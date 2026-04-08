@@ -1,0 +1,11 @@
+node_modules/
+*.MOV
+*.mov
+*.mp4
+*.mxf
+premiere_raw/
+highlights/
+social/
+*.docx
+*.xlsx
+download-slides.bat

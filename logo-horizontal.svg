@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160">
+  <defs>
+    <radialGradient id="bgH" cx="15%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1a1d23"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    <filter id="gy" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="gb" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="bannerClip">
+      <rect x="0" y="0" width="640" height="160" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="640" height="160" rx="16" fill="url(#bgH)"/>
+
+  <!-- Speed stripes -->
+  <g clip-path="url(#bannerClip)" opacity="0.07">
+    <line x1="-20" y1="45" x2="660" y2="25" stroke="#e8ff00" stroke-width="28"/>
+    <line x1="-20" y1="85" x2="660" y2="65" stroke="#e8ff00" stroke-width="10"/>
+    <line x1="-20" y1="120" x2="660" y2="100" stroke="#00c8ff" stroke-width="18"/>
+    <line x1="-20" y1="145" x2="660" y2="125" stroke="#00c8ff" stroke-width="7"/>
+  </g>
+
+  <!-- Checkered blocks top-right -->
+  <g clip-path="url(#bannerClip)">
+    <rect x="560" y="0"  width="16" height="16" fill="#e8ff00" opacity="0.8"/>
+    <rect x="576" y="0"  width="16" height="16" fill="#0a0a0a" opacity="0.8"/>
+    <rect x="592" y="0"  width="16" height="16" fill="#e8ff00" opacity="0.8"/>
+    <rect x="608" y="0"  width="16" height="16" fill="#0a0a0a" opacity="0.8"/>
+    <rect x="624" y="0"  width="16" height="16" fill="#e8ff00" opacity="0.8"/>
+    <rect x="560" y="16" width="16" height="16" fill="#0a0a0a" opacity="0.8"/>
+    <rect x="576" y="16" width="16" height="16" fill="#e8ff00" opacity="0.8"/>
+    <rect x="592" y="16" width="16" height="16" fill="#0a0a0a" opacity="0.8"/>
+    <rect x="608" y="16" width="16" height="16" fill="#e8ff00" opacity="0.8"/>
+    <rect x="624" y="16" width="16" height="16" fill="#0a0a0a" opacity="0.8"/>
+  </g>
+
+  <!-- Icon: steering wheel -->
+  <g transform="translate(82,80)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#2a2d35" stroke-width="12"/>
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#e8ff00" stroke-width="2.5"
+      stroke-dasharray="60 242" stroke-dashoffset="-70" filter="url(#gy)"/>
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#00c8ff" stroke-width="2"
+      stroke-dasharray="40 262" stroke-dashoffset="75" filter="url(#gb)"/>
+    <!-- Spokes -->
+    <g stroke="#3a3d45" stroke-width="8" stroke-linecap="round">
+      <line x1="0" y1="0" x2="-38" y2="13"/>
+      <line x1="0" y1="0" x2="38" y2="-13"/>
+      <line x1="0" y1="0" x2="0" y2="47"/>
+    </g>
+    <g stroke="#e8ff00" stroke-width="1.2" stroke-linecap="round" opacity="0.55">
+      <line x1="0" y1="0" x2="-38" y2="13"/>
+      <line x1="0" y1="0" x2="38" y2="-13"/>
+      <line x1="0" y1="0" x2="0" y2="47"/>
+    </g>
+    <!-- Hub -->
+    <circle cx="0" cy="0" r="10" fill="#1a1d23" stroke="#e8ff00" stroke-width="2"/>
+    <circle cx="0" cy="0" r="4.5" fill="#e8ff00"/>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="155" y1="28" x2="155" y2="132" stroke="#2a2d35" stroke-width="1.5"/>
+
+  <!-- Text block -->
+  <text x="178" y="88"
+    font-family="'Arial Black', Impact, Haettenschweiler, sans-serif"
+    font-weight="900" font-size="62" letter-spacing="4"
+    fill="#f0f0f0" dominant-baseline="middle">REAL</text>
+
+  <text x="178" y="125"
+    font-family="'Arial Black', Impact, Haettenschweiler, sans-serif"
+    font-weight="900" font-size="32" letter-spacing="10"
+    fill="#e8ff00" dominant-baseline="middle"
+    filter="url(#gy)">iRACING</text>
+
+  <!-- Tagline -->
+  <text x="178" y="46"
+    font-family="'Segoe UI', system-ui, sans-serif"
+    font-size="13" letter-spacing="3"
+    fill="#00c8ff" dominant-baseline="middle" opacity="0.85">RACE · STREAM · COMPETE</text>
+
+  <!-- Blue dot accents -->
+  <circle cx="162" cy="46" r="2.5" fill="#00c8ff" opacity="0.7"/>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="638" height="158" rx="15" fill="none" stroke="#e8ff00" stroke-width="1.5" opacity="0.5"/>
+</svg>

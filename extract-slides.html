@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RealIRacing — Extract Slide Photos</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0a0a0a; color: #f0f0f0; padding: 40px; max-width: 700px; margin: 0 auto; }
+    h1 { color: #e8ff00; margin-bottom: 8px; }
+    p { color: #aaa; margin-bottom: 24px; line-height: 1.6; }
+    .step { background: #1a1d23; border: 1px solid #2a2d35; border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
+    .step h3 { color: #00c8ff; margin-bottom: 8px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+    .step p { margin: 0; color: #ccc; font-size: 0.9rem; }
+    code { background: #1a1d23; border: 1px solid #2a2d35; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; color: #e8ff00; }
+    button {
+      background: #e8ff00; color: #0a0a0a; border: none;
+      padding: 12px 28px; border-radius: 8px; font-weight: 700;
+      font-size: 1rem; cursor: pointer; margin-top: 12px;
+    }
+    button:hover { opacity: 0.85; }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    #log { background: #111; border: 1px solid #2a2d35; border-radius: 8px; padding: 16px; margin-top: 16px; font-family: monospace; font-size: 0.85rem; min-height: 120px; color: #ccc; white-space: pre-wrap; }
+    .ok   { color: #e8ff00; }
+    .err  { color: #ff4444; }
+    .info { color: #00c8ff; }
+    a { color: #e8ff00; }
+  </style>
+</head>
+<body>
+  <h1>📸 Extract Slide Photos</h1>
+  <p>
+    This tool downloads your motorsport photos from Instagram as local JPEG files.
+    Once saved in the <code>slides/</code> folder, the homepage slideshow will use
+    them permanently — no internet or Instagram login required.
+  </p>
+
+  <div class="step">
+    <h3>Step 1 — Make sure you are logged into Instagram</h3>
+    <p>
+      Open <a href="https://www.instagram.com/" target="_blank">instagram.com</a> in this
+      browser and confirm you are logged in as <strong>@realtape</strong> or <strong>@realiracing</strong>.
+    </p>
+  </div>
+
+  <div class="step">
+    <h3>Step 2 — Download all 7 slide photos</h3>
+    <p>
+      Click the button below. Your browser will download 7 JPEG files.
+      Then move them into the <code>slides/</code> folder next to <code>index.html</code>.
+    </p>
+    <button id="extractBtn" onclick="extractAll()">⬇ Download All Slide Photos</button>
+  </div>
+
+  <div class="step">
+    <h3>Step 3 — Reload the homepage</h3>
+    <p>
+      Open <code>index.html</code> in your browser. The slideshow will now load your
+      local photos instantly — no login needed.
+    </p>
+  </div>
+
+  <div id="log">Ready. Click "Download All Slide Photos" to begin...</div>
+
+  <script>
+    const SLIDES = [
+      {
+        n: 1,
+        url: 'https://instagram.flsc1-1.fna.fbcdn.net/v/t51.82787-15/621826211_18111723463647369_927075783910543501_n.jpg',
+        label: 'Takuma Sato #21 · IndyCar · Long Beach 2018 · @tapephotocom'
+      },
+      {
+        n: 2,
+        url: 'https://instagram.flsc1-1.fna.fbcdn.net/v/t51.82787-15/650465743_18098525518766895_5128245768467555980_n.jpg',
+        label: 'Marco Andretti #98 · IndyCar · @tapephotocom'
+      },
+      {
+        n: 3,
+        url: 'https://instagram.flsc1-1.fna.fbcdn.net/v/t51.82787-15/618733624_18083917859156093_6937440380032568866_n.jpg',
+        label: 'Long Beach Race · @tapephotocom'
+      },
+      {
+        n: 4,
+        url: 'https://instagram.flsc1-1.fna.fbcdn.net/v/t51.75761-15/623921485_18089045743841848_2817298748563091177_n.jpg',
+        label: 'WRC Chile · Coquimbo · @tapephotocom'
+      },
+      {
+        n: 5,
+        url: 'https://instagram.flsc1-1.fna.fbcdn.net/v/t51.75761-15/475532708_17893945326159271_7542449374676169418_n.jpg',
+        label: 'iRacing · Circuit Zandvoort · @realiracing'
+      },
+      {
+        n: 6,
+        url: 'https://instagram.flsc1-1.fna.fbcdn.net/v/t51.82787-15/539395496_17918210187159271_1525847402102853354_n.jpg',
+        label: 'iRacing Session · @realiracing'
+      },
+      {
+        n: 7,
+        url: 'https://instagram.flsc1-1.fna.fbcdn.net/v/t51.75761-15/497850668_17906077263159271_4183353136579006367_n.jpg',
+        label: 'iRacing Race Highlights May 2025 · @realiracing'
+      }
+    ];
+
+    const logEl = document.getElementById('log');
+    function log(msg, cls) {
+      logEl.innerHTML += (cls ? `<span class="${cls}">${msg}</span>` : msg) + '\n';
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    async function downloadSlide(slide) {
+      log(`\nSlide ${slide.n}: ${slide.label}`, 'info');
+      log(`  Loading from Instagram CDN...`);
+
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+
+      const loaded = await new Promise(resolve => {
+        img.onload  = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = slide.url;
+        setTimeout(() => resolve(false), 12000);
+      });
+
+      if (!loaded) {
+        log(`  ✗ Could not load — make sure you are logged into Instagram`, 'err');
+        return false;
+      }
+
+      log(`  ✓ Loaded (${img.naturalWidth}x${img.naturalHeight}px)`);
+
+      try {
+        // Draw to canvas and convert to blob for clean JPEG download
+        const canvas = document.createElement('canvas');
+        canvas.width  = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        canvas.getContext('2d').drawImage(img, 0, 0);
+
+        const blob = await new Promise((res, rej) =>
+          canvas.toBlob(b => b ? res(b) : rej(new Error('toBlob failed')), 'image/jpeg', 0.92)
+        );
+
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = `slide${slide.n}.jpg`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
+
+        log(`  ✓ Downloaded: slide${slide.n}.jpg (${Math.round(blob.size / 1024)} KB)`, 'ok');
+        return true;
+
+      } catch (e) {
+        // Canvas tainted by CORS — trigger direct browser download
+        log(`  ⚠ Canvas tainted, triggering direct download...`);
+        const a = document.createElement('a');
+        a.href     = slide.url;
+        a.download = `slide${slide.n}.jpg`;
+        a.target   = '_blank';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        log(`  → Save the file as: slide${slide.n}.jpg`, 'ok');
+        return true;
+      }
+    }
+
+    async function extractAll() {
+      document.getElementById('extractBtn').disabled = true;
+      logEl.textContent = '';
+      log('Downloading 7 slide photos from your Instagram accounts...\n', 'info');
+
+      let ok = 0;
+      for (const slide of SLIDES) {
+        const success = await downloadSlide(slide);
+        if (success) ok++;
+        await new Promise(r => setTimeout(r, 700));
+      }
+
+      log('\n' + '─'.repeat(55));
+      if (ok === 7) {
+        log('✓ All 7 slides downloaded!', 'ok');
+        log('\nNext steps:', 'ok');
+        log('  1. Move slide1.jpg – slide7.jpg into the slides/ folder', 'ok');
+        log('  2. Open index.html — your photos will appear in the slideshow!', 'ok');
+      } else {
+        log(`${ok}/7 slides downloaded.`, ok > 0 ? 'ok' : 'err');
+        if (ok < 7) {
+          log('\nFor slides that failed: confirm you are logged into Instagram', 'err');
+          log('at instagram.com in this browser, then try again.', 'err');
+        }
+      }
+
+      document.getElementById('extractBtn').disabled = false;
+    }
+  </script>
+</body>
+</html>

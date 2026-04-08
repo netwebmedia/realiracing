@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RealIRacing — iRacing Content by Carlos Martinez</title>
+  <meta name="description" content="iRacing sim racing content, race highlights, setup guides, rig tours and tips. Follow @realiracing on YouTube, TikTok, Instagram and more." />
+  <meta property="og:title" content="RealIRacing" />
+  <meta property="og:description" content="iRacing sim racing content — Race Highlights, Setup Guides, Rig Tours & Tips." />
+  <meta property="og:url" content="https://realiracing.com" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --black:   #0a0a0a;
+      --dark:    #111317;
+      --card:    #1a1d23;
+      --border:  #2a2d35;
+      --accent:  #e8ff00;
+      --accent2: #00c8ff;
+      --text:    #f0f0f0;
+      --muted:   #888;
+      --radius:  12px;
+      --font:    'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ─────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      background: rgba(10,10,10,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo-wheel {
+      width: 28px; height: 28px;
+    }
+    .nav-logo span { color: var(--text); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--black) !important;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ── HERO / SLIDESHOW ────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ── Slideshow background ── */
+    .slideshow {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.4s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.06);
+      transition: opacity 1.4s ease-in-out, transform 7s ease-out;
+    }
+    .slide.active {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+    /* Slide photo backgrounds — Pexels motorsport (permanent). Drop your own into slides/ */
+    /* Local slides/ files load first; Pexels URLs are the permanent online fallback */
+    .slide-1 { background-image: url('slides/slide1.jpg'), url('https://images.pexels.com/photos/35415243/pexels-photo-35415243.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
+    .slide-2 { background-image: url('slides/slide2.jpg'), url('https://images.pexels.com/photos/28463838/pexels-photo-28463838.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
+    .slide-3 { background-image: url('slides/slide3.jpg'), url('https://images.pexels.com/photos/18956548/pexels-photo-18956548.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
+    .slide-4 { background-image: url('slides/slide4.jpg'), url('https://images.pexels.com/photos/9528592/pexels-photo-9528592.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
+    .slide-5 { background-image: url('slides/slide5.jpg'), url('https://images.pexels.com/photos/13237630/pexels-photo-13237630.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
+    .slide-6 { background-image: url('slides/slide6.jpg'), url('https://images.pexels.com/photos/12801/pexels-photo-12801.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
+    .slide-7 { background-image: url('slides/slide7.jpg'), url('https://images.pexels.com/photos/5111316/pexels-photo-5111316.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
+
+    /* SVG graphics only shown on non-photo (gradient) slides */
+    .slide-graphic {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Hide SVG on photo slides 1-7 */
+    .slide-1 .slide-graphic,
+    .slide-2 .slide-graphic,
+    .slide-3 .slide-graphic,
+    .slide-4 .slide-graphic,
+    .slide-5 .slide-graphic,
+    .slide-6 .slide-graphic,
+    .slide-7 .slide-graphic { display: none; }
+
+    .slide-graphic svg {
+      width: min(70vw, 700px);
+      opacity: 0.18;
+      filter: blur(0.5px);
+    }
+    .slide.active .slide-graphic svg {
+      animation: graphicDrift 7s ease-out forwards;
+    }
+    @keyframes graphicDrift {
+      from { transform: translateX(-30px) scale(0.96); opacity: 0; }
+      to   { transform: translateX(0)     scale(1.00); opacity: 0.18; }
+    }
+
+    /* Grid overlay on all slides */
+    .slide-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(232,255,0,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,255,0,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Cinematic dark gradient — stronger on real photo slides */
+    .slide-vignette {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom,  rgba(10,10,10,.60) 0%, transparent 30%),
+        linear-gradient(to top,     rgba(10,10,10,.85) 0%, transparent 45%),
+        linear-gradient(to right,   rgba(10,10,10,.45) 0%, transparent 55%);
+    }
+    /* Extra darkening on real photo slides to ensure text contrast */
+    .slide-1 .slide-vignette,
+    .slide-2 .slide-vignette,
+    .slide-3 .slide-vignette,
+    .slide-4 .slide-vignette,
+    .slide-5 .slide-vignette,
+    .slide-6 .slide-vignette,
+    .slide-7 .slide-vignette {
+      background:
+        linear-gradient(to bottom,  rgba(10,10,10,.70) 0%, rgba(10,10,10,.20) 35%, transparent 50%),
+        linear-gradient(to top,     rgba(10,10,10,.90) 0%, rgba(10,10,10,.50) 30%, transparent 55%),
+        linear-gradient(to right,   rgba(10,10,10,.50) 0%, transparent 50%),
+        rgba(0,0,0,.25);
+    }
+
+    /* Slide caption (bottom-left) */
+    .slide-caption {
+      position: absolute;
+      bottom: 110px; left: 48px;
+      display: flex; align-items: center; gap: 10px;
+      z-index: 4;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .6s .8s, transform .6s .8s;
+      pointer-events: none;
+    }
+    .slide.active .slide-caption {
+      opacity: 1; transform: translateY(0);
+    }
+    .slide-caption-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0;
+      animation: blink 2s infinite;
+    }
+    .slide-caption-text {
+      font-size: 0.75rem; font-weight: 600;
+      color: rgba(255,255,255,.65);
+      letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .slide-caption-account {
+      font-size: 0.72rem; color: var(--accent2);
+      font-weight: 700; margin-left: 4px;
+    }
+
+    /* Progress bar (bottom) */
+    .slideshow-progress {
+      position: absolute;
+      bottom: 80px; left: 0; right: 0;
+      z-index: 5;
+      display: flex; justify-content: center; gap: 8px;
+      pointer-events: none;
+    }
+    .progress-dot {
+      width: 28px; height: 3px; border-radius: 2px;
+      background: rgba(255,255,255,.2);
+      transition: background .4s, width .4s;
+      cursor: pointer;
+      pointer-events: all;
+    }
+    .progress-dot.active {
+      background: var(--accent);
+      width: 48px;
+    }
+
+    /* Nav arrow buttons */
+    .slide-nav {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      z-index: 5;
+      background: rgba(10,10,10,.5);
+      border: 1px solid rgba(255,255,255,.12);
+      color: white; font-size: 1.2rem;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: background .2s, border-color .2s;
+      backdrop-filter: blur(6px);
+    }
+    .slide-nav:hover { background: rgba(232,255,0,.15); border-color: var(--accent); }
+    .slide-nav-prev { left: 20px; }
+    .slide-nav-next { right: 20px; }
+
+    /* ── Hero content (above slideshow) ── */
+    .hero-content {
+      position: relative; z-index: 3;
+      display: flex; flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(232,255,0,.12);
+      border: 1px solid rgba(232,255,0,.35);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero-badge::before {
+      content: '●'; font-size: 0.5rem;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1.0;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 30px rgba(0,0,0,.6);
+    }
+    .hero h1 .yellow { color: var(--accent); }
+    .hero h1 .blue   { color: var(--accent2); }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(240,240,240,.8);
+      max-width: 580px;
+      margin: 0 auto 40px;
+      text-shadow: 0 1px 10px rgba(0,0,0,.7);
+    }
+    .hero-buttons {
+      display: flex; gap: 16px;
+      flex-wrap: wrap; justify-content: center;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--black);
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-weight: 800; font-size: 1rem;
+      text-decoration: none;
+      transition: transform .15s, opacity .15s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); opacity: .9; }
+    .btn-ghost {
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      padding: 14px 32px; border-radius: 999px;
+      font-weight: 600; font-size: 1rem;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.2);
+      backdrop-filter: blur(8px);
+      transition: border-color .2s, background .2s;
+    }
+    .btn-ghost:hover { border-color: var(--text); background: rgba(255,255,255,.14); }
+
+    /* ── STATS BAR ───────────────────────── */
+    .stats-bar {
+      display: flex; justify-content: center;
+      gap: 60px; flex-wrap: wrap;
+      padding: 48px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--dark);
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 900; color: var(--accent); display: block; }
+    .stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+
+    /* ── SECTION BASE ────────────────────── */
+    section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2px;
+      color: var(--accent); margin-bottom: 12px;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800; letter-spacing: -1px; margin-bottom: 16px;
+    }
+    .section-sub {
+      color: var(--muted); font-size: 1.05rem;
+      max-width: 520px; margin-bottom: 48px;
+    }
+
+    /* ── MEDIA GALLERY ───────────────────── */
+    .media-section {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+    }
+    .media-inner { max-width: 1100px; margin: 0 auto; }
+
+    /* Tab switcher */
+    .media-tabs {
+      display: flex; gap: 8px;
+      margin-bottom: 36px; flex-wrap: wrap;
+    }
+    .media-tab {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-size: 0.85rem; font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .media-tab:hover { border-color: var(--accent); color: var(--text); }
+    .media-tab.active { background: var(--accent); border-color: var(--accent); color: var(--black); }
+
+    /* Gallery grid */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .media-panel { display: none; }
+    .media-panel.active { display: block; }
+
+    /* Post card */
+    .post-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color .2s, transform .2s;
+      text-decoration: none;
+      color: var(--text);
+      display: flex; flex-direction: column;
+    }
+    .post-card:hover { border-color: var(--accent2); transform: translateY(-4px); }
+
+    /* Mosaic photo frame — no external images needed */
+    .post-thumb {
+      width: 100%;
+      aspect-ratio: 1;
+      position: relative;
+      overflow: hidden;
+      background: var(--dark);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .post-thumb-bg {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+    }
+    .post-thumb-stripe { flex: 1; }
+
+    .post-thumb-label {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 16px;
+      z-index: 2;
+    }
+    .post-thumb-emoji { font-size: 3rem; margin-bottom: 10px; }
+    .post-thumb-title {
+      font-size: 0.85rem; font-weight: 700;
+      color: white; text-shadow: 0 1px 8px rgba(0,0,0,.8);
+      line-height: 1.3;
+    }
+    .post-thumb-tag {
+      font-size: 0.7rem; color: var(--accent);
+      margin-top: 6px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    .post-badge {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(0,0,0,.7); border: 1px solid rgba(255,255,255,.2);
+      border-radius: 6px; padding: 3px 8px;
+      font-size: 0.7rem; color: white; font-weight: 600;
+      z-index: 3;
+    }
+
+    .post-info {
+      padding: 16px 18px;
+      display: flex; flex-direction: column; gap: 6px;
+      flex: 1;
+    }
+    .post-account {
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--accent2); text-transform: uppercase; letter-spacing: 1px;
+    }
+    .post-caption {
+      font-size: 0.88rem; color: var(--muted);
+      line-height: 1.4;
+      display: -webkit-box; -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .post-cta {
+      margin-top: auto;
+      font-size: 0.8rem; color: var(--accent);
+      font-weight: 600; padding-top: 8px;
+    }
+
+    /* YouTube thumbnail grid */
+    .yt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .yt-thumb {
+      display: block;
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .yt-thumb:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(232,255,0,.08); }
+    .yt-thumb-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      background: #111;
+    }
+    .yt-thumb-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px; height: 56px;
+      background: rgba(0,0,0,.7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .25s;
+      pointer-events: none;
+    }
+    .yt-thumb:hover .yt-thumb-play { opacity: 1; }
+    .yt-thumb-play::after {
+      content: '';
+      display: block;
+      width: 0; height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 18px;
+      border-color: transparent transparent transparent var(--accent);
+      margin-left: 3px;
+    }
+    .yt-thumb-duration {
+      position: absolute;
+      bottom: 8px; right: 8px;
+      background: rgba(0,0,0,.85);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: .02em;
+    }
+    .yt-thumb-info { padding: 12px 14px; }
+    .yt-thumb-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 4px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .yt-thumb-meta { font-size: 0.76rem; color: var(--muted); }
+    .yt-cta-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+      min-height: 200px;
+      transition: border-color .2s;
+    }
+    .yt-cta-card:hover { border-color: var(--accent); }
+
+    /* ── CONTENT PILLARS ─────────────────── */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .pillar-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: border-color .2s, transform .2s;
+    }
+    .pillar-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .pillar-icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+    .pillar-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .pillar-card p { color: var(--muted); font-size: 0.9rem; }
+
+    /* ── PLATFORMS ───────────────────────── */
+    .platforms-section {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+    }
+    .platforms-inner { max-width: 1100px; margin: 0 auto; }
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .platform-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px; text-align: center;
+      text-decoration: none; color: var(--text);
+      transition: border-color .2s, transform .2s;
+    }
+    .platform-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
+    .platform-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .platform-name { font-weight: 700; font-size: 0.95rem; }
+    .platform-handle { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── POLL ────────────────────────────── */
+    .poll-section { max-width: 600px; margin: 0 auto; padding: 80px 24px; text-align: center; }
+    .poll-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px; margin-top: 32px;
+    }
+    .poll-question { font-size: 1.15rem; font-weight: 700; margin-bottom: 24px; }
+    .poll-options { display: flex; flex-direction: column; gap: 12px; }
+    .poll-option {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 14px 18px;
+      cursor: pointer; transition: border-color .2s; text-align: left;
+    }
+    .poll-option:hover { border-color: var(--accent); }
+    .poll-option.selected { border-color: var(--accent); background: rgba(232,255,0,.07); }
+    .poll-option-dot {
+      width: 18px; height: 18px; border-radius: 50%;
+      border: 2px solid var(--border); flex-shrink: 0;
+    }
+    .poll-option.selected .poll-option-dot { border-color: var(--accent); background: var(--accent); }
+
+    /* ── ALL LINKS ───────────────────────── */
+    .linktree-section {
+      background: linear-gradient(135deg, rgba(232,255,0,.06), rgba(0,200,255,.06));
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 60px 40px;
+      text-align: center; max-width: 700px; margin: 0 auto 80px;
+    }
+    .linktree-section h2 { margin-bottom: 12px; }
+    .linktree-section p { color: var(--muted); margin-bottom: 32px; }
+    .link-buttons { display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin: 0 auto; }
+    .link-btn {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 20px;
+      text-decoration: none; color: var(--text);
+      font-weight: 600; font-size: 0.95rem;
+      transition: border-color .2s, transform .15s;
+    }
+    .link-btn:hover { border-color: var(--accent); transform: translateX(4px); }
+    .link-btn-icon { font-size: 1.3rem; }
+
+    /* ── FOOTER ──────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px; text-align: center;
+      color: var(--muted); font-size: 0.85rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── MOBILE ──────────────────────────── */
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .stats-bar { gap: 30px; }
+      section { padding: 60px 20px; }
+      .media-grid, .yt-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">
+      <svg class="nav-logo-wheel" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#e8ff00" stroke-width="2.5"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#2a2d35" stroke-width="7"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#e8ff00" stroke-width="2"
+          stroke-dasharray="14 56" stroke-dashoffset="-10"/>
+        <line x1="20" y1="20" x2="7"  y2="24" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="33" y2="16" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="20" y2="34" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3" fill="#e8ff00"/>
+      </svg>
+      <span>Real</span>IRacing
+    </a>
+    <ul class="nav-links">
+      <li><a href="#media">Media</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#platforms">Platforms</a></li>
+      <li><a href="#poll">Poll</a></li>
+      <li><a href="#links">Links</a></li>
+      <li><a class="nav-cta" href="https://www.youtube.com/@realiracing" target="_blank">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SLIDESHOW -->
+  <div class="hero">
+
+    <!-- Slideshow background layers -->
+    <div class="slideshow" id="slideshow">
+
+      <!-- Slide 1: Takuma Sato #21 Panasonic IndyCar — Long Beach 2018 -->
+      <div class="slide slide-1 active">
+        <div class="slide-graphic">
+          <svg viewBox="0 0 700 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Race car silhouette (GT / cockpit view inspired) -->
+            <ellipse cx="350" cy="260" rx="320" ry="18" fill="#e8ff00" opacity="0.3"/>
+            <path d="M80 240 Q120 180 200 160 Q260 145 350 143 Q440 145 500 160 Q580 180 620 240 Z" fill="#e8ff00"/>
+            <path d="M200 160 Q260 120 350 115 Q440 120 500 160" fill="#00c8ff" opacity="0.6"/>
+            <rect x="240" y="118" width="220" height="45" rx="12" fill="#0a0a0a" opacity="0.7"/>
+            <circle cx="140" cy="245" r="36" fill="#111" stroke="#e8ff00" stroke-width="3"/>
+            <circle cx="140" cy="245" r="22" fill="#1a1d23" stroke="#333" stroke-width="2"/>
+            <circle cx="560" cy="245" r="36" fill="#111" stroke="#e8ff00" stroke-width="3"/>
+            <circle cx="560" cy="245" r="22" fill="#1a1d23" stroke="#333" stroke-width="2"/>
+            <!-- Speed lines -->
+            <line x1="0" y1="200" x2="120" y2="195" stroke="#e8ff00" stroke-width="1.5" opacity="0.5"/>
+            <line x1="0" y1="210" x2="100" y2="205" stroke="#e8ff00" stroke-width="1" opacity="0.3"/>
+            <line x1="580" y1="195" x2="700" y2="200" stroke="#e8ff00" stroke-width="1.5" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="slide-grid"></div>
+        <div class="slide-vignette"></div>
+        <div class="slide-caption">
+          <div class="slide-caption-dot"></div>
+          <span class="slide-caption-text">High-Speed Drift · Motorsport Arena</span>
+          <span class="slide-caption-account">@realiracing</span>
+        </div>
+      </div>
+
+      <!-- Slide 2: Takuma Sato #21 Panasonic IndyCar -->
+      <div class="slide slide-2">
+        <div class="slide-graphic">
+          <svg viewBox="0 0 700 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- IndyCar silhouette -->
+            <ellipse cx="350" cy="230" rx="280" ry="14" fill="#00c8ff" opacity="0.25"/>
+            <path d="M120 210 Q160 175 240 162 Q295 153 350 152 Q405 153 460 162 Q540 175 580 210 Z" fill="#0050c8"/>
+            <path d="M240 162 Q295 138 350 136 Q405 138 460 162" fill="#00a0ff" opacity="0.7"/>
+            <!-- #21 -->
+            <text x="335" y="185" font-size="22" font-weight="900" fill="white" font-family="Arial Black" opacity="0.9">21</text>
+            <!-- Front wing -->
+            <path d="M80 212 L130 205 L130 218 L80 222 Z" fill="#0040a0"/>
+            <path d="M570 205 L620 212 L620 222 L570 218 Z" fill="#0040a0"/>
+            <!-- Wheels -->
+            <circle cx="185" cy="218" r="30" fill="#111" stroke="#00c8ff" stroke-width="2.5"/>
+            <circle cx="185" cy="218" r="18" fill="#1a1d23"/>
+            <circle cx="515" cy="218" r="30" fill="#111" stroke="#00c8ff" stroke-width="2.5"/>
+            <circle cx="515" cy="218" r="18" fill="#1a1d23"/>
+            <!-- Motion blur lines -->
+            <line x1="0" y1="185" x2="80"  y2="183" stroke="#00c8ff" stroke-width="2" opacity="0.6"/>
+            <line x1="0" y1="192" x2="60"  y2="190" stroke="#00c8ff" stroke-width="1" opacity="0.4"/>
+            <line x1="620" y1="183" x2="700" y2="185" stroke="#00c8ff" stroke-width="2" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="slide-grid"></div>
+        <div class="slide-vignette"></div>
+        <div class="slide-caption">
+          <div class="slide-caption-dot"></div>
+          <span class="slide-caption-text">Vintage Racing · Track Day</span>
+          <span class="slide-caption-account">@realiracing</span>
+        </div>
+      </div>
+
+      <!-- Slide 3: Marco Andretti #98 US Concrete IndyCar -->
+      <div class="slide slide-3">
+        <div class="slide-graphic">
+          <svg viewBox="0 0 700 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="350" cy="230" rx="280" ry="14" fill="#cc0000" opacity="0.25"/>
+            <path d="M120 210 Q160 175 240 162 Q295 153 350 152 Q405 153 460 162 Q540 175 580 210 Z" fill="#990000"/>
+            <path d="M240 162 Q295 138 350 136 Q405 138 460 162" fill="#cc2200" opacity="0.8"/>
+            <text x="328" y="185" font-size="22" font-weight="900" fill="white" font-family="Arial Black" opacity="0.95">98</text>
+            <path d="M80 212 L130 205 L130 218 L80 222 Z" fill="#660000"/>
+            <path d="M570 205 L620 212 L620 222 L570 218 Z" fill="#660000"/>
+            <circle cx="185" cy="218" r="30" fill="#111" stroke="#cc0000" stroke-width="2.5"/>
+            <circle cx="185" cy="218" r="18" fill="#1a1d23"/>
+            <circle cx="515" cy="218" r="30" fill="#111" stroke="#cc0000" stroke-width="2.5"/>
+            <circle cx="515" cy="218" r="18" fill="#1a1d23"/>
+            <line x1="0" y1="185" x2="80"  y2="183" stroke="#cc0000" stroke-width="2" opacity="0.7"/>
+            <line x1="0" y1="192" x2="60"  y2="190" stroke="#e8ff00" stroke-width="1" opacity="0.4"/>
+            <line x1="620" y1="183" x2="700" y2="185" stroke="#cc0000" stroke-width="2" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="slide-grid"></div>
+        <div class="slide-vignette"></div>
+        <div class="slide-caption">
+          <div class="slide-caption-dot"></div>
+          <span class="slide-caption-text">Race Cars on the Move</span>
+          <span class="slide-caption-account">@realiracing</span>
+        </div>
+      </div>
+
+      <!-- Slide 4: WRC Chile 2019 -->
+      <div class="slide slide-4">
+        <div class="slide-graphic">
+          <svg viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Rally car silhouette -->
+            <ellipse cx="350" cy="250" rx="230" ry="12" fill="#80c020" opacity="0.2"/>
+            <path d="M160 228 Q180 200 220 192 Q280 182 350 181 Q420 182 480 192 Q520 200 540 228 Z" fill="#2a5010"/>
+            <path d="M220 192 Q280 170 350 168 Q420 170 480 192" fill="#4a8020" opacity="0.7"/>
+            <rect x="235" y="172" width="230" height="36" rx="8" fill="#0a0a0a" opacity="0.6"/>
+            <!-- Trees in background -->
+            <polygon points="60,230 80,170 100,230"  fill="#1a4010" opacity="0.6"/>
+            <polygon points="90,230 115,155 140,230" fill="#1e5012" opacity="0.5"/>
+            <polygon points="570,230 595,165 620,230" fill="#1a4010" opacity="0.6"/>
+            <circle cx="205" cy="232" r="26" fill="#111" stroke="#80c020" stroke-width="2.5"/>
+            <circle cx="205" cy="232" r="16" fill="#1a1d23"/>
+            <circle cx="495" cy="232" r="26" fill="#111" stroke="#80c020" stroke-width="2.5"/>
+            <circle cx="495" cy="232" r="16" fill="#1a1d23"/>
+            <!-- dust -->
+            <ellipse cx="100" cy="238" rx="55" ry="10" fill="white" opacity="0.06"/>
+          </svg>
+        </div>
+        <div class="slide-grid"></div>
+        <div class="slide-vignette"></div>
+        <div class="slide-caption">
+          <div class="slide-caption-dot"></div>
+          <span class="slide-caption-text">Speed · Precision · Competition</span>
+          <span class="slide-caption-account">@realiracing</span>
+        </div>
+      </div>
+
+      <!-- Slide 5: NASCAR Talladega 2023 -->
+      <div class="slide slide-5">
+        <div class="slide-graphic">
+          <svg viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- NASCAR stock car -->
+            <ellipse cx="350" cy="255" rx="290" ry="15" fill="#ff8000" opacity="0.2"/>
+            <path d="M100 235 Q130 205 200 196 Q270 186 350 185 Q430 186 500 196 Q570 205 600 235 Z" fill="#1a0800"/>
+            <path d="M200 196 Q270 176 350 174 Q430 176 500 196" fill="#ff6000" opacity="0.5"/>
+            <rect x="215" y="176" width="270" height="38" rx="6" fill="#0a0a0a" opacity="0.55"/>
+            <!-- Grandstand shapes behind -->
+            <rect x="0"   y="100" width="160" height="130" fill="#181208" opacity="0.6" rx="2"/>
+            <rect x="540" y="100" width="160" height="130" fill="#181208" opacity="0.6" rx="2"/>
+            <!-- Crowd dots -->
+            <circle cx="40"  cy="130" r="3" fill="white" opacity="0.3"/>
+            <circle cx="60"  cy="125" r="3" fill="white" opacity="0.25"/>
+            <circle cx="80"  cy="135" r="3" fill="white" opacity="0.3"/>
+            <circle cx="100" cy="128" r="3" fill="white" opacity="0.2"/>
+            <circle cx="120" cy="132" r="3" fill="white" opacity="0.3"/>
+            <circle cx="600" cy="130" r="3" fill="white" opacity="0.3"/>
+            <circle cx="620" cy="125" r="3" fill="white" opacity="0.25"/>
+            <circle cx="640" cy="133" r="3" fill="white" opacity="0.3"/>
+            <circle cx="660" cy="127" r="3" fill="white" opacity="0.2"/>
+            <circle cx="185" cy="242" r="30" fill="#111" stroke="#ff6000" stroke-width="2.5"/>
+            <circle cx="185" cy="242" r="18" fill="#1a1d23"/>
+            <circle cx="515" cy="242" r="30" fill="#111" stroke="#ff6000" stroke-width="2.5"/>
+            <circle cx="515" cy="242" r="18" fill="#1a1d23"/>
+          </svg>
+        </div>
+        <div class="slide-grid"></div>
+        <div class="slide-vignette"></div>
+        <div class="slide-caption">
+          <div class="slide-caption-dot"></div>
+          <span class="slide-caption-text">On Track · Full Throttle</span>
+          <span class="slide-caption-account">@realiracing</span>
+        </div>
+      </div>
+
+      <!-- Slide 6: iRacing Porsche -->
+      <div class="slide slide-6">
+        <div class="slide-graphic">
+          <svg viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Porsche GT3 silhouette -->
+            <ellipse cx="350" cy="252" rx="270" ry="15" fill="#00c8ff" opacity="0.15"/>
+            <path d="M130 232 Q165 200 240 190 Q295 182 350 181 Q405 182 460 190 Q535 200 570 232 Z" fill="#0d1525"/>
+            <path d="M240 190 Q295 170 350 168 Q405 170 460 190" fill="#1a3060" opacity="0.8"/>
+            <!-- Rear wing -->
+            <rect x="215" y="163" width="270" height="10" rx="3" fill="#00c8ff" opacity="0.5"/>
+            <rect x="220" y="155" width="260" height="14" rx="4" fill="#0a1530" opacity="0.8"/>
+            <rect x="285" y="155" width="12" height="30" fill="#00c8ff" opacity="0.4"/>
+            <rect x="403" y="155" width="12" height="30" fill="#00c8ff" opacity="0.4"/>
+            <circle cx="200" cy="236" r="28" fill="#111" stroke="#00c8ff" stroke-width="2.5"/>
+            <circle cx="200" cy="236" r="17" fill="#1a1d23"/>
+            <circle cx="500" cy="236" r="28" fill="#111" stroke="#00c8ff" stroke-width="2.5"/>
+            <circle cx="500" cy="236" r="17" fill="#1a1d23"/>
+            <!-- track markings -->
+            <line x1="0" y1="260" x2="700" y2="250" stroke="white" stroke-width="1.5" stroke-dasharray="40 30" opacity="0.12"/>
+          </svg>
+        </div>
+        <div class="slide-grid"></div>
+        <div class="slide-vignette"></div>
+        <div class="slide-caption">
+          <div class="slide-caption-dot"></div>
+          <span class="slide-caption-text">Race Day · Grid Ready</span>
+          <span class="slide-caption-account">@realiracing</span>
+        </div>
+      </div>
+
+      <!-- Slide 7: Sim Rig / Moza setup -->
+      <div class="slide slide-7">
+        <div class="slide-graphic">
+          <svg viewBox="0 0 700 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Monitor bank -->
+            <rect x="80"  y="60" width="175" height="110" rx="6" fill="#0d1525" stroke="#00c8ff" stroke-width="1.5"/>
+            <rect x="262" y="50" width="176" height="120" rx="6" fill="#0d1525" stroke="#00c8ff" stroke-width="2"/>
+            <rect x="445" y="60" width="175" height="110" rx="6" fill="#0d1525" stroke="#00c8ff" stroke-width="1.5"/>
+            <!-- Screen glow -->
+            <rect x="85"  y="65" width="165" height="100" rx="4" fill="#001830" opacity="0.9"/>
+            <rect x="267" y="55" width="166" height="110" rx="4" fill="#001a35" opacity="0.9"/>
+            <rect x="450" y="65" width="165" height="100" rx="4" fill="#001830" opacity="0.9"/>
+            <!-- iRacing UI elements on center screen -->
+            <rect x="290" y="90" width="120" height="8"  rx="2" fill="#e8ff00" opacity="0.6"/>
+            <rect x="290" y="104" width="80"  height="5"  rx="2" fill="#00c8ff" opacity="0.5"/>
+            <rect x="290" y="115" width="100" height="5"  rx="2" fill="white"   opacity="0.2"/>
+            <!-- Steering wheel -->
+            <circle cx="350" cy="240" r="48" fill="none" stroke="#2a2d35" stroke-width="14"/>
+            <circle cx="350" cy="240" r="48" fill="none" stroke="#e8ff00" stroke-width="2.5"
+              stroke-dasharray="50 250" stroke-dashoffset="-60"/>
+            <line x1="350" y1="240" x2="315" y2="252" stroke="#e8ff00" stroke-width="2" stroke-linecap="round"/>
+            <line x1="350" y1="240" x2="385" y2="228" stroke="#e8ff00" stroke-width="2" stroke-linecap="round"/>
+            <line x1="350" y1="240" x2="350" y2="286" stroke="#e8ff00" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="350" cy="240" r="10" fill="#1a1d23" stroke="#e8ff00" stroke-width="2"/>
+            <circle cx="350" cy="240" r="4"  fill="#e8ff00"/>
+            <!-- Rig frame -->
+            <rect x="280" y="285" width="140" height="8" rx="3" fill="#2a2d35"/>
+            <rect x="310" y="290" width="12"  height="25" rx="2" fill="#2a2d35"/>
+            <rect x="378" y="290" width="12"  height="25" rx="2" fill="#2a2d35"/>
+          </svg>
+        </div>
+        <div class="slide-grid"></div>
+        <div class="slide-vignette"></div>
+        <div class="slide-caption">
+          <div class="slide-caption-dot"></div>
+          <span class="slide-caption-text">Sim Racing · Real Passion</span>
+          <span class="slide-caption-account">@realiracing</span>
+        </div>
+      </div>
+
+      <!-- Progress dots — 7 real photo slides -->
+      <div class="slideshow-progress" id="progress">
+        <div class="progress-dot active" onclick="goToSlide(0)"></div>
+        <div class="progress-dot" onclick="goToSlide(1)"></div>
+        <div class="progress-dot" onclick="goToSlide(2)"></div>
+        <div class="progress-dot" onclick="goToSlide(3)"></div>
+        <div class="progress-dot" onclick="goToSlide(4)"></div>
+        <div class="progress-dot" onclick="goToSlide(5)"></div>
+        <div class="progress-dot" onclick="goToSlide(6)"></div>
+      </div>
+
+      <!-- Nav arrows -->
+      <div class="slide-nav slide-nav-prev" onclick="prevSlide()">&#8592;</div>
+      <div class="slide-nav slide-nav-next" onclick="nextSlide()">&#8594;</div>
+    </div>
+
+    <!-- Hero content over slideshow -->
+    <div class="hero-content">
+      <div class="hero-badge">Now Live on iRacing</div>
+      <h1>
+        Race.<br>
+        <span class="yellow">Stream.</span><br>
+        <span class="blue">Compete.</span>
+      </h1>
+      <p>iRacing content from Carlos Martinez — race highlights, setup guides, rig tours, and tips. Built for sim racers. Real motorsport roots.</p>
+      <div class="hero-buttons">
+        <a class="btn-primary" href="https://www.youtube.com/@realiracing" target="_blank">▶ Watch on YouTube</a>
+        <a class="btn-ghost" href="#media">See the Media ↓</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-num">975+</span>
+      <span class="stat-label">Videos</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">1,700+</span>
+      <span class="stat-label">Subscribers</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">15 yrs</span>
+      <span class="stat-label">On YouTube</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">IRL + Sim</span>
+      <span class="stat-label">Motorsport</span>
+    </div>
+  </div>
+
+  <!-- ══ MEDIA GALLERY ══ -->
+  <div class="media-section" id="media">
+    <div class="media-inner">
+      <p class="section-label">From the Accounts</p>
+      <h2>Real Motorsport Media</h2>
+      <p class="section-sub">Sim racing + real-world racing photography & video — all from Carlos's own accounts.</p>
+
+      <div class="media-tabs">
+        <div class="media-tab active" onclick="switchTab('iracing')">🎮 @realiracing (iRacing)</div>
+        <div class="media-tab" onclick="switchTab('photo')">📸 @tapephotocom (IRL Photography)</div>
+        <div class="media-tab" onclick="switchTab('youtube')">▶ @realtape (YouTube)</div>
+      </div>
+
+      <!-- TAB 1: @realiracing iRacing posts -->
+      <div class="media-panel active" id="panel-iracing">
+        <div class="media-grid">
+
+          <!-- Post 1: Nürburgring Nordschleife -->
+          <a class="post-card" href="https://www.instagram.com/realiracing/p/DNw025JXAgY/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#1a2a0a;"></div>
+                <div class="post-thumb-stripe" style="background:#0f1a0a;"></div>
+                <div class="post-thumb-stripe" style="background:#0a1505;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(232,255,0,.08),rgba(0,0,0,.5));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🏎️</div>
+                <div class="post-thumb-title">Nürburgring Nordschleife</div>
+                <div class="post-thumb-tag">iRacing · Cockpit View</div>
+              </div>
+              <div class="post-badge">📸 Photo</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@realiracing</div>
+              <div class="post-caption">Behind the wheel at the Green Hell — iRacing cockpit view at the Nordschleife.</div>
+              <div class="post-cta">View on Instagram →</div>
+            </div>
+          </a>
+
+          <!-- Post 2: Porsche / iRacing -->
+          <a class="post-card" href="https://www.instagram.com/realiracing/p/DJoUatatbPB/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#1a1230;"></div>
+                <div class="post-thumb-stripe" style="background:#120e24;"></div>
+                <div class="post-thumb-stripe" style="background:#0d0b1a;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,200,255,.1),rgba(0,0,0,.5));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🏁</div>
+                <div class="post-thumb-title">Porsche on Track</div>
+                <div class="post-thumb-tag">iRacing · @realiracing</div>
+              </div>
+              <div class="post-badge">📸 Photo</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@realiracing</div>
+              <div class="post-caption">Porsche cup car iRacing session — chasing the apex.</div>
+              <div class="post-cta">View on Instagram →</div>
+            </div>
+          </a>
+
+          <!-- Post 3: WRC Chile 2019 Reel -->
+          <a class="post-card" href="https://www.instagram.com/realiracing/reel/DHcSN9QMp5k/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#1a2a10;"></div>
+                <div class="post-thumb-stripe" style="background:#2a1a0a;"></div>
+                <div class="post-thumb-stripe" style="background:#1a1510;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(100,200,50,.1),rgba(0,0,0,.55));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🌿</div>
+                <div class="post-thumb-title">WRC Chile 2019</div>
+                <div class="post-thumb-tag">Real Rally Stage · #wrc #chile #rally</div>
+              </div>
+              <div class="post-badge">🎬 Reel</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@realiracing</div>
+              <div class="post-caption">At the WRC rally stage in Chile 2019 — real motorsport in the wild.</div>
+              <div class="post-cta">Watch Reel →</div>
+            </div>
+          </a>
+
+          <!-- Post 4: Long Beach GP 2018 Reel -->
+          <a class="post-card" href="https://www.instagram.com/realiracing/reel/DF_xNrrMqtn/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#1a0a0a;"></div>
+                <div class="post-thumb-stripe" style="background:#200f0f;"></div>
+                <div class="post-thumb-stripe" style="background:#150808;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(232,100,0,.12),rgba(0,0,0,.55));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🏙️</div>
+                <div class="post-thumb-title">Long Beach Grand Prix 2018</div>
+                <div class="post-thumb-tag">IMSA · IndyCar · #longbeach</div>
+              </div>
+              <div class="post-badge">🎬 Reel</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@realiracing</div>
+              <div class="post-caption">Long Beach Grand Prix 2018 — IMSA + IndyCar weekend, on-track action.</div>
+              <div class="post-cta">Watch Reel →</div>
+            </div>
+          </a>
+
+          <!-- Post 5: NASCAR Talladega 2023 Reel -->
+          <a class="post-card" href="https://www.instagram.com/realiracing/reel/DF_wwA4sOmD/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#1a0f00;"></div>
+                <div class="post-thumb-stripe" style="background:#251500;"></div>
+                <div class="post-thumb-stripe" style="background:#180d00;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,160,0,.12),rgba(0,0,0,.5));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🏟️</div>
+                <div class="post-thumb-title">NASCAR Talladega 2023</div>
+                <div class="post-thumb-tag">Cup Series Playoffs · #talladega</div>
+              </div>
+              <div class="post-badge">🎬 Reel</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@realiracing</div>
+              <div class="post-caption">NASCAR Cup Series Playoff race at Talladega 2023 — grandstand view, packed house.</div>
+              <div class="post-cta">Watch Reel →</div>
+            </div>
+          </a>
+
+          <!-- Post 6: iRacing Rig -->
+          <a class="post-card" href="https://www.instagram.com/realiracing/reel/DGaqyUisY2y/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#0a101a;"></div>
+                <div class="post-thumb-stripe" style="background:#0d1520;"></div>
+                <div class="post-thumb-stripe" style="background:#0a0f18;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,200,255,.12),rgba(0,0,0,.5));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🖥️</div>
+                <div class="post-thumb-title">The Sim Rig</div>
+                <div class="post-thumb-tag">#iracing #moza · Full Setup</div>
+              </div>
+              <div class="post-badge">🎬 Reel</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@realiracing</div>
+              <div class="post-caption">Full sim rig tour — iRacing setup with Moza hardware.</div>
+              <div class="post-cta">Watch Reel →</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- TAB 2: @tapephotocom IRL photography -->
+      <div class="media-panel" id="panel-photo">
+        <div class="media-grid">
+
+          <!-- Photo 1: Takuma Sato Panasonic IndyCar -->
+          <a class="post-card" href="https://www.instagram.com/tapephotocom/p/CEP1gdkhXNr/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#001040;"></div>
+                <div class="post-thumb-stripe" style="background:#000d30;"></div>
+                <div class="post-thumb-stripe" style="background:#000820;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,120,255,.15),rgba(0,0,0,.45));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🔵</div>
+                <div class="post-thumb-title">Takuma Sato #21 — Panasonic / Mi-Jack IndyCar</div>
+                <div class="post-thumb-tag">Long Beach GP 2018 · Shot by Carlos Martinez</div>
+              </div>
+              <div class="post-badge">📷 OWN PHOTO</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@tapephotocom</div>
+              <div class="post-caption">Takuma Sato — Indy 500 winner. Shot at Long Beach Grand Prix 2018. Canon 6D.</div>
+              <div class="post-cta">View on Instagram →</div>
+            </div>
+          </a>
+
+          <!-- Photo 2: Marco Andretti #98 US Concrete IndyCar -->
+          <a class="post-card" href="https://www.instagram.com/tapephotocom/p/CEPZNQNBm4v/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#300000;"></div>
+                <div class="post-thumb-stripe" style="background:#200000;"></div>
+                <div class="post-thumb-stripe" style="background:#180000;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,0,0,.15),rgba(0,0,0,.45));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🔴</div>
+                <div class="post-thumb-title">Marco Andretti #98 — US Concrete IndyCar</div>
+                <div class="post-thumb-tag">Acura Grand Prix of Long Beach 2018 · Shot by Carlos Martinez</div>
+              </div>
+              <div class="post-badge">📷 OWN PHOTO</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@tapephotocom</div>
+              <div class="post-caption">Marco Andretti, Pole Position Indy 500 — shot at the Long Beach Grand Prix 2018. #indy #indycar</div>
+              <div class="post-cta">View on Instagram →</div>
+            </div>
+          </a>
+
+          <!-- Photo 3: Long Beach / IMSA -->
+          <a class="post-card" href="https://www.instagram.com/tapephotocom/p/CB48vfkhjTM/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#101018;"></div>
+                <div class="post-thumb-stripe" style="background:#0d0d15;"></div>
+                <div class="post-thumb-stripe" style="background:#080810;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(232,255,0,.08),rgba(0,0,0,.5));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🌅</div>
+                <div class="post-thumb-title">Long Beach, California</div>
+                <div class="post-thumb-tag">Race Weekend · @tapephotocom</div>
+              </div>
+              <div class="post-badge">📷 OWN PHOTO</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@tapephotocom</div>
+              <div class="post-caption">Race weekend in Long Beach, California. Canon 6D. All photos taken and edited by Carlos.</div>
+              <div class="post-cta">View on Instagram →</div>
+            </div>
+          </a>
+
+          <!-- Photo 4: WRC Chile / Coquimbo -->
+          <a class="post-card" href="https://www.instagram.com/tapephotocom/p/B-HgzIIJ5ex/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#0a1a08;"></div>
+                <div class="post-thumb-stripe" style="background:#0d2010;"></div>
+                <div class="post-thumb-stripe" style="background:#081508;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(80,180,40,.1),rgba(0,0,0,.5));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🌄</div>
+                <div class="post-thumb-title">Coquimbo Region, Chile</div>
+                <div class="post-thumb-tag">WRC Chile · Rally Stage · Carlos Martinez</div>
+              </div>
+              <div class="post-badge">📷 OWN PHOTO</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@tapephotocom</div>
+              <div class="post-caption">WRC rally stage in Chile — Coquimbo region. Shot on location at the special stage.</div>
+              <div class="post-cta">View on Instagram →</div>
+            </div>
+          </a>
+
+          <!-- Photo 5: Coquimbo Region Rally -->
+          <a class="post-card" href="https://www.instagram.com/tapephotocom/p/B3VnTREJTKN/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#1a1a00;"></div>
+                <div class="post-thumb-stripe" style="background:#141400;"></div>
+                <div class="post-thumb-stripe" style="background:#0f0f00;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,180,0,.1),rgba(0,0,0,.5));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">🛣️</div>
+                <div class="post-thumb-title">Chile Rally Stage — On Location</div>
+                <div class="post-thumb-tag">Coquimbo · WRC · #rally</div>
+              </div>
+              <div class="post-badge">📷 OWN PHOTO</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@tapephotocom</div>
+              <div class="post-caption">On the ground at the WRC rally stage in the Coquimbo region of Chile.</div>
+              <div class="post-cta">View on Instagram →</div>
+            </div>
+          </a>
+
+          <!-- Photo 6: Laguna Seca area -->
+          <a class="post-card" href="https://www.instagram.com/tapephotocom/p/B3J6EbmJkcp/" target="_blank">
+            <div class="post-thumb">
+              <div class="post-thumb-bg">
+                <div class="post-thumb-stripe" style="background:#001520;"></div>
+                <div class="post-thumb-stripe" style="background:#001018;"></div>
+                <div class="post-thumb-stripe" style="background:#000c12;"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,200,255,.1),rgba(0,0,0,.5));"></div>
+              <div class="post-thumb-label">
+                <div class="post-thumb-emoji">💧</div>
+                <div class="post-thumb-title">Laguna Big Pond</div>
+                <div class="post-thumb-tag">Carlos Martinez Photography · DJI Phantom</div>
+              </div>
+              <div class="post-badge">📷 OWN PHOTO</div>
+            </div>
+            <div class="post-info">
+              <div class="post-account">@tapephotocom</div>
+              <div class="post-caption">Aerial photography at Laguna — DJI Phantom 4. All photos taken and edited by Carlos Martinez.</div>
+              <div class="post-cta">View on Instagram →</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- TAB 3: YouTube @realtape videos — thumbnail grid -->
+      <div class="media-panel" id="panel-youtube">
+        <div class="yt-grid">
+
+          <a class="yt-thumb" href="https://www.youtube.com/watch?v=Y1BXOa_9kI8" target="_blank">
+            <img class="yt-thumb-img" src="https://img.youtube.com/vi/Y1BXOa_9kI8/hqdefault.jpg" alt="iRacing Season 4 Week 7" loading="lazy">
+            <div class="yt-thumb-play"></div>
+            <div class="yt-thumb-duration">LIVE</div>
+            <div class="yt-thumb-info">
+              <div class="yt-thumb-title">iRacing Live — 2025 Season 4 Week 7 of 13</div>
+              <div class="yt-thumb-meta">@realtape · iRacing Ranked Races</div>
+            </div>
+          </a>
+
+          <a class="yt-thumb" href="https://www.youtube.com/watch?v=vPj0IvaQiR8" target="_blank">
+            <img class="yt-thumb-img" src="https://img.youtube.com/vi/vPj0IvaQiR8/hqdefault.jpg" alt="iRacing Season 4 Week 12" loading="lazy">
+            <div class="yt-thumb-play"></div>
+            <div class="yt-thumb-duration">LIVE</div>
+            <div class="yt-thumb-info">
+              <div class="yt-thumb-title">iRacing Live — 2025 Season 4 Week 12 · Imola & Mt Panorama</div>
+              <div class="yt-thumb-meta">@realtape · Porsche · Nordschleife</div>
+            </div>
+          </a>
+
+          <a class="yt-thumb" href="https://www.youtube.com/watch?v=AXtlTyr16_w" target="_blank">
+            <img class="yt-thumb-img" src="https://img.youtube.com/vi/AXtlTyr16_w/hqdefault.jpg" alt="Daytona Special" loading="lazy">
+            <div class="yt-thumb-play"></div>
+            <div class="yt-thumb-duration">LIVE</div>
+            <div class="yt-thumb-info">
+              <div class="yt-thumb-title">iRacing Live — 2025 Season 1 Week 9 Daytona Special</div>
+              <div class="yt-thumb-meta">@realtape · Daytona International Speedway</div>
+            </div>
+          </a>
+
+          <a class="yt-thumb" href="https://www.youtube.com/watch?v=lfrYhZjowhU" target="_blank">
+            <img class="yt-thumb-img" src="https://img.youtube.com/vi/lfrYhZjowhU/hqdefault.jpg" alt="Silverstone F3" loading="lazy">
+            <div class="yt-thumb-play"></div>
+            <div class="yt-thumb-info">
+              <div class="yt-thumb-title">iRacing Live — DOF Reality Dallara F3 Series · Silverstone</div>
+              <div class="yt-thumb-meta">@realtape · Fanatec GT3 · Porsche Cup</div>
+            </div>
+          </a>
+
+          <a class="yt-thumb" href="https://www.youtube.com/watch?v=n4OH2fK6svg" target="_blank">
+            <img class="yt-thumb-img" src="https://img.youtube.com/vi/n4OH2fK6svg/hqdefault.jpg" alt="NASCAR Talladega" loading="lazy">
+            <div class="yt-thumb-play"></div>
+            <div class="yt-thumb-info">
+              <div class="yt-thumb-title">iRacing Live — 2025 Winter NASCAR Series · Talladega</div>
+              <div class="yt-thumb-meta">@realtape · NASCAR iRacing</div>
+            </div>
+          </a>
+
+          <a class="yt-thumb" href="https://www.youtube.com/watch?v=_T_3I-ftYtI" target="_blank">
+            <img class="yt-thumb-img" src="https://img.youtube.com/vi/_T_3I-ftYtI/hqdefault.jpg" alt="Ranked Races Nürburgring" loading="lazy">
+            <div class="yt-thumb-play"></div>
+            <div class="yt-thumb-info">
+              <div class="yt-thumb-title">iRacing Live — Daily Ranked Races · Season 4 Week 3</div>
+              <div class="yt-thumb-meta">@realtape · Nürburgring · BMW M4 GT4</div>
+            </div>
+          </a>
+
+          <a class="yt-thumb" href="https://www.youtube.com/watch?v=GYcxSk4KUTs" target="_blank">
+            <img class="yt-thumb-img" src="https://img.youtube.com/vi/GYcxSk4KUTs/hqdefault.jpg" alt="NASCAR Fontana" loading="lazy">
+            <div class="yt-thumb-play"></div>
+            <div class="yt-thumb-info">
+              <div class="yt-thumb-title">iRacing Live — NASCAR C Class · Fontana · Chevrolet</div>
+              <div class="yt-thumb-meta">@realtape · NASCAR Series</div>
+            </div>
+          </a>
+
+          <a class="yt-thumb" href="https://www.youtube.com/watch?v=WAbrmK8VBqw" target="_blank">
+            <img class="yt-thumb-img" src="https://img.youtube.com/vi/WAbrmK8VBqw/hqdefault.jpg" alt="Season 4 Week 6" loading="lazy">
+            <div class="yt-thumb-play"></div>
+            <div class="yt-thumb-duration">LIVE</div>
+            <div class="yt-thumb-info">
+              <div class="yt-thumb-title">iRacing Live — 2025 Season 4 Week 6 of 13</div>
+              <div class="yt-thumb-meta">@realtape · Ranked Races</div>
+            </div>
+          </a>
+
+          <div class="yt-cta-card">
+            <div style="font-size:2.5rem;margin-bottom:14px;">▶</div>
+            <div style="font-weight:700;font-size:1.05rem;margin-bottom:6px;">975+ Videos on @realtape</div>
+            <div style="color:var(--muted);font-size:0.85rem;margin-bottom:18px;">15 years of iRacing, motorsport content, rig tours and more.</div>
+            <a href="https://www.youtube.com/channel/UChzmRHNnY_HkIuHdzLT_Ttg" target="_blank" class="btn-primary" style="font-size:0.85rem;padding:10px 22px;">Browse Full Channel →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTENT PILLARS -->
+  <section id="content">
+    <p class="section-label">Content</p>
+    <h2>What's on the channel</h2>
+    <p class="section-sub">Four core content types — voted on by the community.</p>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <span class="pillar-icon">🏁</span>
+        <h3>Race Highlights</h3>
+        <p>Best moments, close battles, and full race recaps from iRacing sessions.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">⚙️</span>
+        <h3>Setup Guides</h3>
+        <p>Car setups, tuning tips, and garage walkthroughs to help you go faster.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">🖥️</span>
+        <h3>Rig Tours</h3>
+        <p>Behind-the-scenes looks at the sim rig, hardware, and software stack.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">💡</span>
+        <h3>iRacing Tips</h3>
+        <p>Techniques, racecraft, and strategies for all skill levels on iRacing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <div class="platforms-section" id="platforms">
+    <div class="platforms-inner">
+      <p class="section-label">Follow Along</p>
+      <h2>Find @realiracing everywhere</h2>
+      <p class="section-sub" style="margin-bottom:40px;">All the platforms, one handle.</p>
+      <div class="platforms-grid">
+        <a class="platform-card" href="https://www.youtube.com/@realiracing" target="_blank">
+          <span class="platform-icon">▶️</span>
+          <div class="platform-name">YouTube</div>
+          <div class="platform-handle">@realiracing</div>
+        </a>
+        <a class="platform-card" href="https://www.instagram.com/realiracing" target="_blank">
+          <span class="platform-icon">📸</span>
+          <div class="platform-name">Instagram</div>
+          <div class="platform-handle">@realiracing</div>
+        </a>
+        <a class="platform-card" href="https://www.tiktok.com/@realiracing" target="_blank">
+          <span class="platform-icon">🎵</span>
+          <div class="platform-name">TikTok</div>
+          <div class="platform-handle">@realiracing</div>
+        </a>
+        <a class="platform-card" href="https://www.facebook.com/profile.php?id=61556874721569" target="_blank">
+          <span class="platform-icon">📘</span>
+          <div class="platform-name">Facebook</div>
+          <div class="platform-handle">Realiracing</div>
+        </a>
+        <a class="platform-card" href="https://x.com/realiracing" target="_blank">
+          <span class="platform-icon">𝕏</span>
+          <div class="platform-name">X / Twitter</div>
+          <div class="platform-handle">@realiracing</div>
+        </a>
+        <a class="platform-card" href="https://linktr.ee/realiracing" target="_blank">
+          <span class="platform-icon">🌿</span>
+          <div class="platform-name">Linktree</div>
+          <div class="platform-handle">linktr.ee/realiracing</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMUNITY POLL -->
+  <div class="poll-section" id="poll">
+    <p class="section-label">Community Poll</p>
+    <h2>You decide the content</h2>
+    <p style="color:var(--muted); margin-bottom:0;">Vote on YouTube — your pick shapes what gets made next.</p>
+
+    <div class="poll-card">
+      <p class="poll-question">🏁 What do you want to see most on this channel?</p>
+      <div class="poll-options">
+        <div class="poll-option selected" onclick="selectOption(this)">
+          <div class="poll-option-dot"></div> Race Highlights
+        </div>
+        <div class="poll-option" onclick="selectOption(this)">
+          <div class="poll-option-dot"></div> Setup Guides
+        </div>
+        <div class="poll-option" onclick="selectOption(this)">
+          <div class="poll-option-dot"></div> Rig Tours
+        </div>
+        <div class="poll-option" onclick="selectOption(this)">
+          <div class="poll-option-dot"></div> iRacing Tips
+        </div>
+      </div>
+      <p style="margin-top:20px; font-size:0.8rem; color:var(--muted)">
+        Vote on the real poll → <a href="https://www.youtube.com/@realiracing" target="_blank" style="color:var(--accent)">YouTube Community tab</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ALL LINKS -->
+  <div style="padding: 0 24px 80px;">
+    <div class="linktree-section" id="links">
+      <p class="section-label">One Hub</p>
+      <h2>All Links</h2>
+      <p>Everything in one place — no searching required.</p>
+      <div class="link-buttons">
+        <a class="link-btn" href="https://www.youtube.com/@realiracing" target="_blank">
+          <span class="link-btn-icon">▶️</span> YouTube — @realiracing
+        </a>
+        <a class="link-btn" href="https://www.instagram.com/realiracing" target="_blank">
+          <span class="link-btn-icon">📸</span> Instagram — @realiracing
+        </a>
+        <a class="link-btn" href="https://www.tiktok.com/@realiracing" target="_blank">
+          <span class="link-btn-icon">🎵</span> TikTok — @realiracing
+        </a>
+        <a class="link-btn" href="https://www.facebook.com/profile.php?id=61556874721569" target="_blank">
+          <span class="link-btn-icon">📘</span> Facebook — Realiracing
+        </a>
+        <a class="link-btn" href="https://x.com/realiracing" target="_blank">
+          <span class="link-btn-icon">𝕏</span> X / Twitter — @realiracing
+        </a>
+        <a class="link-btn" href="https://linktr.ee/realiracing" target="_blank">
+          <span class="link-btn-icon">🌿</span> Linktree — All Platforms
+        </a>
+        <a class="link-btn" href="https://www.instagram.com/tapephotocom/" target="_blank">
+          <span class="link-btn-icon">🎞️</span> Photography — @tapephotocom
+        </a>
+        <a class="link-btn" href="https://www.youtube.com/channel/UChzmRHNnY_HkIuHdzLT_Ttg" target="_blank">
+          <span class="link-btn-icon">📺</span> Original Channel — @realtape
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 RealIRacing · iRacing User: <strong>Carlos Martinez9</strong> · Built with 🏎️</p>
+    <p style="margin-top:6px;font-size:0.78rem;">
+      Photography: <a href="https://www.instagram.com/tapephotocom/" target="_blank">@tapephotocom</a> ·
+      <a href="https://linktr.ee/realiracing" target="_blank">linktr.ee/realiracing</a>
+    </p>
+  </footer>
+
+  <script>
+    /* ── SLIDESHOW ── */
+    let currentSlide = 0;
+    let slideshowTimer = null;
+    const SLIDE_DURATION = 5000;
+
+    const slides   = document.querySelectorAll('.slide');
+    const dots     = document.querySelectorAll('.progress-dot');
+
+    function goToSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+      resetTimer();
+    }
+    function nextSlide() { goToSlide(currentSlide + 1); }
+    function prevSlide() { goToSlide(currentSlide - 1); }
+
+    function resetTimer() {
+      clearInterval(slideshowTimer);
+      slideshowTimer = setInterval(nextSlide, SLIDE_DURATION);
+    }
+
+    // Pause on hover
+    const ss = document.getElementById('slideshow');
+    ss.addEventListener('mouseenter', () => clearInterval(slideshowTimer));
+    ss.addEventListener('mouseleave', resetTimer);
+
+    // Touch swipe support
+    let touchStartX = 0;
+    ss.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    ss.addEventListener('touchend',   e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) dx < 0 ? nextSlide() : prevSlide();
+    }, { passive: true });
+
+    // Keyboard support
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft')  prevSlide();
+    });
+
+    resetTimer();
+
+    /* ── PHOTO SLIDE LOADER ──────────────────────────────────────────────
+       Each slide has an Instagram CDN URL set as background-image in CSS.
+       Those URLs require auth cookies, which ARE present when you open this
+       file in a browser where you're logged into Instagram.
+
+       This script also tries a canvas-based approach as a belt-and-suspenders
+       fallback: it creates a hidden <img>, waits for it to load (cookies are
+       sent automatically), draws it to a canvas, converts to a blob URL, and
+       sets it as the slide background. This makes the photo persist even if
+       the CDN URL later expires.
+    ────────────────────────────────────────────────────────────────────── */
+    /* ── TAB SWITCHER ── */
+    function switchTab(tab) {
+      document.querySelectorAll('.media-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.media-panel').forEach(p => p.classList.remove('active'));
+      document.querySelector(`#panel-${tab}`).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    function selectOption(el) {
+      document.querySelectorAll('.poll-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
+</body>
+</html>
