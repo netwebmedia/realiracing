@@ -1,0 +1,69 @@
+name: Deploy to realiracing.com
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-realiracing
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Preflight — verify secrets
+        id: preflight
+        run: |
+          if [ -z "${{ secrets.FTP_HOST }}" ] || [ -z "${{ secrets.FTP_USER }}" ] || [ -z "${{ secrets.FTP_PASSWORD }}" ]; then
+            echo "::error::FTP secrets not configured. Add FTP_HOST, FTP_USER, FTP_PASSWORD in repo Settings → Secrets → Actions."
+            exit 1
+          fi
+          echo "Secrets present — proceeding."
+
+      - name: Stage files
+        run: |
+          mkdir -p _stage
+          # Copy everything except dev/build artifacts
+          rsync -a --exclude='.git' --exclude='.github' --exclude='node_modules' \
+            --exclude='.DS_Store' --exclude='Thumbs.db' --exclude='remotion-highlights' \
+            --exclude='slides' --exclude='extract-slides.html' \
+            . _stage/
+          echo "── Stage contents ──"
+          ls -1 _stage
+
+      - name: Deploy via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./_stage/
+          server-dir: ./
+          dangerous-clean-slate: false
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/.DS_Store
+            **/Thumbs.db
+            **/node_modules/**
+            **/remotion-highlights/**
+            **/slides/**
+            **/extract-slides.html
+
+      - name: Smoke test
+        run: |
+          code=$(curl -sSL -o /dev/null -w "%{http_code}" \
+            -A "Mozilla/5.0 (gh-actions smoke test)" --max-time 20 \
+            "https://realiracing.com/")
+          echo "Homepage: $code"
+          [ "$code" = "200" ] || { echo "Non-200 response — check the site"; exit 1; }
+          echo "realiracing.com is live"
