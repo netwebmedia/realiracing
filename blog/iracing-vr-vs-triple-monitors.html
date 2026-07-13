@@ -72,6 +72,7 @@
       <li><a href="/#media">Media</a></li>
       <li><a href="/#content">Content</a></li>
       <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
       <li><a href="/#platforms">Platforms</a></li>
       <li><a class="nav-cta" href="https://www.youtube.com/@realiracing" target="_blank">Subscribe</a></li>
     </ul>
@@ -162,13 +163,9 @@
 
       <p>VR needs an extra piece: a mirror or spectator view rendered specifically for your capture software, separate from what's actually being displayed in the headset. That's an extra render target for your GPU to produce alongside the stereo VR image itself, plus encode overhead on top of that — meaning your GPU headroom needs to cover VR rendering, mirror rendering, and streaming encode simultaneously. It's absolutely done successfully by VR sim racing streamers, but it's an extra setup step and extra GPU load that a flat-screen streamer never has to think about.</p>
 
-      <div class="gear-box">
-        <span class="box-label">If you're going VR or going triples</span>
-        <ul>
-          <li><a href="https://www.meta.com/quest/" target="_blank" rel="noopener sponsored">Meta Quest</a> — a widely used standalone-capable PCVR option if you're exploring VR for sim racing</li>
-          <li>For triples: any three <strong>matched</strong> 27–32" 1440p high-refresh panels from a major display brand work well — matching panel size, resolution, and refresh rate across all three matters more than any single brand choice</li>
-        </ul>
-      </div>
+      <div id="rir-gear"></div>
+
+      <p style="font-size:0.85rem;color:#888;margin-top:-14px;">For triples: buy three <strong>matched</strong> 27–32" 1440p high-refresh panels — matching size, resolution, and refresh rate across all three matters more than any single brand choice.</p>
 
       <div class="tip-box">
         <span class="box-label">The setting that matters more than the hardware</span>
@@ -218,6 +215,9 @@
       <a href="https://linktr.ee/realiracing" target="_blank">linktr.ee/realiracing</a>
     </p>
   </footer>
+
+  <script src="/js/affiliates.js"></script>
+  <script>renderGearBox('rir-gear', ['meta-quest-3','monitor-1440p-120','gpu-rtx-5060-ti'], 'If you’re going VR — or staying flat');</script>
 
 </body>
 </html>

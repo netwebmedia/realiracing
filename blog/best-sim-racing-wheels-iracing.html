@@ -72,6 +72,7 @@
       <li><a href="/#media">Media</a></li>
       <li><a href="/#content">Content</a></li>
       <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
       <li><a href="/#platforms">Platforms</a></li>
       <li><a class="nav-cta" href="https://www.youtube.com/@realiracing" target="_blank">Subscribe</a></li>
     </ul>
@@ -157,20 +158,7 @@
 
       <p>Buying direct drive before you've hit that wall doesn't hurt you, but it also doesn't buy you anything you'll notice yet. Spend the money when the budget wheel is actually the thing holding you back, not because a review told you to.</p>
 
-      <div class="gear-box">
-        <span class="box-label">The gear ladder, tier by tier</span>
-        <ul>
-          <li><a href="https://logitechg.com" target="_blank" rel="noopener sponsored">Logitech G923</a> — belt-driven, the easiest on-ramp into iRacing</li>
-          <li><a href="https://thrustmaster.com" target="_blank" rel="noopener sponsored">Thrustmaster T300 RS</a> — gear-driven, long-standing budget pick</li>
-          <li><a href="https://mozaracing.com/collections/wheel-bases" target="_blank" rel="noopener sponsored">MOZA R3 / R5 bundle</a> — entry direct drive, the first real fidelity jump</li>
-          <li><a href="https://fanatec.com" target="_blank" rel="noopener sponsored">Fanatec CSL DD</a> — entry direct drive with Fanatec's ecosystem</li>
-          <li><a href="https://mozaracing.com/collections/wheel-bases" target="_blank" rel="noopener sponsored">MOZA R9</a> — the sweet spot, and what I race on</li>
-          <li><a href="https://mozaracing.com/collections/steering-wheels" target="_blank" rel="noopener sponsored">MOZA steering wheels</a> — rim options for R-series bases</li>
-          <li><a href="https://mozaracing.com/collections/pedals" target="_blank" rel="noopener sponsored">MOZA pedals</a> — load cell pedal sets on the same Pit House ecosystem</li>
-          <li><a href="https://mozaracing.com/collections/wheel-bases" target="_blank" rel="noopener sponsored">MOZA R12 / R16</a> — high-end direct drive, maximum headroom</li>
-          <li><a href="https://fanatec.com" target="_blank" rel="noopener sponsored">Fanatec ClubSport DD+</a> — high-end, deep licensed-rim catalog</li>
-        </ul>
-      </div>
+      <div id="rir-gear"></div>
 
       <h2>Common mistakes buyers make</h2>
 
@@ -229,6 +217,9 @@
       <a href="https://linktr.ee/realiracing" target="_blank">linktr.ee/realiracing</a>
     </p>
   </footer>
+
+  <script src="/js/affiliates.js"></script>
+  <script>renderGearBox('rir-gear', ['logitech-g923','thrustmaster-t300','moza-r5','fanatec-csl-dd','moza-r9','moza-cs-v2','moza-crp2','moza-r12','fanatec-clubsport-dd'], 'The gear ladder, tier by tier');</script>
 
 </body>
 </html>

@@ -72,6 +72,7 @@
       <li><a href="/#media">Media</a></li>
       <li><a href="/#content">Content</a></li>
       <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
       <li><a href="/#platforms">Platforms</a></li>
       <li><a class="nav-cta" href="https://www.youtube.com/@realiracing" target="_blank">Subscribe</a></li>
     </ul>
@@ -158,14 +159,7 @@
         <li><strong>The wheel doesn't fight you on straights</strong> — that's the speed-dependent damping doing its job above 80 km/h.</li>
       </ul>
 
-      <div class="gear-box">
-        <span class="box-label">The gear in this guide</span>
-        <ul>
-          <li><a href="https://mozaracing.com/collections/wheel-bases" target="_blank" rel="noopener sponsored">MOZA R9 V3 Direct Drive Wheelbase</a> — 9 N·m, the sweet spot of price vs. torque</li>
-          <li><a href="https://mozaracing.com/collections/steering-wheels" target="_blank" rel="noopener sponsored">MOZA CS V2 Steering Wheel</a> — the round rim this profile's inertia value (2800) is matched to</li>
-          <li><a href="https://mozaracing.com/collections/pedals" target="_blank" rel="noopener sponsored">MOZA CRP2 Load Cell Pedals</a> — pairs on the same Pit House software</li>
-        </ul>
-      </div>
+      <div id="rir-gear"></div>
 
       <h2>Common mistakes with the R9 in iRacing</h2>
 
@@ -224,6 +218,9 @@
       <a href="https://linktr.ee/realiracing" target="_blank">linktr.ee/realiracing</a>
     </p>
   </footer>
+
+  <script src="/js/affiliates.js"></script>
+  <script>renderGearBox('rir-gear', ['moza-r9','moza-cs-v2','moza-crp2'], 'The gear in this guide');</script>
 
 </body>
 </html>

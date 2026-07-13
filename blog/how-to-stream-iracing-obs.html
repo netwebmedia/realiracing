@@ -72,6 +72,7 @@
       <li><a href="/#media">Media</a></li>
       <li><a href="/#content">Content</a></li>
       <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
       <li><a href="/#platforms">Platforms</a></li>
       <li><a class="nav-cta" href="https://www.youtube.com/@realiracing" target="_blank">Subscribe</a></li>
     </ul>
@@ -177,6 +178,8 @@
         <p>The third cause in my log — the bitrate collapsing from 4500 to 2500 kbps — traced back to routing the stream through a VPN. VPNs add a hop, and that hop adds jitter that a real-time video stream can't absorb the way a web page load can. Stream directly, on wired ethernet, with the VPN off. Verify with OBS's <strong>Stats dock</strong> (View → Docks → Stats) — skipped frames should sit at roughly 0% for the entire session once everything above is dialed in.</p>
       </div>
 
+      <div id="rir-gear"></div>
+
       <div class="cta-box">
         <h3>Watch the fixed stream in action</h3>
         <p>This exact OBS config is what's running behind every live iRacing stream I put out now — clean encode, no dropped segments.</p>
@@ -220,6 +223,9 @@
       <a href="https://linktr.ee/realiracing" target="_blank">linktr.ee/realiracing</a>
     </p>
   </footer>
+
+  <script src="/js/affiliates.js"></script>
+  <script>renderGearBox('rir-gear', ['gpu-rtx-5060-ti','cpu-ryzen-7-5700','monitor-1440p-120','whoop'], 'The hardware behind this stream');</script>
 
 </body>
 </html>

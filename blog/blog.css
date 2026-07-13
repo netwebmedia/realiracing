@@ -224,6 +224,12 @@ nav {
 .tip-box p:last-child, .gear-box p:last-child { margin-bottom: 0; }
 .gear-box ul { margin: 8px 0 0 20px; }
 .gear-box li { margin-bottom: 6px; font-size: 0.95rem; }
+.gear-box .aff-note {
+  font-size: 0.72rem; color: var(--muted);
+  margin: 14px 0 0 !important;
+  padding-top: 10px;
+  border-top: 1px solid rgba(232,255,0,.15);
+}
 
 .cta-box {
   background: linear-gradient(135deg, rgba(232,255,0,.08), rgba(0,200,255,.08));
@@ -282,6 +288,47 @@ footer {
   color: var(--muted); font-size: 0.85rem;
 }
 footer a { color: var(--accent); text-decoration: none; }
+
+/* ── MY RIG PAGE (/gear.html) ────────── */
+.rig-section { margin: 44px 0 0; }
+.rig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+  margin: 20px 0 8px;
+}
+.rig-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: border-color .2s, transform .2s;
+}
+.rig-item:hover { border-color: var(--accent); transform: translateY(-3px); }
+.rig-photo {
+  aspect-ratio: 16/9;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 6px;
+  background: var(--dark);
+  border-bottom: 1px dashed var(--border);
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase; letter-spacing: 1.5px;
+}
+.rig-photo .cam { font-size: 1.8rem; opacity: .5; }
+.rig-item-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.rig-item-body h3 { margin: 0 !important; font-size: 1.05rem !important; }
+.rig-item-body p { font-size: 0.88rem; color: var(--muted); margin-bottom: 0 !important; line-height: 1.55; }
+.rig-item-body .rig-buy {
+  margin-top: auto; padding-top: 10px;
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: none !important;
+}
+.rig-item-body .rig-buy:hover { text-decoration: underline; }
 
 /* Affiliate disclosure */
 .disclosure {
