@@ -98,6 +98,21 @@
         amazonUrl: 'https://www.amazon.com/s?k=Meta+Quest+3',
         note: 'the most common way into PCVR sim racing'
       },
+      'thrustmaster-t-lcm': {
+        name: 'Thrustmaster T-LCM Pedals',
+        amazonUrl: 'https://www.amazon.com/s?k=Thrustmaster+T-LCM+pedals',
+        note: 'cheapest genuine load cell, works with any base over USB'
+      },
+      'moza-sr-p': {
+        name: 'MOZA SR-P Load Cell Pedals',
+        amazonUrl: 'https://www.amazon.com/s?k=MOZA+SR-P+load+cell+pedals',
+        note: 'budget load cell on the same Pit House ecosystem as my R9'
+      },
+      'fanatec-csl-pedals-lc': {
+        name: 'Fanatec CSL Pedals + Load Cell Kit',
+        amazonUrl: 'https://www.amazon.com/s?k=Fanatec+CSL+pedals+load+cell+kit',
+        note: 'modular upgrade path inside the Fanatec ecosystem'
+      },
       'cockpit': {
         name: 'Sim Racing Cockpit / Wheel Stand',
         amazonUrl: 'https://www.amazon.com/s?k=sim+racing+cockpit+stand',
