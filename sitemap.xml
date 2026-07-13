@@ -8,9 +8,15 @@
   </url>
   <url>
     <loc>https://realiracing.com/blog/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://realiracing.com/gear.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://realiracing.com/blog/moza-r9-iracing-settings.html</loc>
@@ -45,6 +51,30 @@
   <url>
     <loc>https://realiracing.com/blog/bmw-m4-gt4-iracing-guide.html</loc>
     <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://realiracing.com/blog/complete-iracing-rig-under-1000.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://realiracing.com/blog/best-budget-sim-racing-wheel-2026.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://realiracing.com/blog/best-sim-racing-pedals-iracing-2026.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://realiracing.com/blog/moza-r9-vs-r12-which-to-buy.html</loc>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
