@@ -21,7 +21,7 @@
   'use strict';
 
   var RIR_AFF = {
-    amazonTag: 'PENDING-20',
+    amazonTag: 'realiracing-20',
 
     products: {
 
