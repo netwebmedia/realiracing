@@ -1,0 +1,69 @@
+{
+  "slug": "reduce-vr-motion-sickness-sim-racing",
+  "tag": "Hardware · VR",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "How to Reduce Motion Sickness in VR Sim Racing — What Actually Helped Me",
+  "description": "Practical fixes for VR motion sickness in iRacing: frame rate, FOV, session length and the settings that matter more than \"getting used to it.\"",
+  "published": "2026-07-19",
+  "dateLabel": "July 19, 2026",
+  "gearKeys": [
+    "meta-quest-3",
+    "moza-r9"
+  ],
+  "sections": [
+    {
+      "p": "VR motion sickness nearly made me give up on PCVR sim racing entirely before I actually fixed the settings that were causing it. It wasn't \"getting used to it\" that solved it for me — it was three specific changes, and I wish someone had just told me what they were instead of \"give it time.\""
+    },
+    {
+      "h2": "Frame rate matters more than anything else"
+    },
+    {
+      "p": "A stuttering or inconsistent frame rate in VR is, in my experience, the single biggest motion sickness trigger — more than FOV, more than session length. Your inner ear and your eyes disagreeing about motion is the core problem, and a choppy frame rate makes that disagreement constant and unpredictable. Prioritize a stable, consistent frame rate over higher visual settings every time you're tuning VR graphics."
+    },
+    {
+      "h2": "Settings that actually helped"
+    },
+    {
+      "list": [
+        "Lock or cap frame rate below your headset's max refresh if you can't hold it consistently — a stable lower number beats an unstable higher one",
+        "Reduce or disable extra post-processing effects (motion blur especially) that add visual smoothing your inner ear doesn't experience",
+        "Keep session length short at first — 15-20 minutes — and extend gradually rather than trying a full race distance on day one"
+      ]
+    },
+    {
+      "h2": "The FOV and comfort settings people skip"
+    },
+    {
+      "p": "A slightly reduced field of view during VR races, using whatever comfort vignette option your headset or the sim offers, cuts down peripheral motion your eyes register without your body actually moving — that mismatch is a big part of the sickness trigger. It's not a permanent crutch; most people can widen it back out gradually as they acclimate."
+    },
+    {
+      "tip": "Stable frame rate first, shorter sessions second, comfort vignette third. In that order. I tried the opposite order for months and made almost no progress; changing the order fixed it within two weeks.",
+      "tipLabel": "What actually worked for me"
+    },
+    {
+      "h2": "When to just accept VR isn't for a session"
+    },
+    {
+      "p": "Some days, for reasons I still don't fully understand, VR just doesn't agree with me — and I've learned to just switch to my <a href=\"iracing-vr-vs-triple-monitors.html\">monitor setup</a> rather than push through it. There's no prize for forcing a VR session that's making you feel worse; the sim racing is still there tomorrow."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What causes motion sickness in VR sim racing?",
+      "a": "Mainly a mismatch between what your eyes see and what your inner ear feels — your body isn't actually accelerating or braking the way the visuals suggest. An unstable or choppy frame rate makes that mismatch worse and more unpredictable, which is why frame rate is usually the biggest single trigger."
+    },
+    {
+      "q": "Does lowering VR frame rate help with motion sickness?",
+      "a": "A stable lower frame rate is usually better than an unstable higher one. Consistency matters more than the raw number — locking or capping your frame rate to something your system can hold steadily reduces the visual stutter that triggers sickness."
+    },
+    {
+      "q": "Do comfort vignette settings actually help VR motion sickness?",
+      "a": "Yes, for most people. Reducing peripheral vision slightly during motion cuts down on visual cues your body isn't physically experiencing, which lessens the sensory mismatch. Most racers can widen the vignette back out gradually as they acclimate."
+    },
+    {
+      "q": "How long should my first VR sim racing sessions be?",
+      "a": "Start short — 15 to 20 minutes — rather than a full race distance. Extending session length gradually as your tolerance builds works far better than pushing through a long first session and getting discouraged."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "fanatec-vs-moza-ecosystem-2026",
+  "tag": "Buyer's Guide · Hardware",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "Fanatec vs MOZA in 2026 — Which Ecosystem to Commit To, Not Just Which Base to Buy",
+  "description": "Beyond the entry base spec sheet: comparing Fanatec's and MOZA's full rim, pedal and software ecosystems for long-term sim racing commitment.",
+  "published": "2026-07-20",
+  "dateLabel": "July 20, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "fanatec-csl-dd",
+    "fanatec-clubsport-dd"
+  ],
+  "sections": [
+    {
+      "p": "I already compared the MOZA R9 against the Fanatec CSL DD base-to-base in <a href=\"moza-r9-vs-fanatec-csl-dd.html\">an earlier post</a>. This one is different on purpose — it's about which full ecosystem you'd want to be inside three years from now, not which entry base wins a spec sheet."
+    },
+    {
+      "h2": "Rim catalog depth is the real differentiator"
+    },
+    {
+      "p": "Fanatec's rim catalog, built over years of licensed partnerships, is genuinely deeper than most competitors' — official replica wheels from real race cars, in a range that spans budget to premium. MOZA's rim lineup is smaller but growing, with the <a href=\"https://www.amazon.com/s?k=MOZA+CS+V2+steering+wheel\" data-aff=\"moza-cs-v2\" target=\"_blank\" rel=\"sponsored noopener\">CS V2</a> I actually race on covering the general-purpose GT/road use case well. If owning a specific licensed replica wheel matters to you, that's a real point in Fanatec's favor that a base-only comparison misses entirely."
+    },
+    {
+      "h2": "Pedal ecosystems, side by side"
+    },
+    {
+      "list": [
+        "Fanatec's modular pedal system lets you add load cell to an existing base later — a genuinely flexible upgrade path",
+        "MOZA's pedal range, including the load-cell CRP2 I run, integrates directly into the same Pit House software as the wheelbase",
+        "Neither ecosystem's pedals cross over to the other brand's base without adapters, so this decision compounds with the wheelbase choice"
+      ]
+    },
+    {
+      "h2": "Software: Pit House vs Fanatec's ecosystem"
+    },
+    {
+      "p": "Pit House, MOZA's software, has matured into a genuinely clean single control point for base, rim and pedals together — I documented my exact profile in <a href=\"moza-r9-iracing-settings.html\">my R9 settings guide</a>. Fanatec's software ecosystem is more fragmented across product generations but benefits from a longer track record and a larger existing user base sharing configs and troubleshooting."
+    },
+    {
+      "tip": "Don't ask \"which base is better.\" Ask \"which rim catalog and pedal lineup do I actually want to be shopping from for the next several years.\" That's the question that actually predicts long-term satisfaction, not a torque number.",
+      "tipLabel": "The real question to ask"
+    },
+    {
+      "h2": "Where I've landed, and why"
+    },
+    {
+      "p": "I'm inside the MOZA ecosystem by choice — Pit House's integration and the CRP2/CS V2 combo cover everything I race, and the lineup's headroom (up through the R12) means I'm not boxed in if my needs change. That's not a knock on Fanatec's deeper rim catalog — if licensed replica wheels are a priority for you, that catalog depth is a legitimate reason to choose differently than I did."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Which ecosystem has a better rim catalog, Fanatec or MOZA?",
+      "a": "Fanatec's licensed replica wheel catalog is deeper, built over years of manufacturer partnerships. MOZA's rim lineup is smaller but well-integrated with its Pit House software, covering general-purpose GT and road racing needs well."
+    },
+    {
+      "q": "Can I use Fanatec pedals with a MOZA wheelbase, or vice versa?",
+      "a": "Generally no, without adapters — each ecosystem's pedal connectors and quick-release standards are largely brand-specific, so the pedal decision compounds with whichever wheelbase ecosystem you commit to."
+    },
+    {
+      "q": "Is Pit House or Fanatec's software better?",
+      "a": "Pit House has matured into a clean, unified control point across MOZA's base, rim and pedals. Fanatec's software ecosystem is more fragmented across product generations but benefits from a longer track record and larger community of shared configs."
+    },
+    {
+      "q": "How should I decide between the Fanatec and MOZA ecosystems?",
+      "a": "Think past the entry base spec sheet — consider which rim catalog and pedal lineup you'd want to be shopping from for years, not just which base wins a torque comparison today. That question predicts long-term satisfaction better than any single spec."
+    }
+  ]
+}

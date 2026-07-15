@@ -1,0 +1,72 @@
+{
+  "slug": "iracing-force-feedback-explained",
+  "tag": "Setup Guides · FFB",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "iRacing Force Feedback Explained — What Every Slider Actually Does",
+  "description": "How iRacing's force feedback signal really works, which Pit House and in-sim sliders matter, and why more strength isn't always more detail.",
+  "published": "2026-07-18",
+  "dateLabel": "July 18, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "moza-r12"
+  ],
+  "sections": [
+    {
+      "p": "Force feedback is the part of sim racing most people tune by feel and folklore rather than understanding, and I did the same thing for longer than I'd like to admit before I actually learned what each slider does on my own <a href=\"moza-r9-iracing-settings.html\">MOZA R9 setup</a>. This is the plain-language version of how iRacing's FFB signal actually works."
+    },
+    {
+      "h2": "The signal iRacing actually sends"
+    },
+    {
+      "p": "iRacing sends one raw torque signal straight from its physics engine to your wheelbase — there's no canned effect layered on top, no scripted rumble for a kerb. Every force you feel is a direct, real-time representation of what the simulated tires and suspension are doing. That's why direct drive bases feel so different from belt-driven ones: they can reproduce that raw signal far more faithfully, with none of the mechanical filtering a belt or gear introduces."
+    },
+    {
+      "h2": "Where the sliders actually live"
+    },
+    {
+      "p": "Your base's own software (Pit House, in my case) controls the hardware-level settings — overall strength, and a handful of shaping filters. iRacing's in-sim FFB menu controls a separate, smaller set of parameters, mainly overall strength scaling and a damping value. The confusion most people run into is tuning both independently without understanding that one scales the other — you can end up with clipping from the hardware side while the in-sim slider looks conservative, or vice versa."
+    },
+    {
+      "list": [
+        "Set your base's hardware strength first, with headroom to spare, before touching iRacing's in-sim slider",
+        "Use iRacing's in-sim strength as the fine-tune layer on top of that hardware baseline, not as your primary strength control",
+        "Watch for clipping specifically under heavy braking and big kerb strikes — that's where a demand spike is most likely to exceed your ceiling"
+      ]
+    },
+    {
+      "h2": "Why more strength isn't more detail"
+    },
+    {
+      "p": "This is the part that trips up new direct drive owners the most. Cranking strength doesn't add detail — it just makes existing detail feel more intense, and past a certain point it starts clipping the signal on spikes, which actually destroys detail rather than adding it. Most experienced sim racers, myself included, run well below their base's ceiling for exactly this reason: headroom preserves the subtle stuff — kerb texture, weight transfer — that clipping erases."
+    },
+    {
+      "tip": "You're not tuning for \"as strong as possible.\" You're tuning for the highest strength that still leaves margin for your hardest braking zone and biggest kerb strike without flattening against the ceiling.",
+      "tipLabel": "The honest tuning goal"
+    },
+    {
+      "h2": "A simple way to check your own setup"
+    },
+    {
+      "p": "Find your hardest braking zone on a track you know well, and pay attention specifically to whether the wheel goes quiet or dead right at peak brake pressure. If it does, you're clipping — back off hardware strength a notch and retest. That single check tells you more about your actual FFB setup than any generic slider chart ever will."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How does force feedback actually work in iRacing?",
+      "a": "iRacing sends a single raw torque signal directly from its physics engine to your wheelbase, with no canned or scripted effects layered on top. Your base's job is to reproduce that signal as faithfully as possible, which is why direct drive bases — with no mechanical filtering — feel notably different from belt-driven wheels."
+    },
+    {
+      "q": "Should I set FFB strength in my base's software or in iRacing?",
+      "a": "Set your base's hardware-level strength first, with margin to spare, then use iRacing's in-sim strength slider as a smaller fine-tune layer on top. Treating both as independent primary controls is the most common source of confusion."
+    },
+    {
+      "q": "Why does higher force feedback strength sometimes feel worse?",
+      "a": "Because past a certain point you're clipping — the signal is exceeding your base's ceiling and flattening out on spikes, which destroys detail rather than adding it. Running with headroom preserves subtle forces like kerb texture and weight transfer better than maxing out strength does."
+    },
+    {
+      "q": "How can I tell if my force feedback is clipping?",
+      "a": "Find your hardest braking zone on a familiar track and watch for the wheel going quiet or dead right at peak brake pressure. That's a clear clipping signal — back off your base's hardware strength a notch and retest."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "sim-racing-wheel-settings-for-oval",
+  "tag": "Setup Guides · FFB",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "Sim Racing Wheel Settings for Oval Racing — What Changes from Road Course",
+  "description": "Why oval racing on iRacing needs a different force feedback profile than road courses, and the specific settings I change before an oval stint.",
+  "published": "2026-07-20",
+  "dateLabel": "July 20, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "moza-r12"
+  ],
+  "sections": [
+    {
+      "p": "Oval racing on iRacing exposed a weakness in my force feedback setup that road racing never had — a profile tuned for GT4 kerb strikes and trail braking felt flat and uninformative through a long, sustained oval corner. This is what I actually change before an oval stint."
+    },
+    {
+      "h2": "Why oval loads the wheel differently"
+    },
+    {
+      "p": "Road racing is a rhythm of load and unload — braking, turning, unloading through apex, reloading on exit. Oval racing, especially on a banked superspeedway or intermediate, is sustained, near-constant cornering load for much longer stretches. A force feedback profile tuned for road racing's punchy, transient forces can feel muted or uninformative under oval's steady, prolonged load, because the detail you're used to noticing — sharp transients — isn't the main signal oval racing sends."
+    },
+    {
+      "h2": "The specific changes I make"
+    },
+    {
+      "list": [
+        "Slightly reduce overall damping compared to my road setup — oval's sustained loads don't need the same smoothing road's sharp transients benefit from",
+        "Pay closer attention to headroom specifically through sustained banking load, not just peak braking or kerb spikes, since that's where oval clips differently",
+        "Increase attentiveness to subtle understeer or oversteer creep during long green-flag runs, since oval's grip changes are gradual rather than sudden"
+      ]
+    },
+    {
+      "h2": "Torque headroom means something different on oval"
+    },
+    {
+      "p": "This is the discipline where extra wheelbase headroom genuinely earns its keep, more than road or GT racing does. Sustained heavy cornering load for long stints is exactly the scenario I flagged in <a href=\"moza-r9-vs-r12-which-to-buy.html\">my R9 vs R12 comparison</a> as the strongest argument for the bigger base — oval racers leaning on 8+ N·m for extended periods benefit from the extra ceiling in a way GT racing on the same base rarely does."
+    },
+    {
+      "tip": "Oval deserves its own saved FFB profile, not a slightly-adjusted road setup. The sustained-load character is different enough that a dedicated profile pays off within a single race weekend.",
+      "tipLabel": "Don't just copy your road profile"
+    },
+    {
+      "h2": "What stayed the same"
+    },
+    {
+      "p": "My base hardware strength setting barely changed between road and oval — the adjustments are mostly in damping and how I'm reading the feedback, not a wholesale re-tune. If your road setup already avoids clipping with margin, you're not starting from scratch for oval; you're refining, not rebuilding."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does force feedback need different settings for oval racing?",
+      "a": "Yes, to some degree. Oval's sustained cornering loads feel different from road racing's punchy, transient forces, so settings like damping often benefit from small adjustments — though your base hardware strength typically doesn't need a full re-tune."
+    },
+    {
+      "q": "Why does my FFB feel flat on oval compared to road courses?",
+      "a": "A profile tuned for road racing's sharp transients — braking, kerbs — can feel muted under oval's sustained, steady cornering load, because that's a different kind of signal than what the profile was optimized to convey."
+    },
+    {
+      "q": "Do I need more wheelbase torque headroom for oval racing?",
+      "a": "Oval is one of the disciplines where extra torque headroom matters most, since sustained heavy cornering load for long stints eats into headroom differently than road racing's load-unload rhythm does."
+    },
+    {
+      "q": "Should I save a separate FFB profile for oval racing?",
+      "a": "Yes — a dedicated oval profile, adjusted mainly in damping and headroom margin rather than overall strength, tends to pay off quickly once you notice the sustained-load character is different from road racing."
+    }
+  ]
+}

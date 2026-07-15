@@ -1,0 +1,75 @@
+{
+  "slug": "how-to-improve-iracing-irating-fast",
+  "tag": "iRacing Tips · iRating",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "How to Improve Your iRacing iRating Fast — Without Wrecking Your Safety Rating",
+  "description": "A practical framework for gaining iRating faster on iRacing: which series to run, when to protect points, and why consistency beats raw pace early on.",
+  "published": "2026-07-15",
+  "dateLabel": "July 15, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "sections": [
+    {
+      "p": "I spent my first real stretch on iRacing chasing iRating the wrong way — qualifying too aggressively, racing series that didn't fit my skill level, and treating every incident point like it didn't matter. iRating did go up eventually, just slower than it needed to, on a MOZA R9 rig that was never the limiting factor. The car and the base were never the problem; the strategy was."
+    },
+    {
+      "p": "This isn't a \"10 tips\" list. It's the handful of decisions that actually moved my number, in the order I'd make them again."
+    },
+    {
+      "h2": "Consistency beats raw pace, especially early"
+    },
+    {
+      "p": "iRacing's rating system rewards finishing position relative to the field's strength, and finishing position rewards not making mistakes far more than it rewards being the fastest car on track. A driver who qualifies mid-pack and finishes clean gains more, race over race, than one who qualifies on pole and finishes in the wall half the time. I had to unlearn the instinct to race like every lap was a hot lap."
+    },
+    {
+      "p": "Incidents cost you twice — once through the Safety Rating penalty, and again because an incident almost always costs positions too. Treating incident avoidance as part of your racecraft, not a separate box to check, is the single highest-leverage habit change."
+    },
+    {
+      "h2": "Pick series and splits deliberately"
+    },
+    {
+      "list": [
+        "Race a series that matches your actual pace, not your ego — a strong finish two splits down usually gains more than a mid-pack finish in the top split",
+        "Stay in a car long enough to actually learn it — hopping between cars every week resets your setup knowledge and your racecraft both",
+        "Watch the Strength of Field before you commit — a stacked field with a bad qualifying lap from you is a worse night than a smaller field where you can actually race"
+      ]
+    },
+    {
+      "h2": "Qualifying is a risk decision, not just a lap time"
+    },
+    {
+      "p": "A scrappy pole lap that puts you in traffic you can't handle is often worse for your rating than a clean lap two rows back in a cleaner starting position. I now treat qualifying as picking my starting risk level as much as chasing lap time — especially in series where the first two laps are where most incidents happen."
+    },
+    {
+      "tip": "I stopped treating every race as a must-win and started treating every race as a must-finish-clean. My pace didn't change much; my average finishing position and incident count did, and that's what iRating actually rewards.",
+      "tipLabel": "What actually changed my number"
+    },
+    {
+      "h2": "Practice with a purpose"
+    },
+    {
+      "p": "Ten minutes of focused practice on braking points and traffic scenarios beats an hour of casual laps. I use short, deliberate sessions — a handful of qualifying-style laps, then a handful of laps specifically practicing being passed cleanly, since that's the scenario that costs most drivers the most points. None of this depends on hardware; I ran this exact approach before I ever touched a direct drive base, and it mattered more than the <a href=\"moza-r9-iracing-settings.html\">FFB settings I run today</a>."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the fastest way to improve iRating on iRacing?",
+      "a": "Prioritize clean, consistent finishes over aggressive pace — the rating system rewards finishing position relative to field strength far more than raw speed, and incidents cost you both Safety Rating and track position at the same time."
+    },
+    {
+      "q": "Does a better wheel or pedals improve iRating faster?",
+      "a": "Not directly. Hardware affects your ceiling on lap time and consistency, but the biggest early iRating gains come from racecraft decisions — series choice, qualifying risk, and incident avoidance — that cost nothing to change."
+    },
+    {
+      "q": "Should I race the top split or a lower split to gain iRating?",
+      "a": "Race the split that matches your actual current pace. A strong, clean finish a split or two down usually gains more rating than scraping a mediocre finish in the strongest field available."
+    },
+    {
+      "q": "How much does practice actually help iRating gains?",
+      "a": "A lot, if it's focused. Short, deliberate practice on braking points and being passed cleanly in traffic tends to move your rating more than long, unstructured practice sessions, because incidents in races usually come from the same few scenarios."
+    }
+  ]
+}

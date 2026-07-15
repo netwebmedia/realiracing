@@ -1,0 +1,70 @@
+{
+  "slug": "sim-racing-budget-desk-setup",
+  "tag": "Buyer's Guide · Rig Build",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "Sim Racing on a Budget Desk Setup — What Actually Works Without a Dedicated Rig",
+  "description": "How to run a genuinely stable sim racing setup on a normal desk, what wobbles first, and when it's time to graduate to a stand or cockpit.",
+  "published": "2026-07-17",
+  "dateLabel": "July 17, 2026",
+  "gearKeys": [
+    "logitech-g923",
+    "cockpit",
+    "monitor-1440p-120"
+  ],
+  "sections": [
+    {
+      "p": "Not everyone racing iRacing has room for a dedicated cockpit, and that's fine — I ran a genuinely competitive setup on a normal desk for longer than I ran any dedicated rig. This is what actually works when a desk is your only option, and where a desk setup hits its real limit."
+    },
+    {
+      "h2": "What a desk setup can handle"
+    },
+    {
+      "p": "A clamped belt-drive wheel like a Logitech G923 on a solid, heavy desk is a legitimately fine setup — the desk's own mass resists the wheel's forces well enough at that torque level. The failure mode isn't the wheel, it's the desk: thin particleboard desks, glass desks, and anything on wheels or with a wobbly leg will undersell any wheel clamped to it, belt-drive or otherwise."
+    },
+    {
+      "h2": "The things that actually go wrong"
+    },
+    {
+      "list": [
+        "The clamp loosening mid-session as the desk flexes under braking — check it every session until you know your desk's behavior",
+        "Cable management becoming a mess fast, since a desk setup doesn't have dedicated cable routing like a cockpit does",
+        "Pedal placement fighting with your desk's leg or support bar — measure before you buy anything"
+      ]
+    },
+    {
+      "h2": "When a desk setup stops being enough"
+    },
+    {
+      "p": "The signal isn't a fixed torque number — it's flex you can feel. If you notice the desk moving under hard braking or a big kerb strike, that's the base telling you it needs a rigid platform, not more torque. I made this exact jump once I moved past entry gear; I cover the tiers and the honest trade-offs in <a href=\"best-sim-racing-cockpit-2026.html\">my cockpit buyer's guide</a>."
+    },
+    {
+      "tip": "A basic wheel stand is a genuinely good middle step between a desk clamp and a full cockpit — it's not permanent furniture, it packs away, and it solves most of the flex problem a soft desk introduces.",
+      "tipLabel": "The cheap fix that buys you time"
+    },
+    {
+      "h2": "My honest recommendation"
+    },
+    {
+      "p": "If your desk is heavy, solid, and doesn't wobble when you lean on it, a clamped belt-drive or even an entry direct drive setup will serve you well longer than most guides admit. Don't let \"no dedicated rig\" stop you from starting — start on the desk you have, and let the actual feel of flex under braking tell you when it's time to upgrade the platform, not the wheel."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I run a good sim racing setup on a regular desk?",
+      "a": "Yes, if the desk is solid and heavy. A clamped wheel on a genuinely sturdy desk handles entry-to-mid torque levels fine — the failure point is desk flex, not the wheel itself."
+    },
+    {
+      "q": "How do I know if my desk is too flimsy for sim racing?",
+      "a": "If you feel the desk move or the clamp loosen under hard braking or a kerb strike, that's your sign. A rigid desk shouldn't visibly flex under normal race forces."
+    },
+    {
+      "q": "What's a cheap alternative to a full cockpit for a desk setup?",
+      "a": "A basic wheel stand is the natural middle step — it's not a permanent piece of furniture, it packs away when not in use, and it solves most of the rigidity problems a soft or narrow desk introduces."
+    },
+    {
+      "q": "Do I need a heavier wheelbase before upgrading my desk setup?",
+      "a": "No — upgrade the platform based on flex you actually feel, not a target torque number. A rigid mount matters at every torque level, and a wobbly desk undersells even an entry-level wheel."
+    }
+  ]
+}

@@ -33,6 +33,7 @@ jobs:
           rsync -a --exclude='.git' --exclude='.github' --exclude='node_modules' \
             --exclude='.DS_Store' --exclude='Thumbs.db' --exclude='remotion-highlights' \
             --exclude='slides' --exclude='extract-slides.html' --exclude='_stage' \
+            --exclude='_deploy' \
             . _stage/
           echo "── Stage contents ──"
           ls -1 _stage
@@ -58,6 +59,7 @@ jobs:
             **/remotion-highlights/**
             **/slides/**
             **/extract-slides.html
+            **/_deploy/**
 
       - name: Smoke test
         run: |

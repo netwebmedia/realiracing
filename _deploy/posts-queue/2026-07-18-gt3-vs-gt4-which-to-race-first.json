@@ -1,0 +1,70 @@
+{
+  "slug": "gt3-vs-gt4-which-to-race-first",
+  "tag": "Car Guide · GT Racing",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "GT3 vs GT4 in iRacing — Which Class Should You Race First?",
+  "description": "Why GT4 is the smarter first step into GT racing on iRacing, what GT3's extra performance actually costs you in learning curve, and when to move up.",
+  "published": "2026-07-18",
+  "dateLabel": "July 18, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "cockpit"
+  ],
+  "sections": [
+    {
+      "p": "My main car on iRacing is the <a href=\"bmw-m4-gt4-iracing-guide.html\">BMW M4 GT4</a>, and when people ask whether they should start in GT3 or GT4, I always give the same answer: GT4 first, and it's not close. This is why, and when GT3's extra performance is actually worth the harder learning curve."
+    },
+    {
+      "h2": "What actually separates the two classes"
+    },
+    {
+      "p": "GT3 cars carry meaningfully more downforce and power than GT4 cars, which sounds like a simple upgrade but changes the driving problem itself. Aero-dependent grip means your confidence window shifts with speed in a way GT4's more mechanical-grip-driven balance doesn't. Learning car control fundamentals — trail braking, weight transfer, throttle application on exit — is a cleaner lesson in a GT4 car, where the grip you feel is closer to the grip you actually have at any given moment."
+    },
+    {
+      "h2": "Why GT4 teaches better habits, faster"
+    },
+    {
+      "list": [
+        "Lower overall grip means mistakes are more forgiving — you get more warning before you actually lose the car",
+        "Less aero dependency means your braking points feel more consistent across a stint, which builds accurate instincts faster",
+        "A smaller performance gap between good and great drivers in GT4 means racecraft and consistency matter more relative to outright pace — good early rating-building habits"
+      ]
+    },
+    {
+      "h2": "When GT3 is the right move"
+    },
+    {
+      "p": "Once GT4's habits are second nature — you're braking late and consistently, you're not surprised by the car losing grip, your racecraft in traffic is clean — GT3's extra performance becomes a genuine step forward instead of a trap. The aero-dependent confidence window that makes GT3 harder to learn on is exactly what makes it rewarding once you've built the fundamentals to handle it."
+    },
+    {
+      "tip": "If you can consistently finish clean races in GT4 without incidents costing you positions, you're ready to try GT3. If GT4 still occasionally surprises you, more reps there will pay off faster than jumping up early.",
+      "tipLabel": "The honest test"
+    },
+    {
+      "h2": "My take, from the GT4 seat"
+    },
+    {
+      "p": "I've stayed in GT4 by choice, not because I haven't tried GT3 — the racing is close, the learning curve rewards the fundamentals I actually want to keep sharp, and the field strength tends to be excellent. Start there. Move up once GT4 stops teaching you anything new, not before."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I race GT3 or GT4 first on iRacing?",
+      "a": "GT4 first, for almost everyone. Its lower downforce and more mechanical grip balance teach fundamental car control habits — trail braking, weight transfer, consistent braking points — more cleanly than GT3's aero-dependent grip window does."
+    },
+    {
+      "q": "What's the main difference between GT3 and GT4 cars in iRacing?",
+      "a": "GT3 cars carry meaningfully more downforce and power, which shifts your grip and confidence window with speed. GT4 cars rely more on mechanical grip, giving more consistent, predictable feedback that's easier to learn fundamentals on."
+    },
+    {
+      "q": "How do I know I'm ready to move up from GT4 to GT3?",
+      "a": "When you can consistently finish GT4 races clean, without incidents costing you positions, and the car rarely surprises you anymore — that's the signal GT4 has taught you what it can, and GT3's extra performance becomes rewarding instead of a trap."
+    },
+    {
+      "q": "Is GT4 a good class for building iRating?",
+      "a": "Yes. GT4's smaller performance gap between good and great drivers rewards racecraft and consistency relative to outright pace, which builds exactly the clean-finish habits that grow iRating fastest early on."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+name: Generate Blog Queue (Weekly)
+
+# Runs every Monday at 10:00 UTC (6 AM Santiago).
+# Generates ~20 posts (2/day cadence matches the publish workflow below).
+# Requires the ANTHROPIC_API_KEY repo secret — see the "Check API key" step;
+# if it's missing this workflow skips gracefully instead of hard-failing the
+# scheduled run.
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of posts to generate'
+        default: '20'
+        required: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check API key
+        id: keycheck
+        run: |
+          if [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ]; then
+            echo "::warning::ANTHROPIC_API_KEY is not set — skipping this scheduled run. Add it under Settings > Secrets and variables > Actions to enable automatic queue generation."
+            echo "has_key=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_key=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate posts
+        if: steps.keycheck.outputs.has_key == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '20' }}"
+          node _deploy/generate-post-queue.js --count "$COUNT"
+
+      - name: Commit new posts
+        if: steps.keycheck.outputs.has_key == 'true'
+        run: |
+          git config user.name "RealIRacing Blog Bot"
+          git config user.email "bot@realiracing.com"
+          git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
+          git add _deploy/posts-queue/
+          git diff --cached --quiet && echo "Nothing new to commit" && exit 0
+          git commit -m "chore: auto-generate $(git diff --cached --name-only | wc -l | tr -d ' ') blog posts for queue"
+          # Retry push with rebase --autostash for concurrent push + unstaged residuals
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase --autostash origin/main; then
+              if git push origin HEAD:main; then
+                echo "Pushed on attempt $attempt"
+                exit 0
+              fi
+            else
+              git rebase --abort 2>/dev/null || true
+            fi
+            echo "Push attempt $attempt failed — retrying after $((attempt * 5))s"
+            sleep $((attempt * 5))
+          done
+          echo "::error::Failed to push after 5 attempts"
+          exit 1

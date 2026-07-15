@@ -1,0 +1,94 @@
+name: Publish Blog Posts (Scheduled)
+
+# Publishes 2 posts per fire, twice a day (13:00 and 17:00 UTC) — a
+# 2-4/day realistic cadence for a niche affiliate site (NOT NWM's 15/day
+# pace). Posts are read from _deploy/posts-queue/*.json (pre-written queue;
+# generate-blog-queue.yml refills it weekly, and the repo ships with a
+# 14-post starter queue so this runs immediately without the API).
+# After publishing, blog/*.html + blog/index.html + sitemap.xml +
+# _deploy/posts-queue/ are committed, which triggers deploy.yml (FTP to
+# realiracing.com). No ANTHROPIC_API_KEY needed — this workflow only
+# renders already-generated queue JSON, it never calls the API.
+
+on:
+  schedule:
+    - cron: '0 13,17 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Number of posts to publish (default: 2)'
+        default: '2'
+        required: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write   # needed to gh-workflow-run deploy.yml after pushing
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check queue
+        id: queue
+        run: |
+          COUNT=$(find _deploy/posts-queue -maxdepth 1 -name '*.json' | wc -l)
+          echo "pending=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "Pending posts: $COUNT"
+
+      - name: Render posts from queue
+        id: render
+        if: steps.queue.outputs.pending != '0'
+        run: |
+          LIMIT="${{ github.event.inputs.limit || '2' }}"
+          node _deploy/generate-blogs.js --limit "$LIMIT"
+          COUNT=$(git status --porcelain | wc -l)
+          echo "changed=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "Files changed: $COUNT"
+
+      - name: Commit and push published posts
+        if: steps.render.outputs.changed != '0'
+        run: |
+          git config user.name "RealIRacing Blog Bot"
+          git config user.email "bot@realiracing.com"
+          git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
+          git add blog/ _deploy/posts-queue/ sitemap.xml
+          git commit -m "publish: auto-publish $(date -u '+%Y-%m-%d %H:%M') UTC"
+          # Retry push with rebase --autostash for concurrent push + unstaged residuals
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase --autostash origin/main; then
+              if git push origin HEAD:main; then
+                echo "Pushed on attempt $attempt"
+                exit 0
+              fi
+            else
+              git rebase --abort 2>/dev/null || true
+            fi
+            echo "Push attempt $attempt failed — retrying after $((attempt * 5))s"
+            sleep $((attempt * 5))
+          done
+          echo "::error::Failed to push after 5 attempts"
+          exit 1
+
+      - name: Trigger deploy.yml
+        # Pushes made with GITHUB_TOKEN do NOT trigger other workflows on push
+        # (GitHub's guard against recursive workflow runs). Without this step,
+        # published HTML would land in git but never reach InMotion until the
+        # next human commit. Explicitly dispatch deploy.yml instead.
+        if: steps.render.outputs.changed != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run deploy.yml --ref main
+          echo "Dispatched deploy.yml — published posts will reach realiracing.com."
+
+      - name: No posts in queue
+        if: steps.queue.outputs.pending == '0'
+        run: echo "Queue is empty — add JSON files to _deploy/posts-queue/, or wait for generate-blog-queue.yml to refill it."

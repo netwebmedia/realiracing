@@ -1,0 +1,73 @@
+{
+  "slug": "moza-vs-logitech-which-ecosystem",
+  "tag": "Buyer's Guide · Hardware",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "MOZA vs Logitech — Which Sim Racing Ecosystem Should You Commit To?",
+  "description": "Comparing MOZA's direct drive ecosystem against Logitech's belt-drive lineup for iRacing — price ladder, upgrade path and who each one is actually for.",
+  "published": "2026-07-16",
+  "dateLabel": "July 16, 2026",
+  "gearKeys": [
+    "moza-r5",
+    "logitech-g923",
+    "moza-r9"
+  ],
+  "sections": [
+    {
+      "p": "I get some version of \"MOZA or Logitech\" almost as often as I get the beginner-wheel question, and the honest answer is that they're not really competing for the same buyer — Logitech owns the true entry price point, and MOZA is the ecosystem I ended up living in once I was ready to go direct drive. This is the ecosystem-level comparison, not just a spec sheet."
+    },
+    {
+      "h2": "What \"ecosystem\" actually means here"
+    },
+    {
+      "p": "A wheelbase isn't a standalone purchase — it's a commitment to a rim standard, a pedal lineup, and a piece of software you'll open every time you race. Logitech's ecosystem is built around belt-driven and hybrid-drive bases at accessible prices, with a smaller but genuinely functional range of wheels and pedals. MOZA's ecosystem is built entirely around direct drive, from the entry <a href=\"https://www.amazon.com/s?k=MOZA+R5+bundle+direct+drive\" data-aff=\"moza-r5\" target=\"_blank\" rel=\"sponsored noopener\">R5 bundle</a> up through the base I actually race on, with Pit House tying the whole lineup together."
+    },
+    {
+      "h2": "Price ladder and where each one starts"
+    },
+    {
+      "list": [
+        "Logitech's entry point (the G923) is lower than anything in MOZA's lineup — belt-driven, not direct drive, but a genuinely capable way to start",
+        "MOZA's entry point (the R5 bundle) is direct drive from day one, at a real step up in price over the G923",
+        "Once you're inside either ecosystem, staying inside it for rims and pedals is usually the path of least resistance — cross-brand compatibility is limited"
+      ]
+    },
+    {
+      "h2": "Which one fits which racer"
+    },
+    {
+      "p": "If budget is the deciding factor and you're not sure iRacing is a long-term hobby yet, Logitech's ecosystem gets you racing for less, full stop — I cover that decision in more depth in <a href=\"best-sim-racing-wheel-for-beginners.html\">my beginner wheel guide</a>. If you're confident you're staying and want direct drive fidelity from the first purchase, MOZA's ladder — R5 up to the R9 I run daily, up to the R12 for extra headroom — gives you a clear upgrade path that doesn't require switching ecosystems later."
+    },
+    {
+      "p": "The one thing I'd flag honestly: once you own rims, pedals, and a quick-release standard from one ecosystem, switching brands later means replacing more than just the base. That's a real cost people underweight when they buy the entry unit \"just to try it.\""
+    },
+    {
+      "tip": "Ask yourself which ecosystem you'd be happy owning three years from now, not which base is cheapest today — because the base is the easy part to swap; the rims and pedals are what actually lock you in.",
+      "tipLabel": "The practical test"
+    },
+    {
+      "h2": "My honest take, as an R9 owner"
+    },
+    {
+      "p": "I didn't start on MOZA — I started on budget gear like most people. I moved into the MOZA ecosystem once I knew iRacing wasn't a phase, and I've stayed because Pit House and the quick-release standard have made every subsequent purchase (a new rim, upgraded pedals) a drop-in decision instead of a research project. That convenience is the real ecosystem value, more than any single spec."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is MOZA or Logitech better for iRacing?",
+      "a": "Logitech is the more accessible entry point with a genuinely capable belt-driven lineup; MOZA is a direct-drive-first ecosystem with a clearer upgrade path. Neither is objectively \"better\" — the right choice depends on your budget and how confident you are that you're staying in the hobby long-term."
+    },
+    {
+      "q": "Can I mix MOZA and Logitech gear on the same rig?",
+      "a": "Cross-brand compatibility is limited — quick-release standards, rim mounts and pedal connectors are usually ecosystem-specific. Most racers end up buying rims and pedals within whichever base's ecosystem they commit to."
+    },
+    {
+      "q": "Which ecosystem has a better upgrade path?",
+      "a": "MOZA's lineup is built entirely around direct drive, from the R5 bundle up through higher-torque bases, all sharing the same Pit House software and quick-release standard — which makes upgrading the base later a relatively low-friction swap."
+    },
+    {
+      "q": "Should a beginner start with MOZA's entry direct drive bundle?",
+      "a": "Only if you're already confident you're staying in the hobby and want direct drive fidelity from day one. If you're still finding out whether iRacing is for you, Logitech's more accessible ecosystem is the lower-risk starting point."
+    }
+  ]
+}
