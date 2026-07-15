@@ -35,17 +35,15 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 .nav-logo {
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: var(--accent);
+  width: 184px;
+  height: 31px;
+  flex: 0 0 184px;
+  font-size: 0;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: block;
+  background: url('/logo-horizontal.png') left center / contain no-repeat;
 }
-.nav-logo-wheel { width: 28px; height: 28px; }
-.nav-logo span { color: var(--text); }
+.nav-logo-wheel { display: none; }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a {
   color: var(--muted); text-decoration: none;
