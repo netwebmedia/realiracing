@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://realiracing.com/blog/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -129,6 +129,18 @@
   <url>
     <loc>https://realiracing.com/blog/sim-racing-budget-desk-setup.html</loc>
     <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://realiracing.com/blog/gt3-vs-gt4-which-to-race-first.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://realiracing.com/blog/iracing-force-feedback-explained.html</loc>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
