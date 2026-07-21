@@ -1,0 +1,51 @@
+# realiracing.com — sim-racing content + Amazon affiliate site (Don Gastón portfolio)
+# Static docroot. No backend.
+#
+# Added 2026-07-21 after a portfolio audit found the site had NO .htaccess at
+# all: http://realiracing.com and https://www.realiracing.com both answered
+# 200 alongside the apex, so the same content was reachable at three
+# hostnames (split ranking signals, no HSTS, no security headers), and
+# directory listing was open (/js/ served a 200 index).
+
+Options -Indexes
+DirectoryIndex index.html
+
+# ── Canonical host: www → non-www, and force HTTPS ──────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://realiracing.com%{REQUEST_URI} [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.realiracing\.com$ [NC]
+  RewriteRule ^ https://realiracing.com%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ── Security headers ────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  # No 'preload' and no 'includeSubDomains': this domain's subdomain usage
+  # isn't audited, and preload is effectively irreversible.
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# ── Caching: HTML always fresh, static assets long-lived ────────────────────
+# js/ is deliberately NOT immutable-for-a-year: js/affiliates.js carries the
+# Amazon Associates tag and the whole product table, so a tag change has to
+# be able to reach existing readers.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
+  <FilesMatch "\.(js)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(css|svg|png|jpg|jpeg|webp|woff2|mp4)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# ── Compression ─────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
