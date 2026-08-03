@@ -79,6 +79,13 @@ function loadAllowedGearKeys() {
   return keys;
 }
 
+// ─── Server-side gear box ───────────────────────────────────────────────────
+// Rendered at build time (see _deploy/lib/affiliates-ssr.js) so the affiliate
+// links exist in the served HTML: crawlable, and working even if JS fails. The
+// runtime renderGearBox() call each post still carries then finds a populated
+// container and no-ops.
+const { loadAffiliateConfig, renderGearBoxHtml } = require('./lib/affiliates-ssr.js');
+
 const FALLBACK_GEAR_KEYS = ['moza-r9', 'cockpit'];
 
 // ─── FAQ helpers (fallback only — seed/generated posts should ship explicit
@@ -230,6 +237,11 @@ function renderPostHtml(post, related, allowedGearKeys) {
   let gearKeys = Array.isArray(post.gearKeys) ? post.gearKeys.filter(k => allowedGearKeys.has(k)) : [];
   if (gearKeys.length === 0) gearKeys = FALLBACK_GEAR_KEYS.slice();
 
+  // Rendered into the HTML at build time so the affiliate links are crawlable
+  // and survive a JS failure; the runtime renderGearBox() call below then
+  // finds a populated container and leaves it alone.
+  const gearBoxHtml = renderGearBoxHtml(loadAffiliateConfig(), gearKeys, 'The gear in this guide');
+
   const faqs = Array.isArray(post.faqs) && post.faqs.length ? post.faqs : buildFallbackFaqs(post);
   const bodyHtml = renderSections(post.sections);
 
@@ -325,7 +337,7 @@ ${faqJsonLd}
 
 ${bodyHtml}
 
-      <div id="rir-gear"></div>
+      ${gearBoxHtml}
 
       <div class="cta-box">
         <h3>Watch it, don't just read about it</h3>

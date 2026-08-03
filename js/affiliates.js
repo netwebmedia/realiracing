@@ -142,6 +142,15 @@
     var el = document.getElementById(containerId);
     if (!el) return;
 
+    /* Posts are rendered with the gear box already in the HTML (build-time,
+     * see _deploy/generate-blogs.js) so the affiliate links are crawlable and
+     * work without JS. If the container is already populated, leave it — this
+     * call is then a no-op kept for older pages that still ship an empty div. */
+    if (el.querySelector('.gear-box')) {
+      hydrateLinks(el);
+      return;
+    }
+
     var box = document.createElement('div');
     box.className = 'gear-box';
 
