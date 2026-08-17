@@ -1,0 +1,133 @@
+{
+  "slug": "iracing-ffb-clipping-how-to-diagnose-and-fix",
+  "tag": "Setup Guides · FFB",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "iRacing FFB Clipping — How to Diagnose It and Fix It Without Losing Detail",
+  "description": "What FFB clipping is, how to see it in iRacing's force meter, and how I fix it on my MOZA R9 so the wheel stays heavy where it matters and detailed everywhere.",
+  "published": "2026-08-17",
+  "dateLabel": "August 17, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "moza-r12",
+    "fanatec-csl-dd",
+    "cockpit"
+  ],
+  "sections": [
+    {
+      "p": "For about a month after I bolted the MOZA R9 to my rig I thought direct drive was slightly overrated. The wheel was heavy — heavier than anything I'd owned — but mid-corner it went strangely quiet. Kerbs I could feel on the way in disappeared once the car was loaded up, and the moment the rear started to slide, which is exactly when I needed information, the wheel just stayed heavy and told me nothing. That wasn't the base. That was clipping, and I'd set it up that way myself by chasing weight instead of detail."
+    },
+    {
+      "p": "Clipping is the most common force feedback problem in iRacing and one of the least understood, partly because it feels like a feature. A wheel that's always heavy feels serious. This guide is how I learned to see it, the order I fix it in, and the trade-off you're actually making when you turn the strength up."
+    },
+    {
+      "h2": "What clipping actually is"
+    },
+    {
+      "p": "iRacing calculates a steering torque for every frame — the force the real car would put through the steering column at that moment. Your wheelbase can only output so much torque, so somewhere in the chain that calculated force gets mapped onto what the base can deliver. When the sim asks for more force than the mapping allows, the signal gets cut off flat at the maximum. That flat top is the clip."
+    },
+    {
+      "p": "The problem isn't the peak. The problem is everything happening on top of the peak. Weight transfer, kerb strikes, the tyres starting to let go, the little oscillation that tells you the rear is about to step out — all of that rides on the main steering load as small variations. If the main load is already pinned at 100 percent, those variations have nowhere to go. You feel a heavy wheel and nothing else. That's why clipped FFB feels strong and numb at the same time."
+    },
+    {
+      "p": "It's the same idea as audio clipping: turn the amp past what the speaker can reproduce and you don't get louder music, you get distortion where the detail used to be. Direct drive doesn't make you immune. It gives you more headroom, which you can still spend all of by turning things up."
+    },
+    {
+      "h2": "How to see it instead of guessing"
+    },
+    {
+      "p": "You don't have to diagnose this by feel. iRacing gives you a force feedback meter in the black box while you're on track — a bar that shows how much of your available force the sim is using at that moment. When it hits the top and turns red, you're clipping. Watch it through a full lap, not a straight: the places to look are heavy braking zones, long loaded corners, and the moment you turn in on a fast entry."
+    },
+    {
+      "p": "A little red on the biggest kerb strike of the lap is fine and honestly unavoidable. Red through the middle of every medium-speed corner is not — that's the sim telling you it has more to say than your settings let it say. If you want more than a bar, iRacing's telemetry logs the steering torque as a percentage of your maximum, and free tools built on that telemetry will show you a trace of exactly where in the lap you're pinned. Look at the trace, not the number of the day."
+    },
+    {
+      "list": [
+        "<strong>Heavy but numb mid-corner</strong> — you can feel the car is loaded but not what the tyres are doing. Classic clip.",
+        "<strong>Kerbs vanish when the car is loaded</strong> — you feel them on the exit of a slow corner but not on the apex of a fast one.",
+        "<strong>Slides announce themselves late</strong> — the wheel goes light only after the rear is already gone, because the lightening got clipped away.",
+        "<strong>The FFB meter is red through corners</strong>, not just on impacts."
+      ]
+    },
+    {
+      "h2": "The fix, in the order I'd actually do it"
+    },
+    {
+      "h3": "1. Get the wheelbase side out of the way"
+    },
+    {
+      "p": "Before touching iRacing, decide where the base's own output lives. On my R9 I run the base near its full output in Pit House and do the actual scaling inside iRacing. The reason is simple: if the base is limited to a fraction of its torque and iRacing is also scaling, you have two dials fighting each other and no idea which one is clipping. Pick one place for the strength decision. I pick the sim, because it's per car."
+    },
+    {
+      "p": "While you're in the base software, be suspicious of any effect that adds force on top of the sim's signal — extra kerb effects, exaggerated road texture, that kind of thing. Every one of those eats headroom the steering signal needed. I run them off or low. The sim already knows about the kerb; I don't need a second kerb layered on it."
+    },
+    {
+      "h3": "2. Raise the max force in iRacing, don't lower the strength"
+    },
+    {
+      "p": "This is the part that trips people up because iRacing's terminology is backwards from what you'd expect. The core setting is the maximum force the sim maps to 100 percent of your wheel. A <strong>lower</strong> value means the wheel hits full output sooner — heavier, and more clipping. A <strong>higher</strong> value means it takes more calculated torque to hit full output — lighter, and less clipping. So if the meter is red, you raise that number, and the wheel gets lighter. That's the trade."
+    },
+    {
+      "p": "iRacing has an auto button next to that setting. Drive a few clean laps first — real laps, with the kerbs you actually use — then press it. It sets the max force so that the peaks of what you just did land right around full output. That's your baseline. From there I usually nudge it up slightly, because I'd rather sacrifice a fraction of peak weight than lose the detail sitting on top of it."
+    },
+    {
+      "h3": "3. Do it per car, because cars are not the same"
+    },
+    {
+      "p": "A GT3 car under braking, a stock car in a banked oval, and a lightweight formula car put wildly different loads through the column. A setting that's clean in one is a clipping mess in another. iRacing stores the FFB strength per car, so treat the auto-then-nudge routine as something you do the first time you drive a new car, not once for your whole account. It takes two minutes and it's the single biggest improvement most people can make."
+    },
+    {
+      "h3": "4. Only then look at damping and smoothing"
+    },
+    {
+      "p": "Damping and smoothing are not clipping fixes. They change how the wheel feels around the centre and how sharp the signal is. If you use them to calm down a wheel that's actually clipping, you end up with something that's both numb and mushy. Sort the headroom first. Then, if the wheel is too lively on the straights or too spiky over bumps, add a little damping — and I do mean a little. On the R9 I run modest damping in the sim and let the base handle the rest."
+    },
+    {
+      "tip": "If your wheel feels dramatically stronger than everyone says direct drive should feel for your base's torque class, you are almost certainly clipping. Realistic FFB has a lot of range: light in the pit lane, moderate on the straight, heavy in the loaded corner, and different in every one of those places. If it's all heavy, that's not realism, that's a flat top.",
+      "tipLabel": "The tell"
+    },
+    {
+      "h2": "The trade-off you're actually making"
+    },
+    {
+      "p": "Fixing clipping means the wheel gets lighter at the peaks. Some people hate that, and I understand — I bought a direct drive base to feel something. But the choice isn't heavy versus light. It's flat versus dynamic. A wheel that runs at moderate strength with real headroom tells you more per lap than one pinned at maximum, and after a week your hands stop missing the fake weight and start reading the actual information. My lap times didn't jump. My consistency did, especially in long stints where numb FFB turns into lazy corrections."
+    },
+    {
+      "p": "If after all that you still want more, that's what a stronger base is for — the <a href=\"moza-r9-vs-r12-which-to-buy.html\">R12</a> or a higher-torque Fanatec base gives you more headroom, so you can run heavier peaks and still keep the detail. That's a legitimate upgrade path. Turning a smaller base up until it clips isn't; it just makes it feel like a bigger base that's broken."
+    },
+    {
+      "h2": "A quick routine for a new car"
+    },
+    {
+      "olist": [
+        "In the base software, set the output near full and switch off any added effects that layer force on top of the sim.",
+        "In iRacing, drive three or four honest laps in the car, using the kerbs and braking points you'd race with.",
+        "Open the FFB options and press auto. Note the number it lands on.",
+        "Drive again with the FFB meter visible. Look for red through corners, not just on impacts.",
+        "If you see it, raise the max force a step and repeat. Stop when the meter only flickers on the biggest hits.",
+        "Only now touch damping, and only if the wheel is genuinely too lively — not to hide clipping."
+      ]
+    },
+    {
+      "p": "If you want the full breakdown of what every slider in that menu does, I wrote it up separately in <a href=\"iracing-force-feedback-explained.html\">iRacing Force Feedback Explained</a>, and my exact R9 profile is in <a href=\"moza-r9-iracing-settings.html\">the MOZA R9 settings guide</a>. This post is the piece I wish I'd read first: none of those settings matter until the signal has room to breathe."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What does FFB clipping feel like in iRacing?",
+      "a": "Heavy and numb at the same time. The wheel is loaded up in corners but the details on top of that load disappear: kerbs vanish when the car is loaded, and slides announce themselves late because the lightening of the wheel got cut off. If your wheel feels strong but you keep getting surprised by the rear, check the FFB meter."
+    },
+    {
+      "q": "Should I raise or lower the max force setting to stop clipping?",
+      "a": "Raise it. In iRacing that number is the calculated torque that maps to full output on your wheel, so a higher value means the sim needs more force before it pins the wheel at maximum. The wheel gets a little lighter at the peaks and the detail comes back. Lowering it does the opposite."
+    },
+    {
+      "q": "Does the auto button in iRacing fix clipping on its own?",
+      "a": "It gets you most of the way. Drive a few real laps first so it has honest data, then press it and it sets max force so your peaks land near full output. I usually nudge it up slightly from there, because I would rather give up a fraction of peak weight than lose the information riding on top of it. Repeat it for each new car."
+    },
+    {
+      "q": "Is clipping still a problem with a direct drive wheelbase?",
+      "a": "Yes, just at a higher ceiling. Direct drive gives you more torque headroom, but if you turn the strength up until the wheel is pinned in every corner you have spent all of that headroom and you are clipping like anyone else. More torque is worth having precisely because it lets you run realistic peaks with room to spare."
+    }
+  ]
+}
