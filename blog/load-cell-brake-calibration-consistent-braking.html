@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Load Cell Brake Calibration — How I Set Up My Pedals for Consistent Braking in iRacing | RealIRacing</title>
+  <meta name="description" content="A load cell only helps if it is calibrated to your leg, seat and stint. How I set brake pressure, curve and mounting on my MOZA CRP2 for repeatable braking." />
+  <link rel="canonical" href="https://realiracing.com/blog/load-cell-brake-calibration-consistent-braking.html" />
+  <meta property="og:title" content="Load Cell Brake Calibration — How I Set Up My Pedals for Consistent Braking in iRacing" />
+  <meta property="og:description" content="A load cell only helps if it is calibrated to your leg, seat and stint. How I set brake pressure, curve and mounting on my MOZA CRP2 for repeatable braking." />
+  <meta property="og:url" content="https://realiracing.com/blog/load-cell-brake-calibration-consistent-braking.html" />
+  <meta property="og:type" content="article" />
+  <link rel="stylesheet" href="blog.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Load Cell Brake Calibration — How I Set Up My Pedals for Consistent Braking in iRacing",
+    "description": "A load cell only helps if it is calibrated to your leg, seat and stint. How I set brake pressure, curve and mounting on my MOZA CRP2 for repeatable braking.",
+    "author": { "@type": "Person", "name": "Carlos Martinez", "url": "https://realiracing.com" },
+    "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "https://realiracing.com" },
+    "mainEntityOfPage": "https://realiracing.com/blog/load-cell-brake-calibration-consistent-braking.html",
+    "datePublished": "2026-08-17",
+    "dateModified": "2026-08-17"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What pressure should I set as 100 percent brake on load cell pedals?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A force you can apply cleanly and repeatedly for a full stint and still modulate around, not the hardest you can physically press. Set it, drive a stint, and check the brake trace: you want peaks that touch full and plenty of shape below it. If you rarely reach 100 percent even in panic braking, the maximum is too high; if you sit pinned at 100 and lock tyres, it is too low." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use a linear or progressive brake curve in iRacing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Near-linear for cars with ABS, a mild progressive curve for cars without it so the top of the range is easier to feel through. Whatever you choose, keep the curve in one place, either the pedal software or the sim, and then leave it alone long enough for your leg to learn it." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why am I slower right after switching to load cell pedals?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Because your leg is still braking by position and the pedal now measures force. Most people over-brake and brake early for a session or two. Set the maximum pressure to something reachable, do a few minutes of deliberate pressure practice while watching the input bar, and it settles quickly. What you get afterwards is braking that looks the same at the end of a stint as at the start." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a stiff cockpit for load cell pedals?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You need one that does not move under hard braking. On a bolted aluminium cockpit that is usually taken care of. On a wheel stand or a desk setup, check whether the pedals or the frame shift when you brake hard, because any movement changes the pressure reading and undoes the consistency you bought the pedals for." }
+    }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">
+      <svg class="nav-logo-wheel" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#e8ff00" stroke-width="2.5"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#2a2d35" stroke-width="7"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#e8ff00" stroke-width="2" stroke-dasharray="14 56" stroke-dashoffset="-10"/>
+        <line x1="20" y1="20" x2="7" y2="24" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="33" y2="16" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="20" y2="34" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3" fill="#e8ff00"/>
+      </svg>
+      <span>Real</span>IRacing
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#media">Media</a></li>
+      <li><a href="/#content">Content</a></li>
+      <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
+      <li><a href="/#platforms">Platforms</a></li>
+      <li><a class="nav-cta" href="https://www.youtube.com/@realtape" target="_blank">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <p class="section-label">Setup Guides · Pedals</p>
+    <h1>Load Cell Brake Calibration — How I Set Up My Pedals for Consistent Braking in iRacing</h1>
+    <div class="article-meta">
+      <span class="author">Carlos Martinez</span>
+      <span class="dot">·</span>
+      <span>Updated August 17, 2026</span>
+      <span class="dot">·</span>
+      <span>8 min read</span>
+    </div>
+
+    <div class="article-body">
+      <p class="disclosure">Some links on this page may earn RealIRacing a commission at no extra cost to you. Gear I personally race on is called out as such; other picks are researched recommendations.</p>
+
+      <p class="article-lead">The first week on my MOZA CRP2 pedals I was slower than on the potentiometer pedals I'd just replaced. Not by a lot, but enough to be annoying, and enough to make me wonder whether the whole load cell thing was internet folklore. It wasn't. I had bolted a precision instrument to my rig and then calibrated it like a light switch — full force to hit 100 percent, a curve I never looked at, and a bracket that flexed every time I stood on it. Once I fixed those three things the consistency everyone talks about showed up within a couple of sessions.</p>
+
+      <p>This is the setup guide I wish had come in the box. It's not about which load cell pedals to buy — I covered that in <a href="best-sim-racing-pedals-iracing-2026.html">the pedals buyer's guide</a> and the <a href="best-budget-load-cell-pedals.html">budget load cell roundup</a>. It's about what to do in the first hour after they arrive so they actually make you more consistent, on the CRP2 or on any load cell set.</p>
+
+      <h2>Why a load cell is more consistent in the first place</h2>
+
+      <p>A potentiometer pedal measures how far you've pushed. A load cell measures how hard. That sounds like a small difference until you think about what your body is good at. Your leg cannot reliably reproduce a position — six centimetres of travel feels the same as seven when you're three laps from the end and your heart rate is up. But it is very good at reproducing a force. You know what leaning on something at roughly half your effort feels like, every time, without looking.</p>
+
+      <p>So a load cell moves the braking reference from your eyes and your ankle angle to the muscles in your leg. That's the entire trick, and it's why the calibration matters so much: if the pressure you have to apply for 100 percent brake is wrong for you, you've thrown away the advantage and kept only the price tag.</p>
+
+      <h2>Step 1: mount them so nothing moves</h2>
+
+      <p>Before any software, deal with flex. When you brake hard on a load cell you're pushing with a real amount of force, and if the pedal plate, the bracket or the whole rig moves under that force, the pressure reading changes with the movement. You get a brake that feels different depending on how the frame settled that lap. On a fixed aluminium cockpit this is mostly solved — bolt the deck down properly and check it after a week. On a wheel stand or a desk-mounted setup, be honest with yourself: if it rocks when you stamp on it, that's your first consistency problem and no slider fixes it.</p>
+
+      <p>Set the pedal angle and spacing while you're there. Your heel should stay planted on the floor or heel plate through the whole brake stroke, and your knee should have some bend left at full pressure. If you're locking your leg out to reach maximum, you'll never be able to modulate at the top of the range, which is exactly where the trail braking happens.</p>
+
+      <h2>Step 2: set the maximum pressure to a force you can hold, not your record</h2>
+
+      <p>This is the calibration everybody gets wrong the first time, including me. Pedal software asks you, one way or another, what force should count as 100 percent brake. The temptation is to press as hard as you physically can, because that feels like using the full pedal. Then you drive, and 100 percent becomes something you can only reach with a lunge, and threshold braking turns into a fight with your own leg.</p>
+
+      <p>The right number is a force you can apply cleanly, repeatedly, for the length of a stint you actually race — and still modulate around. My rough guide is: press to what feels like a hard, committed brake application without straining, hold it for a few seconds, and set that as full. In Pit House I set the CRP2's maximum brake pressure well below what the load cell can physically read, and I revisit it if I change seat position or shoes. If you race sock-footed one day and in trainers the next, you have two different pedals.</p>
+
+      <div class="tip-box">
+        <span class="box-label">How to check it</span>
+        <p>After you set the maximum, drive a stint and check the telemetry for brake input. If your traces show you rarely reaching 100 percent — even under panic braking — your maximum is set too high. If you're pinned at 100 percent for long stretches and locking tyres, it's too low. You want peaks that touch full and a lot of shape below it.</p>
+      </div>
+
+      <h2>Step 3: shape the curve, then leave it alone</h2>
+
+      <p>Most load cell software lets you shape how pressure maps to brake percentage — linear, or progressive so the first part of the travel counts for less. iRacing has its own brake force factor setting in the controls options as well; it defaults to a non-linear response that suits potentiometer pedals, and most load cell owners set it to zero for a linear map. My rule is that the curve should live in one place only, so I keep the sim linear and do any shaping on the pedal side. Two curves stacked on top of each other is how you get a brake nobody can predict, including you.</p>
+
+      <p>For cars with ABS I run close to linear. For cars without it — where the last few percent is the difference between a good stop and a lock-up — I use a mild progressive curve so the top of the range is stretched out and easier to feel my way through. Change it, drive twenty laps, and then don't touch it for a month. Consistency comes from your leg learning one mapping, and every tweak resets that clock.</p>
+
+      <h2>Step 4: calibrate in iRacing properly</h2>
+
+      <p>Once the pedal side is set, calibrate in iRacing's controls screen. Press each pedal fully and release when it asks; for the brake, press to the maximum you just defined, not harder. Then check two things: that a light touch registers as a small percentage rather than nothing, and that your defined maximum shows as 100. If there's a dead zone at the bottom, adjust the minimum on the pedal side — a brake that ignores the first bit of pressure is a brake you can't feather on corner entry.</p>
+
+      <ul>
+        <li><strong>Full at your chosen force</strong>, not at your leg's absolute limit.</li>
+        <li><strong>No dead zone at the top of the stroke</strong> — a light touch should read as a light brake.</li>
+        <li><strong>One curve, in one place</strong> — pedal software or sim, not both.</li>
+        <li><strong>Same shoes, same seat</strong> — or re-check the maximum when they change.</li>
+        <li><strong>Nothing flexes</strong> — mount, bracket and rig all solid under full pressure.</li>
+      </ul>
+
+      <h2>Step 5: retrain your leg, on purpose</h2>
+
+      <p>The pedals are set. Now the awkward part: your leg has spent years braking by position and it will keep trying to. For the first few sessions I did something slightly ridiculous — I closed my eyes on a straight, pressed to what I thought was full brake, and looked at the input bar. Then half. Then a quarter. It takes maybe ten minutes and it recalibrates you, not the pedal. After that, run a few short races rather than long practice sessions: pressure under adrenaline is different from pressure in a calm test lap, and races are where the consistency has to hold.</p>
+
+      <p>Expect to be a touch slower for a session or two while your braking points move — you'll brake harder initially and hit the pedal earlier than you need to. That settles fast. What sticks around is the thing that made me stop questioning the purchase: my braking in lap thirty looks like my braking in lap three, and I stopped losing places in the last stint to a leg that no longer knew where seven centimetres was.</p>
+
+      <h2>Common mistakes I still see</h2>
+
+      <ul>
+        <li><strong>Setting maximum pressure by feel on day one</strong>, then never checking the telemetry to see whether you ever actually reach it.</li>
+        <li><strong>Chasing a stiffer brake because it feels more pro.</strong> Stiff is fine; unreachable is not.</li>
+        <li><strong>Stacking a curve in the pedal software and another in the sim.</strong> Pick one.</li>
+        <li><strong>Ignoring the mounting.</strong> On a rig that flexes, no calibration is stable.</li>
+        <li><strong>Re-tuning after every bad race.</strong> Give a change twenty laps and a full stint before you judge it.</li>
+      </ul>
+
+      <p>None of this is exotic. It's an hour of setup and a couple of sessions of retraining, and it's the difference between owning a load cell and actually getting what you paid for. If you're still on the fence about whether load cell pedals are worth it at all, the buyer's guides linked above cover the tiers — but the honest answer is that a well-calibrated budget load cell beats an expensive one set up like a light switch.</p>
+
+      <div id="rir-gear"><div class="gear-box">
+        <span class="box-label">The gear in this guide</span>
+        <ul>
+          <li><a href="https://www.amazon.com/s?k=MOZA+CRP2+load+cell+pedals&amp;tag=realiracing-20" data-aff="moza-crp2" target="_blank" rel="sponsored noopener">MOZA CRP2 Load Cell Pedals</a> — load-cell brake, managed in the same Pit House software</li>
+          <li><a href="https://www.amazon.com/s?k=MOZA+SR-P+load+cell+pedals&amp;tag=realiracing-20" data-aff="moza-sr-p" target="_blank" rel="sponsored noopener">MOZA SR-P Load Cell Pedals</a> — budget load cell on the same Pit House ecosystem as my R9</li>
+          <li><a href="https://www.amazon.com/s?k=Thrustmaster+T-LCM+pedals&amp;tag=realiracing-20" data-aff="thrustmaster-t-lcm" target="_blank" rel="sponsored noopener">Thrustmaster T-LCM Pedals</a> — cheapest genuine load cell, works with any base over USB</li>
+          <li><a href="https://www.amazon.com/s?k=Fanatec+CSL+pedals+load+cell+kit&amp;tag=realiracing-20" data-aff="fanatec-csl-pedals-lc" target="_blank" rel="sponsored noopener">Fanatec CSL Pedals + Load Cell Kit</a> — modular upgrade path inside the Fanatec ecosystem</li>
+        </ul>
+        <p class="aff-note">Some links are affiliate links — I may earn a commission at no cost to you.</p>
+      </div></div>
+
+      <div class="cta-box">
+        <h3>Watch it, don't just read about it</h3>
+        <p>I stream and upload iRacing races on my MOZA R9 rig — real laps, real force feedback, real mistakes. See the gear from this guide working before you spend a cent.</p>
+        <a class="btn-primary" href="https://www.youtube.com/@realtape" target="_blank">▶ Subscribe on YouTube</a>
+      </div>
+
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h3>What pressure should I set as 100 percent brake on load cell pedals?</h3>
+        <p>A force you can apply cleanly and repeatedly for a full stint and still modulate around, not the hardest you can physically press. Set it, drive a stint, and check the brake trace: you want peaks that touch full and plenty of shape below it. If you rarely reach 100 percent even in panic braking, the maximum is too high; if you sit pinned at 100 and lock tyres, it is too low.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I use a linear or progressive brake curve in iRacing?</h3>
+        <p>Near-linear for cars with ABS, a mild progressive curve for cars without it so the top of the range is easier to feel through. Whatever you choose, keep the curve in one place, either the pedal software or the sim, and then leave it alone long enough for your leg to learn it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why am I slower right after switching to load cell pedals?</h3>
+        <p>Because your leg is still braking by position and the pedal now measures force. Most people over-brake and brake early for a session or two. Set the maximum pressure to something reachable, do a few minutes of deliberate pressure practice while watching the input bar, and it settles quickly. What you get afterwards is braking that looks the same at the end of a stint as at the start.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need a stiff cockpit for load cell pedals?</h3>
+        <p>You need one that does not move under hard braking. On a bolted aluminium cockpit that is usually taken care of. On a wheel stand or a desk setup, check whether the pedals or the frame shift when you brake hard, because any movement changes the pressure reading and undoes the consistency you bought the pedals for.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Keep reading</h2>
+    <div class="related-grid">
+      <a class="related-card" href="moza-r9-iracing-settings.html"><span>Setup Guides</span>MOZA R9 iRacing Settings — The Complete FFB Guide (2026)</a>
+      <a class="related-card" href="sim-racing-wheel-settings-for-oval.html"><span>Setup Guides</span>Sim Racing Wheel Settings for Oval Racing — What Changes from Road Course</a>
+      <a class="related-card" href="iracing-ffb-clipping-how-to-diagnose-and-fix.html"><span>Setup Guides</span>iRacing FFB Clipping — How to Diagnose It and Fix It Without Losing Detail</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 RealIRacing · iRacing User: <strong>Carlos Martinez9</strong> · Built with 🏎️</p>
+    <p style="margin-top:6px;font-size:0.78rem;">
+      <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
+      <a href="https://linktr.ee/realiracing" target="_blank">linktr.ee/realiracing</a>
+    </p>
+  </footer>
+
+  <script src="/js/affiliates.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof renderGearBox === 'function') {
+        renderGearBox('rir-gear', ["moza-crp2","moza-sr-p","thrustmaster-t-lcm","fanatec-csl-pedals-lc"], 'The gear in this guide');
+      }
+      if (window.RIR_AFF) { RIR_AFF.hydrateLinks(); }
+    });
+  </script>
+
+</body>
+</html>
