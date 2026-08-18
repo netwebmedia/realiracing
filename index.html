@@ -920,18 +920,18 @@
 
       <!-- Progress dots — 7 real photo slides -->
       <div class="slideshow-progress" id="progress">
-        <div class="progress-dot active" onclick="goToSlide(0)"></div>
-        <div class="progress-dot" onclick="goToSlide(1)"></div>
-        <div class="progress-dot" onclick="goToSlide(2)"></div>
-        <div class="progress-dot" onclick="goToSlide(3)"></div>
-        <div class="progress-dot" onclick="goToSlide(4)"></div>
-        <div class="progress-dot" onclick="goToSlide(5)"></div>
-        <div class="progress-dot" onclick="goToSlide(6)"></div>
+        <div class="progress-dot active"></div>
+        <div class="progress-dot"></div>
+        <div class="progress-dot"></div>
+        <div class="progress-dot"></div>
+        <div class="progress-dot"></div>
+        <div class="progress-dot"></div>
+        <div class="progress-dot"></div>
       </div>
 
       <!-- Nav arrows -->
-      <div class="slide-nav slide-nav-prev" onclick="prevSlide()">&#8592;</div>
-      <div class="slide-nav slide-nav-next" onclick="nextSlide()">&#8594;</div>
+      <div class="slide-nav slide-nav-prev">&#8592;</div>
+      <div class="slide-nav slide-nav-next">&#8594;</div>
     </div>
 
     <!-- Hero content over slideshow -->
@@ -979,9 +979,9 @@
       <p class="section-sub">Sim racing + real-world racing photography & video — all from Carlos's own accounts.</p>
 
       <div class="media-tabs">
-        <div class="media-tab active" onclick="switchTab('iracing')">🎮 @realiracing (iRacing)</div>
-        <div class="media-tab" onclick="switchTab('photo')">📸 @tapephotocom (IRL Photography)</div>
-        <div class="media-tab" onclick="switchTab('youtube')">▶ @realtape (YouTube)</div>
+        <div class="media-tab active" data-tab="iracing">🎮 @realiracing (iRacing)</div>
+        <div class="media-tab" data-tab="photo">📸 @tapephotocom (IRL Photography)</div>
+        <div class="media-tab" data-tab="youtube">▶ @realtape (YouTube)</div>
       </div>
 
       <!-- TAB 1: @realiracing iRacing posts -->
@@ -1447,16 +1447,16 @@
     <div class="poll-card">
       <p class="poll-question">🏁 What do you want to see most on this channel?</p>
       <div class="poll-options">
-        <div class="poll-option selected" onclick="selectOption(this)">
+        <div class="poll-option selected">
           <div class="poll-option-dot"></div> Race Highlights
         </div>
-        <div class="poll-option" onclick="selectOption(this)">
+        <div class="poll-option">
           <div class="poll-option-dot"></div> Setup Guides
         </div>
-        <div class="poll-option" onclick="selectOption(this)">
+        <div class="poll-option">
           <div class="poll-option-dot"></div> Rig Tours
         </div>
-        <div class="poll-option" onclick="selectOption(this)">
+        <div class="poll-option">
           <div class="poll-option-dot"></div> iRacing Tips
         </div>
       </div>
@@ -1515,84 +1515,7 @@
     </p>
   </footer>
 
-  <script>
-    /* ── SLIDESHOW ── */
-    let currentSlide = 0;
-    let slideshowTimer = null;
-    const SLIDE_DURATION = 5000;
-
-    const slides   = document.querySelectorAll('.slide');
-    const dots     = document.querySelectorAll('.progress-dot');
-
-    function goToSlide(n) {
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
-      currentSlide = (n + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-      resetTimer();
-    }
-    function nextSlide() { goToSlide(currentSlide + 1); }
-    function prevSlide() { goToSlide(currentSlide - 1); }
-
-    function resetTimer() {
-      clearInterval(slideshowTimer);
-      slideshowTimer = setInterval(nextSlide, SLIDE_DURATION);
-    }
-
-    // Pause on hover
-    const ss = document.getElementById('slideshow');
-    ss.addEventListener('mouseenter', () => clearInterval(slideshowTimer));
-    ss.addEventListener('mouseleave', resetTimer);
-
-    // Touch swipe support
-    let touchStartX = 0;
-    ss.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    ss.addEventListener('touchend',   e => {
-      const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 40) dx < 0 ? nextSlide() : prevSlide();
-    }, { passive: true });
-
-    // Keyboard support
-    document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowRight') nextSlide();
-      if (e.key === 'ArrowLeft')  prevSlide();
-    });
-
-    resetTimer();
-
-    /* ── PHOTO SLIDE LOADER ──────────────────────────────────────────────
-       Each slide has an Instagram CDN URL set as background-image in CSS.
-       Those URLs require auth cookies, which ARE present when you open this
-       file in a browser where you're logged into Instagram.
-
-       This script also tries a canvas-based approach as a belt-and-suspenders
-       fallback: it creates a hidden <img>, waits for it to load (cookies are
-       sent automatically), draws it to a canvas, converts to a blob URL, and
-       sets it as the slide background. This makes the photo persist even if
-       the CDN URL later expires.
-    ────────────────────────────────────────────────────────────────────── */
-    /* ── TAB SWITCHER ── */
-    function switchTab(tab) {
-      document.querySelectorAll('.media-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.media-panel').forEach(p => p.classList.remove('active'));
-      document.querySelector(`#panel-${tab}`).classList.add('active');
-      event.target.classList.add('active');
-    }
-
-    function selectOption(el) {
-      document.querySelectorAll('.poll-option').forEach(o => o.classList.remove('selected'));
-      el.classList.add('selected');
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-  </script>
+  <script src="/js/home.js" defer></script>
 
 </body>
 </html>
