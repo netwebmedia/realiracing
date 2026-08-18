@@ -27,6 +27,40 @@ DirectoryIndex index.html
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Enforced CSP (not Report-Only). Audited 2026-08-18 across this repo and the
+  # live blog output.
+  #
+  # script-src carries NO 'unsafe-inline'. 29 blog posts each embed their own
+  # <script> calling renderGearBox() with that post's affiliate keys — all
+  # different, and the blog machine keeps publishing more — so a hand-written
+  # hash list would go stale the first time a post auto-published. Instead
+  # `node _deploy/csp-inline-hashes.js` regenerates the sha256 allow-list below
+  # from the HTML actually being shipped, and deploy.yml runs it against the
+  # staged tree on every deploy. The list therefore cannot drift, and unlike
+  # 'unsafe-inline' — which would permit ANY inline script, including one
+  # injected at runtime — only inline scripts present in the committed source
+  # can execute.
+  # index.html and gear.html were cleared of inline script entirely on
+  # 2026-08-18 (see js/home.js and js/gear-page.js); the hashes below are the
+  # blog's.
+  # The JSON-LD blocks are NOT in this list: type="application/ld+json" is a
+  # data block the browser never executes, so script-src never applied to them.
+  #
+  # style-src needs 'unsafe-inline' too — there are 119 style="" attributes and
+  # two <style> blocks in the markup. Note this does NOT cover CSSOM: verified
+  # in a browser on 2026-08-18 that under style-src without 'unsafe-inline',
+  # el.style.cssText and el.style.prop still apply and only
+  # setAttribute('style', …) is blocked.
+  #
+  # img-src: img.youtube.com serves the video thumbnails, and images.pexels.com
+  # is the second layer of the slide background-image stacks in index.html
+  # (behind the local slides/*.jpg) — drop it and those slides lose their
+  # fallback. js/ga4.js injects gtag at runtime, so googletagmanager needs
+  # script-src and the beacon + pixel need connect-src and img-src; miss one and
+  # GA4 goes silent while the page looks fine. There are no iframes on this site,
+  # so youtube.com/linktr.ee/x.com are anchor hrefs only and need no entry.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-/PreoQYKCip0gcNowbt5HxXbh+KHiavWekI/KVK8ZZk=' 'sha256-4WOCQZQWtlmSEoVtAidr4wOz9JLV9NuNyjVfTpN+P/A=' 'sha256-4tYQgfQh+xkWHnfhWdG1sIFYvYclxzrJlaJP56ncj5A=' 'sha256-7mZgBM/nc8JE1/o6QNyuDWKeu5LfbxAdgqNtaJgz1RI=' 'sha256-7wsaiLPA25Z9InLFYpTH39KYAaaS49wKN4qoHgYWi2c=' 'sha256-C4jWy61RdKeCRSSEJ4KcZWTdz8ZNUJjrvT8rtswEP0w=' 'sha256-ESVZuJmUZQ3D6wjXyPLjlmV5XXK6DiEVgSGzJxjdmkw=' 'sha256-H6UPqMghlMak6rO2vcuZxXI2f0M4uXzBdL61GeaCF14=' 'sha256-HRoJflrip0dz2TWqQMgOBU4mcb6vNk/IChHZM1WwCMY=' 'sha256-J7lvJ80FZyO/F1igX8QVCztXtGhFHfW9Lb8Y8obmA4s=' 'sha256-O9SmJYwrvqP8vJY+eJG6rxyXyiIyzH/NTtbo/comQdE=' 'sha256-Ox0vOi9HGHNhIpYnIfUhmTilpk/Dx+OJX6dtMeoaJqY=' 'sha256-TR+wNwx6m+1N8RnZ1Yp/VwJs6lYgfv0UV4egxqnFXcE=' 'sha256-W3IptnClnmh3JGN/dWsKH4N1n3psWo8ucDlHjcA0Utc=' 'sha256-Xkss9feKfX3CqXYU168UqqfTy4Ku8i5jWTm93foXSk4=' 'sha256-bKIYeliCSE2iTL4LJj25tkP1FKtGDqDaIjvz6bDl54g=' 'sha256-dI3IhG5Z+0Lw3ExMZFQhUZtkpJSRDlry98JrS8HD7rk=' 'sha256-fRRPBwuipdYZDnhIZrckj2rKcu4r+iM0j0UagvtNrJ0=' 'sha256-gn6pqRXiuYLpfBdkXQpTBfCrxjP92/XQMjol7HL6pR0=' 'sha256-lYLNnyatN07tYRdXnxFMsvPn9f7+Oi38hZ2UhESsBEA=' 'sha256-oQYTgvcnVR7mqn3m7YYpFf1C3J8eiQETHVfaE2Kcwus=' 'sha256-pNM7PHTp2MHHPIpOdvB8+vNos/ieBiJXkrTyQqsPbZk=' 'sha256-pZA0qArnVKarZP5RP2gwrYtzEBxhtu46rjO6wojsfoA=' 'sha256-tEGO8twQX3cEBz+yHv/O3MYqXP6MvT+jhstN9oXDzmM=' 'sha256-u933j+gAPljXiSAV0xyAkZrkvT0TwQ5aXfVTZ5uNqnM=' 'sha256-v+KSvcOGJUwVnjsfQSD/8h0WSdMmlTKemSpM8UflBCA=' 'sha256-vc8DzMRMR+eJJqL2+AQD+HJSZw5u2lU4WcxC3W1R2Pc=' 'sha256-xr7WNgcBO7WRavh/FiB1Y3YfIWYRERvs+qRj7W2YCpA=' 'sha256-yIc4h7pp85gjkMRtZ0LHJsT8gQPj33HqFKgNe43A74o=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://img.youtube.com https://images.pexels.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
 </IfModule>
 
 # ── Caching: HTML always fresh, static assets long-lived ────────────────────

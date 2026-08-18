@@ -38,6 +38,18 @@ jobs:
           echo "── Stage contents ──"
           ls -1 _stage
 
+      - name: Regenerate CSP inline-script hashes
+        run: |
+          set -euo pipefail
+          # The enforced CSP has no 'unsafe-inline' in script-src — every inline
+          # <script> is allowed by sha256 instead. The blog machine publishes
+          # posts with their own inline gear-box call, so the list is rebuilt
+          # from the staged HTML rather than trusted from the repo. Without this
+          # the first auto-published post would be silently refused by the
+          # browser and its gear box would render empty on a green deploy.
+          node _deploy/csp-inline-hashes.js _stage
+          grep -o "script-src[^;]*" _stage/.htaccess | tail -1 | cut -c1-120
+
       - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
