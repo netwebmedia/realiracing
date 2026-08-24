@@ -3,10 +3,24 @@
  * ============================================================
  * All affiliate product data lives HERE and only here.
  *
- * To activate Amazon Associates: replace 'PENDING-20' below with
- * the real tracking ID (e.g. 'realiracing-20'). One-line swap —
- * every link on the site picks it up. While the tag is still
- * 'PENDING-20', links go out untagged and work normally.
+ * The Associates tag is LIVE (realiracing-20) and affUrl() appends it
+ * to every link below. Setting amazonTag back to 'PENDING-20' sends
+ * links out untagged; they still work, they just stop earning.
+ *
+ * LINKING POLICY (set 2026-08-24 after an audit found every link was a
+ * bare Amazon search, which ranks third-party adapters and mounting
+ * brackets above the actual product):
+ *
+ *   1. One unambiguous product  → link the ASIN:  /dp/<ASIN>
+ *   2. A brand with many live   → keyword search + the brand facet,
+ *      variants (MOZA)            /s?k=...&rh=p_89%3AMOZA — verified
+ *                                 2026-08-24 to return MOZA-only results
+ *   3. A genuine category       → plain keyword search (GPU, monitor,
+ *      (no single product)        cockpit). Correct as a search.
+ *
+ * Do NOT "upgrade" a rule-3 entry to an ASIN — the posts recommend a
+ * class of part there, not one SKU. Do re-check rule-1 ASINs when a
+ * vendor revises its line; MOZA and Fanatec both revise often.
  *
  * Usage in a page:
  *   <div id="rir-gear"></div>
@@ -28,19 +42,21 @@
       /* ── The actual rig (what Carlos races on) ────────────── */
       'moza-r9': {
         name: 'MOZA R9 Direct Drive Wheelbase',
-        amazonUrl: 'https://www.amazon.com/s?k=MOZA+R9+direct+drive+wheel+base',
+        amazonUrl: 'https://www.amazon.com/s?k=MOZA+R9+wheel+base&rh=p_89%3AMOZA',
         note: '9 N·m direct drive — the base bolted to my rig right now'
       },
       'moza-cs-v2': {
         name: 'MOZA CS V2 Steering Wheel',
-        amazonUrl: 'https://www.amazon.com/s?k=MOZA+CS+V2+steering+wheel',
+        amazonUrl: 'https://www.amazon.com/s?k=MOZA+CS+V2+steering+wheel&rh=p_89%3AMOZA',
         note: 'the round rim my whole FFB profile is tuned around'
       },
       'moza-crp2': {
         name: 'MOZA CRP2 Load Cell Pedals',
-        amazonUrl: 'https://www.amazon.com/s?k=MOZA+CRP2+load+cell+pedals',
+        amazonUrl: 'https://www.amazon.com/s?k=MOZA+CRP2+pedals&rh=p_89%3AMOZA',
         note: 'load-cell brake, managed in the same Pit House software'
       },
+      /* Category, not a product — many AIB partners build the same GPU,
+         so a search is the honest link. Same for the monitor and cockpit. */
       'gpu-rtx-5060-ti': {
         name: 'NVIDIA GeForce RTX 5060 Ti (8 GB)',
         amazonUrl: 'https://www.amazon.com/s?k=RTX+5060+Ti+8GB+graphics+card',
@@ -48,7 +64,7 @@
       },
       'cpu-ryzen-7-5700': {
         name: 'AMD Ryzen 7 5700',
-        amazonUrl: 'https://www.amazon.com/s?k=AMD+Ryzen+7+5700+processor',
+        amazonUrl: 'https://www.amazon.com/dp/B0CQ4HPJYV',
         note: '8 cores — plenty for iRacing plus OBS on one PC'
       },
       'monitor-1440p-120': {
@@ -56,38 +72,44 @@
         amazonUrl: 'https://www.amazon.com/s?k=1440p+144hz+g-sync+compatible+gaming+monitor',
         note: 'my single-screen setup — high refresh matters more than size'
       },
+      /* WHOOP 4.0 was discontinued in May 2025 (replaced by 5.0 / MG), so
+         the old link pointed at a product nobody can buy. 5.0 is the
+         current band; WHOOP sells by membership, hence a search not an ASIN. */
       'whoop': {
-        name: 'WHOOP 4.0 Band',
-        amazonUrl: 'https://www.amazon.com/s?k=WHOOP+4.0+band',
-        note: 'drives the live heart-rate overlay on my streams'
+        name: 'WHOOP 5.0 Band',
+        amazonUrl: 'https://www.amazon.com/s?k=WHOOP+5.0+band',
+        note: 'a WHOOP drives the live heart-rate overlay on my streams — mine is a 4.0, but 5.0 is what you can buy now'
       },
 
       /* ── The buying ladder (recommended, tier by tier) ────── */
       'logitech-g923': {
         name: 'Logitech G923 Racing Wheel',
-        amazonUrl: 'https://www.amazon.com/s?k=Logitech+G923+racing+wheel',
+        amazonUrl: 'https://www.amazon.com/dp/B07PGGDJSG',
         note: 'belt-driven, the easiest on-ramp into iRacing'
       },
       'thrustmaster-t300': {
         name: 'Thrustmaster T300 RS GT',
-        amazonUrl: 'https://www.amazon.com/s?k=Thrustmaster+T300+RS+GT',
+        amazonUrl: 'https://www.amazon.com/dp/B01M1L2NRL',
         note: 'long-standing budget pick'
       },
       'moza-r5': {
         name: 'MOZA R5 Bundle',
-        amazonUrl: 'https://www.amazon.com/s?k=MOZA+R5+bundle+direct+drive',
+        amazonUrl: 'https://www.amazon.com/s?k=MOZA+R5+bundle&rh=p_89%3AMOZA',
         note: 'entry direct drive — the first real fidelity jump'
       },
       'fanatec-csl-dd': {
         name: 'Fanatec CSL DD',
-        amazonUrl: 'https://www.amazon.com/s?k=Fanatec+CSL+DD',
+        amazonUrl: 'https://www.amazon.com/dp/B0FBGZHFN3',
         note: 'entry direct drive with Fanatec’s ecosystem'
       },
       'moza-r12': {
         name: 'MOZA R12 Direct Drive Wheelbase',
-        amazonUrl: 'https://www.amazon.com/s?k=MOZA+R12+direct+drive+wheel+base',
+        amazonUrl: 'https://www.amazon.com/s?k=MOZA+R12+wheel+base&rh=p_89%3AMOZA',
         note: 'high-end direct drive, maximum headroom'
       },
+      /* No Amazon listing for the ClubSport DD+ base itself — a search for it
+         returns third-party mounting brackets. Left as a search deliberately;
+         revisit if Fanatec lists the base directly. */
       'fanatec-clubsport-dd': {
         name: 'Fanatec ClubSport DD+',
         amazonUrl: 'https://www.amazon.com/s?k=Fanatec+ClubSport+DD%2B',
@@ -95,19 +117,22 @@
       },
       'meta-quest-3': {
         name: 'Meta Quest 3',
-        amazonUrl: 'https://www.amazon.com/s?k=Meta+Quest+3',
+        amazonUrl: 'https://www.amazon.com/dp/B0DDWH41HB',
         note: 'the most common way into PCVR sim racing'
       },
       'thrustmaster-t-lcm': {
         name: 'Thrustmaster T-LCM Pedals',
-        amazonUrl: 'https://www.amazon.com/s?k=Thrustmaster+T-LCM+pedals',
+        amazonUrl: 'https://www.amazon.com/dp/B083MNB4D8',
         note: 'cheapest genuine load cell, works with any base over USB'
       },
       'moza-sr-p': {
         name: 'MOZA SR-P Load Cell Pedals',
-        amazonUrl: 'https://www.amazon.com/s?k=MOZA+SR-P+load+cell+pedals',
+        amazonUrl: 'https://www.amazon.com/s?k=MOZA+SR-P+pedals&rh=p_89%3AMOZA',
         note: 'budget load cell on the same Pit House ecosystem as my R9'
       },
+      /* The pedals-plus-kit combo this recommends does not map to one
+         listing; Fanatec now sells the CSL Elite Pedals V2 with the load
+         cell built in. Kept as a search until the copy is rewritten. */
       'fanatec-csl-pedals-lc': {
         name: 'Fanatec CSL Pedals + Load Cell Kit',
         amazonUrl: 'https://www.amazon.com/s?k=Fanatec+CSL+pedals+load+cell+kit',
