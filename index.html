@@ -647,8 +647,25 @@
 
     /* ── MOBILE ──────────────────────────── */
     @media (max-width: 640px) {
-      nav { padding: 14px 20px; }
-      .nav-links { display: none; }
+      nav { padding: 10px 16px 8px; flex-wrap: wrap; row-gap: 6px; }
+
+      /* Until 2026-08-24 this was `.nav-links { display: none }` with no
+         hamburger anywhere on the site, so every destination in the header —
+         Blog, My Rig, Platforms, Subscribe — was unreachable on a phone. The
+         links stay visible as one horizontally scrollable row rather than a JS
+         drawer, matching blog/blog.css so both stylesheets behave the same. */
+      .nav-links {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links li { flex: 0 0 auto; }
+      .nav-links a { font-size: 0.82rem; white-space: nowrap; }
       .stats-bar { gap: 30px; }
       section { padding: 60px 20px; }
       .media-grid, .yt-grid { grid-template-columns: 1fr; }

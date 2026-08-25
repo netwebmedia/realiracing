@@ -339,8 +339,30 @@ footer a { color: var(--accent); text-decoration: none; }
 }
 
 @media (max-width: 640px) {
-  nav { padding: 14px 20px; }
-  .nav-links { display: none; }
-  .article-wrap { padding-top: 120px; }
-  .blog-hero { padding-top: 130px; }
+  nav { padding: 10px 16px 8px; flex-wrap: wrap; row-gap: 6px; }
+
+  /* Until 2026-08-24 this was `.nav-links { display: none }` with no hamburger
+     anywhere on the site, so every destination in the header — Blog, My Rig,
+     Platforms, Subscribe — was unreachable on a phone. The links stay visible
+     as one horizontally scrollable row rather than a JS drawer: the posts are
+     generator output (_deploy/generate-blogs.js) and share only this
+     stylesheet, so a CSS-only fix reaches all of them without touching markup. */
+  .nav-links {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links li { flex: 0 0 auto; }
+  .nav-links a { font-size: 0.82rem; white-space: nowrap; }
+
+  /* These used to shave the base 150px down to 120/130px because the mobile nav
+     was a single 59px-tall row. It is now two rows (~83px), so the shave no
+     longer clears it — hold the base value instead of trimming. */
+  .article-wrap { padding-top: 150px; }
+  .blog-hero { padding-top: 150px; }
 }
