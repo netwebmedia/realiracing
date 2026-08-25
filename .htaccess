@@ -67,14 +67,23 @@ DirectoryIndex index.html
 # js/ is deliberately NOT immutable-for-a-year: js/affiliates.js carries the
 # Amazon Associates tag and the whole product table, so a tag change has to
 # be able to reach existing readers.
+#
+# css/ moved out of the immutable bucket for exactly the same reason
+# (2026-08-25). blog/blog.css is hand-edited in place and every page linked it
+# as a bare `blog.css` with no version string, so `immutable` meant a returning
+# reader kept the cached copy for a YEAR no matter what shipped. That is how
+# the mobile-nav fix (F-01) reached new visitors but not returning ones. The
+# pages now carry ?v=20260824 to flush the already-poisoned entries once; this
+# header change is what stops the next CSS edit needing a version bump at all.
+# Fonts and images stay immutable — they are replaced, not edited in place.
 <IfModule mod_headers.c>
   <FilesMatch "\.(html)$">
     Header set Cache-Control "no-cache, must-revalidate, max-age=0"
   </FilesMatch>
-  <FilesMatch "\.(js)$">
+  <FilesMatch "\.(js|css)$">
     Header set Cache-Control "public, max-age=3600, must-revalidate"
   </FilesMatch>
-  <FilesMatch "\.(css|svg|png|jpg|jpeg|webp|woff2|mp4)$">
+  <FilesMatch "\.(svg|png|jpg|jpeg|webp|woff2|mp4)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
