@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — RealIRacing</title>
+<meta name="robots" content="noindex,follow" />
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  /* Palette mirrors index.html's :root, inlined on purpose: a 404 is served for
+     arbitrary paths, so a relative stylesheet URL would resolve against the
+     wrong directory. An inline style block is covered by the CSP's style-src
+     'unsafe-inline'; this page carries no inline JS, because script-src is
+     'self' plus a fixed hash allow-list that _deploy/csp-inline-hashes.js
+     regenerates at deploy time. */
+  :root{--black:#0a0a0a;--dark:#111317;--card:#1a1d23;--border:#2a2d35;
+        --accent:#e8ff00;--accent2:#00c8ff;--text:#f0f0f0;--muted:#888;
+        --font:'Segoe UI',system-ui,-apple-system,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{min-height:100vh;display:grid;place-items:center;background:var(--black);
+       color:var(--text);font-family:var(--font);text-align:center;padding:24px}
+  .code{font-size:88px;font-weight:800;letter-spacing:-.04em;color:var(--accent);
+        line-height:1}
+  h1{font-size:22px;font-weight:700;margin:10px 0 6px}
+  p{color:var(--muted);max-width:46ch;margin:0 auto 22px}
+  a.btn{display:inline-block;background:var(--accent);color:var(--black);font-weight:700;
+        text-decoration:none;padding:11px 22px;border-radius:999px;margin:6px 6px 0}
+  a.alt{display:inline-block;color:var(--text);font-weight:600;text-decoration:none;
+        padding:11px 20px;border:1px solid var(--border);border-radius:999px;margin:6px 6px 0}
+  nav.more{margin-top:26px;padding-top:18px;border-top:1px solid var(--border);
+           color:var(--muted);font-size:14px;line-height:2.1}
+  nav.more a{color:var(--muted);text-decoration:none;margin:0 9px;white-space:nowrap}
+  nav.more a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<div>
+  <p class="code">404</p>
+  <h1>Off track</h1>
+  <p>That page doesn't exist, or the guide has moved. Here's the way back onto the racing line.</p>
+  <a class="btn" href="/">Back to the homepage</a>
+  <a class="alt" href="/blog/">Read the guides</a>
+  <nav class="more">
+    <a href="/gear.html">My Rig</a>
+    <a href="/#media">Media</a>
+    <a href="/#platforms">Platforms</a>
+    <a href="https://www.youtube.com/@realtape" rel="noopener">Subscribe</a>
+  </nav>
+</div>
+</body>
+</html>
