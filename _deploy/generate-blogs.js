@@ -272,7 +272,7 @@ function renderPostHtml(post, related, allowedGearKeys) {
   <meta property="og:description" content="${esc(description)}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:type" content="article" />
-  <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="blog.css?v=20260824" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
