@@ -20,6 +20,8 @@
 
 const fs = require('fs');
 const path = require('path');
+
+const photos = require('./lib/photos.js');
 process.chdir(path.join(__dirname, '..'));
 
 const QUEUE_DIR = path.join('_deploy', 'posts-queue');
@@ -226,6 +228,12 @@ function scanExistingPosts() {
 function renderPostHtml(post, related, allowedGearKeys) {
   const slug = post.slug;
   const url = `${SITE_URL}/blog/${slug}.html`;
+  // Every post gets a picture with a stated origin: a photograph under an
+  // attribution-only licence, credited under the image, or a cover we rendered.
+  // Before this the article carried none and the index card showed an emoji on a
+  // gradient — the same emoji on a lot of cards.
+  const photo = photos.photoFor({ slug, title: post.title, description: post.description, tag: post.tag });
+  const photoUrl = photos.ogImage(photo, SITE_URL);
   const publishedISO = post.published || new Date().toISOString().slice(0, 10);
   const title = post.title;
   const description = post.description;
@@ -272,7 +280,13 @@ function renderPostHtml(post, related, allowedGearKeys) {
   <meta property="og:description" content="${esc(description)}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:type" content="article" />
-  <link rel="stylesheet" href="blog.css?v=20260824" />
+  <meta property="og:image" content="${photoUrl}" />
+  <meta property="og:image:width" content="${photo.width}" />
+  <meta property="og:image:height" content="${photo.height}" />
+  <meta property="og:image:alt" content="${esc(photo.alt_en)}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="${photoUrl}" />
+  <link rel="stylesheet" href="blog.css?v=20260826" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -282,6 +296,7 @@ function renderPostHtml(post, related, allowedGearKeys) {
     "author": { "@type": "Person", "name": ${JSON.stringify(author)}, "url": "${SITE_URL}" },
     "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "${SITE_URL}" },
     "mainEntityOfPage": "${url}",
+    "image": ${JSON.stringify(photoUrl)},
     "datePublished": "${publishedISO}",
     "dateModified": "${publishedISO}"
   }
@@ -331,6 +346,8 @@ ${faqJsonLd}
       <span class="dot">·</span>
       <span>${esc(readTime)}</span>
     </div>
+
+${photos.figureHtml(photo)}
 
     <div class="article-body">
       <p class="disclosure">Some links on this page may earn RealIRacing a commission at no extra cost to you. Gear I personally race on is called out as such; other picks are researched recommendations.</p>
@@ -389,9 +406,13 @@ ${relatedHtml}
 // recoverable from the post HTML itself.
 function buildCardHtml(post) {
   const style = CARD_STYLES[hash(post.slug) % CARD_STYLES.length];
+  // The banner keeps its per-post tint, but the emoji is replaced by the
+  // article's own picture — the emoji pool had fourteen entries for thirty-one
+  // posts, so cards repeated each other on sight.
+  const photo = photos.photoFor(post);
   return `<a class="blog-card" href="${post.slug}.html">
       <div class="blog-card-banner" style="background:linear-gradient(135deg,rgba(${style.rgb},.10),rgba(0,0,0,.4));">
-        <div class="blog-card-emoji">${style.emoji}</div>
+        <img class="blog-card-photo" src="${esc(photos.smFile(photo.file))}" width="${photo.sm_width || 560}" height="${photo.sm_height || 315}" alt="${esc(photo.alt_en)}" loading="lazy" decoding="async">
         <div class="blog-card-cat">${esc(post.tag || '')}</div>
       </div>
       <div class="blog-card-body">
