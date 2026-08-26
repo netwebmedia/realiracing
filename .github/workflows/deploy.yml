@@ -17,6 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify photo attribution
+        run: node _ci/validate-photo-attribution.mjs
+
       - name: Preflight — verify secrets
         id: preflight
         run: |
