@@ -1,0 +1,119 @@
+{
+  "slug": "rig-flex-and-wheelbase-mounting-ffb-feel",
+  "tag": "Setup Guides · Hardware",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "Your Force Feedback Feels Mushy and It Probably Isn't the Wheelbase",
+  "description": "Rig flex eats force feedback detail before it reaches your hands. How I found it on my own aluminium cockpit, and the mounting fixes that cost nothing.",
+  "published": "2026-08-31",
+  "dateLabel": "August 31, 2026",
+  "gearKeys": [
+    "cockpit",
+    "moza-r9",
+    "moza-r12",
+    "moza-crp2"
+  ],
+  "sections": [
+    {
+      "p": "I spent about three weeks convinced my MOZA R9 had developed a fault. The feedback had gone vague — kerbs arrived late and rounded off, the front end felt like it was reporting through a blanket, and the sharp little edge you get right as the fronts start to let go had disappeared. I reflashed firmware, reset every profile, rebuilt my <a href=\"iracing-force-feedback-explained.html\">force feedback settings</a> from scratch twice, and read enough forum threads to be certain the wheelbase was dying."
+    },
+    {
+      "p": "The wheelbase was fine. What had changed was that I had moved my rig to reach a wall socket, and in doing so I had left four of the wheel deck bolts finger tight. The base was still bolted on. It just wasn't rigid any more, and a wheelbase that can move relative to the frame spends part of its torque moving the frame instead of your hands."
+    },
+    {
+      "p": "This is the single most under-diagnosed problem in sim racing, because it presents exactly like a settings problem and gets treated as one. Here is how to tell them apart, and what actually fixes it."
+    },
+
+    { "h2": "Why flex reads as bad force feedback" },
+    {
+      "p": "A direct drive wheelbase produces torque by pushing against something. If that something is a rigid structure, all of the torque ends up at the rim. If the structure can twist, some of the torque goes into twisting it, and what reaches your hands is what's left over — delayed slightly, and with the high frequency detail smeared out."
+    },
+    {
+      "p": "The delay is the part that ruins driving. Kerb strikes and the onset of understeer are short, sharp events, and they are precisely the signals that get lost first. Sustained forces like cornering load survive flex reasonably well, which is why the wheel can still feel strong while telling you nothing useful. Strong and detailed are different things, and flex removes the second while leaving the first."
+    },
+    {
+      "p": "It also gets worse as your wheelbase gets stronger. An entry level belt drive at ~3 N&middot;m barely troubles a desk clamp. An R9 at ~9 N&middot;m will find every loose joint you have, and something in the R12 class will find joints you didn't know were joints."
+    },
+
+    { "h2": "The five minute test" },
+    {
+      "p": "You don't need instrumentation. You need a hand and a friend, or a hand and patience."
+    },
+    { "olist": [
+      "With the sim closed and the wheelbase powered off, hold the rim and try to twist it side to side against the frame. There should be essentially no movement other than the base's own detent.",
+      "Put one hand flat on the wheel deck and the other on the main frame rail, then push the rim hard. If you can feel the deck move relative to the rail, that's your flex.",
+      "Repeat at the pedal deck. Push the brake hard with your hand and feel whether the deck moves relative to the frame — a load cell that moves under load feels exactly like an inconsistent brake.",
+      "Load a car in the sim, sit stationary, and turn the wheel lock to lock slowly. Watch the monitor mount and the frame. Any visible sympathetic movement is energy not reaching you.",
+      "Finally, check whether the whole rig is walking on the floor under load. If it slides, everything above it is being asked to absorb that."
+    ]},
+    {
+      "p": "If all five are clean, your problem genuinely is settings, and you should go back to your <a href=\"iracing-ffb-clipping-how-to-diagnose-and-fix.html\">clipping diagnosis</a> rather than buying anything."
+    },
+
+    { "h2": "Where the flex usually is" },
+    {
+      "p": "On a fixed aluminium profile cockpit like mine, it's almost never the profile itself. It's the connections."
+    },
+    { "list": [
+      "Wheel deck bolts. Four or six of them, and the ones at the back are the awkward ones you tightened least. This is the most common single cause.",
+      "The T-nuts inside the profile slot. If a T-nut has rotated slightly or was never seated square, the bolt is tight but the joint is not.",
+      "The angle brackets joining the wheel deck uprights to the main rails. Two bolts per bracket is common and often not enough on a strong base.",
+      "The seat mount. A flexing seat feels like a flexing wheel because your body is the reference point for both.",
+      "The pedal deck, which almost nobody checks, and which matters as much for braking consistency as the wheel deck does for steering feel."
+    ]},
+
+    { "h2": "The fixes, cheapest first" },
+    {
+      "p": "Do these in order. I got most of my feel back at step two, before spending anything."
+    },
+    { "olist": [
+      "Re-torque everything. Every bolt on the front half of the rig, in a cross pattern, properly tight. Do this before considering any other explanation, and do it again after any time you move the rig.",
+      "Add a diagonal. A single length of profile running diagonally between the wheel deck upright and the main rail turns a rectangle, which can parallelogram, into a triangle, which can't. This is the highest value modification available and it costs less than almost any accessory.",
+      "Double up the brackets. If the wheel deck uprights use one bracket per joint, add a second on the opposite face. Doubling the bracket count roughly doubles the resistance to the twisting that matters.",
+      "Stop the rig moving on the floor. Feet with rubber pads, or the rig against a wall. A rig that slides is dumping energy into the carpet.",
+      "Only then consider a stiffer wheel deck plate. Thin steel or aluminium plates flex on their own under a strong base, and this is the one item on the list worth spending money on."
+    ]},
+
+    {
+      "tip": "Re-torque the front half of your rig after every time you move it, and once a season regardless. Bolts in aluminium profile back off gradually under vibration, so the degradation is slow enough that you adapt to it instead of noticing it.",
+      "tipLabel": "Do this first"
+    },
+
+    { "h2": "What it should feel like afterwards" },
+    {
+      "p": "The honest answer is that it does not feel stronger. If anything the peak forces feel similar, because peak torque was never the thing being lost. What comes back is edge definition: kerbs arrive as distinct impacts rather than as a swell, and the moment the front tyres start to slide has a texture again instead of just going light."
+    },
+    {
+      "p": "For me the measurable part was consistency rather than outright pace. My best lap barely moved. My spread over a stint tightened noticeably, because I was getting the understeer signal early enough to act on it rather than reacting after the car had already washed out. That is the same reason <a href=\"seating-position-and-wheel-height-sim-rig.html\">seating position</a> matters so much: both are about the fidelity of the information reaching you, not the strength of it."
+    },
+
+    { "h2": "The buying implication" },
+    {
+      "p": "If you are shopping for a bigger wheelbase because your current one feels vague, test for flex first. A stronger base bolted to a flexible structure will feel stronger and no more detailed, and you will have spent a lot of money to move the bottleneck exactly nowhere."
+    },
+    {
+      "p": "The general rule I'd give now: budget for the mounting at the same time as the base, not afterwards. A mid-range direct drive on a rigid rig beats a high-end one on a flexible rig, every time, and it is not close. The mounting is not an accessory to the wheelbase. It is part of the wheelbase's ability to do its job."
+    },
+    {
+      "p": "None of this is exciting and none of it photographs well. It is also the cheapest genuine improvement I have made to my rig, and the only one where the fix was entirely free."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I know if my force feedback problem is rig flex or a settings issue?",
+      "a": "Flex removes detail while leaving strength intact, so the wheel feels powerful but vague, and kerbs feel rounded off rather than sharp. Settings problems like clipping usually change the strength as well. The physical test is decisive: hold the rim and try to twist it against the frame with the base powered off. If there is movement, fix that before touching any setting."
+    },
+    {
+      "q": "Does a desk mount always feel worse than a cockpit?",
+      "a": "Not always, but it is much more likely to. A heavy solid desk with a good clamp can be adequate for a lower torque wheelbase. As torque rises, the desk becomes the limiting element and the clamp point becomes a pivot. If you are moving up to a stronger direct drive base, plan on a rigid mounting structure at the same time."
+    },
+    {
+      "q": "Will adding a diagonal brace really make a noticeable difference?",
+      "a": "In my experience yes, and more than most paid upgrades. A rectangular frame can deform into a parallelogram under load, and a diagonal turns it into two triangles, which cannot. It is a small amount of extra profile and two brackets, and it addresses the exact motion that steals steering detail."
+    },
+    {
+      "q": "How often should I re-tighten the bolts on an aluminium profile rig?",
+      "a": "After every time you move the rig, and roughly once a season otherwise. Bolts in profile slots back off slowly under vibration, and because the change is gradual most people adapt to the worsening feel rather than noticing it. A quick pass over the wheel deck and pedal deck bolts takes a few minutes."
+    }
+  ]
+}
