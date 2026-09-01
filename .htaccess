@@ -98,3 +98,9 @@ ErrorDocument 404 /404.html
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
 </IfModule>
+
+# The FTP deploy action (SamKirkland/FTP-Deploy-Action) writes its sync-state
+# file into the docroot: a JSON inventory of every deployed path + hash. It was
+# web-readable (sibling property climalerta.com served it 200 on 2026-09-01).
+# The action reads it back over FTP, so an HTTP 404 costs deploys nothing.
+RedirectMatch 404 (^|/)\.ftp-deploy-sync-state
