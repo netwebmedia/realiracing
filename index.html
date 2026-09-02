@@ -10,6 +10,21 @@
   <meta property="og:description" content="iRacing sim racing content — Race Highlights, Setup Guides, Rig Tours & Tips." />
   <meta property="og:url" content="https://realiracing.com/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://realiracing.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RealIRacing — Race. Stream. Compete." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@realiracing" />
+  <meta name="twitter:title" content="RealIRacing" />
+  <meta name="twitter:description" content="iRacing sim racing content — Race Highlights, Setup Guides, Rig Tours & Tips." />
+  <meta name="twitter:image" content="https://realiracing.com/og-image.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- Slide 1 is the LCP image; preload the variant this viewport will use so it
+       starts with the HTML instead of after the inline stylesheet is applied. -->
+  <link rel="preload" as="image" href="/slides/slide1-sm.jpg" media="(max-width: 640px) and (orientation: portrait)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/slides/slide1.jpg" media="(min-width: 641px), (orientation: landscape)" fetchpriority="high" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,7 +105,8 @@
       font-size: 0;
       text-decoration: none;
       display: block;
-      background: url('/logo-horizontal.png') left center / contain no-repeat;
+      /* 552x93 = 3x the 184x31 box; the 2169x365 master PNG was 258 KB for a 31 px logo. */
+      background: url('/logo-nav.webp') left center / contain no-repeat;
     }
     .nav-logo-wheel { display: none; }
     .nav-links { display: flex; gap: 32px; list-style: none; }
@@ -142,15 +158,15 @@
       opacity: 1;
       transform: scale(1.0);
     }
-    /* Slide photo backgrounds — Pexels motorsport (permanent). Drop your own into slides/ */
-    /* Local slides/ files load first; Pexels URLs are the permanent online fallback */
-    .slide-1 { background-image: url('slides/slide1.jpg'), url('https://images.pexels.com/photos/35415243/pexels-photo-35415243.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
-    .slide-2 { background-image: url('slides/slide2.jpg'), url('https://images.pexels.com/photos/28463838/pexels-photo-28463838.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
-    .slide-3 { background-image: url('slides/slide3.jpg'), url('https://images.pexels.com/photos/18956548/pexels-photo-18956548.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
-    .slide-4 { background-image: url('slides/slide4.jpg'), url('https://images.pexels.com/photos/9528592/pexels-photo-9528592.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
-    .slide-5 { background-image: url('slides/slide5.jpg'), url('https://images.pexels.com/photos/13237630/pexels-photo-13237630.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
-    .slide-6 { background-image: url('slides/slide6.jpg'), url('https://images.pexels.com/photos/12801/pexels-photo-12801.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
-    .slide-7 { background-image: url('slides/slide7.jpg'), url('https://images.pexels.com/photos/5111316/pexels-photo-5111316.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
+    /* Slide photos — self-hosted JPEGs under slides/ (Pexels licence, credited in
+       slides/CREDITS.md). Only slide 1 is declared here so it is the one image on
+       the critical path; slides 2-7 carry data-bg / data-bg-sm and js/home.js
+       attaches them after window.load. The -sm variant is a 3:5 centre crop —
+       exactly what cover + center shows on a phone — at a third of the bytes. */
+    .slide-1 { background-image: url('/slides/slide1.jpg'); }
+    @media (max-width: 640px) and (orientation: portrait) {
+      .slide-1 { background-image: url('/slides/slide1-sm.jpg'); }
+    }
 
     /* SVG graphics only shown on non-photo (gradient) slides */
     .slide-graphic {
@@ -272,8 +288,8 @@
       background: rgba(10,10,10,.5);
       border: 1px solid rgba(255,255,255,.12);
       color: white; font-size: 1.2rem;
-      width: 44px; height: 44px;
-      border-radius: 50%;
+      width: 44px; height: 44px; padding: 0;
+      border-radius: 50%; font-family: inherit;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer;
       transition: background .2s, border-color .2s;
@@ -774,7 +790,7 @@
       </div>
 
       <!-- Slide 2: Takuma Sato #21 Panasonic IndyCar -->
-      <div class="slide slide-2">
+      <div class="slide slide-2" data-bg="/slides/slide2.jpg" data-bg-sm="/slides/slide2-sm.jpg">
         <div class="slide-graphic">
           <svg viewBox="0 0 700 260" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- IndyCar silhouette -->
@@ -807,7 +823,7 @@
       </div>
 
       <!-- Slide 3: Marco Andretti #98 US Concrete IndyCar -->
-      <div class="slide slide-3">
+      <div class="slide slide-3" data-bg="/slides/slide3.jpg" data-bg-sm="/slides/slide3-sm.jpg">
         <div class="slide-graphic">
           <svg viewBox="0 0 700 260" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="350" cy="230" rx="280" ry="14" fill="#cc0000" opacity="0.25"/>
@@ -835,7 +851,7 @@
       </div>
 
       <!-- Slide 4: WRC Chile 2019 -->
-      <div class="slide slide-4">
+      <div class="slide slide-4" data-bg="/slides/slide4.jpg" data-bg-sm="/slides/slide4-sm.jpg">
         <div class="slide-graphic">
           <svg viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Rally car silhouette -->
@@ -865,7 +881,7 @@
       </div>
 
       <!-- Slide 5: NASCAR Talladega 2023 -->
-      <div class="slide slide-5">
+      <div class="slide slide-5" data-bg="/slides/slide5.jpg" data-bg-sm="/slides/slide5-sm.jpg">
         <div class="slide-graphic">
           <svg viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- NASCAR stock car -->
@@ -902,7 +918,7 @@
       </div>
 
       <!-- Slide 6: iRacing Porsche -->
-      <div class="slide slide-6">
+      <div class="slide slide-6" data-bg="/slides/slide6.jpg" data-bg-sm="/slides/slide6-sm.jpg">
         <div class="slide-graphic">
           <svg viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Porsche GT3 silhouette -->
@@ -932,7 +948,7 @@
       </div>
 
       <!-- Slide 7: Sim Rig / Moza setup -->
-      <div class="slide slide-7">
+      <div class="slide slide-7" data-bg="/slides/slide7.jpg" data-bg-sm="/slides/slide7-sm.jpg">
         <div class="slide-graphic">
           <svg viewBox="0 0 700 320" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Monitor bank -->
@@ -983,8 +999,8 @@
       </div>
 
       <!-- Nav arrows -->
-      <div class="slide-nav slide-nav-prev">&#8592;</div>
-      <div class="slide-nav slide-nav-next">&#8594;</div>
+      <button type="button" class="slide-nav slide-nav-prev" aria-label="Previous slide">&#8592;</button>
+      <button type="button" class="slide-nav slide-nav-next" aria-label="Next slide">&#8594;</button>
     </div>
 
     <!-- Hero content over slideshow -->

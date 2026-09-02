@@ -15,11 +15,26 @@
   var slides = document.querySelectorAll('.slide');
   var dots   = document.querySelectorAll('.progress-dot');
 
+  /* Slides 2-7 carry their photos in data-bg / data-bg-sm instead of the
+     stylesheet, so only slide 1 is fetched before first paint (every slide is
+     opacity:0, not display:none, so a CSS background on all seven would have
+     downloaded ~1 MB up front). The same media query as the stylesheet picks
+     the phone crop. Attached after window.load, and defensively just before a
+     slide is shown in case load is still pending on a slow connection. */
+  var SMALL_VIEWPORT = '(max-width: 640px) and (orientation: portrait)';
+  function attachBackground(slide) {
+    var small = window.matchMedia(SMALL_VIEWPORT).matches;
+    var src = (small && slide.getAttribute('data-bg-sm')) || slide.getAttribute('data-bg');
+    if (src && !slide.style.backgroundImage) slide.style.backgroundImage = 'url("' + src + '")';
+  }
+  function attachAllBackgrounds() { slides.forEach(attachBackground); }
+
   function goToSlide(n) {
     if (!slides.length) return;
     slides[currentSlide].classList.remove('active');
     dots[currentSlide].classList.remove('active');
     currentSlide = (n + slides.length) % slides.length;
+    attachBackground(slides[currentSlide]);
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
     resetTimer();
@@ -64,7 +79,11 @@
     if (e.key === 'ArrowLeft')  prevSlide();
   });
 
-  if (slides.length) resetTimer();
+  if (slides.length) {
+    resetTimer();
+    if (document.readyState === 'complete') attachAllBackgrounds();
+    else window.addEventListener('load', attachAllBackgrounds);
+  }
 
   /* ── TAB SWITCHER ── */
   // Reads the target panel from data-tab. The old version called switchTab('x')
