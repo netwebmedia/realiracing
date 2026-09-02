@@ -41,7 +41,7 @@ nav {
   font-size: 0;
   text-decoration: none;
   display: block;
-  background: url('/logo-horizontal.png') left center / contain no-repeat;
+  background: url('/logo-nav.webp') left center / contain no-repeat; /* 552x93, 12 KB — was the 258 KB master PNG */
 }
 .nav-logo-wheel { display: none; }
 .nav-links { display: flex; gap: 32px; list-style: none; }

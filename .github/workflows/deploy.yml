@@ -35,7 +35,7 @@ jobs:
           # Copy everything except dev/build artifacts
           rsync -a --exclude='.git' --exclude='.github' --exclude='node_modules' \
             --exclude='.DS_Store' --exclude='Thumbs.db' --exclude='remotion-highlights' \
-            --exclude='slides' --exclude='extract-slides.html' --exclude='_stage' \
+            --exclude='extract-slides.html' --exclude='_stage' \
             --exclude='_deploy' \
             . _stage/
           echo "── Stage contents ──"
@@ -72,7 +72,6 @@ jobs:
             **/Thumbs.db
             **/node_modules/**
             **/remotion-highlights/**
-            **/slides/**
             **/extract-slides.html
             **/_deploy/**
 
