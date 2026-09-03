@@ -21,6 +21,12 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://realiracing.com";
 
+// COMPARISON KEYS, not the URL we render. Every lookup goes through normalise()
+// below, which strips the scheme difference, /deed.<lang> and the trailing slash,
+// so these are deliberately written in that stripped form and must stay that way —
+// adding the trailing slash here matches nothing and fails every sourced photo.
+// The href that actually ships is credits.json's license_url, which carries the
+// canonical trailing slash because creativecommons.org 301s the bare form.
 const ALLOWED_LICENCES = new Set([
   "https://creativecommons.org/licenses/by/2.0",
   "https://creativecommons.org/licenses/by/3.0",
