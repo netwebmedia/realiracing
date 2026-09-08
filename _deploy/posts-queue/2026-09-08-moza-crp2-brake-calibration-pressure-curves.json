@@ -1,0 +1,28 @@
+{
+  "slug": "moza-crp2-brake-calibration-pressure-curves",
+  "tag": "Hardware \u00b7 Setup",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "MOZA CRP2 brake calibration: pressure curves and threshold tuning for iRacing",
+  "description": "Calibrate your CRP2 load-cell brake for iRacing.",
+  "published": "2026-09-08",
+  "dateLabel": "September 08, 2026",
+  "gearKeys": [
+    "moza-crp2",
+    "moza-r9"
+  ],
+  "sections": [
+    {
+      "h2": "Why CRP2 load-cell calibration matters in iRacing"
+    },
+    {
+      "p": "Load-cell brakes are stupidly sensitive to calibration state."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How often to recalibrate?",
+      "a": "Once every 3 months"
+    }
+  ]
+}
