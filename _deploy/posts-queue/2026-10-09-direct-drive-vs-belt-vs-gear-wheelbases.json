@@ -1,0 +1,114 @@
+{
+  "slug": "direct-drive-vs-belt-vs-gear-wheelbases",
+  "tag": "Buyer's Guide · Hardware",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "Direct Drive vs. Belt vs. Gear-Driven Wheelbases: What the Difference Actually Feels Like",
+  "description": "Three drive technologies power sim racing wheelbases, and the difference isn't just a spec sheet number — it's a genuinely different feel at the wheel that's w",
+  "published": "2026-10-09",
+  "dateLabel": "October 9, 2026",
+  "gearKeys": [
+    "logitech-g923",
+    "thrustmaster-t300",
+    "moza-r9",
+    "fanatec-csl-dd"
+  ],
+  "sections": [
+    {
+      "p": "I run all of this from a fixed-aluminium-extrusion cockpit with a ~MOZA R9 direct drive wheelbase and ~MOZA CRP2 load-cell pedals — no motion, no fancy paint, just a rig built to be honest about what the car is doing. Three drive technologies power sim racing wheelbases, and the difference isn't just a spec sheet number — it's a genuinely different feel at the wheel that's worth understanding before you spend money."
+    },
+    {
+      "p": "I want to be upfront that I don't think there's a single universally correct answer here — the right choice depends heavily on your budget, how much you already own, and which specific type of racing you spend most of your time on. What I can offer is what I've actually noticed, having spent real time with more than one option in this space."
+    },
+    {
+      "h2": "Gear-driven wheelbases"
+    },
+    {
+      "p": "Gear-driven wheelbases, like the ~Logitech G923, use a motor connected through a gear reduction. They're the most affordable entry point and a genuinely reasonable place to start, but the gear mesh introduces a small amount of play and a characteristic slight notchiness compared to what comes next up the ladder."
+    },
+    {
+      "h2": "Belt-driven wheelbases"
+    },
+    {
+      "p": "Belt-driven wheelbases, like the ~Thrustmaster T300, use a belt and pulley system instead of gears. This typically feels smoother than gear-driven, with less mechanical play, while staying at a similar or slightly higher price point than the entry gear-driven options."
+    },
+    {
+      "h2": "Direct drive wheelbases"
+    },
+    {
+      "p": "Direct drive wheelbases, like my own ~MOZA R9 or a ~Fanatec CSL DD, connect the wheel rim straight to the motor shaft with nothing in between. There's no gear mesh or belt stretch to introduce play, which is why direct drive is often described as feeling more 'connected' — you're feeling the motor's output essentially unfiltered."
+    },
+    {
+      "h2": "What I'd actually recommend"
+    },
+    {
+      "p": "If you're just finding out whether sim racing is for you, a gear or belt-driven wheel is a perfectly reasonable way to start — you'll learn real skills that transfer directly. If you already know you're staying in the hobby, I think the jump to direct drive is worth prioritizing over almost any other single upgrade, including a nicer monitor or a fancier cockpit."
+    },
+    {
+      "p": "It's also worth remembering that the used market for wheelbases is genuinely active in this hobby. A lot of racers upgrade in stages, which means a well-cared-for belt-driven or entry direct-drive unit can often be found secondhand for meaningfully less than buying new, if you're comfortable with that route and can verify the seller's condition claims."
+    },
+    {
+      "h2": "How I'd actually decide"
+    },
+    {
+      "p": "If I were starting from scratch today with a clean budget, I'd think about it in this order: figure out what you're actually going to race most, be honest about your budget ceiling including tax and shipping, and then buy the best option within that ceiling rather than stretching for a marginally better spec that puts you over budget. Overspending on one component and then being stuck with a compromised setup everywhere else is a worse outcome than a balanced, slightly more modest setup across the board."
+    },
+    {
+      "p": "It's also worth resisting the urge to buy for the racer you hope to become rather than the one you actually are today. If you're not sure yet how many hours a week you'll realistically put into this hobby, a more modest choice that you can upgrade from later is usually the smarter financial decision than committing to the top tier immediately, even if the top tier is technically the better long-term outcome for someone who ends up racing every day."
+    },
+    {
+      "h2": "Mistakes I see people make with this decision"
+    },
+    {
+      "list": [
+        "Buying based purely on a single influencer or reviewer's personal preference without checking it against their own budget and racing habits",
+        "Chasing the newest release the moment it launches instead of waiting for real-world reviews and any early firmware or reliability issues to shake out",
+        "Underestimating shipping, import duty, or regional availability, which can change the actual value comparison significantly depending on where you live",
+        "Ignoring resale value and community size for a given ecosystem, which matters more than people expect if you ever want to sell or upgrade a specific piece later"
+      ]
+    },
+    {
+      "p": "None of these mistakes are really about the products themselves — they're about the decision-making process around buying them, which is honestly where I see more sim racers waste money than on any specific bad product choice."
+    },
+    {
+      "h2": "How this decision ages over time"
+    },
+    {
+      "p": "It's worth thinking beyond the initial purchase to how this choice holds up as your own skill and interest in the hobby develop. Something that feels like the right call for a beginner can start to feel limiting after a year of regular racing, while something that feels like overkill at first can end up being exactly right once your habits catch up to it. I'd rather make a slightly conservative choice now and upgrade deliberately later than overcommit to something I'm not yet sure I'll actually use to its full potential."
+    },
+    {
+      "p": "I'd also encourage checking in with your own decision six months or a year after making it, honestly assessing whether it turned out to be the right call. That kind of retrospective is rare in this hobby — most people move on to the next purchase decision rather than evaluating the last one — but it's genuinely useful for making better choices the next time an upgrade decision comes up."
+    },
+    {
+      "h2": "Where I've landed personally"
+    },
+    {
+      "p": "For what it's worth, my own choices here weren't made all at once — I built up my rig gradually over time as I got clearer on what I actually needed versus what just looked appealing in a review or a forum thread. I'd encourage the same patience rather than trying to buy the 'complete' setup in one purchase; you'll make better decisions once you actually know your own habits and preferences from real seat time."
+    },
+    {
+      "tip": "Don't judge a wheelbase technology purely from a spec sheet — if you can, try a direct drive wheel at a sim racing meetup or friend's rig before buying, since the difference is much more obvious in person than in any written description.",
+      "tipLabel": "Pro Tip"
+    },
+    {
+      "p": "For a related comparison, see my notes on <a href=\"fanatec-vs-moza-ecosystem-2026.html\">the Fanatec vs MOZA ecosystem comparison</a> — it's worth reading both before committing to a purchase in this price range."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is direct drive worth the extra cost over belt-driven?",
+      "a": "For most people who plan to stay in the hobby, I'd say yes — the improved connection to the car's behavior tends to matter more for both enjoyment and lap time than most other single upgrades."
+    },
+    {
+      "q": "Can a gear-driven wheel still be competitive on iRacing?",
+      "a": "Yes — plenty of drivers race competitively on entry-level wheels. The wheel technology affects feel and information more than it hard-caps your potential lap time."
+    },
+    {
+      "q": "Do I need a direct drive wheel to learn force feedback basics?",
+      "a": "No — the fundamentals of reading FFB (weight transfer, grip loss) can be learned on any wheel technology; direct drive just presents that information more clearly and with less mechanical noise in between."
+    },
+    {
+      "q": "Does drive technology affect pedal choice?",
+      "a": "Not directly — pedals are typically a separate purchase regardless of wheelbase technology, though many brands sell them as matched ecosystems."
+    }
+  ]
+}

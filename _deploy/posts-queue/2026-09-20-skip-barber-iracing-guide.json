@@ -1,0 +1,123 @@
+{
+  "slug": "skip-barber-iracing-guide",
+  "tag": "Car Guide · Formula",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "The Skip Barber Formula 2000 on iRacing: A Different Kind of Honest",
+  "description": "My honest impressions racing the Skip Barber Formula 2000 on iRacing — setup notes, wheel feel, and who this car actually suits.",
+  "published": "2026-09-20",
+  "dateLabel": "September 20, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "sections": [
+    {
+      "p": "I run all of this from a fixed-aluminium-extrusion cockpit with a ~MOZA R9 direct drive wheelbase and ~MOZA CRP2 load-cell pedals — no motion, no fancy paint, just a rig built to be honest about what the car is doing. Here's what the Skip Barber Formula 2000 has actually been like to race, across the tracks I run most — not a spec-sheet rundown, just what I've actually noticed after enough laps to trust my own impressions."
+    },
+    {
+      "p": "I try to give a car a genuinely fair chance before forming an opinion on it — a session or two of just getting comfortable before I start comparing it to anything else I race. The Skip Barber Formula 2000 is a good example of a car that rewarded that patience; my first impression and my impression after a few weeks weren't quite the same."
+    },
+    {
+      "h2": "What this car is really like to drive"
+    },
+    {
+      "p": "It's light, has real aero at speed, and demands a completely different braking and rotation technique than a fixed-roof car — the open-cockpit view alone changes how you judge your braking points."
+    },
+    {
+      "p": "That character shows up most clearly once you're pushing near the limit rather than cruising around at seven-tenths — which is honestly true of most race cars, but it's worth saying plainly here because a lot of first impressions of the Skip Barber Formula 2000 get formed in that first cautious session and then never get revisited."
+    },
+    {
+      "h2": "Setup starting point"
+    },
+    {
+      "list": [
+        "Wing levels genuinely matter here in a way they don't in the fixed-aero MX-5 — I adjust front-to-rear wing balance per track more than almost any other setup parameter",
+        "The car is light enough that curb strikes unsettle it noticeably more than a heavier GT car",
+        "I run slightly more front brake bias than in GT cars since the Skip Barber's weight distribution rewards a sharper initial bite"
+      ]
+    },
+    {
+      "p": "As with any setup notes, I'd treat these as a starting direction rather than a fixed recipe — track-specific demands, personal preference, and even the specific series rules you're racing under can all shift what actually works best. Change one thing at a time and judge it against a stopwatch, not just a feeling."
+    },
+    {
+      "h2": "How it feels through the wheel"
+    },
+    {
+      "p": "Through the ~MOZA R9, the Skip Barber's lighter weight and open aero mean you feel aerodynamic grip build and fade far more distinctly than in a heavier GT car — it's a genuinely good teaching tool for understanding what downforce actually feels like."
+    },
+    {
+      "p": "Pedal feel matters just as much here as wheel feel, and I'd say the same logic applies to the ~MOZA CRP2 load-cell pedals I run — a car's braking character comes through in how the pedal resists your foot, not just in how the car decelerates on screen. Cars with different weight distributions like the Skip Barber Formula 2000 genuinely reward paying attention to that resistance curve rather than just stomping to a fixed travel point every time."
+    },
+    {
+      "tip": "Pay attention to how much more the Skip Barber moves around over curbs than a heavier car — smoothing your inputs over bumps matters more here than almost anywhere else.",
+      "tipLabel": "Pro Tip"
+    },
+    {
+      "h2": "Common mistakes I see (and made myself) in this car"
+    },
+    {
+      "list": [
+        "Carrying over setup habits from a different car class instead of respecting what the Skip Barber Formula 2000 specifically rewards",
+        "Judging the car's limit too early, in the first session, before tires and the driver are both actually warmed up",
+        "Ignoring how the car's character changes over a longer run as tires wear, rather than just tuning for a single fast lap"
+      ]
+    },
+    {
+      "h2": "Who this car suits"
+    },
+    {
+      "p": "Drivers who've outgrown the MX-5 and want a lighter, more aero-sensitive car before jumping into GT3, or anyone who specifically wants open-wheel practice without the higher speeds of the IndyCar or Super Formula."
+    },
+    {
+      "h2": "Practice plan for getting comfortable with this car"
+    },
+    {
+      "olist": [
+        "Spend a full session with no other cars on track just learning where the Skip Barber Formula 2000's grip limit actually is in isolation",
+        "Run a handful of laps intentionally over the limit in a low-stakes session so you know what the car's warning signs feel like before you're relying on avoiding them under race pressure",
+        "Do at least one longer run at race pace rather than qualifying pace before your first real race in the car, so tire wear and fuel load aren't a surprise",
+        "Race it in a lower-pressure series first if you can, before bringing it into a series or split where the stakes and traffic density are higher"
+      ]
+    },
+    {
+      "p": "That progression matters more with the Skip Barber Formula 2000 than it might with a car you're already deeply familiar with, simply because every car has its own specific way of warning you before it lets go, and you can't actually learn that warning from reading about it — only from spending time right at the edge of it in a controlled setting."
+    },
+    {
+      "h2": "What I'd change about my own approach next time"
+    },
+    {
+      "p": "Looking back at my early sessions in the Skip Barber Formula 2000, I spent too long trying to force a setup and driving style that worked well in a different car onto it, rather than treating it as its own thing with its own demands from lap one. That cost me more time than any actual mechanical shortcoming in the car itself, and it's a mistake I think a lot of drivers make whenever they change car class — old habits are comfortable, but comfortable isn't the same as correct for the car you're actually in."
+    },
+    {
+      "p": "If I were starting over with this car today, I'd spend the first full session purely on getting comfortable with its specific braking and rotation character before touching the setup at all — changing the car's balance before you actually understand its default behavior just muddies the feedback you're trying to learn from."
+    },
+    {
+      "h2": "A quick note on iRating and Safety Rating in this car"
+    },
+    {
+      "p": "Jumping into a new car class, including the Skip Barber Formula 2000, resets some of your comfort even if your iRating and Safety Rating carry over. I'd expect a small dip in results for the first several races purely from unfamiliarity, and I wouldn't read too much into it — it's a normal, temporary cost of learning something new, not a sign you've actually gotten worse at racing in general."
+    },
+    {
+      "p": "If you're deciding what to race next, it's worth reading my notes on <a href=\"gt3-vs-gt4-which-to-race-first.html\">GT3 vs GT4</a> too — car choice and track choice both matter more than people give them credit for when you're building consistency, and the two decisions usually aren't independent of each other."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is the Skip Barber Formula 2000 good for a driver moving up in car class?",
+      "a": "Generally yes, provided the jump in grip and speed from your current car isn't too large — I'd recommend a session or two of just getting comfortable before pushing for outright pace."
+    },
+    {
+      "q": "What wheelbase do you race this car on?",
+      "a": "I run a ~MOZA R9 with ~MOZA CRP2 load-cell pedals for all my iRacing sessions, including this car."
+    },
+    {
+      "q": "Do the setup notes here apply across all tracks?",
+      "a": "They're a starting point rather than a fixed answer — I adjust from this baseline depending on the specific track's demands."
+    },
+    {
+      "q": "Is this car beginner-friendly?",
+      "a": "That depends on your current experience level more than the car itself — see the 'who this car suits' section above for my honest take."
+    }
+  ]
+}

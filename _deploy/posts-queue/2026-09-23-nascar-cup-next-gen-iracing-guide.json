@@ -1,0 +1,123 @@
+{
+  "slug": "nascar-cup-next-gen-iracing-guide",
+  "tag": "Car Guide · Oval",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "NASCAR Next Gen on iRacing: What Surprised Me Coming From Road Racing",
+  "description": "My honest impressions racing the NASCAR Cup Next Gen on iRacing — setup notes, wheel feel, and who this car actually suits.",
+  "published": "2026-09-23",
+  "dateLabel": "September 23, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "sections": [
+    {
+      "p": "I run all of this from a fixed-aluminium-extrusion cockpit with a ~MOZA R9 direct drive wheelbase and ~MOZA CRP2 load-cell pedals — no motion, no fancy paint, just a rig built to be honest about what the car is doing. Here's what the NASCAR Cup Next Gen has actually been like to race, across the tracks I run most — not a spec-sheet rundown, just what I've actually noticed after enough laps to trust my own impressions."
+    },
+    {
+      "p": "I try to give a car a genuinely fair chance before forming an opinion on it — a session or two of just getting comfortable before I start comparing it to anything else I race. The NASCAR Cup Next Gen is a good example of a car that rewarded that patience; my first impression and my impression after a few weeks weren't quite the same."
+    },
+    {
+      "h2": "What this car is really like to drive"
+    },
+    {
+      "p": "The biggest adjustment for me coming from road racing was how much of the lap is about managing the car's balance change as fuel burns off and tires wear, rather than hitting a single perfect line lap after lap."
+    },
+    {
+      "p": "That character shows up most clearly once you're pushing near the limit rather than cruising around at seven-tenths — which is honestly true of most race cars, but it's worth saying plainly here because a lot of first impressions of the NASCAR Cup Next Gen get formed in that first cautious session and then never get revisited."
+    },
+    {
+      "h2": "Setup starting point"
+    },
+    {
+      "list": [
+        "Wedge and track bar adjustments (where available) matter more on ovals than almost any setup parameter I touch on a road course",
+        "I run softer springs than I expected going in — oval setups reward compliance over the raw stiffness that helps on a smooth road course",
+        "Managing tire temperature across a run became something I had to actively think about in a way road racing setups don't usually demand lap-to-lap"
+      ]
+    },
+    {
+      "p": "As with any setup notes, I'd treat these as a starting direction rather than a fixed recipe — track-specific demands, personal preference, and even the specific series rules you're racing under can all shift what actually works best. Change one thing at a time and judge it against a stopwatch, not just a feeling."
+    },
+    {
+      "h2": "How it feels through the wheel"
+    },
+    {
+      "p": "Oval racing puts less demand on the ~MOZA R9 for split-second direction changes and more on sustained, subtle cornering load — it's a genuinely different skill from road racing, and the wheel feedback reflects that difference clearly once you're a few laps in."
+    },
+    {
+      "p": "Pedal feel matters just as much here as wheel feel, and I'd say the same logic applies to the ~MOZA CRP2 load-cell pedals I run — a car's braking character comes through in how the pedal resists your foot, not just in how the car decelerates on screen. Cars with different weight distributions like the NASCAR Cup Next Gen genuinely reward paying attention to that resistance curve rather than just stomping to a fixed travel point every time."
+    },
+    {
+      "tip": "Don't judge your oval pace on lap one or two — Next Gen cars change character meaningfully as the tires and track come in, and the car that felt loose early can tighten up completely by lap ten.",
+      "tipLabel": "Pro Tip"
+    },
+    {
+      "h2": "Common mistakes I see (and made myself) in this car"
+    },
+    {
+      "list": [
+        "Carrying over setup habits from a different car class instead of respecting what the NASCAR Cup Next Gen specifically rewards",
+        "Judging the car's limit too early, in the first session, before tires and the driver are both actually warmed up",
+        "Ignoring how the car's character changes over a longer run as tires wear, rather than just tuning for a single fast lap"
+      ]
+    },
+    {
+      "h2": "Who this car suits"
+    },
+    {
+      "p": "Road racers curious what oval racing actually demands, and anyone who wants to understand why NASCAR drivers talk about the car 'coming to them' over a run rather than just driving flat-out from lap one."
+    },
+    {
+      "h2": "Practice plan for getting comfortable with this car"
+    },
+    {
+      "olist": [
+        "Spend a full session with no other cars on track just learning where the NASCAR Cup Next Gen's grip limit actually is in isolation",
+        "Run a handful of laps intentionally over the limit in a low-stakes session so you know what the car's warning signs feel like before you're relying on avoiding them under race pressure",
+        "Do at least one longer run at race pace rather than qualifying pace before your first real race in the car, so tire wear and fuel load aren't a surprise",
+        "Race it in a lower-pressure series first if you can, before bringing it into a series or split where the stakes and traffic density are higher"
+      ]
+    },
+    {
+      "p": "That progression matters more with the NASCAR Cup Next Gen than it might with a car you're already deeply familiar with, simply because every car has its own specific way of warning you before it lets go, and you can't actually learn that warning from reading about it — only from spending time right at the edge of it in a controlled setting."
+    },
+    {
+      "h2": "What I'd change about my own approach next time"
+    },
+    {
+      "p": "Looking back at my early sessions in the NASCAR Cup Next Gen, I spent too long trying to force a setup and driving style that worked well in a different car onto it, rather than treating it as its own thing with its own demands from lap one. That cost me more time than any actual mechanical shortcoming in the car itself, and it's a mistake I think a lot of drivers make whenever they change car class — old habits are comfortable, but comfortable isn't the same as correct for the car you're actually in."
+    },
+    {
+      "p": "If I were starting over with this car today, I'd spend the first full session purely on getting comfortable with its specific braking and rotation character before touching the setup at all — changing the car's balance before you actually understand its default behavior just muddies the feedback you're trying to learn from."
+    },
+    {
+      "h2": "A quick note on iRating and Safety Rating in this car"
+    },
+    {
+      "p": "Jumping into a new car class, including the NASCAR Cup Next Gen, resets some of your comfort even if your iRating and Safety Rating carry over. I'd expect a small dip in results for the first several races purely from unfamiliarity, and I wouldn't read too much into it — it's a normal, temporary cost of learning something new, not a sign you've actually gotten worse at racing in general."
+    },
+    {
+      "p": "If you're deciding what to race next, it's worth reading my notes on <a href=\"talladega-drafting-strategy-iracing.html\">drafting strategy at Talladega</a> too — car choice and track choice both matter more than people give them credit for when you're building consistency, and the two decisions usually aren't independent of each other."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is the NASCAR Cup Next Gen good for a driver moving up in car class?",
+      "a": "Generally yes, provided the jump in grip and speed from your current car isn't too large — I'd recommend a session or two of just getting comfortable before pushing for outright pace."
+    },
+    {
+      "q": "What wheelbase do you race this car on?",
+      "a": "I run a ~MOZA R9 with ~MOZA CRP2 load-cell pedals for all my iRacing sessions, including this car."
+    },
+    {
+      "q": "Do the setup notes here apply across all tracks?",
+      "a": "They're a starting point rather than a fixed answer — I adjust from this baseline depending on the specific track's demands."
+    },
+    {
+      "q": "Is this car beginner-friendly?",
+      "a": "That depends on your current experience level more than the car itself — see the 'who this car suits' section above for my honest take."
+    }
+  ]
+}

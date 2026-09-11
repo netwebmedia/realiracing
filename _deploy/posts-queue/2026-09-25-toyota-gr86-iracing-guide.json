@@ -1,0 +1,123 @@
+{
+  "slug": "toyota-gr86-iracing-guide",
+  "tag": "Car Guide · Touring",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "The Toyota GR86 on iRacing: A Modern Take on the Momentum Car",
+  "description": "My honest impressions racing the Toyota GR86 on iRacing — setup notes, wheel feel, and who this car actually suits.",
+  "published": "2026-09-25",
+  "dateLabel": "September 25, 2026",
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "sections": [
+    {
+      "p": "I run all of this from a fixed-aluminium-extrusion cockpit with a ~MOZA R9 direct drive wheelbase and ~MOZA CRP2 load-cell pedals — no motion, no fancy paint, just a rig built to be honest about what the car is doing. Here's what the Toyota GR86 has actually been like to race, across the tracks I run most — not a spec-sheet rundown, just what I've actually noticed after enough laps to trust my own impressions."
+    },
+    {
+      "p": "I try to give a car a genuinely fair chance before forming an opinion on it — a session or two of just getting comfortable before I start comparing it to anything else I race. The Toyota GR86 is a good example of a car that rewarded that patience; my first impression and my impression after a few weeks weren't quite the same."
+    },
+    {
+      "h2": "What this car is really like to drive"
+    },
+    {
+      "p": "It sits in a nice gap between the MX-5 and GT4 cars — a bit more power and grip than the MX-5, but still fundamentally a momentum car where carrying corner speed matters more than braking late."
+    },
+    {
+      "p": "That character shows up most clearly once you're pushing near the limit rather than cruising around at seven-tenths — which is honestly true of most race cars, but it's worth saying plainly here because a lot of first impressions of the Toyota GR86 get formed in that first cautious session and then never get revisited."
+    },
+    {
+      "h2": "Setup starting point"
+    },
+    {
+      "list": [
+        "Tire pressures still matter a lot here, similar to the MX-5, since the overall grip level is modest enough that small changes are proportionally significant",
+        "I run a slightly stiffer rear anti-roll bar than default to sharpen rotation without losing the stability that makes this car easy to place",
+        "Gearing rarely needs major changes across most road courses given the GR86's modest, broad power band"
+      ]
+    },
+    {
+      "p": "As with any setup notes, I'd treat these as a starting direction rather than a fixed recipe — track-specific demands, personal preference, and even the specific series rules you're racing under can all shift what actually works best. Change one thing at a time and judge it against a stopwatch, not just a feeling."
+    },
+    {
+      "h2": "How it feels through the wheel"
+    },
+    {
+      "p": "On the ~MOZA R9, the GR86 sits comfortably between the MX-5's gentle build-up and a GT4 car's sharper responses — a good next step once the MX-5 starts to feel too slow but before you're ready for GT3-level cornering forces."
+    },
+    {
+      "p": "Pedal feel matters just as much here as wheel feel, and I'd say the same logic applies to the ~MOZA CRP2 load-cell pedals I run — a car's braking character comes through in how the pedal resists your foot, not just in how the car decelerates on screen. Cars with different weight distributions like the Toyota GR86 genuinely reward paying attention to that resistance curve rather than just stomping to a fixed travel point every time."
+    },
+    {
+      "tip": "Focus on smooth, early throttle application rather than late braking in the GR86 — like the MX-5, most of the lap time here comes from exit speed, not braking heroics.",
+      "tipLabel": "Pro Tip"
+    },
+    {
+      "h2": "Common mistakes I see (and made myself) in this car"
+    },
+    {
+      "list": [
+        "Carrying over setup habits from a different car class instead of respecting what the Toyota GR86 specifically rewards",
+        "Judging the car's limit too early, in the first session, before tires and the driver are both actually warmed up",
+        "Ignoring how the car's character changes over a longer run as tires wear, rather than just tuning for a single fast lap"
+      ]
+    },
+    {
+      "h2": "Who this car suits"
+    },
+    {
+      "p": "Drivers stepping up from the MX-5 who want more grip and power without jumping straight to a GT3 or GT4 car, and anyone who enjoys close, momentum-based racing over outright speed."
+    },
+    {
+      "h2": "Practice plan for getting comfortable with this car"
+    },
+    {
+      "olist": [
+        "Spend a full session with no other cars on track just learning where the Toyota GR86's grip limit actually is in isolation",
+        "Run a handful of laps intentionally over the limit in a low-stakes session so you know what the car's warning signs feel like before you're relying on avoiding them under race pressure",
+        "Do at least one longer run at race pace rather than qualifying pace before your first real race in the car, so tire wear and fuel load aren't a surprise",
+        "Race it in a lower-pressure series first if you can, before bringing it into a series or split where the stakes and traffic density are higher"
+      ]
+    },
+    {
+      "p": "That progression matters more with the Toyota GR86 than it might with a car you're already deeply familiar with, simply because every car has its own specific way of warning you before it lets go, and you can't actually learn that warning from reading about it — only from spending time right at the edge of it in a controlled setting."
+    },
+    {
+      "h2": "What I'd change about my own approach next time"
+    },
+    {
+      "p": "Looking back at my early sessions in the Toyota GR86, I spent too long trying to force a setup and driving style that worked well in a different car onto it, rather than treating it as its own thing with its own demands from lap one. That cost me more time than any actual mechanical shortcoming in the car itself, and it's a mistake I think a lot of drivers make whenever they change car class — old habits are comfortable, but comfortable isn't the same as correct for the car you're actually in."
+    },
+    {
+      "p": "If I were starting over with this car today, I'd spend the first full session purely on getting comfortable with its specific braking and rotation character before touching the setup at all — changing the car's balance before you actually understand its default behavior just muddies the feedback you're trying to learn from."
+    },
+    {
+      "h2": "A quick note on iRating and Safety Rating in this car"
+    },
+    {
+      "p": "Jumping into a new car class, including the Toyota GR86, resets some of your comfort even if your iRating and Safety Rating carry over. I'd expect a small dip in results for the first several races purely from unfamiliarity, and I wouldn't read too much into it — it's a normal, temporary cost of learning something new, not a sign you've actually gotten worse at racing in general."
+    },
+    {
+      "p": "If you're deciding what to race next, it's worth reading my notes on <a href=\"mazda-mx5-cup-iracing-beginner-guide.html\">the MX-5 Cup</a> too — car choice and track choice both matter more than people give them credit for when you're building consistency, and the two decisions usually aren't independent of each other."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is the Toyota GR86 good for a driver moving up in car class?",
+      "a": "Generally yes, provided the jump in grip and speed from your current car isn't too large — I'd recommend a session or two of just getting comfortable before pushing for outright pace."
+    },
+    {
+      "q": "What wheelbase do you race this car on?",
+      "a": "I run a ~MOZA R9 with ~MOZA CRP2 load-cell pedals for all my iRacing sessions, including this car."
+    },
+    {
+      "q": "Do the setup notes here apply across all tracks?",
+      "a": "They're a starting point rather than a fixed answer — I adjust from this baseline depending on the specific track's demands."
+    },
+    {
+      "q": "Is this car beginner-friendly?",
+      "a": "That depends on your current experience level more than the car itself — see the 'who this car suits' section above for my honest take."
+    }
+  ]
+}
