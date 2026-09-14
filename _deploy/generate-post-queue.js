@@ -283,6 +283,17 @@ async function main() {
     if (latestDate >= currentDate) currentDate = addDays(latestDate, 1);
   }
 
+  // `currentDate` continues from the last queued filename purely to keep
+  // filenames unique and chronologically sorted — it has nothing to do with
+  // when a post actually goes live. The publisher (generate-blogs.js) renders
+  // whatever's pending the moment it fires, not on a drip schedule, so a
+  // `published` date any later than today is a lie the day it's written (this
+  // is what shipped 46 posts dated up to 2026-10-11 on 2026-09-11 and had to
+  // be re-dated after the fact — see commit 9d72eaa). TODAY is captured once,
+  // real wall-clock date, and every post's `published`/`dateLabel` is clamped
+  // to whichever is earlier: the nominal cadence date or today.
+  const TODAY = new Date();
+
   console.log(`Generating ${TARGET} posts starting from ${isoDate(currentDate)}...`);
   console.log(`Allowed gear keys: ${allowedGearKeys.map(g => g.key).join(', ')}`);
 
@@ -304,15 +315,19 @@ async function main() {
     topicIdx += batchSize;
     if (topicIdx >= topics.length) topicIdx = 0; // cycle if needed
 
-    console.log(`  Batch: ${batch.length} post(s) for ${isoDate(currentDate)}...`);
+    // Never quote a `published` date later than today, no matter how far the
+    // filename cadence has advanced (see TODAY comment above).
+    const publishDate = isoDate(currentDate) <= isoDate(TODAY) ? currentDate : TODAY;
+
+    console.log(`  Batch: ${batch.length} post(s) for ${isoDate(publishDate)} (filename date ${isoDate(currentDate)})...`);
 
     let posts;
     try {
-      posts = await generateBatch(batch, currentDate, used, allowedGearKeys);
+      posts = await generateBatch(batch, publishDate, used, allowedGearKeys);
     } catch (e) {
       console.error(`  Error in batch: ${e.message}`);
       await new Promise(r => setTimeout(r, 5000));
-      try { posts = await generateBatch(batch, currentDate, used, allowedGearKeys); }
+      try { posts = await generateBatch(batch, publishDate, used, allowedGearKeys); }
       catch (e2) { console.error(`  Retry failed: ${e2.message}`); stalls++; continue; }
     }
 
@@ -343,6 +358,12 @@ async function main() {
       let gearKeys = Array.isArray(post.gearKeys) ? post.gearKeys.filter(k => allowedKeySet.has(k)) : [];
       if (gearKeys.length === 0) gearKeys = ['moza-r9', 'cockpit'];
       post.gearKeys = gearKeys;
+
+      // Force published/dateLabel to the clamped date regardless of what the
+      // model echoed back — never trust generated JSON for the one field a
+      // stale/creative model response could push into the future.
+      post.published = isoDate(publishDate);
+      post.dateLabel = dateLabel(publishDate);
 
       const filename = `${isoDate(currentDate)}-${slug}.json`;
       const filepath = path.join(QUEUE_DIR, filename);
