@@ -20,6 +20,18 @@
   gtag('js', new Date());
   gtag('config', ID, { anonymize_ip: true });
 
+  // Affiliate clicks are the revenue event. Logged by name so they can be marked
+  // a key event in GA4, instead of hunting for them among generic outbound clicks.
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || !/amazon\.|amzn\.to/i.test(a.href)) return;
+    gtag('event', 'affiliate_click', {
+      link_url: a.href,
+      link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100),
+      page_path: location.pathname
+    });
+  }, true);
+
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;

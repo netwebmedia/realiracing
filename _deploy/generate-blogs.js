@@ -54,6 +54,14 @@ const CARD_STYLES = [
   { emoji: '🕹️', rgb: '255,120,120' },
 ];
 
+// Google renders roughly 60 characters of <title>; append the brand only when it
+// fits, otherwise the suffix just pushes the end of the headline out of view.
+function brandTitle(title) {
+  const core = String(title).trim();
+  const withBrand = core + ' | RealIRacing';
+  return withBrand.length <= 60 ? withBrand : core;
+}
+
 function hash(s) { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) & 0x7fffffff; return h; }
 function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function stripTags(s) { return String(s == null ? '' : s).replace(/<[^>]+>/g, ''); }
@@ -293,7 +301,7 @@ function renderPostHtml(post, related, allowedGearKeys) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${esc(title)} | RealIRacing</title>
+  <title>${esc(brandTitle(title))}</title>
   <meta name="description" content="${esc(description)}" />
   <link rel="canonical" href="${url}" />
   <meta property="og:title" content="${esc(title)}" />
@@ -403,6 +411,7 @@ ${relatedHtml}
     </p>
   </footer>
 
+  <script src="/js/ga4.js" defer></script>
   <script src="/js/affiliates.js" defer></script>
   <script>
     window.addEventListener('DOMContentLoaded', function () {
