@@ -90,6 +90,26 @@ const { loadAffiliateConfig, renderGearBoxHtml } = require('./lib/affiliates-ssr
 
 const FALLBACK_GEAR_KEYS = ['moza-r9', 'cockpit'];
 
+// ─── Publish date clamp ─────────────────────────────────────────────────────
+// generate-post-queue.js stamps queued posts with scheduled dates that run
+// days or weeks ahead, but this publisher renders whatever is pending the
+// moment it fires. A post goes live now, so it can never claim a later date:
+// a future datePublished confuses search engines and made the NWM
+// blog-staleness check read RealiRacing as "-27d old" (2026-09-14).
+const TODAY = new Date().toISOString().slice(0, 10);
+
+function longDateLabel(iso) {
+  return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+
+function clampPublishedToToday(post) {
+  if (!post.published || post.published <= TODAY) return false;
+  console.warn(`  ${post.slug}: published ${post.published} is in the future — clamped to ${TODAY}.`);
+  post.published = TODAY;
+  post.dateLabel = longDateLabel(TODAY);
+  return true;
+}
+
 // ─── FAQ helpers (fallback only — seed/generated posts should ship explicit
 // post.faqs; this heuristic mirrors NWM's derivation as a safety net) ───────
 
@@ -519,6 +539,8 @@ for (const f of pending) {
     continue;
   }
 
+  const clamped = clampPublishedToToday(post);
+
   const related = pickRelated(existingPosts, post.slug, post.tag, 3);
   const html = renderPostHtml(post, related, allowedGearKeys);
   fs.writeFileSync(path.join(BLOG_DIR, post.slug + '.html'), html);
@@ -527,7 +549,16 @@ for (const f of pending) {
 
   const destPath = path.join(PUBLISHED_DIR, f);
   if (fs.existsSync(destPath)) fs.unlinkSync(destPath);
-  fs.renameSync(srcPath, destPath);
+  if (clamped) {
+    // Keep the archived JSON truthful too — it is what gets re-rendered from.
+    const raw = fs.readFileSync(srcPath, 'utf8')
+      .replace(/"published":\s*"[^"]*"/, `"published": "${post.published}"`)
+      .replace(/"dateLabel":\s*"[^"]*"/, `"dateLabel": "${post.dateLabel}"`);
+    fs.writeFileSync(destPath, raw);
+    fs.unlinkSync(srcPath);
+  } else {
+    fs.renameSync(srcPath, destPath);
+  }
 
   renderedPosts.push(post);
   rendered++;
