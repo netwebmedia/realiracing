@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iRacing Brake Bias Explained: When to Move It and Why</title>
+  <meta name="description" content="What brake bias actually does in iRacing, how front and rear lockups feel through a load cell pedal, and a simple method for adjusting it corner by corner." />
+  <link rel="canonical" href="https://realiracing.com/blog/iracing-brake-bias-explained.html" />
+  <meta property="og:title" content="iRacing Brake Bias Explained: When to Move It and Why" />
+  <meta property="og:description" content="What brake bias actually does in iRacing, how front and rear lockups feel through a load cell pedal, and a simple method for adjusting it corner by corner." />
+  <meta property="og:url" content="https://realiracing.com/blog/iracing-brake-bias-explained.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://realiracing.com/assets/photos/pedals-cover.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="563" />
+  <meta property="og:image:alt" content="Cover art: a rising series of bars" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://realiracing.com/assets/photos/pedals-cover.jpg" />
+  <link rel="stylesheet" href="blog.css?v=20260826" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "iRacing Brake Bias Explained: When to Move It and Why",
+    "description": "What brake bias actually does in iRacing, how front and rear lockups feel through a load cell pedal, and a simple method for adjusting it corner by corner.",
+    "author": { "@type": "Person", "name": "Carlos Martinez", "url": "https://realiracing.com" },
+    "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "https://realiracing.com" },
+    "mainEntityOfPage": "https://realiracing.com/blog/iracing-brake-bias-explained.html",
+    "image": "https://realiracing.com/assets/photos/pedals-cover.jpg",
+    "datePublished": "2026-09-14",
+    "dateModified": "2026-09-14"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does brake bias do in iRacing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Brake bias sets how braking force is split between the front and rear axles. In iRacing it is usually shown as the share going to the front, so a higher value means more front braking and a lower value means more rear braking." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my brake bias is too far forward?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The front tyres lock first, the steering goes light under braking and the car pushes straight on when you try to turn in. The car feels stable, but you lose rotation and braking distance." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change brake bias in a fixed setup race?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In cars that support in-car brake bias adjustment, the in-car controls generally remain available in fixed-setup series, so you can still adjust bias from the cockpit during the session." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I adjust brake bias during a race?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It can help. As fuel burns and tyres wear, the balance shifts, and many drivers make small bias changes over a stint. Change it in small steps and only once your braking points are consistent." }
+    }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">
+      <svg class="nav-logo-wheel" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#e8ff00" stroke-width="2.5"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#2a2d35" stroke-width="7"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#e8ff00" stroke-width="2" stroke-dasharray="14 56" stroke-dashoffset="-10"/>
+        <line x1="20" y1="20" x2="7" y2="24" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="33" y2="16" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="20" y2="34" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3" fill="#e8ff00"/>
+      </svg>
+      <span>Real</span>IRacing
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#media">Media</a></li>
+      <li><a href="/#content">Content</a></li>
+      <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
+      <li><a href="/#platforms">Platforms</a></li>
+      <li><a class="nav-cta" href="https://www.youtube.com/@realtape" target="_blank">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <p class="section-label">Setup Guides · Braking</p>
+    <h1>iRacing Brake Bias Explained: When to Move It and Why</h1>
+    <div class="article-meta">
+      <span class="author">Carlos Martinez</span>
+      <span class="dot">·</span>
+      <span>Updated September 14, 2026</span>
+      <span class="dot">·</span>
+      <span>7 min read</span>
+    </div>
+
+        <figure class="article-photo">
+          <img src="/assets/photos/pedals-cover.jpg" width="1000" height="563" alt="Cover art: a rising series of bars" loading="eager" decoding="async">
+          <figcaption>Illustration: RealiRacing</figcaption>
+        </figure>
+
+    <div class="article-body">
+      <p class="disclosure">Some links on this page may earn RealIRacing a commission at no extra cost to you. Gear I personally race on is called out as such; other picks are researched recommendations.</p>
+
+      <p class="article-lead">For my first few months in iRacing I treated brake bias as a number that belonged to setup builders. I would load a fixed setup, never touch the in-car adjustment, and blame myself every time the fronts locked into Turn 1 at Road America. It was only when I started logging where I was losing time on my ~MOZA R9 and ~MOZA CRP2 rig that I realised a good chunk of it was not technique at all — it was a brake balance that suited the setup author's driving style, not mine. This is the guide I wish I had read back then.</p>
+
+      <h2>What brake bias actually is</h2>
+
+      <p>Brake bias is how the braking force is split between the front and rear axles. In iRacing it is usually displayed as the share going to the front — so a higher number means more front braking, a lower number means more rear braking. The exact range and step size vary from car to car, and some cars let you change it from the cockpit while others only allow it in the garage.</p>
+
+      <p>When you brake hard, weight transfers forward. The front tyres gain grip and the rears lose it, which is why almost every car runs a front-heavy bias. The goal is not to find a magic number. The goal is to put the limit of both axles as close together as possible, so neither end locks first under the kind of braking you actually do.</p>
+
+      <h2>How too much front bias feels</h2>
+
+      <p>With too much front bias, the front tyres lock before the rears have done their share of the work. On the wheel this shows up as a sudden lightening of the force feedback as the fronts stop rotating, followed by the car pushing straight on when you try to turn in. You can see the flat-spot smoke from the cockpit in some cars, but the steering going light is usually the first warning.</p>
+
+      <p>The car feels safe and stable, which is exactly why it is easy to leave bias too far forward. You are giving away entry rotation and braking distance, and you often end up releasing the brake early to get the nose to turn, which costs more time than the lockup itself.</p>
+
+      <h2>How too much rear bias feels</h2>
+
+      <p>Move the bias too far back and the rear axle locks first. This is the one that bites. The rear goes light and starts to step out under braking, most noticeably when you brake with a little steering lock or over a bump. Through a load cell pedal it can feel like the car is rotating nicely right up to the moment it does not. In higher-downforce cars, the effect changes with speed because the aero load changes with speed, so a bias that feels fine at the end of a short straight can be nervous at the end of a long one.</p>
+
+      <div class="tip-box">
+        <span class="box-label">Pro Tip</span>
+        <p>Change bias in small steps and do at least three laps between changes. One lap is not a sample — the track, fuel load and your own consistency all move more than a single click does.</p>
+      </div>
+
+      <h2>Why your pedal matters more than the setup sheet</h2>
+
+      <p>A load cell pedal measures force, not travel, which makes it much easier to brake to the same pressure every time. That consistency is what makes bias tuning meaningful. On a potentiometer pedal your peak pressure varies lap to lap, so you end up chasing lockups that were really just inconsistent inputs. If you have not calibrated your brake yet, do that first — I wrote up my process in <a href="moza-crp2-brake-calibration-pressure-curves.html">MOZA CRP2 brake calibration and pressure curves</a>. Tuning bias on an uncalibrated pedal is tuning noise.</p>
+
+      <p>It is also worth being honest about how you brake. A driver who stamps the pedal hard and releases it in one motion loads the front axle quickly and tends to tolerate more rearward bias. A driver who trails the brake deep into the corner is asking the front tyres to brake and turn at the same time, and usually needs a bias that keeps the rear stable while the steering is loaded. The technique side of that is covered in <a href="trail-braking-load-cell-technique.html">trail braking with a load cell</a>.</p>
+
+      <h2>A simple method for finding your bias</h2>
+
+      <ol>
+        <li>Start from the car's default or a trusted baseline setup, with your pedal already calibrated.</li>
+        <li>Pick one heavy braking zone you can repeat, ideally a straight-line stop into a slow corner.</li>
+        <li>Do three or four laps and note what locks first, if anything, and where in the braking zone it happens.</li>
+        <li>If the fronts lock or the car refuses to turn in, move the bias a small step rearward. If the rear steps out, move it a small step forward.</li>
+        <li>Repeat until the car stops in a straight line without either end locking, then check it in a braking zone with some steering lock.</li>
+        <li>Write the value down per car and per track. It will not transfer perfectly, but it gives you a far better starting point next time.</li>
+      </ol>
+
+      <h2>Reading the replay before you touch the number</h2>
+
+      <p>Before changing anything, watch the replay of a braking zone from the chase camera and the cockpit camera. A front lockup shows as the car carrying straight on with the nose not responding; a rear lockup shows as the tail moving out while the steering is still close to straight. It sounds obvious, but in the moment it is very easy to misread one for the other — especially on triples or in VR, where your sense of the car's yaw is weaker than in real life. Two minutes of replay can save twenty laps of guessing in the wrong direction.</p>
+
+      <h2>Adjusting bias during a race</h2>
+
+      <p>In cars that allow in-car adjustment, bias is one of the most useful controls you have, and in iRacing those in-car adjustments generally remain available even in fixed-setup series. As fuel burns off, the car gets lighter and the balance shifts; as tyres wear, their grip changes too. Many drivers move bias gradually over a stint rather than setting it once. If you race long events, mapping bias to a button or rotary is worth it — I cover my layout in the <a href="button-box-guide-sim-racing.html">button box guide</a>.</p>
+
+      <p>Some drivers also move bias between corners — more rearward for a slow hairpin where rotation matters, more forward for a high-speed braking zone where stability matters more. That can work, but it adds workload. I would only start doing it once your braking points are consistent, otherwise you are adding a variable to a problem you have not isolated.</p>
+
+      <h2>Brake bias and ABS cars</h2>
+
+      <p>In cars with ABS, such as many GT3 and GT4 machines, the system manages lockups for you, so bias feels different. You will not get the classic flat-spotted front, but a poor bias still shows up as ABS intervening too early on one axle, longer stopping distances and a car that will not rotate on entry. The same logic applies: watch which end the car is fighting, not only whether the wheels lock. If you are choosing between those classes, <a href="gt3-vs-gt4-which-to-race-first.html">GT3 vs GT4</a> is a good place to start.</p>
+
+      <h2>The mistake to avoid</h2>
+
+      <p>The most common mistake I see — and made — is using bias to fix a braking technique problem. If you lock the fronts because you are braking too late and too hard, moving bias rearward will stop the lockup and create a nervous rear instead. Get your braking point and pressure consistent first, then tune bias to match. Done in that order, bias becomes one of the cheapest lap time gains in the sim: it costs nothing but a few focused laps.</p>
+
+      <div id="rir-gear"><div class="gear-box">
+        <span class="box-label">The gear in this guide</span>
+        <ul>
+          <li><a href="https://www.amazon.com/s?k=MOZA+CRP2+pedals&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-crp2" target="_blank" rel="sponsored noopener">MOZA CRP2 Load Cell Pedals</a> — load-cell brake, managed in the same Pit House software</li>
+          <li><a href="https://www.amazon.com/s?k=MOZA+R9+wheel+base&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-r9" target="_blank" rel="sponsored noopener">MOZA R9 Direct Drive Wheelbase</a> — 9 N·m direct drive — the base bolted to my rig right now</li>
+          <li><a href="https://www.amazon.com/s?k=Fanatec+CSL+pedals+load+cell+kit&amp;tag=realiracing-20" data-aff="fanatec-csl-pedals-lc" target="_blank" rel="sponsored noopener">Fanatec CSL Pedals + Load Cell Kit</a> — modular upgrade path inside the Fanatec ecosystem</li>
+        </ul>
+        <p class="aff-note">Some links are affiliate links — I may earn a commission at no cost to you.</p>
+      </div></div>
+
+      <div class="cta-box">
+        <h3>Watch it, don't just read about it</h3>
+        <p>I stream and upload iRacing races on my MOZA R9 rig — real laps, real force feedback, real mistakes. See the gear from this guide working before you spend a cent.</p>
+        <a class="btn-primary" href="https://www.youtube.com/@realtape" target="_blank">▶ Subscribe on YouTube</a>
+      </div>
+
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h3>What does brake bias do in iRacing?</h3>
+        <p>Brake bias sets how braking force is split between the front and rear axles. In iRacing it is usually shown as the share going to the front, so a higher value means more front braking and a lower value means more rear braking.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I know if my brake bias is too far forward?</h3>
+        <p>The front tyres lock first, the steering goes light under braking and the car pushes straight on when you try to turn in. The car feels stable, but you lose rotation and braking distance.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I change brake bias in a fixed setup race?</h3>
+        <p>In cars that support in-car brake bias adjustment, the in-car controls generally remain available in fixed-setup series, so you can still adjust bias from the cockpit during the session.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I adjust brake bias during a race?</h3>
+        <p>It can help. As fuel burns and tyres wear, the balance shifts, and many drivers make small bias changes over a stint. Change it in small steps and only once your braking points are consistent.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Keep reading</h2>
+    <div class="related-grid">
+      <a class="related-card" href="iracing-force-feedback-explained.html"><span>Setup Guides</span>iRacing Force Feedback Explained — What Every Slider Actually Does</a>
+      <a class="related-card" href="rig-flex-and-wheelbase-mounting-ffb-feel.html"><span>Setup Guides</span>Your Force Feedback Feels Mushy and It Probably Isn't the Wheelbase</a>
+      <a class="related-card" href="iracing-tyre-temps-and-pressures-basic-setup.html"><span>Setup Guides</span>Reading iRacing Tyre Temps: The Only Car Setup Skill a Mid-Pack Driver Needs</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 RealIRacing · iRacing User: <strong>Carlos Martinez9</strong> · Built with 🏎️</p>
+    <p style="margin-top:6px;font-size:0.78rem;">
+      <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
+      <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
+    </p>
+  </footer>
+
+  <script src="/js/ga4.js" defer></script>
+  <script src="/js/affiliates.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof renderGearBox === 'function') {
+        renderGearBox('rir-gear', ["moza-crp2","moza-r9","fanatec-csl-pedals-lc"], 'The gear in this guide');
+      }
+      if (window.RIR_AFF) { RIR_AFF.hydrateLinks(); }
+    });
+  </script>
+
+</body>
+</html>
