@@ -1,0 +1,108 @@
+{
+  "slug": "vr-streaming-iracing-setup",
+  "tag": "Hardware · Streaming",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "Streaming iRacing from VR: The GPU Guide",
+  "description": "How to capture and stream VR iRacing gameplay using spectator view, encoder settings, and GPU requirements for dual rendering.",
+  "published": "2026-09-15",
+  "dateLabel": "September 15, 2026",
+  "gearKeys": [
+    "gpu-rtx-5060-ti",
+    "moza-r9",
+    "monitor-1440p-120"
+  ],
+  "sections": [
+    {
+      "p": "Streaming from a VR headset looks simple to an observer: they see your race, you see the world inside the headset, and somewhere in between a capture card or software encoder is supposed to bridge the gap. In practice, it's the most technically complex streaming setup in sim racing—and most guides skip the part that actually matters: your GPU is rendering two frames at once (one for your eyes in the headset, one for the stream), and the CPU encoder is working double-shift to keep up. Get this wrong and you end up with stuttering in the headset, dropped frames on stream, or a setup that throttles your iRacing performance entirely."
+    },
+    {
+      "h2": "Why VR streaming is harder than monitor streaming"
+    },
+    {
+      "p": "When you stream from a monitor, iRacing renders one frame, your GPU encodes it, and the capture software sends it out. VR adds a step: iRacing renders a separate frame for each eye (stereo), the GPU distorts and rotates those frames to match the headset's optics, and then—if you want people on stream to see what you see—the GPU has to ALSO send a single flattened \"spectator\" view to the capture software. That's three rendering passes instead of one, all happening on the same GPU per frame."
+    },
+    {
+      "p": "The encoder stacks on top: you need to compress video fast enough that stream delay stays under ~3 seconds, which means your GPU is encoding in real-time while doing all that rendering. A mid-range GPU like a 5060 Ti can handle it, but only if you dial the encoder settings correctly and accept that some performance optimization goes toward streaming instead of toward higher frame rates in the headset."
+    },
+    {
+      "h2": "iRacing spectator mode: the foundation"
+    },
+    {
+      "p": "The key to viewable VR streaming is iRacing's spectator view—a built-in mode that renders a separate single-screen chase camera or cockpit view while you race in the headset. Without it, you have no stream source at all; with it, OBS can capture that window and send it out while your headset stays untethered."
+    },
+    {
+      "p": "To enable spectator view in iRacing, go to Options → Graphics → VR, and toggle \"Mirror mode\" on. This renders a 1080p or 1440p copy of your race to your monitor (or a capture window) while the headset shows the full VR experience. That mirrored output is what OBS sees and streams. The frame rate is independent—your headset might be running 144 Hz (if your GPU is pushing it), while the mirror runs at 60 or 90 Hz depending on your encoder's target bitrate and your upload speed."
+    },
+    {
+      "h2": "GPU requirements: the math"
+    },
+    {
+      "p": "I run an RTX 5060 Ti, and it handles VR streaming in iRacing at ~1440p90 on the mirror with NVENC H.264 encoding. Here's the load breakdown: ~7–8 TFLOPS on the VR rendering (headset stereo + distortion), ~2–3 TFLOPS on the spectator mirror, and ~1 TFLOP on NVENC encoding. Total: roughly 10–12 TFLOPS sustained. A 5060 Ti peaks at ~20 TFLOPS, so you have headroom, but not infinite headroom. If you also have a second monitor or chat overlay on your stream machine, that overhead comes out of iRacing performance."
+    },
+    {
+      "p": "A 5060 Ti is the minimum I'd recommend for comfortable VR streaming (144 Hz headset + 60 fps stream). A 6070 Ti or higher keeps the headset at 144 Hz while pushing the mirror to 90+ fps, which looks noticeably smoother on stream. Below a 5060 Ti, you'll either drop headset frame rate or mirror frame rate, and one of those will feel jerky to your audience or in your VR view."
+    },
+    {
+      "h2": "NVENC encoding settings for iRacing"
+    },
+    {
+      "p": "NVENC is NVIDIA's hardware encoder, and it runs on a dedicated circuit in the GPU separate from the cores doing rendering. This is why it's viable to use NVENC while maxing out the GPU's compute cores—they work in parallel. Set OBS to use NVENC H.264 (not HEVC; H.264 decodes better on most platforms) with these baseline settings for a 1080p60 stream:"
+    },
+    {
+      "list": [
+        "Bitrate: 6000 kbps (or higher if your ISP upload allows; 8000–10000 is more comfortable for 1080p60)",
+        "Preset: Quality (slower encodes give better compression per bitrate; Performance is fine if you're upload-limited)",
+        "Profile: High",
+        "B-frames: 4 (improves compression; some platforms cap it, but iRacing's stable scene change rate tolerates it)",
+        "Rate Control: CBR (constant bitrate keeps latency predictable; VBR will spike if track camera cuts happen)"
+      ]
+    },
+    {
+      "p": "At 1440p90, bump bitrate to 12000–15000 kbps if your upload allows (most residential connections hit a ceiling around 20 Mbps upload). If you're upload-limited, stick to 1080p60—the lower resolution looks better at a lower bitrate than under-encoding 1440p."
+    },
+    {
+      "h2": "Monitor-based vs dedicated capture card streaming"
+    },
+    {
+      "p": "A dedicated capture card (like an Elgato 4K60 Pro) routes the mirror output separately from your main GPU, which sounds ideal but isn't—it adds latency and requires the mirror to run at fixed resolution/frame rate. Software encoding (NVENC) through OBS is simpler and actually lower latency because the GPU passes the mirror buffer directly to the encoder without a round-trip through a capture device. I use OBS with NVENC, and stream delay is consistently ~2.5 seconds on a stable network."
+    },
+    {
+      "h2": "A practical workflow: my own setup"
+    },
+    {
+      "p": "My stream machine is a single PC: Ryzen 7 5700 CPU, RTX 5060 Ti GPU, iRacing on an SSD. iRacing runs full VR on the headset (144 Hz if the track allows it), mirror at 1440p60 in a window on a side monitor (not my primary display—that's just browser and chat). OBS captures that mirror window, NVENC encodes it at 10000 kbps, and it ships to Twitch. The headset frame rate stays above 90 Hz because the mirror is running at 60 fps, not trying to match the headset. This separation—headset and stream at different frame rates—is the key to stable streaming without performance sacrifice."
+    },
+    {
+      "p": "If you're on a tighter budget GPU, drop the mirror to 1080p60 and keep the bitrate at 6000. It still looks good, and you free up enough GPU bandwidth to keep the headset at a comfortable frame rate. See my full setup tour in my <a href=\"iracing-vr-vs-triple-monitors.html\">VR vs triple monitors guide</a>—that post covers the entire depth-perception and immersion calculus, and this streaming aspect is just one piece of the decision."
+    },
+    {
+      "h2": "Common VR streaming mistakes to avoid"
+    },
+    {
+      "p": "Mistake 1: Running the mirror at the same frame rate as the headset. If your headset is 144 Hz, the mirror should be 60 or 90 Hz. Forcing the mirror to 144 Hz uses double the GPU overhead and gives no benefit to viewers. Mistake 2: Streaming directly from VR without a spectator mirror. Some VR sims let OBS capture the raw VR stream, but iRacing does not—you need mirror mode on. Mistake 3: Over-encoding the bitrate. Even with a stable connection, more bitrate does not equal better quality if your encoder settings are loose. Dial in your preset and rate control first, then raise bitrate only if you can actually see quality improvement."
+    },
+    {
+      "tip": "Start with 1080p60 at 6000 kbps and leave it there for an entire stream session. Make one change at a time—either resolution or bitrate—and watch the stability and quality for 10+ minutes before deciding to change again. VR streaming is the easiest setup to tweak into instability.",
+      "tipLabel": "Tune one variable at a time"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I need a dedicated capture card to stream VR iRacing?",
+      "a": "No. Software encoding with NVENC (built into NVIDIA GPUs) is simpler, lower-latency, and easier to adjust than a hardware capture card. The capture card adds a fixed frame rate and resolution constraint, whereas NVENC lets you adjust bitrate and resolution on the fly."
+    },
+    {
+      "q": "What GPU do I need to stream VR iRacing at decent quality?",
+      "a": "An RTX 5060 Ti is the practical minimum for 1440p90 mirror + 144 Hz headset. For 1080p60 streaming, even a 4060 Ti works, but you'll need to dial back headset frame rate. Below that, you'll feel performance sacrifice in either the headset or the stream."
+    },
+    {
+      "q": "Should the spectator mirror match the headset frame rate?",
+      "a": "No. Run the mirror at 60 or 90 fps while the headset runs at 90 or 144 Hz. This separation allows your encoder to keep up without forcing the GPU to render a high-frame mirror that viewers don't see at high frame rate anyway. It's a free ~30% GPU reduction."
+    },
+    {
+      "q": "What bitrate should I use for 1080p60 VR streaming?",
+      "a": "Start at 6000 kbps with NVENC H.264 and Quality preset. If your upload speed supports it, bump to 8000 kbps for noticeably better quality. Anything under 6000 kbps will show compression artifacts on high-speed track sections; anything over 10000 kbps is overkill unless you're streaming to a large audience."
+    }
+  ]
+}

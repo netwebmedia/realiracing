@@ -1,0 +1,132 @@
+{
+  "slug": "brake-pressure-curves-iracing-series",
+  "tag": "Setup Guides · FFB",
+  "author": "Carlos Martinez",
+  "readTime": "7 min read",
+  "title": "Brake Pressure Curves for GT3, Oval, Road",
+  "description": "How to map MOZA CRP2 load cell pressure curves to different iRacing series. Calibration strategy for GT3, stock cars, and road racing.",
+  "published": "2026-09-15",
+  "dateLabel": "September 15, 2026",
+  "gearKeys": [
+    "moza-crp2",
+    "moza-r9",
+    "cockpit"
+  ],
+  "sections": [
+    {
+      "p": "A load cell pedal reads force, not travel—which is a massive advantage for lap consistency, but it also means the pedal's pressure mapping is not one-size-fits-all. A GT3 car and an oval stock car have completely different brake characteristics, and the pressure curve that feels precise in one series will feel dull or over-sensitive in the other. I've built three distinct pressure profiles on my MOZA CRP2 for the three series I race regularly, and the difference in driving feel is as significant as changing wheels. Dialing this in is what separates someone grinding laps from someone actually racing."
+    },
+    {
+      "h2": "Why pressure curves matter more than you think"
+    },
+    {
+      "p": "A pressure curve maps the physical force you apply to the pedal (measured in Newtons) to the brake input percentage iRacing sees (0–100%). At first glance this seems straightforward: push harder, get more braking. But real racing cars have brake nonlinearity—they don't increase braking linearly with pedal force. Most ABS systems are tuned to reduce brake pressure at high slip angles, and even without ABS, tire load sensitivity and brake fade mean the braking you get changes throughout a lap and throughout a stint."
+    },
+    {
+      "p": "The pressure curve is your chance to tune how your pedal input translates to that nonlinearity. Set it too soft (i.e., require too much force to reach ~75% brake input), and you'll lock up on trail-braking because you can't modulate the last few percentage points. Set it too stiff, and light trail-braking inputs require micro-adjustments that your foot can't reliably repeat. The right curve for your series and driving style is what makes loading and unloading the brakes feel predictable instead of twitchy or sluggish."
+    },
+    {
+      "h2": "GT3 pressure curve: the all-rounder"
+    },
+    {
+      "p": "GT3 cars in iRacing have good ABS (TCS-controlled, not full slip ABS), moderate brake power, and a wide operating range. The brake feel needs to be responsive to small inputs (for trail-braking precision) while still holding full braking power at high force (for late-apex zones). I run what I call a \"linear-with-ramp\" profile:"
+    },
+    {
+      "list": [
+        "0–50 N: ~0–30% brake (smooth entry to small braking inputs)",
+        "50–150 N: ~30–75% brake (the sweet spot for trail-braking modulation—this is where ~80% of driving happens)",
+        "150–200+ N: ~75–100% brake (aggressive braking, heavy load-cell force)"
+      ]
+    },
+    {
+      "p": "In MOZA Pit House, this looks like a curve that rises gradually at first, then steepens in the middle range. The reason: at low force (0–50 N) you want fine control, so a shallow slope gives you more granularity. At high force (150+ N) you're already committed to full braking, so a steep ramp gets you to 100% quickly without requiring excessive pedal pressure. The middle 50–150 N zone is where you live during racing—that's trail-braking, downshift braking, re-acceleration control. Make that zone responsive, and the whole car feels predictable."
+    },
+    {
+      "p": "Practically, this feels like: light pressure (50 N, basically your foot resting on the pedal) gives you ~30% braking, which is about where a GT3 needs to be on a radius-limited turn. Medium pressure (~100 N) gives you ~60–65%, the entry to a trail-braking zone. Hard pressure (~180 N) gives you full braking. No dead zones, no harsh transitions."
+    },
+    {
+      "h2": "Oval stock car pressure curve: soft and progressive"
+    },
+    {
+      "p": "Oval racing in iRacing (Cup Series, Trucks) uses drum brakes on the rears and much lighter pedal pressure overall than road racing. A pressure curve optimized for GT3 will feel way too sensitive on an oval car—you'll lock the wheels constantly because the brakes respond too aggressively to small pedal inputs. The curve here needs to be softer: more pedal travel mapped to lower brake percentages, so you can modulate into a corner without locking."
+    },
+    {
+      "list": [
+        "0–30 N: ~0–20% brake (very soft; oval braking is gentle)",
+        "30–100 N: ~20–60% brake (gradual slope; slight pressure changes should change brake percentage slightly)",
+        "100–200+ N: ~60–100% brake (the hard-brake zone, but you rarely go there on ovals)"
+      ]
+    },
+    {
+      "p": "This curve is notably flatter than GT3, especially in the low-force zone. The reason: oval braking zones are short, and you're often trailing into a turn with constant light-to-medium pressure rather than heavy trail-braking. The softer curve lets you feel those light inputs. It also reduces the lock-up risk that comes from the combination of high-speed oval racing and low-grip surfaces like Charlotte or Bristol."
+    },
+    {
+      "p": "Practically, this feels like: your foot resting on the pedal (30 N) is just barely at 20% braking, not 30% like GT3. Small pedal movements (30–50 N) change brake percentage by only 10–15 percentage points, giving you room to modulate without overshooting. When you actually need hard braking (rare on ovals), 150+ N gets you to 80–90% with headroom for the lockup threshold."
+    },
+    {
+      "h2": "Road racing (non-GT3) pressure curve: steep and responsive"
+    },
+    {
+      "p": "Road courses like Lime Rock or Road America need aggressive braking and precise modulation—more precision than GT3, and more power than oval. The pressure curve is steeper across the board: higher brake percentage at every force level, so you get to full braking faster and with less pedal travel."
+    },
+    {
+      "list": [
+        "0–40 N: ~0–25% brake (entry zone, but steeper than GT3)",
+        "40–120 N: ~25–80% brake (aggressive mid-range; small force changes = bigger brake changes)",
+        "120–200+ N: ~80–100% brake (quick ramp to full power)"
+      ]
+    },
+    {
+      "p": "This curve is designed for series like Porsche Carrera Cup or GT4 that have powerful brakes and shorter braking zones. You need to get to heavy braking faster, and the sensitive mid-range means your foot can modulate more effectively when you're at 70–80% brake pressure. The steeper response also compensates for the higher speeds in these series—you're more committed to braking decisions, less in modulation mode."
+    },
+    {
+      "p": "Practically: your resting foot (40 N) is at ~25% (slightly higher than GT3), and 80 N already gets you to 50% braking. When you hit 100 N, you're already at ~80%, so you're not hunting for the last 20%—you're already committed. This works for road series where braking is binary (on or off) rather than analog."
+    },
+    {
+      "h2": "How to build your own curve in Pit House"
+    },
+    {
+      "p": "In MOZA Pit House, go to the CRP2 pedal settings and look for \"Brake Curve\" or \"Pressure Mapping.\" Most versions let you define a curve by setting 3–5 waypoints: force in Newtons, brake input percentage. Start with one of my profiles above, then do this tuning sequence:"
+    },
+    {
+      "olist": [
+        "Load the curve into Pit House and save it as a preset (e.g., \"GT3-Linear-Ramp\")",
+        "Go do 5 laps in iRacing in that series—nothing fancy, just driving",
+        "If trail-braking feels too sensitive (you lock up on small pedal changes), lower the midpoint slope slightly (e.g., 75–150 N → 30–70% instead of 30–75%)",
+        "If hard braking feels sluggish (you have to push really hard to get 100%), steepen the high-force zone (150–200 N)",
+        "Save the adjusted version and repeat for 3–4 more laps",
+        "Once it feels right for one series, switch to another series and build that preset independently"
+      ]
+    },
+    {
+      "h2": "Switching between curves without re-calibrating"
+    },
+    {
+      "p": "One question I get often: do I have to re-calibrate the CRP2 brake each time I switch pressure curves? The answer is no, as long as you calibrate the brake range once (finding the pedal's minimum and maximum force) and then only switch curves. The range stays the same; only the mapping changes. I have three presets saved in Pit House—one per series—and I switch between them before each race with no recalibration. The brake finds full pressure (200 N) at the same physical pedal position every time."
+    },
+    {
+      "h2": "When a single curve is enough"
+    },
+    {
+      "p": "If you race only one series (e.g., just GT3), you can absolutely dial in one curve and call it done. Most of the benefit comes from moving away from a generic default curve to one tuned to your series and driving style. The three-preset approach is for people like me who race multiple series in the same week. The real outcome is repeatability: whatever curve you pick, use it consistently for 10+ laps in that series before adjusting. Your foot learns the pressure range, and your lap times improve because your braking is consistent, not because you found the theoretically perfect curve. See my full brake calibration walkthrough in <a href=\"moza-crp2-brake-calibration-pressure-curves.html\">my MOZA CRP2 calibration post</a>—this guide is the advanced tuning layer on top of the basic setup."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I use a different brake pressure curve for each iRacing series?",
+      "a": "If you race multiple series regularly, yes—tuning the curve to the braking demand of each series (soft for ovals, progressive for GT3, steep for road) makes a measurable difference in consistency and lap time. If you race only one series, a single well-tuned curve is enough."
+    },
+    {
+      "q": "What's the difference between a linear curve and a progressive curve?",
+      "a": "A linear curve maps force 1:1 to brake percentage (50 N = 50% braking). A progressive curve uses a gentler slope in the low-force zone and a steeper slope at high force, giving you more control over small inputs and faster access to full braking."
+    },
+    {
+      "q": "How often should I adjust my brake pressure curve?",
+      "a": "Once you've found a curve that feels right for your series, stick with it for at least 10 laps. Your foot learns the pressure range during that time. Adjusting every 2–3 laps prevents learning—let one curve settle before switching."
+    },
+    {
+      "q": "Do I need to re-calibrate the CRP2 brake if I switch pressure curves?",
+      "a": "No. The calibration (finding the pedal's force range) is separate from the curve (mapping force to brake percentage). You calibrate once, then switch between curves as many times as you want without re-calibrating."
+    }
+  ]
+}
