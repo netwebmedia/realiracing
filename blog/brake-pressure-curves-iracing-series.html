@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brake Pressure Curves for GT3, Oval, Road | RealIRacing</title>
+  <meta name="description" content="How to map MOZA CRP2 load cell pressure curves to different iRacing series. Calibration strategy for GT3, stock cars, and road racing." />
+  <link rel="canonical" href="https://realiracing.com/blog/brake-pressure-curves-iracing-series.html" />
+  <meta property="og:title" content="Brake Pressure Curves for GT3, Oval, Road" />
+  <meta property="og:description" content="How to map MOZA CRP2 load cell pressure curves to different iRacing series. Calibration strategy for GT3, stock cars, and road racing." />
+  <meta property="og:url" content="https://realiracing.com/blog/brake-pressure-curves-iracing-series.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://realiracing.com/assets/photos/pedals-cover.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="563" />
+  <meta property="og:image:alt" content="Cover art: a rising series of bars" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://realiracing.com/assets/photos/pedals-cover.jpg" />
+  <link rel="stylesheet" href="blog.css?v=20260826" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Brake Pressure Curves for GT3, Oval, Road",
+    "description": "How to map MOZA CRP2 load cell pressure curves to different iRacing series. Calibration strategy for GT3, stock cars, and road racing.",
+    "author": { "@type": "Person", "name": "Carlos Martinez", "url": "https://realiracing.com" },
+    "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "https://realiracing.com" },
+    "mainEntityOfPage": "https://realiracing.com/blog/brake-pressure-curves-iracing-series.html",
+    "image": "https://realiracing.com/assets/photos/pedals-cover.jpg",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I use a different brake pressure curve for each iRacing series?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If you race multiple series regularly, yes—tuning the curve to the braking demand of each series (soft for ovals, progressive for GT3, steep for road) makes a measurable difference in consistency and lap time. If you race only one series, a single well-tuned curve is enough." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a linear curve and a progressive curve?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A linear curve maps force 1:1 to brake percentage (50 N = 50% braking). A progressive curve uses a gentler slope in the low-force zone and a steeper slope at high force, giving you more control over small inputs and faster access to full braking." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I adjust my brake pressure curve?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Once you've found a curve that feels right for your series, stick with it for at least 10 laps. Your foot learns the pressure range during that time. Adjusting every 2–3 laps prevents learning—let one curve settle before switching." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to re-calibrate the CRP2 brake if I switch pressure curves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The calibration (finding the pedal's force range) is separate from the curve (mapping force to brake percentage). You calibrate once, then switch between curves as many times as you want without re-calibrating." }
+    }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">
+      <svg class="nav-logo-wheel" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#e8ff00" stroke-width="2.5"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#2a2d35" stroke-width="7"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#e8ff00" stroke-width="2" stroke-dasharray="14 56" stroke-dashoffset="-10"/>
+        <line x1="20" y1="20" x2="7" y2="24" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="33" y2="16" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="20" y2="34" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3" fill="#e8ff00"/>
+      </svg>
+      <span>Real</span>IRacing
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#media">Media</a></li>
+      <li><a href="/#content">Content</a></li>
+      <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
+      <li><a href="/#platforms">Platforms</a></li>
+      <li><a class="nav-cta" href="https://www.youtube.com/@realtape" target="_blank">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <p class="section-label">Setup Guides · FFB</p>
+    <h1>Brake Pressure Curves for GT3, Oval, Road</h1>
+    <div class="article-meta">
+      <span class="author">Carlos Martinez</span>
+      <span class="dot">·</span>
+      <span>Updated September 15, 2026</span>
+      <span class="dot">·</span>
+      <span>7 min read</span>
+    </div>
+
+        <figure class="article-photo">
+          <img src="/assets/photos/pedals-cover.jpg" width="1000" height="563" alt="Cover art: a rising series of bars" loading="eager" decoding="async">
+          <figcaption>Illustration: RealiRacing</figcaption>
+        </figure>
+
+    <div class="article-body">
+      <p class="disclosure">Some links on this page may earn RealIRacing a commission at no extra cost to you. Gear I personally race on is called out as such; other picks are researched recommendations.</p>
+
+      <p class="article-lead">A load cell pedal reads force, not travel—which is a massive advantage for lap consistency, but it also means the pedal's pressure mapping is not one-size-fits-all. A GT3 car and an oval stock car have completely different brake characteristics, and the pressure curve that feels precise in one series will feel dull or over-sensitive in the other. I've built three distinct pressure profiles on my MOZA CRP2 for the three series I race regularly, and the difference in driving feel is as significant as changing wheels. Dialing this in is what separates someone grinding laps from someone actually racing.</p>
+
+      <h2>Why pressure curves matter more than you think</h2>
+
+      <p>A pressure curve maps the physical force you apply to the pedal (measured in Newtons) to the brake input percentage iRacing sees (0–100%). At first glance this seems straightforward: push harder, get more braking. But real racing cars have brake nonlinearity—they don't increase braking linearly with pedal force. Most ABS systems are tuned to reduce brake pressure at high slip angles, and even without ABS, tire load sensitivity and brake fade mean the braking you get changes throughout a lap and throughout a stint.</p>
+
+      <p>The pressure curve is your chance to tune how your pedal input translates to that nonlinearity. Set it too soft (i.e., require too much force to reach ~75% brake input), and you'll lock up on trail-braking because you can't modulate the last few percentage points. Set it too stiff, and light trail-braking inputs require micro-adjustments that your foot can't reliably repeat. The right curve for your series and driving style is what makes loading and unloading the brakes feel predictable instead of twitchy or sluggish.</p>
+
+      <h2>GT3 pressure curve: the all-rounder</h2>
+
+      <p>GT3 cars in iRacing have good ABS (TCS-controlled, not full slip ABS), moderate brake power, and a wide operating range. The brake feel needs to be responsive to small inputs (for trail-braking precision) while still holding full braking power at high force (for late-apex zones). I run what I call a "linear-with-ramp" profile:</p>
+
+      <ul>
+        <li>0–50 N: ~0–30% brake (smooth entry to small braking inputs)</li>
+        <li>50–150 N: ~30–75% brake (the sweet spot for trail-braking modulation—this is where ~80% of driving happens)</li>
+        <li>150–200+ N: ~75–100% brake (aggressive braking, heavy load-cell force)</li>
+      </ul>
+
+      <p>In MOZA Pit House, this looks like a curve that rises gradually at first, then steepens in the middle range. The reason: at low force (0–50 N) you want fine control, so a shallow slope gives you more granularity. At high force (150+ N) you're already committed to full braking, so a steep ramp gets you to 100% quickly without requiring excessive pedal pressure. The middle 50–150 N zone is where you live during racing—that's trail-braking, downshift braking, re-acceleration control. Make that zone responsive, and the whole car feels predictable.</p>
+
+      <p>Practically, this feels like: light pressure (50 N, basically your foot resting on the pedal) gives you ~30% braking, which is about where a GT3 needs to be on a radius-limited turn. Medium pressure (~100 N) gives you ~60–65%, the entry to a trail-braking zone. Hard pressure (~180 N) gives you full braking. No dead zones, no harsh transitions.</p>
+
+      <h2>Oval stock car pressure curve: soft and progressive</h2>
+
+      <p>Oval racing in iRacing (Cup Series, Trucks) uses drum brakes on the rears and much lighter pedal pressure overall than road racing. A pressure curve optimized for GT3 will feel way too sensitive on an oval car—you'll lock the wheels constantly because the brakes respond too aggressively to small pedal inputs. The curve here needs to be softer: more pedal travel mapped to lower brake percentages, so you can modulate into a corner without locking.</p>
+
+      <ul>
+        <li>0–30 N: ~0–20% brake (very soft; oval braking is gentle)</li>
+        <li>30–100 N: ~20–60% brake (gradual slope; slight pressure changes should change brake percentage slightly)</li>
+        <li>100–200+ N: ~60–100% brake (the hard-brake zone, but you rarely go there on ovals)</li>
+      </ul>
+
+      <p>This curve is notably flatter than GT3, especially in the low-force zone. The reason: oval braking zones are short, and you're often trailing into a turn with constant light-to-medium pressure rather than heavy trail-braking. The softer curve lets you feel those light inputs. It also reduces the lock-up risk that comes from the combination of high-speed oval racing and low-grip surfaces like Charlotte or Bristol.</p>
+
+      <p>Practically, this feels like: your foot resting on the pedal (30 N) is just barely at 20% braking, not 30% like GT3. Small pedal movements (30–50 N) change brake percentage by only 10–15 percentage points, giving you room to modulate without overshooting. When you actually need hard braking (rare on ovals), 150+ N gets you to 80–90% with headroom for the lockup threshold.</p>
+
+      <h2>Road racing (non-GT3) pressure curve: steep and responsive</h2>
+
+      <p>Road courses like Lime Rock or Road America need aggressive braking and precise modulation—more precision than GT3, and more power than oval. The pressure curve is steeper across the board: higher brake percentage at every force level, so you get to full braking faster and with less pedal travel.</p>
+
+      <ul>
+        <li>0–40 N: ~0–25% brake (entry zone, but steeper than GT3)</li>
+        <li>40–120 N: ~25–80% brake (aggressive mid-range; small force changes = bigger brake changes)</li>
+        <li>120–200+ N: ~80–100% brake (quick ramp to full power)</li>
+      </ul>
+
+      <p>This curve is designed for series like Porsche Carrera Cup or GT4 that have powerful brakes and shorter braking zones. You need to get to heavy braking faster, and the sensitive mid-range means your foot can modulate more effectively when you're at 70–80% brake pressure. The steeper response also compensates for the higher speeds in these series—you're more committed to braking decisions, less in modulation mode.</p>
+
+      <p>Practically: your resting foot (40 N) is at ~25% (slightly higher than GT3), and 80 N already gets you to 50% braking. When you hit 100 N, you're already at ~80%, so you're not hunting for the last 20%—you're already committed. This works for road series where braking is binary (on or off) rather than analog.</p>
+
+      <h2>How to build your own curve in Pit House</h2>
+
+      <p>In MOZA Pit House, go to the CRP2 pedal settings and look for "Brake Curve" or "Pressure Mapping." Most versions let you define a curve by setting 3–5 waypoints: force in Newtons, brake input percentage. Start with one of my profiles above, then do this tuning sequence:</p>
+
+      <ol>
+        <li>Load the curve into Pit House and save it as a preset (e.g., "GT3-Linear-Ramp")</li>
+        <li>Go do 5 laps in iRacing in that series—nothing fancy, just driving</li>
+        <li>If trail-braking feels too sensitive (you lock up on small pedal changes), lower the midpoint slope slightly (e.g., 75–150 N → 30–70% instead of 30–75%)</li>
+        <li>If hard braking feels sluggish (you have to push really hard to get 100%), steepen the high-force zone (150–200 N)</li>
+        <li>Save the adjusted version and repeat for 3–4 more laps</li>
+        <li>Once it feels right for one series, switch to another series and build that preset independently</li>
+      </ol>
+
+      <h2>Switching between curves without re-calibrating</h2>
+
+      <p>One question I get often: do I have to re-calibrate the CRP2 brake each time I switch pressure curves? The answer is no, as long as you calibrate the brake range once (finding the pedal's minimum and maximum force) and then only switch curves. The range stays the same; only the mapping changes. I have three presets saved in Pit House—one per series—and I switch between them before each race with no recalibration. The brake finds full pressure (200 N) at the same physical pedal position every time.</p>
+
+      <h2>When a single curve is enough</h2>
+
+      <p>If you race only one series (e.g., just GT3), you can absolutely dial in one curve and call it done. Most of the benefit comes from moving away from a generic default curve to one tuned to your series and driving style. The three-preset approach is for people like me who race multiple series in the same week. The real outcome is repeatability: whatever curve you pick, use it consistently for 10+ laps in that series before adjusting. Your foot learns the pressure range, and your lap times improve because your braking is consistent, not because you found the theoretically perfect curve. See my full brake calibration walkthrough in <a href="moza-crp2-brake-calibration-pressure-curves.html">my MOZA CRP2 calibration post</a>—this guide is the advanced tuning layer on top of the basic setup.</p>
+
+      <div id="rir-gear"><div class="gear-box">
+        <span class="box-label">The gear in this guide</span>
+        <ul>
+          <li><a href="https://www.amazon.com/s?k=MOZA+CRP2+pedals&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-crp2" target="_blank" rel="sponsored noopener">MOZA CRP2 Load Cell Pedals</a> — load-cell brake, managed in the same Pit House software</li>
+          <li><a href="https://www.amazon.com/s?k=MOZA+R9+wheel+base&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-r9" target="_blank" rel="sponsored noopener">MOZA R9 Direct Drive Wheelbase</a> — 9 N·m direct drive — the base bolted to my rig right now</li>
+          <li><a href="https://www.amazon.com/s?k=sim+racing+cockpit+stand&amp;tag=realiracing-20" data-aff="cockpit" target="_blank" rel="sponsored noopener">Sim Racing Cockpit / Wheel Stand</a> — a rigid mount matters more than the brand — flex kills FFB detail</li>
+        </ul>
+        <p class="aff-note">Some links are affiliate links — I may earn a commission at no cost to you.</p>
+      </div></div>
+
+      <div class="cta-box">
+        <h3>Watch it, don't just read about it</h3>
+        <p>I stream and upload iRacing races on my MOZA R9 rig — real laps, real force feedback, real mistakes. See the gear from this guide working before you spend a cent.</p>
+        <a class="btn-primary" href="https://www.youtube.com/@realtape" target="_blank">▶ Subscribe on YouTube</a>
+      </div>
+
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h3>Should I use a different brake pressure curve for each iRacing series?</h3>
+        <p>If you race multiple series regularly, yes—tuning the curve to the braking demand of each series (soft for ovals, progressive for GT3, steep for road) makes a measurable difference in consistency and lap time. If you race only one series, a single well-tuned curve is enough.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the difference between a linear curve and a progressive curve?</h3>
+        <p>A linear curve maps force 1:1 to brake percentage (50 N = 50% braking). A progressive curve uses a gentler slope in the low-force zone and a steeper slope at high force, giving you more control over small inputs and faster access to full braking.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How often should I adjust my brake pressure curve?</h3>
+        <p>Once you've found a curve that feels right for your series, stick with it for at least 10 laps. Your foot learns the pressure range during that time. Adjusting every 2–3 laps prevents learning—let one curve settle before switching.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need to re-calibrate the CRP2 brake if I switch pressure curves?</h3>
+        <p>No. The calibration (finding the pedal's force range) is separate from the curve (mapping force to brake percentage). You calibrate once, then switch between curves as many times as you want without re-calibrating.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Keep reading</h2>
+    <div class="related-grid">
+      <a class="related-card" href="iracing-ffb-clipping-how-to-diagnose-and-fix.html"><span>Setup Guides</span>iRacing FFB Clipping — How to Diagnose It and Fix It Without Losing Detail</a>
+      <a class="related-card" href="iracing-force-feedback-explained.html"><span>Setup Guides</span>iRacing Force Feedback Explained — What Every Slider Actually Does</a>
+      <a class="related-card" href="rig-flex-and-wheelbase-mounting-ffb-feel.html"><span>Setup Guides</span>Your Force Feedback Feels Mushy and It Probably Isn't the Wheelbase</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 RealIRacing · iRacing User: <strong>Carlos Martinez9</strong> · Built with 🏎️</p>
+    <p style="margin-top:6px;font-size:0.78rem;">
+      <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
+      <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
+    </p>
+  </footer>
+
+  <script src="/js/ga4.js" defer></script>
+  <script src="/js/affiliates.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof renderGearBox === 'function') {
+        renderGearBox('rir-gear', ["moza-crp2","moza-r9","cockpit"], 'The gear in this guide');
+      }
+      if (window.RIR_AFF) { RIR_AFF.hydrateLinks(); }
+    });
+  </script>
+
+</body>
+</html>
