@@ -1,0 +1,78 @@
+{
+  "slug": "iracing-telemetry-basics-reading-your-laps",
+  "tag": "Technique · Telemetry",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "iRacing Telemetry Basics: Reading Your Own Laps",
+  "description": "Telemetry shows where you are slow, not just that you are. The four traces worth reading, and why comparing against an alien lap teaches you nothing.",
+  "published": "2026-09-15",
+  "dateLabel": "September 15, 2026",
+  "gearKeys": ["moza-crp2", "moza-r9", "cpu-ryzen-7-5700"],
+  "sections": [
+    { "p": "For a long time my answer to being slow was to drive more. Then somebody sent me a telemetry overlay of my lap against a quicker one around the same circuit, and the half-second I had been hunting for weeks turned out to be sitting in one corner, in a place I would never have guessed. Not the corner that felt bad. A corner I thought I was fine at." },
+    { "p": "Telemetry has a reputation for being an engineer's tool, full of traces that mean nothing to a normal driver. Most of that is true, and you can ignore almost all of it. There are four traces worth your attention, and they answer the only question that matters: where, specifically, is the time going?" },
+
+    { "h2": "Getting the data out" },
+    { "p": "iRacing writes telemetry files when you enable them — the option is in the app's own settings, and the files land in your iRacing telemetry folder. You then need something to read them. There are free and paid analysis tools in the community; which one you pick matters far less than actually opening it, and any of them will draw the traces below." },
+    { "p": "One practical note: telemetry logging writes continuously to disk during a session. On a machine that is already CPU-limited it is one more thing competing for resources, so if you are chasing frame-time problems, sort those out first rather than layering logging on top." },
+
+    { "h2": "Trace one: speed, and where the gap opens" },
+    { "p": "The speed trace is the one to start with, and the useful version is not speed on its own but the delta — the running time difference between your lap and a reference, plotted around the circuit." },
+    { "p": "Read the delta for slope, not height. A line drifting upward means you are losing time right there. A line that is high but flat means you already lost that time earlier and are now matching pace. This distinction is the single most common misreading, and it sends people to fix corners that are not the problem — the damage was done before they arrived." },
+    { "tipLabel": "Find the steepest climb", "tip": "Ignore the biggest gap and find the steepest upward slope. That is where the time is actively being lost, and it is usually one or two places rather than the whole lap." },
+
+    { "h2": "Trace two: throttle, and the honest one" },
+    { "p": "Throttle is where most amateur time hides, and it is brutally honest because it is a direct record of your right foot rather than an interpretation." },
+    { "p": "Look for the moment you reach full throttle out of a corner and compare it against the reference. Being a tenth late to full throttle out of a corner leading onto a long straight costs you all the way down that straight. This is the least glamorous finding in telemetry and by far the most common." },
+    { "p": "Also look for hesitation — throttle that goes up, dips, and goes up again. That dip is almost always a confidence problem rather than a car problem: you got on power, felt something, and lifted. It rarely shows up in how the lap feels, and it shows up immediately in the trace." },
+
+    { "h2": "Trace three: brake, and the shape that matters" },
+    { "p": "For brake, the shape matters more than the peak. A good braking trace rises quickly to its maximum, then trails back down smoothly as you approach the apex. A trace that ramps up slowly is leaving stopping power unused at the point where the car can take the most. A trace that drops off a cliff means you came off the brake abruptly and gave up the rotation that trail braking gives you." },
+    { "p": "If your peak pressure varies a lot lap to lap in the same corner, that is a calibration and hardware conversation rather than a technique one — a load cell measures pressure rather than travel, and it only helps if it is calibrated to a pressure range you can actually repeat. My ~MOZA CRP2 pedals made the trace noticeably more repeatable than anything travel-based I used before, but only after the calibration was right." },
+
+    { "h2": "Trace four: steering, and what smooth actually means" },
+    { "p": "Steering angle exposes something you cannot feel: corrections. A clean corner shows a smooth build to maximum angle and a smooth unwind. Small rapid oscillations mean you are fighting the car — either the setup, or entering too fast and catching it." },
+    { "p": "A useful check is to see whether the steering angle keeps increasing after the apex. If it does, you turned in too early, the car ran out of road, and you are adding lock to save it. That specific pattern is visible in the trace long before it is obvious from the driver's seat." },
+
+    { "h2": "The trap: whose lap are you comparing against?" },
+    { "p": "The obvious move is to grab the fastest lap available and overlay yours. It is also the fastest way to learn nothing useful." },
+    { "list": [
+      "A much quicker driver is often on a different setup, and the differences you find are the car, not you.",
+      "Their line may depend on a level of commitment you cannot yet repeat safely across a race distance.",
+      "The gap is so large it appears everywhere, which tells you nothing about priority."
+    ]},
+    { "p": "Compare against your own best lap first. That removes the car from the equation entirely and shows you your own inconsistency, which is the cheapest time available to anyone. Then compare against someone a step ahead of you rather than several — a gap you can plausibly close in one area is actionable, a gap of several seconds is just discouraging." },
+
+    { "h2": "What telemetry will not tell you" },
+    { "p": "It is worth being clear about the limits, because telemetry has a way of becoming a hobby in itself." },
+    { "list": [
+      "It does not tell you why. It shows you lifted mid-corner; it cannot tell you whether that was the setup, the tyres, or nerves. That judgement is still yours.",
+      "It does not capture how the car felt. A corner that is fine in the trace and terrifying in the seat is a real problem, and the trace will not flag it.",
+      "It does not account for traffic, track state or fuel load, so comparing a qualifying lap against a race lap produces differences that have nothing to do with your driving.",
+      "It cannot tell you whether a faster line is repeatable across a whole race, which is usually the question that actually matters."
+    ]},
+    { "p": "The useful way to hold it: telemetry narrows down where to think, and then you still have to think. Drivers who improve with it treat it as a way of aiming their attention. Drivers who stall out treat it as a scoreboard and end up optimising single laps they cannot reproduce under pressure." },
+
+    { "h2": "A workflow that survives contact with an evening" },
+    { "olist": [
+      "Record a practice session of six to ten reasonable laps.",
+      "Overlay your best lap against your median lap. Find the steepest climb in the delta.",
+      "Look at throttle and brake in just that section. Do not look at the rest of the lap.",
+      "Form one sentence about what to change — earlier throttle out of turn seven, smoother release into turn two.",
+      "Go drive it, with that one sentence as the only thing you are thinking about.",
+      "Re-record and check whether that section improved. Then, and only then, move on."
+    ]},
+    { "p": "The discipline is in step three. Telemetry makes it tempting to fix everything visible at once, and you cannot — changing three things means you never learn which one worked. One trace, one section, one change." },
+    { "p": "And if what the traces keep showing is inconsistent braking pressure rather than a line problem, that is a different fix: <a href=\"load-cell-brake-calibration-consistent-braking.html\">brake calibration</a> first, then <a href=\"trail-braking-load-cell-technique.html\">trail-braking technique</a>." }
+  ],
+  "faqs": [
+    { "q": "Do I need paid software to read iRacing telemetry?",
+      "a": "No. There are free tools in the community that read iRacing's telemetry files and draw speed, throttle, brake and steering traces, which is everything described here. Paid tools add convenience and deeper analysis, but the traces that matter for driver improvement are available without spending anything." },
+    { "q": "Should I compare my lap to a much faster driver's?",
+      "a": "Not at first. A much quicker lap usually involves a different setup and a commitment level you cannot yet repeat, so the differences you find may not be things you can act on. Start by comparing your best lap against your own median lap — that isolates your inconsistency with the car held constant." },
+    { "q": "What is the most common thing telemetry reveals?",
+      "a": "Getting to full throttle later than necessary out of corners that lead onto long straights. It is undramatic, it almost never feels like a mistake from the seat, and it is the most frequent large time loss for amateur drivers." },
+    { "q": "Does recording telemetry hurt performance?",
+      "a": "It writes continuously to disk during a session, so on a system already limited by CPU or storage it is one more competing process. On a machine with headroom the effect is generally not noticeable, but if you are already chasing frame-time issues it is worth resolving those before adding logging." }
+  ]
+}

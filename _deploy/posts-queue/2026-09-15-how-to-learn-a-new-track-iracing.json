@@ -1,0 +1,80 @@
+{
+  "slug": "how-to-learn-a-new-track-iracing",
+  "tag": "Technique · Practice",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "How to Learn a New iRacing Track Fast (Without 200 Laps)",
+  "description": "A repeatable method for learning an unfamiliar iRacing circuit: split it into sections, fix braking first, and stop grinding laps that teach you nothing.",
+  "published": "2026-09-15",
+  "dateLabel": "September 15, 2026",
+  "gearKeys": ["moza-r9", "moza-crp2", "monitor-1440p-120"],
+  "sections": [
+    { "p": "A new track drops into the schedule on Tuesday and the race is Saturday. Most people respond by loading a practice session and grinding laps until something sticks. I have done it, it half-works, and it is a slow way to get to a pace you could have found in a fraction of the time. Driving an unfamiliar circuit over and over mostly teaches you to repeat whatever you did on lap one." },
+    { "p": "I run a fixed-aluminium cockpit with a ~MOZA R9 direct-drive base and ~MOZA CRP2 load-cell pedals, and the method below is what I actually do when a track I have never seen appears on the schedule. It is not glamorous and it front-loads some boring work, but it gets me to a representative pace in an evening rather than a week." },
+
+    { "h2": "Why grinding laps is such a poor teacher" },
+    { "p": "Three things go wrong when you just drive." },
+    { "list": [
+      "You practise the whole lap at once, so the corners you are already fine at get the same attention as the one costing you half a second.",
+      "Mistakes compound. A bad exit from turn three ruins your reference for turn four, so you are learning turn four from the wrong entry speed, over and over.",
+      "You get no feedback except the lap time, which is a single number summarising twelve corners. It tells you that you were slow. It does not tell you where."
+    ]},
+    { "p": "The fix for all three is the same: stop driving laps and start driving sections." },
+
+    { "h2": "Step one: split the track before you drive it" },
+    { "p": "Before the first lap, look at the track map and break the circuit into three or four sections, each ending on a straight. Straights are the natural seams because a mistake inside a section does not leak across a straight the way it leaks from corner to corner." },
+    { "p": "Then, for each section, write down one sentence about what it is asking for. Something like: heavy braking into a slow left, then immediately a fast right that punishes you for being greedy on exit. You are not writing a setup note, you are giving yourself a label so that when it goes wrong you can say which section rather than just \"the lap felt bad\"." },
+    { "tipLabel": "Do this away from the car", "tip": "Five minutes with the track map before you drive is worth more than the first twenty laps. You are building a mental index so that everything you learn afterwards has somewhere to attach itself." },
+
+    { "h2": "Step two: braking points before racing lines" },
+    { "p": "The single biggest source of time loss on an unfamiliar track is not knowing where to brake, and it is also the thing that scares people into driving conservatively everywhere. So fix it first, deliberately and unglamorously." },
+    { "p": "Pick your heaviest braking zone. Brake absurdly early on purpose, note where you braked against a fixed reference — a board, a change in the kerb, a bridge shadow — and then move it later a car length at a time until you are running wide on entry. Now you know the limit, from the safe side, and you can back off one step and drive it with confidence." },
+    { "p": "Use fixed, permanent references. Braking boards are ideal because they exist precisely for this. Do not use another car, a tyre mark, or anything that moves — the reference has to be there on lap one of the race with forty cars around you." },
+    { "p": "Do this for each of your heavy zones before you worry about apexes at all. It feels backwards, and it is the fastest route to a lap that is not terrifying." },
+
+    { "h2": "Step three: fix exits, not entries" },
+    { "p": "Once braking points exist, work on corners in order of how long the straight after them is. A corner leading onto the longest straight is worth several times more than an identical corner leading into another corner, because the exit speed multiplies down the whole straight." },
+    { "p": "This is where most self-taught pace comes from, and it is the opposite of what feels satisfying. Nailing a fast, committed entry feels heroic. Getting on power earlier out of a slow corner feels like nothing at all and gains more time." },
+    { "olist": [
+      "Rank your corners by the length of the straight that follows.",
+      "Take the top two. Ignore everything else for now.",
+      "For each, drive it deliberately slower on entry than feels right, and concentrate only on how early you can get to full throttle.",
+      "When the early-throttle version is consistently faster than your heroic version — and it usually is — keep it."
+    ]},
+
+    { "h2": "Step four: drive sections, not laps" },
+    { "p": "Now use the sections from step one. Drive a lap, but only evaluate one section. Everything else, drive at eight tenths and do not think about it. Repeat that section's evaluation for five or six laps, then switch to the next section." },
+    { "p": "This sounds slower than driving full laps. It is dramatically faster, because you are giving one problem your full attention instead of spreading attention across twelve. It also breaks the compounding-mistake loop: you stop learning corner four from a broken corner three." },
+    { "tipLabel": "Reset rather than continue", "tip": "If you make a real mistake mid-section, do not drive the rest of the lap to \"get the practice\". Reset to the pits and go again. A lap driven out of a mistake teaches the recovery, not the corner." },
+
+    { "h2": "The corners you should deliberately give up on" },
+    { "p": "There is usually one corner on any new circuit that refuses to make sense. You try three different entries, none feel right, and you keep coming back to it because it is the one that bothers you. That corner is a trap in the first session." },
+    { "p": "Work out what its safe, unspectacular version is — a line that loses a tenth but never costs you the car — and drive that for now. Then leave it alone. The reason is priority: a tenth in your problem corner is worth less than three tenths spread across the corners you already half-understand, and the problem corner usually resolves itself once the rest of the lap is settled and you arrive at it with a consistent entry speed." },
+    { "p": "This also protects your session. The corner you cannot solve is the one most likely to put you in a wall, and a session spent recovering from offs is a session where you learned very little about anywhere else on the track." },
+
+    { "h2": "What actually needs a full lap" },
+    { "p": "Two things, and only near the end of the session. The first is rhythm — the way sections connect, which you genuinely cannot feel in isolation. The second is tyre and fuel behaviour over a run, which is race preparation rather than track learning and deserves its own session once your pace is stable." },
+    { "p": "If you are still finding a second in a single corner, you are not ready for long runs. Long runs on an unlearned track mostly generate tired, inconsistent laps that confirm nothing." },
+
+    { "h2": "The evening that actually works" },
+    { "olist": [
+      "Five minutes with the track map, splitting it into sections and labelling each.",
+      "Fifteen minutes on braking points only, walking them in from the safe side.",
+      "Twenty minutes on the two highest-value exits.",
+      "Twenty minutes driving sections, one at a time, everything else at eight tenths.",
+      "The last stretch on full laps for rhythm — and only then a longer run."
+    ]},
+    { "p": "Roughly an hour, and it will put you closer to a representative pace than three hours of grinding. The reason is not that the method is clever. It is that almost every lap in the grinding approach is spent practising things you already do adequately." },
+    { "p": "Once the pace is there, the rest is race craft — and the track being new stops being the thing holding you back. If your braking is the inconsistent part rather than your references, that is a hardware and technique problem rather than a track-learning one, and <a href=\"trail-braking-load-cell-technique.html\">trail braking with a load cell</a> and <a href=\"load-cell-brake-calibration-consistent-braking.html\">brake calibration</a> are the places to start." }
+  ],
+  "faqs": [
+    { "q": "How many laps does it take to learn a new iRacing track?",
+      "a": "Far fewer than most people run, if the laps are structured. Splitting the circuit into sections and working braking points and high-value exits separately gets you to a representative pace in about an hour of focused practice, where unstructured grinding can take several sessions to reach the same place." },
+    { "q": "Should I use a setup from someone else when learning a track?",
+      "a": "Use a known-decent baseline rather than building your own while you are still learning the circuit. Changing the car and learning the track at the same time makes it impossible to tell which one caused a change in lap time. Save setup work until your pace is consistent." },
+    { "q": "Is it better to learn a track in a slow car or a fast one?",
+      "a": "Learn it in the car you will race. Braking points, reference markers and the value of each exit all shift with the car's speed and downforce, so time spent learning references in a different class partly has to be relearned anyway." },
+    { "q": "What should I use as braking references?",
+      "a": "Permanent, fixed features — braking boards, bridges, kerb transitions, changes in the wall. Avoid anything that can move or disappear, such as tyre marks, shadows at a particular time of day, or another car. Your references have to survive a race start with traffic all around you." }
+  ]
+}

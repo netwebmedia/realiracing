@@ -1,0 +1,77 @@
+{
+  "slug": "iracing-league-racing-getting-started",
+  "tag": "Guide · Racing",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "iRacing League Racing: How to Find One and Not Wash Out",
+  "description": "Leagues are where iRacing stops feeling like a lobby queue. How to pick one that fits, what the first race really asks, and the habits that keep you in.",
+  "published": "2026-09-15",
+  "dateLabel": "September 15, 2026",
+  "gearKeys": ["moza-r9", "cockpit", "monitor-1440p-120"],
+  "sections": [
+    { "p": "Official races are a queue. You join, you race strangers, you leave, and the only thing that persists is a number. That works for a while, and then for a lot of people it stops working — the racing gets repetitive in a way that has nothing to do with the driving. Leagues are the usual cure, and the reason is simple: when you race the same twenty people every week, the racing changes character entirely." },
+    { "p": "It also has a failure mode nobody warns you about. Plenty of people join a league, miss round three, feel awkward about it, and quietly never come back. Avoiding that is mostly about picking the right league in the first place, and knowing what the commitment actually is before you sign up." },
+
+    { "h2": "What a league gives you that officials do not" },
+    { "list": [
+      "People who remember last week. Nobody divebombs someone they have to race for another eight rounds, which raises the standard of racing around you without anyone needing to enforce it.",
+      "A season arc. Points across rounds mean a bad race matters and a consistent one compounds — the thing that makes real racing interesting.",
+      "A fixed, known field. You learn who is quick where, who is nervous on restarts, who you can leave room for and who you cannot.",
+      "A reason to prepare. Practising for a race where the same people will see the result is different from practising for a lobby."
+    ]},
+    { "p": "The thing it costs you is flexibility. A league race happens at a fixed time whether or not you are in the mood, and that is the whole trade." },
+
+    { "h2": "Choosing one that actually fits" },
+    { "p": "Most people pick on car and track list, which matters least. Pick on these four instead, in this order." },
+    { "olist": [
+      "Time slot. A start time that works on a bad week, not just a good one. This causes more dropouts than anything else on the list.",
+      "Race length. A sprint league and an endurance league are different hobbies. Be honest about which you have time to prepare for.",
+      "Fixed or open setup. Fixed setup means everyone gets the same car and the racing is about driving. Open setup means setup work is part of the sport, and if you do not enjoy that you will be slow for reasons that have nothing to do with your driving.",
+      "Field pace. A league where you would be last by a wide margin every week is not fun, and neither is one where you lap the field. Ask what typical lap times look like before committing."
+    ]},
+    { "tipLabel": "Fixed setup first", "tip": "If it is your first league, choose fixed setup. It removes an entire dimension of preparation and lets you find out whether you enjoy league racing before deciding whether you enjoy engineering." },
+
+    { "h2": "Where to find them" },
+    { "p": "iRacing has a league directory built into the service, and it is the obvious starting point — you can filter and see how active a league has been rather than relying on a forum post from last year. Beyond that, the community Discords around specific car classes are where most leagues actually recruit, and where you can get a feel for the people before you commit to racing with them for a season." },
+    { "p": "Whatever the source, look for evidence of recent completed seasons. A league that has run three seasons and finished them is a much safer bet than a brand-new one with an ambitious calendar and no track record — most new leagues do not survive their first season." },
+
+    { "h2": "The first race: what is actually being asked" },
+    { "p": "Newcomers usually assume they need pace. What is actually being assessed, informally and by everyone, is whether you are predictable." },
+    { "p": "Being two seconds off and finishing every lap in a straight line earns you a place in the league. Being quick and putting someone in a wall on lap one does not. This is the inverse of the incentives in a lobby race, where you never see anyone again, and it takes some adjusting." },
+    { "list": [
+      "Show up to whatever practice session the league runs. Half of league integration is social and it happens there, not in the race.",
+      "Read the rules document properly, especially on incident handling and protests. Leagues vary enormously and the surprising rule is always in there.",
+      "In the first race, let people past. You lose almost nothing over a season and you buy an enormous amount of goodwill.",
+      "If you make contact, say so afterwards. Leagues forgive mistakes readily and hold grudges about denial."
+    ]},
+
+    { "h2": "The habit that keeps you in" },
+    { "p": "Attendance beats pace, over and over. Leagues run on having a full grid, and the driver who turns up every week at mid-pack is worth more to the organiser than the fast one who appears twice a season." },
+    { "p": "Which means the single most useful thing you can do is tell people when you cannot make it. Every league has a way to declare an absence, and using it costs you nothing and marks you as reliable. The people who quietly disappear are not thrown out — they just stop being counted on, and then stop being invited." },
+    { "tipLabel": "Say you are out", "tip": "Missing a round is normal and nobody minds. Missing a round silently, twice, is how you end up off the entry list without anyone ever having a conversation with you about it." },
+
+    { "h2": "Preparing without it taking over your week" },
+    { "p": "You do not need to be race-ready every round. A workable minimum is one focused practice session on the track, long enough to know your braking points and complete a run at race fuel without a mistake. That is enough to race respectably and not enough to consume your evenings." },
+    { "p": "If the league runs open setup, budget separately for that, and borrow a baseline from the league's own community rather than building from scratch in your first season. Nobody expects a rookie to bring their own engineering, and most leagues share setups freely." },
+    { "p": "The pace comes later and it comes from structure rather than volume — <a href=\"how-to-learn-a-new-track-iracing.html\">learning each new track by sections</a> gets you there faster than grinding laps the night before." },
+
+    { "h2": "The rules document is not boilerplate" },
+    { "p": "Every league writes one and almost nobody reads it past the schedule. It is where the surprises live, and the surprises are the kind that end seasons." },
+    { "p": "The section worth reading twice is incident handling. Leagues differ enormously here: some run a formal protest window with video evidence and a stewarding panel, some expect drivers to sort it out between themselves, and some apply automatic penalties from the incident count with no discussion at all. Racing as though your league works the way your last one did is how good drivers end up with penalties they did not see coming." },
+    { "p": "Check two other things while you are in there. First, what qualifying format is used and whether it is compulsory — some leagues grid you from championship position if you miss it, which turns a skipped session into a pit-lane start. Second, whether there is a minimum number of rounds to be classified in the championship, because that number quietly decides how many weeks you can afford to miss." },
+
+    { "h2": "When to leave one" },
+    { "p": "Leaving is allowed and it is better than fading out. If the time slot has stopped working, if the field has drifted far from your pace, or if you are dreading race night, say so to the organiser and step out cleanly. You keep the relationship, and league organisers talk to each other — a driver who left properly gets recommended into the next one." },
+    { "p": "The failure mode is the slow fade: three missed rounds, an awkward silence, and a hobby you used to enjoy quietly turning into an obligation you are avoiding. That helps nobody, least of all you." }
+  ],
+  "faqs": [
+    { "q": "Do I need a high iRating to join a league?",
+      "a": "Usually not. Many leagues have no rating requirement at all, and those that do are typically filtering for safety rather than speed. What most organisers actually want is drivers who turn up consistently and race predictably, which has very little to do with iRating." },
+    { "q": "What is the difference between fixed and open setup leagues?",
+      "a": "In a fixed setup league everyone races an identical car, so results come down to driving. In an open setup league you build or source your own, which makes setup work part of the competition. For a first league, fixed removes a whole dimension of preparation and lets you find out whether you enjoy the racing itself." },
+    { "q": "How much time does a league actually take each week?",
+      "a": "At minimum, the race itself plus one focused practice session on that track — enough to know your braking points and complete a race-fuel run cleanly. Open-setup leagues and endurance formats ask for considerably more, which is why the format is worth checking before you commit." },
+    { "q": "What happens if I miss a race?",
+      "a": "In nearly every league, nothing — provided you say so in advance using whatever channel they use for absences. Leagues plan around grid numbers, so a declared absence is easy to handle. Repeatedly disappearing without a word is what quietly gets drivers dropped from entry lists." }
+  ]
+}
