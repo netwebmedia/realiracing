@@ -1,0 +1,153 @@
+{
+  "slug": "baseline-setup-vs-setup-shops-when-to-stop-fiddling",
+  "tag": "Setup Guides · FFB",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Baseline Setups vs. Setup Shops: When to Stop Fiddling",
+  "description": "Learn when a baseline setup is enough and when setup shops actually help. Stop wasting hours tweaking and start finding pace faster.",
+  "sections": [
+    {
+      "p": "I spent three seasons chasing setup perfection. Every track, I'd load into a public server with a fresh setup from someone's Discord shop, spend 45 minutes tuning brake bias and anti-roll bar stiffness, and then realize I was half a tenth slower because I'd stopped practicing. The hard truth: most of us aren't good enough at setup to benefit from deep customization, and the time cost of fiddling often exceeds the lap-time gain."
+    },
+    {
+      "p": "This isn't about skill or intelligence—it's about leverage. If you're within ~0.5 seconds of pace on a track, your setup probably isn't the bottleneck. Your braking consistency, line choice, and throttle control are. I race on my MOZA R9 with the same philosophy: a solid baseline setup gets me 95% of the way there. The last 5% requires either genuine data analysis or acceptance that I'm not a setup engineer."
+    },
+    {
+      "h2": "What a Baseline Setup Actually Is"
+    },
+    {
+      "p": "A baseline setup is a starting point that works across multiple drivers and doesn't fight you. It's not optimized for your driving style—it's stable, predictable, and relatively forgiving. iRacing's built-in setups are baselines. So are the 'safe' shared setups you see in team Discord channels."
+    },
+    {
+      "p": "The key characteristic: a baseline setup lets you focus on driving, not management. You're not fighting oversteer on corner exit or dealing with brake lockup sensitivity. That matters more than it sounds. When I switched to my MOZA R9 setup, I used a baseline for my first ~50 laps at each track. No fiddling. Just laps. My pace improved faster than when I was tweaking every session."
+    },
+    {
+      "list": [
+        "Built-in setups from iRacing (free, standardized, intentionally balanced)",
+        "Shared team setups vetted by experienced drivers (usually reliable if from established leagues)",
+        "Setup shops with a 'safe' or 'baseline' option (explicitly marketed as starting point, not final tune)",
+        "Previous season's setup from the same track (if the car physics haven't changed significantly)"
+      ]
+    },
+    {
+      "tip": "A baseline setup should feel neutral or slightly understeer-biased. If you're fighting it within 5 laps, something's wrong. Understeering is forgiving; oversteer burns lap time and confidence.",
+      "tipLabel": "The Neutral Setup Rule"
+    },
+    {
+      "h2": "When Baseline Is Genuinely Enough"
+    },
+    {
+      "p": "You should stick with baseline if you're consistently qualifying outside the top 10%, still braking early into corners, or learning a car for the first time. I used a baseline setup for my first 50 iRacing laps in the Ferrari 488 GT3. Would a custom setup have been faster? Possibly by 0.05 seconds. But I couldn't execute the driving technique to use it."
+    },
+    {
+      "p": "The time trade-off is real. Modifying a baseline takes 10–30 minutes per adjustment cycle. Even if each change could net you 0.02 seconds, you need five iterations to match a 0.1-second gain. That's 100 minutes. In that time, you could run 200 laps and improve your consistency by 0.3 seconds through driving skill alone. The math is brutal."
+    },
+    {
+      "olist": [
+        "You're within 0.5 seconds of pace on a track (not top-tier speed, but competitive)",
+        "You're learning the track or car for the first time",
+        "You don't have telemetry analysis tools or experience reading data",
+        "You're racing multi-setup series (like MX-5 or Skip Barber) where setup differences are minimal",
+        "Your driving feels consistent lap-to-lap (the setup isn't fighting you)",
+        "You have fewer than 100 laps in the car or series"
+      ]
+    },
+    {
+      "h2": "When Setup Shops Actually Matter"
+    },
+    {
+      "p": "Setup shops aren't useless. They matter when the person building the setup has done the data analysis you haven't. A competent shop operator runs 50+ laps with telemetry, measures brake pressure, throttle input trace, and cornering forces, then adjusts for efficiency. That's work. You're paying for the labor, not magic."
+    },
+    {
+      "p": "I use setup shops when I'm preparing for league racing where the field is tight and I know the track well enough that setup is a lever. For example, at Nürburgring GP, I bought a custom brake bias tune from a shop. Not because I couldn't find pace with baseline—I already had—but because the last 0.08 seconds required brake balance so precise that guessing would have wasted more time than paying for it. That's the honest use case."
+    },
+    {
+      "p": "Setup shops also help if you struggle with a specific handling trait. If you can't adapt to understeer and every baseline feels heavy, a shop that specializes in 'sharp' setups might be worth the ~$5–15 investment. But be realistic: if the problem is your brake timing, a sharper setup is a band-aid."
+    },
+    {
+      "list": [
+        "You're top-20% pace on a track and chasing tenths in league racing",
+        "You have clear data or a persistent handling issue a baseline doesn't address",
+        "You're racing a series where small setup margins win (GT3, GT4, Indycar)",
+        "You've run 100+ laps and still can't find consistency with baseline",
+        "The setup shop has verifiable credibility in your series or car"
+      ]
+    },
+    {
+      "tip": "A good setup shop will tell you what its setup does (e.g., 'aggressive braking, stability on exit'). If the listing just says 'fast,' that's a red flag. You're buying work, not a lap-time cheat.",
+      "tipLabel": "Credibility Test"
+    },
+    {
+      "h2": "The Fiddling Trap and How to Escape It"
+    },
+    {
+      "p": "Fiddling feels productive because you're changing things. But without data, you're just randomly tuning and maybe getting lucky. I've been there. I'd adjust brake bias by 2%, lose time, panic, adjust it back, and declare the baseline 'better.' That's not improvement—that's noise."
+    },
+    {
+      "p": "Here's what I do now on my rig: I load a baseline, run 10 clean laps, record my fastest, then run 20 more laps to check consistency. If I'm not improving by lap 30, the setup is probably fine and I need more practice. If I am improving, I keep pushing until I plateau. Only then do I consider changes."
+    },
+    {
+      "p": "When I do tweak, I change one thing at a time and test with at least 5 laps each. If it doesn't help, I revert immediately. No 'well, maybe it'll feel better in race trim' guessing. On my MOZA R9, the feedback is clear enough to feel changes, so I use that advantage. But the discipline is the real tool—the hardware just amplifies what you learn."
+    },
+    {
+      "olist": [
+        "Set a rule: run at least 10 laps per setup before judging it",
+        "Change only one parameter per test session (one thing per ~5 laps)",
+        "Record your fastest lap and trend, not individual lap times",
+        "If you're not improving by lap 20–30, stop tweaking and practice more",
+        "Write down what you change and the result (brake bias +1%, lost 0.03s) so you don't repeat mistakes"
+      ]
+    },
+    {
+      "h2": "Setup Shops vs. Your Own Testing: The Cost-Benefit"
+    },
+    {
+      "p": "A setup shop costs ~$8–20 per setup. An hour of your time testing setups might be worth $25–50 depending on your hourly rate. But here's the trap: that hour of testing only matters if you know what to test and how to interpret the results. If you're guessing, that hour costs you a tenth of a second and zero insight."
+    },
+    {
+      "p": "Buy a setup shop setup when the math favors it: your time is constrained (league race in 3 days), you're competitive enough that setup matters, and the shop has proven results in your car and track. Skip it if you have time to learn, you're still working on fundamentals, or you're 0.5+ seconds off pace."
+    },
+    {
+      "p": "I've also found that even when I buy a setup, I spend 15 minutes just running and familiarizing myself with how it behaves. That time is non-negotiable. A perfect setup you don't trust will cost you lap time through hesitation. So factor that in: buying a setup isn't a shortcut to pace. It's a tool that only works if you commit to using it."
+    },
+    {
+      "h2": "When to Accept Baseline and Move On"
+    },
+    {
+      "p": "The moment I accepted that baseline was good enough for 90% of my racing, my pace improved. Counterintuitive, I know. But here's why: I stopped burning mental energy on setup guilt and focused on the one thing that actually matters—consistent, smooth driving."
+    },
+    {
+      "p": "If you're not in a paid league or competing for championships, baseline is fine. Use the time you'd spend tweaking to learn <a href=\"best-sim-racing-wheels-iracing.html\">smoother lines</a>, <a href=\"iracing-qualifying-lap-technique.html\">sharper qualifying prep</a>, or just more laps at the track. That's where pace lives."
+    },
+    {
+      "p": "Even on my MOZA R9 with all the force feedback detail to feel changes, I rarely go beyond a baseline modification. I might adjust brake bias by 1–2% based on how the car feels, but that's it. Most of my energy goes into my own inputs, not the setup. And my iRating reflects that: consistency beats optimization."
+    },
+    {
+      "tip": "If you've spent more than 90 minutes on setup for a single track and you're not measuring telemetry or preparing for a league, you're fiddling. Stop and drive instead.",
+      "tipLabel": "The 90-Minute Rule"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I buy a setup shop setup or use the free baseline?",
+      "a": "Use baseline for your first 20–30 laps at any track. If you're still improving on lap 30, keep the baseline and practice more. Buy a setup shop setup only if you're top-20% pace, have a specific handling complaint, or are prepping for a league race. Otherwise, the time you save isn't worth the money."
+    },
+    {
+      "q": "How many laps should I run on a setup before deciding it's bad?",
+      "a": "At least 10 clean laps to get familiar, then 10–15 more to see if your pace is improving. If you're not improving by lap 25–30, the setup is probably fine and you need more practice. If you are improving, keep pushing until you plateau."
+    },
+    {
+      "q": "What's the biggest mistake people make with setup fiddling?",
+      "a": "Changing multiple things at once, then declaring the new setup worse without understanding what caused the change. Change one parameter at a time, test it with at least 5 laps, and revert if it doesn't help. Write down what you tested and the result so you learn patterns."
+    },
+    {
+      "q": "Is a baseline setup fast enough to win a league race?",
+      "a": "Yes, if you're a consistent driver. Most league fields are decided by driver skill, not setup. If you're top-20% pace on a track with a baseline setup, you're in contention. Setup only becomes a tiebreaker if the field is very tight and everyone else is equally skilled."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

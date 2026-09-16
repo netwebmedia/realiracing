@@ -1,0 +1,126 @@
+{
+  "slug": "lotus-79-historic-formula-cars-iracing",
+  "tag": "Car Guide · Formula Racing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Lotus 79 and Historic Formula Cars on iRacing",
+  "description": "Master the Lotus 79 and classic formula cars on iRacing. Learn setup, braking technique, and why these cars demand precision over raw power.",
+  "sections": [
+    {
+      "p": "The Lotus 79 is different. It's not just an old car—it's a machine that taught me why modern sim racing rewards patience and precision over wheel-wrestling aggression. When I first loaded it on iRacing, expecting a twitchy handful, I got something stranger: a car that flows through corners with an elegance that disappears the moment you disrespect it. On my MOZA R9 at ~9 N·m, the feedback is crisp and honest. No power steering, no assists, no mercy. The historic formula category on iRacing includes the Lotus 79, the formula Vee, and the Dallara IR-01, each with their own character. If you're coming from modern GT3 or IndyCar, this is a lesson in fundamentals."
+    },
+    {
+      "p": "Historic formula racing forces you to understand what the car is actually doing underneath you—because the car won't do it for you. There's no electronic stability control to catch a mistake. The steering ratio is quick and direct. The brakes are hydraulic and progressive, not ABS-assisted. You're building a relationship with the machine, not fighting one. That's the appeal, and it's also why these cars separate the patient from the frustrated."
+    },
+    {
+      "h2": "Why the Lotus 79 Feels So Different"
+    },
+    {
+      "p": "The Lotus 79 was revolutionary in 1978—the first car to successfully use ground effect for downforce. On iRacing, you can feel that philosophy: the car rewards smooth inputs and punishes abrupt ones. Aerodynamic grip is speed-dependent, which means slow-speed corners are a struggle, but high-speed sweepers are planted."
+    },
+    {
+      "p": "Compared to the formula Vee (a more basic, open-wheel trainer) or the IR-01 (a hybrid of old and new), the 79 sits in a sweet spot: low enough in the totem pole that you can't carry ridiculous speed, but sophisticated enough that setup and technique matter hugely. The car is physically lighter than modern cars, with less downforce and narrower tires, so weight transfer is immediate and dramatic. A single extra degree of brake bias forward sends you into understeer. A corner entry that's 5 mph too fast breaks the rear free."
+    },
+    {
+      "h2": "Braking and Trail Braking in Historic Formula"
+    },
+    {
+      "p": "On my CRP2 load-cell pedals, braking with the Lotus 79 is about modulation and patience. Modern cars with ABS let you be aggressive; the 79 requires you to read the grip. Brake pressure curves matter more here than almost anywhere else in iRacing because there's no electronic intervention. If your curve is too aggressive early in the pedal travel, you'll lock the rears mid-corner and spin. If it's too soft, you'll overshoot the apex."
+    },
+    {
+      "p": "I run a brake bias of around 58–60% front (depending on the track), which is nose-heavy compared to modern cars, but the 79 needs it. The rear tires are narrow and don't like locking. Trail braking is essential: you're carrying brake pressure deeper into corners than you'd think, releasing it smoothly as the car rotates. The car's light weight means small steering inputs are large torques on the front tires, so smooth is non-negotiable."
+    },
+    {
+      "h2": "Setup Fundamentals for the Lotus 79"
+    },
+    {
+      "h3": "Suspension and Compliance"
+    },
+    {
+      "p": "The Lotus 79 has limited suspension travel compared to modern cars. It's stiff and low. On iRacing, this manifests as a car that's sensitive to bump sensitivity and road texture. A setup that's too soft will wallow and hurt mid-corner grip; too stiff will upset the car on curb strikes. I typically run spring rates ~800–900 N/mm in the front and ~700–800 in the rear, but tracks vary. The key is finding the balance where the car sits flat through compressions but doesn't oscillate after load release."
+    },
+    {
+      "p": "Ride height is critical. Too high and you lose ground effect efficiency; too low and you hit everything. I run the minimum legal height my setups allow, as close to the limit as the track permits. ARB stiffness should be moderate—the car is narrow-tired, so anti-roll bars are doing a lot of the cornering work. Front ARB around 10–12, rear around 8–10, depending on how much mid-corner stability you need."
+    },
+    {
+      "h3": "Downforce and Aerodynamics"
+    },
+    {
+      "p": "The Lotus 79's wing settings are relatively fixed compared to modern GT3 cars, but you'll have front and rear wing angles to dial. High downforce setups (more wing) are better for low-speed, tight courses like Monaco or tight club circuits. Low downforce (flatter wings) helps on high-speed layouts like Spa or Silverstone. I think of it as: if you're running tight corners and risk understeering, add front wing. If you're struggling with rear stability in high-speed corners, reduce rear wing."
+    },
+    {
+      "p": "Fuel load is also part of the aero conversation. Light fuel means lower drag and faster corner speeds but less stability. Heavy fuel (full tank) is more planted but less responsive. I typically run just enough fuel to finish plus a small safety margin, because the 79 is so sensitive to weight changes."
+    },
+    {
+      "list": [
+        "Brake bias: start 58–60% front, adjust based on how much rear lock you're seeing mid-corner.",
+        "Spring rates: ~800–900 front, ~700–800 rear; avoid extremes that cause either wallowing or bouncing.",
+        "ARB: moderate stiffness (10–12 front, 8–10 rear) to help narrow tires manage cornering load.",
+        "Wing angles: high wing for tight courses, low wing for high-speed tracks; adjust by ~1–2 degrees to feel the difference.",
+        "Tire pressures: keep them tight; aim for ~27–28 psi cold (varies by track). The 79 runs smaller, narrower tires than modern cars, so pressure sensitivity is real."
+      ]
+    },
+    {
+      "h2": "Throttle Control and Momentum"
+    },
+    {
+      "p": "This is where the Lotus 79 teaches you the most. The car has limited power (~800 hp in current iRacing spec, but distributed through a very light chassis), so acceleration is smooth rather than explosive. But that lightness means the rear is always ready to slide if you're careless. Rolling on the throttle mid-corner is a conversation with the tires, not a demand. I'm thinking of a throttle trace that rises gradually, holding steady through the apex, and only applying full throttle once the car is completely straight and the rear tires have stopped working to rotate the car."
+    },
+    {
+      "p": "The car rewards momentum maintenance. A clean line through a corner sequence, where you preserve speed through the slow bits and carry that to the fast bits, will out-pace someone who's quicker in isolated corners but loses momentum between them. This is especially true in rain, where the 79 becomes almost unforgiving. Slow hand movements, patience with throttle application, and respect for the skinny tires separate the smooth drivers from the ones spending time in the gravel."
+    },
+    {
+      "tip": "Practice the Lotus 79 on a familiar track first—somewhere you know the braking markers and don't have to relearn the layout. The car demands precision, and learning both the track and the car at once is harder than you'd think. Once you groove it, the smoothness becomes addictive.",
+      "tipLabel": "Learning Approach"
+    },
+    {
+      "h2": "Historic Formula Car Comparisons"
+    },
+    {
+      "p": "The formula Vee is the entry point. It's genuinely slow, with no downforce to speak of, a basic engine, and narrow tires. It's also humbling. If you can drive the Vee smoothly, you can drive anything. The IR-01 is the opposite extreme—a modern design wearing a retro aesthetic, with more power, better aero, and aids that make it more forgiving. The Lotus 79 is the sweet spot: enough aero to reward smooth technique, enough power deficit to keep you honest, and enough mechanical sympathy to let you feel exactly what the tires are doing."
+    },
+    {
+      "p": "If you're doing a historic season or series, understand that the Lotus 79 is the meta car for many drivers. It rewards precision, but it also rewards bravery—knowing when to trust the tires and when to back off. The fastest drivers in iRacing's historic formula series aren't the ones making the biggest inputs; they're the ones making the smallest ones, perfectly."
+    },
+    {
+      "h2": "Rainy-Day Reality Check"
+    },
+    {
+      "p": "Rain is where the Lotus 79 either humbles you or teaches you the most. Wet-weather grip is scarce, and the car's light weight and narrow tires mean aquaplaning is a genuine risk. My approach is: half throttle from the straights into heavy braking zones, smooth everything, and accept that your pace will be slow. Trying to carry modern-car speeds in a Lotus 79 in the rain is a way to spend a lot of time viewing the scenery from the pit lane. <a href=\"wet-weather-driving-iracing.html\">Wet weather technique</a> becomes even more essential here because the car has no electronic assists to save you."
+    },
+    {
+      "h2": "Why This Matters for Your iRacing"
+    },
+    {
+      "p": "Racing the Lotus 79 and other historic formula cars will make you smoother at every other car in iRacing. The discipline required—the precision, the respect for mechanical grip—carries over to GT3, IndyCar, and everything else. You'll find yourself carrying more speed with less correction, braking earlier with more confidence, and understanding how tires work at their limits rather than just mashing inputs and hoping the car's systems save you. If you're running modern cars on your MOZA R9 or any direct-drive wheelbase, spend a season in historic formula. You'll come back to your GT3 a better driver, and you might find that smoothness and momentum matter more than raw aggression."
+    },
+    {
+      "tip": "The Lotus 79 is unforgiving, but that's the point. Every lock, every slide, every correction is feedback. Listen to it. The car is teaching you something real.",
+      "tipLabel": "The Real Lesson"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is the Lotus 79 harder than modern GT3 cars?",
+      "a": "It's different, not necessarily harder. The 79 demands smoothness and respect for mechanical grip; GT3 cars reward aggression and rely on electronic aids. The 79 has less power, narrower tires, and no ABS or traction control, so mistakes are more costly. If you're used to GT3, the 79 will feel slow and twitchy at first. Patience and precision are the transition."
+    },
+    {
+      "q": "What brake pressure curve should I start with?",
+      "a": "Start with a progressive curve—mild pressure in the first 20–30% of pedal travel, then ramping up. On your load-cell pedals, this might look like 0 pressure at 0%, 20–25% pressure at 50% pedal, and 100% at full depression. Adjust from there. The 79 locks easily, so if you're locking the rear, soften the curve or move bias forward. If you're not stopping hard enough, firm it up or move bias rearward in small increments."
+    },
+    {
+      "q": "Why is the Lotus 79 so different from the IR-01?",
+      "a": "The IR-01 is a modern open-wheel design with modern systems—electronic power steering, traction control, and active aerodynamics. The 79 has zero assists. The IR-01 is also heavier and has more downforce at lower speeds, so it's easier to overdrive it and still have electronic grip. The 79 rewards patience; the IR-01 can absorb aggression. Different philosophies."
+    },
+    {
+      "q": "What's the best track to learn the Lotus 79?",
+      "a": "Start somewhere smooth and flowing with long straights—Silverstone, Road America, or even VIR. Avoid bumpy tracks initially; the 79 is sensitive to road surface because of limited suspension travel and low ride height. Once you're comfortable, move to tighter, bumpier layouts. Monaco is a classic 79 track, but it's unforgiving if you're still learning the car's character."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

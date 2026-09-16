@@ -1,0 +1,150 @@
+{
+  "slug": "okayama-iracing-guide",
+  "tag": "Track Guides · iRacing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Okayama International Circuit iRacing Guide: Setup and Technique",
+  "description": "Master Okayama's tight corners and heavy braking zones. Learn the setup, line, and throttle discipline needed to be quick on iRacing's technical Japanese circuit.",
+  "sections": [
+    {
+      "p": "Okayama International Circuit is one of iRacing's most demanding technical tracks. It's a 3.7-km Japanese circuit with relentless direction changes, deep braking zones, and very little margin for error. When I first loaded it on my MOZA R9, I immediately felt the punishment for imprecise inputs—the FFB through every corner demands respect, and one lazy throttle application on exit will cost you."
+    },
+    {
+      "p": "Okayama rewards patience and smooth inputs over aggression. The track has no long straights to recover from mistakes, and the tight sequence of 90-degree turns means corner exit is directly into the next braking zone. That combination of back-to-back technical corners is what makes Okayama uniquely difficult and why your setup and technique need to be locked in."
+    },
+    {
+      "h2": "Track Layout and Key Sectors"
+    },
+    {
+      "p": "Okayama is laid out in two distinct halves. Turn 1 through Turn 7 is a tight, flowing section with rapid left-right combinations. The second half, Turns 8 through 13, features longer radius corners and more space to breathe, but the track still demands precision."
+    },
+    {
+      "list": [
+        "Turn 1 (First Gear Left): Heavy braking from the start/finish straight into a tight left-hander. The curbing is aggressive here—clip it but don't run over it.",
+        "Turns 2–3 (Chicane): Quick left-right that flows naturally if you nail the exit of Turn 1. This is where smooth mid-corner steering matters.",
+        "Turn 4 (Decreasing Radius Right): One of the track's hardest corners. It tightens mid-corner, so don't commit to early apex. Stay patient on entry.",
+        "Turns 5–6 (Technical Left-Right): Demands smooth transitions. Exit Turn 5 is where you set up for Turn 6 entry.",
+        "Turn 7 (Right-Hander): Medium-speed corner before the longest straight. Carry as much speed as possible here.",
+        "Turn 8 (Heavy Braking Left): The longest stop on track. Big downshift zone—manage engine braking carefully.",
+        "Turns 9–10 (Figure-Eight Esses): Flowing but easy to overdrive. The key is smooth steering; don't chop the wheel.",
+        "Turn 13 (Final Right): Feed throttle early to carry momentum back onto the start/finish straight."
+      ]
+    },
+    {
+      "h2": "Braking Zones and Trail Braking"
+    },
+    {
+      "p": "Okayama has five distinct heavy braking zones: Turn 1, Turn 4, Turn 8, and a couple of medium stops elsewhere. Because corners are close together, you must release the brakes smoothly and begin turning before you're fully off the pedal. This is <a href=\"trail-braking-load-cell-technique.html\">trail braking</a> discipline at its most necessary."
+    },
+    {
+      "p": "On my MOZA CRP2 load-cell pedals, I find that Okayama demands very progressive brake pressure. If you dump full pressure too late, you'll lock the fronts. If you release too early, you'll be deep in the corner and unable to turn. The sweet spot is hitting about 85–90% pedal pressure at peak deceleration, then easing off over the last 100–150 meters into corner entry."
+    },
+    {
+      "p": "Turn 4 is the test case. Brake down from the 140 km/h end of the straight into a corner that's only ~60 km/h at apex. You need smooth, progressive braking without trailing too much throttle into the corner itself. Once you're happy with Turn 4, the rest of Okayama clicks."
+    },
+    {
+      "h2": "Setup Strategy"
+    },
+    {
+      "h3": "Suspension and Aerodynamics"
+    },
+    {
+      "p": "Okayama's tight corners and heavy transient loads mean you want a fairly responsive setup. I run a stiffer front anti-roll bar (~12–14 points on most cars) and slightly softer rear to help rotation and curb compliance. Brake balance sits around 55–57% front, biased slightly toward the front because heavy corners demand sharp turn-in feel."
+    },
+    {
+      "p": "Downforce is a trade-off. A high-downforce Okayama setup is fast in corners but you'll be brake-limited on the straight into Turn 1 and Turn 8. I typically run ~60% downforce (relative to series maximum). It's a compromise, but it lets you maintain mid-field pace without being a passenger on the straights."
+    },
+    {
+      "h3": "Differential and Throttle Response"
+    },
+    {
+      "p": "Okayama's tight corners and short straights mean you're accelerating and decelerating constantly. I run a fairly open diff on entry (40–45 accel, 50–55 decel on most GT cars) to help the car rotate mid-corner without wheelspin issues. Engine braking is your friend here—don't over-engine-brake, but use it to help settle the car on corner entry."
+    },
+    {
+      "list": [
+        "Front and rear wing: Aim for the low-to-mid downforce range (~55–65% of maximum). Too much and straights become painful.",
+        "Brake balance: 55–57% front. Okayama rewards front brakes because corners are tight and require sharp deceleration.",
+        "Diff (accel): 40–45. Helps rotation in the tight first sector without causing wheelspin on exit.",
+        "Diff (decel): 50–55. Prevents instability under engine braking on downshifts.",
+        "Front and rear ARB: Fairly stiff front, softer rear (~4–5 points softer). Aids rotation without losing grip.",
+        "Springs and dampers: Stiffer overall to handle transient loads, but not so stiff that curbs upset the car."
+      ]
+    },
+    {
+      "h2": "Driving Technique and Line"
+    },
+    {
+      "p": "The single biggest mistake I made at Okayama early on was trying to apex every corner like a road-course brute. Okayama isn't Spa or Silverstone. It's tighter, more technical, and it punishes early apexes with bad exits. Instead, aim for a \"geometric apex\" (traditional mid-corner point) and focus on smooth steering inputs and progressive throttle application on exit."
+    },
+    {
+      "p": "Turns 2–3 (the chicane) is the best example. Most drivers apex Turn 2 early, which kills their line into Turn 3. Instead, accept a slightly later apex in Turn 2, stay wider, and set yourself up for a proper line through Turn 3. That one adjustment will drop your total sector time by 0.2–0.3 seconds."
+    },
+    {
+      "p": "Curb usage is also critical. Okayama has generous curbing, and using it is nearly mandatory for competitiveness. But overdoing it will unsettle the car. I treat inside curbs as a visual reference, not a target—I clip them, but I don't hunt them aggressively. Outer curbs are hit more deliberately, especially at Turn 8 and Turn 13, where rotation matters."
+    },
+    {
+      "tip": "Throttle application matters more than brake application at Okayama. If your exit feels sloppy, the problem is usually too much throttle too soon, not your braking. Let the car rotate first, then progressively feed in throttle. This will feel slower at first, but it'll be faster overall because you won't be fighting oversteer or understeer.",
+      "tipLabel": "Exit Discipline"
+    },
+    {
+      "h2": "Common Mistakes and How to Avoid Them"
+    },
+    {
+      "list": [
+        "Locking the fronts into Turn 1: You're braking too late or too hard. Trail brake more gently and start turning earlier. The car doesn't need to be at minimum speed to turn.",
+        "Understeer mid-corner at Turn 4: You're carrying too much speed into the corner. Brake deeper and slower. Turn 4 rewards patience.",
+        "Wheelspin on Turns 5–6 exits: You're applying throttle too aggressively too soon. Wait until the car is fully rotated (usually ~75% through the corner) before progressive throttle.",
+        "Losing time to AI in long-run races: Okayama's tight corners build tire heat fast. Watch tire temps; if fronts are 5–10°C hotter than baseline, dial back corner speed slightly and focus on smooth steering.",
+        "Inconsistent lap times: Okayama is unforgiving of sloppy line choices. Record your best lap, then watch it in replay. Most inconsistency comes from trail-braking point variation or apex inconsistency, not car setup."
+      ]
+    },
+    {
+      "h2": "Practice Routine"
+    },
+    {
+      "p": "When I'm learning Okayama or preparing for a race, I spend the first 30 minutes in a solo practice session focused on smooth inputs, not pace. I do full laps at 90–95% effort, focusing on line consistency and smooth steering. Once I've locked in the visual references (curb markers, brake points, turn-in points), I ramp up to full effort."
+    },
+    {
+      "p": "Next, I spend time on the two hardest corners individually. Turn 4 gets 10 laps of isolated focus—entry, apex, exit, nothing else. Then Turn 8. Once those are solid, the rest of the track becomes much more approachable."
+    },
+    {
+      "p": "Finally, I do 15–20 minute stints in long-run practice to dial in tire pressures and brake balance under race conditions. Okayama builds heat quickly, so understanding how your setup responds to warmed tires is essential. If you only practice short stints, you'll be surprised by handling changes during the race."
+    },
+    {
+      "h2": "FFB and Steering Settings"
+    },
+    {
+      "p": "On my MOZA R9, Okayama's tight corners produce very sharp, detailed FFB signals. I run ~85–90 N·m (~9 N·m peak at road cars) with no smoothing, because Okayama rewards the ability to feel curb strikes and mid-corner load transfer. The track is narrow enough that you need that haptic feedback to judge your lateral position precisely."
+    },
+    {
+      "p": "Steering sensitivity is high at Okayama—I run a road car setup with soft lock (~450° rotation depending on the car) and fairly high sensitivity (~2.0–2.5 on iRacing's scale) to allow quick mid-corner corrections without massive arm movements. This matches my physical rig setup and keeps inputs small and smooth.</p>"
+    },
+    {
+      "p": "If you're struggling with FFB feel at Okayama, first check that your <a href=\"moza-r9-iracing-settings.html\">MOZA R9 FFB settings</a> aren't clipping. Okayama's curbs and rapid direction changes can spike the FFB signal; if you're clipping, you'll lose the subtle mid-corner information that makes the track driveable."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the ideal brake balance for Okayama?",
+      "a": "I typically run 55–57% front. Okayama has frequent heavy braking into tight corners, so you want sharp front-end response. Too much rear bias and the car won't turn into corners well; too much front and you'll lock the fronts under heavy stops. Start at 56% and adjust based on whether you're locking the fronts (move it back) or struggling to slow down (move it forward)."
+    },
+    {
+      "q": "Should I use high or low downforce at Okayama?",
+      "a": "Low-to-mid downforce (~55–65% of your car's maximum) is ideal. High downforce corners better but kills top speed on the straights into Turn 1 and Turn 8, where you'll be brake-limited anyway. The extra downforce doesn't buy you much. Low-to-mid lets you maintain straight-line speed while cornering competitively."
+    },
+    {
+      "q": "Why do I keep locking the front brakes into Turn 4?",
+      "a": "Turn 4 is Okayama's deceleration test. You're probably either braking too late, braking too hard, or releasing the brakes too quickly. Practice this corner alone: brake deep but progressively, release pressure smoothly over the last 100–150 meters, and start your turn-in before you're fully off the pedal. Trail brake gently through entry until you feel the car rotating."
+    },
+    {
+      "q": "How do I improve consistency on Okayama?",
+      "a": "Okayama punishes inconsistent lines and braking points. Record your fastest lap and review it in replay, watching your braking markers, apex points, and steering input smoothness. Most consistency issues come from small variations in trail-braking release or apex hits, not setup problems. Focus on hitting the same visual markers lap after lap."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

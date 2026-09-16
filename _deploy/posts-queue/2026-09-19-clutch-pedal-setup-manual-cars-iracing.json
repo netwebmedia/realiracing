@@ -1,0 +1,180 @@
+{
+  "slug": "clutch-pedal-setup-manual-cars-iracing",
+  "tag": "Setup Guides · Pedals",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Clutch Pedal Setup for Manual iRacing Cars: Dead Zone, Linearity, and Feel",
+  "description": "Master clutch calibration on load-cell pedals for manual transmissions. I show exactly how to set dead zone, linearity curves, and practice proper technique.",
+  "sections": [
+    {
+      "p": "When I switched to manual transmission cars in iRacing—specifically the Porsche 992 Cup and Ferrari 488 GT3 Evo—I realized my clutch pedal setup was costing me lap time and making downshifts feel mushy. Most sim racers either leave the clutch uncalibrated or dial in settings that work fine on the road but feel completely different under braking and trail-braking loads. I race on a MOZA R9 wheelbase with <a href=\"best-sim-racing-pedals-iracing-2026.html\">MOZA CRP2 load-cell pedals</a>, and over the last few seasons I've dialed in a clutch curve that lets me feel the bite point clearly, dump it fast under acceleration, and modulate it precisely during downshifts—without the dead zone or lag that kills consistency."
+    },
+    {
+      "p": "The clutch pedal isn't like the throttle or brake. It's a binary input in most sims (either engaged or disengaged), but how you engage it—the speed, the precision, the repeatability—defines whether you launch cleanly, shift smoothly, or spin the tires on the exit. In this post I'll walk through my exact dead-zone settings, the linearity curve I use, and the real-world practice method that got my downshift timing locked in."
+    },
+    {
+      "h2": "Why Clutch Setup Matters More Than You Think"
+    },
+    {
+      "p": "Most people treat the clutch like an on-off switch. They jam it all the way down, get neutral, upshift or downshift, and dump it back in. In iRacing, especially in fixed setups where you can't adjust engine braking or diff settings to compensate, a sloppy clutch technique will cost you 0.1 to 0.3 seconds per lap—not because the sim is punishing you arbitrarily, but because sloppy inputs lead to wheelspin, lock-ups, or incomplete gearbox engagement."
+    },
+    {
+      "p": "The load-cell pedals I use on my rig send analog pressure data to iRacing, which means I can set a dead zone (the range where the input registers as zero), define a linearity curve (how pressure maps to clutch position), and practice hitting the same engagement point lap after lap. Without proper calibration, you're either grabbing the bite point inconsistently or pressing so hard that you burn through the pedal mechanism faster than you should."
+    },
+    {
+      "h2": "Dead Zone Settings: Find Your Bite Point"
+    },
+    {
+      "p": "Dead zone is the pedal travel distance at the top where your input doesn't register. Too much dead zone and you'll overshoot the bite point every time. Too little and any micro-movement will jerk the car around. On my CRP2 pedals, I run a dead zone of roughly 3-5% on the clutch axis—about 0.2 to 0.3 cm of physical travel before the input registers."
+    },
+    {
+      "list": [
+        "Start with 0% dead zone and tap the pedal lightly—you'll feel when the clutch first engages (the car lurches or you hear the gearbox grab)",
+        "Once you find that bite point, back off and add dead zone incrementally until that feeling disappears, then dial it back slightly so you can sense the engagement again",
+        "In iRacing settings, adjust the clutch axis dead zone slider until you can release the pedal slowly and feel exactly when the car starts to pull forward",
+        "Test in a low-speed lot first (I use the Martinsville practice session) so you can repeat the same small inputs and feel consistency"
+      ]
+    },
+    {
+      "p": "I've settled on ~4% because it gives me a small cushion for micro-adjustments on downshifts without losing feel at the bite point. Too low (0-2%) and I'm hunting for consistency; too high (6%+) and I miss smooth engagement under heavy braking."
+    },
+    {
+      "h2": "Linearity Curve: Mapping Pressure to Clutch Engagement"
+    },
+    {
+      "p": "Linearity is where the real precision lives. A linear clutch (1:1 pressure to engagement) means light pressure = light engagement, hard pressure = full engagement. Most sim racers leave this flat, but a curved linearity can make the bite point feel faster or slower relative to your foot travel."
+    },
+    {
+      "p": "My MOZA CRP2 pedals let me adjust linearity in the wheel base software. I run a slightly progressive curve—roughly a 1.1 to 1.2 power index—which means the engagement accelerates slightly as I press deeper. This gives me a wide, forgiving range for creeping into the bite on a standing start, but also a responsive snap when I'm dumping the clutch after a downshift at 150 mph."
+    },
+    {
+      "olist": [
+        "Launch the Clutch Calibration tool in iRacing (Setups → Controllers → Calibrate)",
+        "Set linearity to linear (1.0) first, then practice engaging smoothly in a parking lot",
+        "Note how much pedal travel you need to go from disengaged to fully engaged",
+        "If that range feels too wide (requiring a long, slow press), increase linearity slightly (1.1–1.2)",
+        "If it feels too abrupt (biting too fast), reduce it slightly or increase dead zone instead",
+        "Lock in your setting and repeat the same test 10 times; if engagement feels consistent, you're done"
+      ]
+    },
+    {
+      "tip": "Linearity is personal. A more aggressive curve (1.3+) suits drivers who like a snappy, binary clutch feel; a gentler curve (0.9-1.0) suits drivers who prefer a long, modulated release. I use 1.1 because it balances a wide comfort zone for smooth starts against quick engagement for downshifts.",
+      "tipLabel": "Curve Preference"
+    },
+    {
+      "h2": "Launch Technique: Smooth Engagement Under Load"
+    },
+    {
+      "p": "Once your dead zone and linearity are locked in, technique is everything. A bad launch will spin the tires and drop you behind immediately. A smooth launch—one where you feel the clutch bite, modulate it slightly, and dump it cleanly—will carry momentum off the line."
+    },
+    {
+      "p": "Here's the sequence I use in manual cars like the Porsche 992 Cup:"
+    },
+    {
+      "olist": [
+        "Hold the clutch fully in (100% pedal travel) with the car in 1st gear",
+        "Apply throttle smoothly to ~4000 RPM (varies by car, but don't over-rev)",
+        "Begin releasing the clutch slowly—feel for the bite point (your foot will sense a resistance change)",
+        "Once you feel engagement, pause briefly (0.2–0.3 seconds) to let torque build",
+        "Dump the clutch the rest of the way quickly but not violently—full engagement should take ~0.5 seconds total",
+        "As the clutch engages fully, continue raising throttle smoothly to avoid wheelspin"
+      ]
+    },
+    {
+      "p": "The key is that pause at the bite point. Rushed launches cause wheelspin; pauses that are too long (over 1 second) waste momentum. Once you've calibrated your dead zone and linearity, this timing becomes muscle memory."
+    },
+    {
+      "h2": "Downshift Engagement: Speed and Precision"
+    },
+    {
+      "p": "Downshifts are harder than upshifts because you're doing it at full throttle, at high speed, and under braking load. The clutch needs to engage fast enough to prevent lock-ups but smoothly enough that you don't lose traction."
+    },
+    {
+      "p": "My downshift sequence in a Porsche 992 Cup at 120 mph looks like this:"
+    },
+    {
+      "olist": [
+        "While trail-braking into a corner, I lift off throttle (upshift happens automatically or via paddle)",
+        "Immediately after the upshift completes, I stab the throttle briefly (blip) to match engine speed to the lower gear",
+        "As I blip, I press the clutch quickly—full engagement in ~0.3 seconds",
+        "The downshift completes in the gearbox, and I release the clutch while exiting the corner",
+        "The whole sequence (blip + clutch + downshift) takes ~0.5 seconds"
+      ]
+    },
+    {
+      "p": "If your dead zone is too high, you'll miss the first part of the blip and lock up the rear. If your linearity is too aggressive, the clutch will engage so fast that you'll shock-load the drivetrain and break traction. The sweet spot—which I've dialed in on my CRP2 pedals—lets me feel the bite point clearly even during heavy braking and downshifting."
+    },
+    {
+      "h2": "Practice Method: The Parking Lot Drill"
+    },
+    {
+      "p": "I don't trust my clutch setup until I've done this drill 20+ times with the same car. Load a practice session at Martinsville (flat, low speed, forgiving), spawn in the infield lot, and practice launch after launch without racing."
+    },
+    {
+      "list": [
+        "Do 5 smooth, rolling launches (starting at 5 mph, not from a dead stop)—focus on feeling the bite point",
+        "Do 5 standing starts at full throttle—don't worry about wheelspin, just practice the timing",
+        "Do 5 launches where you hold the bite point for exactly 1 second before dumping it—this forces precision",
+        "Do 5 aggressive launches where you dump the clutch as fast as possible without breaking traction—this teaches you the limits",
+        "Compare your throttle input (via telemetry) across all 20 launches—if they're not consistent, your dead zone or linearity is off"
+      ]
+    },
+    {
+      "tip": "Telemetry is your friend. Export a replay, load it in iRacing's telemetry tool, and graph your clutch input against throttle and speed across multiple launches. If the clutch engagement timing jumps around (±0.1 seconds), dial your dead zone down slightly or increase linearity a hair.",
+      "tipLabel": "Telemetry Trick"
+    },
+    {
+      "h2": "Common Mistakes I Made (So You Don't)"
+    },
+    {
+      "list": [
+        "Running zero dead zone: Micro-vibrations in your rig will jerk the clutch around. A tiny dead zone (2-4%) is actually more consistent.",
+        "Setting linearity too high (1.4+): The clutch becomes too twitchy for modulated starts; reserve extreme curves for pure racing if you must.",
+        "Not testing in-game before trusting it: I once calibrated on a cold engine in practice and got wheelspin racing because the idle RPM was different. Always test your final settings in a race session.",
+        "Ignoring blip technique: Even with perfect clutch settings, if you're not blipping the throttle during downshifts, the gearbox will hang and you'll break traction."
+      ]
+    },
+    {
+      "h2": "Final Setup: My Exact CRP2 Settings"
+    },
+    {
+      "p": "For reference, here's what I run on my MOZA CRP2 load-cell pedals for manual cars in iRacing:"
+    },
+    {
+      "list": [
+        "Clutch Dead Zone: 4%",
+        "Clutch Linearity: 1.1 (progressive curve)",
+        "Max Saturation: 100% (full range, no clipping)",
+        "Inverted: No",
+        "In-game Clutch Axis Sensitivity: 100% (no software scaling after hardware calibration)"
+      ]
+    },
+    {
+      "p": "This works for me on the Porsche 992 Cup, Ferrari 488 GT3 Evo, and Dallara IR18 IndyCar. Some drivers prefer a more linear feel (1.0); others like a snappier curve (1.2+). Adjust your linearity first if you feel inconsistency; adjust dead zone only if you're completely missing the bite point."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why does my clutch feel mushy or delayed compared to my friend's setup?",
+      "a": "Most likely your dead zone is too high (5%+), which pushes the bite point too far down the pedal travel. Start with 3-4% and test in-game; you should feel engagement happen within the first quarter of pedal travel. Also check your linearity—if it's below 1.0, you're compressing the engagement range and making it feel delayed."
+    },
+    {
+      "q": "Should I use a clutch at all in iRacing, or just auto-clutch?",
+      "a": "Manual clutch is faster if you're consistent (launches gain ~0.2 seconds, downshifts are smoother). Auto-clutch is safer for beginners. If you're racing competitively (iRacing rating 2000+), manual is worth the setup time. For casual league racing, auto-clutch is fine."
+    },
+    {
+      "q": "Can I use the same clutch settings for all manual cars?",
+      "a": "Mostly yes—dead zone and linearity are hardware-level settings that should carry across all cars. However, some cars (IndyCars especially) have quirky clutch behavior in their setup files. Always test a new car in practice for 5 minutes to confirm the clutch feels normal before racing."
+    },
+    {
+      "q": "How often should I recalibrate my clutch?",
+      "a": "If you're using load-cell pedals like my CRP2, calibrate once per season or after any major hardware change (pedal replacement, new cockpit, etc.). The calibration is stored in the wheelbase firmware and won't drift. If you notice inconsistent engagement during a season, it's usually a driver technique issue, not a calibration issue—hit the parking lot drill again."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

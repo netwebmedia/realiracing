@@ -1,0 +1,166 @@
+{
+  "slug": "dirt-sprint-car-iracing-beginner-guide",
+  "tag": "Car Guide · Dirt Racing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Dirt Sprint Car iRacing Beginner Guide: Setup, Braking, and Lines",
+  "description": "Learn how to drive dirt sprint cars in iRacing. Master throttle control, braking, and racing lines on oval dirt tracks with practical setup advice.",
+  "sections": [
+    {
+      "p": "Dirt sprint car racing in iRacing is fundamentally different from road racing or asphalt ovals. When I first moved from road courses to dirt, I expected my pavement skills to transfer—they mostly don't. The traction model is so different, the car behavior so raw and reactive, that you have to unlearn habits and build new muscle memory. My MOZA R9 wheelbase immediately made that clear: the ffb feedback on dirt is noisier, choppier, and demands constant tiny inputs rather than smooth arcs. This guide covers the essentials to stop spinning out and start running competitive laps on dirt sprint cars."
+    },
+    {
+      "p": "Dirt sprint racing appeals to people who want visceral, demanding driving. It's not forgiving. But that's exactly why it's rewarding once you get the feel for it. Let's dig into setup, technique, and the mental approach that works on dirt."
+    },
+    {
+      "h2": "Dirt Physics: Why It Feels Alien at First"
+    },
+    {
+      "p": "The iRacing dirt model is based on real physics—loose surface, variable grip, weight transfer that rewards aggression but punishes hesitation. Unlike asphalt, where grip is consistent lap to lap, dirt changes constantly. The track gets rubbered in (builds grip line by line), or it dries out and gets faster. Early in a session, the surface is treacherous; mid-session, it's often fastest; at the end, it can be slick again."
+    },
+    {
+      "p": "Your car is light, powerful, and sensitive to every input. On asphalt, I can trail brake smoothly into a turn; on dirt, I have to brake harder and earlier because the surface won't hold a car at the edge of grip the same way. The feedback through my MOZA R9 is constant chatter—the tire slip, the dirt spray, the weight shifting. It's beautiful and brutal."
+    },
+    {
+      "list": [
+        "Grip is dynamic—track condition changes lap to lap and zone to zone",
+        "Weight transfer matters more than brake smoothness; commit or spin",
+        "Throttle application is abrupt; progressive throttle often means wheelspin or understeer",
+        "Setup changes have exaggerated effects compared to road cars",
+        "Qualifying setup and race setup can differ significantly due to track evolution"
+      ]
+    },
+    {
+      "h2": "Base Setup: Where to Start"
+    },
+    {
+      "p": "Don't overthink setup when you're learning lines and throttle control. Most dirt sprint cars in iRacing ship with a reasonable default. What I adjust first is brake bias, tire pressure, and wing angle—those three affect feel the most."
+    },
+    {
+      "h3": "Brake Bias and Pressure"
+    },
+    {
+      "p": "I run higher brake pressure on dirt (~650–700 kPa on my CRP2 load-cell pedals) because the surface is less consistent. You want immediate, confident stopping power before turn-in, then immediate release. Brake bias typically sits around 50–55% front; dirt cars like a balanced stop more than road cars do, because locking a wheel on dirt feels catastrophic."
+    },
+    {
+      "tip": "Start with 52% front bias and 650 kPa pressure, then adjust by feel. If you're locking the front in late braking zones, reduce pressure by 25 kPa. If the rear feels unstable, add 2% front bias.",
+      "tipLabel": "Brake Tuning on Dirt"
+    },
+    {
+      "h3": "Tire Pressure and Wing"
+    },
+    {
+      "p": "Lower tire pressure = more compliance on bumps and better initial grip, but the tires warm slower and can be unstable if too soft. I start around 20–22 psi front, 20–21 psi rear on sprint cars. Wing angle (if adjustable) should begin at a conservative angle (lower downforce, faster on straights but looser in corners). You'll adjust this based on track banking and how the car feels under power."
+    },
+    {
+      "h2": "Technique: The Dirt Sprint Car Mindset"
+    },
+    {
+      "p": "Road racing teaches precision; dirt teaches aggression and commitment. The car will tell you when you're half-committed—it spins. This is harder to unlearn than I expected."
+    },
+    {
+      "h3": "Throttle Control: On or Off"
+    },
+    {
+      "p": "On dirt, there's no middle ground. When I was learning, I tried to be progressive—gentle throttle application like I do on my road course setups. Result: wheelspin, then a dead engine, then a spin. Dirt prefers binary throttle: you're either building speed (full throttle when traction allows) or managing it (off throttle or light trail braking). This is the biggest mental shift from road racing."
+    },
+    {
+      "p": "In the middle of a corner, I'm not rolling throttle smoothly—I'm either full throttle or completely off. The car is either accelerating or being slowed by engine braking. There's a brief moment when both wheels have grip, and I plant the throttle hard. If I'm gentle, I'll either spin the wheels (if engine is powerful enough) or push the car wide with understeer (if I'm not committed enough)."
+    },
+    {
+      "h3": "Braking and Turn-In"
+    },
+    {
+      "p": "Brake late and hard. Turn-in happens while I'm still on the brakes—this is a key difference from road racing. On pavement, I brake, then turn. On dirt, I brake deep into the corner, release brakes decisively as I start turn-in, and let the car settle into the line. This aggressive braking allows me to carry more entry speed."
+    },
+    {
+      "p": "Turn-in is sharp but controlled. I don't roll the steering wheel; I rotate it with intent, then immediately start unwind as the car rotates. The MOZA R9's torque (~9 N·m at current spec) and quick response make this feel more connected—each tiny steering input translates instantly. If I add too much lock, the car spins. If I add too little, it pushes. The feedback is immediate and honest."
+    },
+    {
+      "h3": "Mid-Corner and Exit"
+    },
+    {
+      "p": "The mid-corner is where many drivers struggle. The car is unsettled; the tires are breaking traction constantly. Some of the fastest drivers accept the car being loose and steer it through it. I steer into the slide slightly—if the rear is sliding right, I let the steering wheel come right a bit more, then unwind as the car rotates. It feels chaotic, but it's controlled chaos."
+    },
+    {
+      "p": "Exit is power application. When I feel the front wheels have traction (the steering loads up slightly as the car rotates out), I add throttle aggressively. This isn't a gradual increase; it's a transition from brake-or-coast to full throttle. The car will drift; I manage that drift by steering."
+    },
+    {
+      "list": [
+        "Brake hard and late; release completely as you start turn-in",
+        "Turn-in decisively; steer into the car's rotation to manage oversteer",
+        "Accept and manage sliding; don't fight it with counter-steering alone",
+        "Apply throttle aggressively on corner exit; commitment is faster than smooth",
+        "Trail brake into slow corners; fully release brakes into fast corners"
+      ]
+    },
+    {
+      "h2": "Racing Line and Track Position"
+    },
+    {
+      "p": "Dirt sprint tracks are typically tight ovals with banking that varies. The racing line is different than you'd think. On flat sections, you run low (near the apron). On banked sections, you run higher to use the banking. The key is using the entire track width and understanding where traction is best."
+    },
+    {
+      "p": "Early in a session, the high line (outside) is often faster because it's cleaner and hasn't rubbed in. As the session ages, the low line (inside) may become faster as rubber builds up. Watch replays of faster drivers and notice where they're positioned relative to the banking. That's often the grip line."
+    },
+    {
+      "tip": "Practice one lap without worrying about time. Focus on managing the car's loose behavior and learning the throttle transition points. Consistency and confidence come before speed.",
+      "tipLabel": "The Beginner Priority"
+    },
+    {
+      "h2": "Common Mistakes and How to Avoid Them"
+    },
+    {
+      "list": [
+        "Smooth throttle application — causes wheelspin or understeer; commit to full throttle when traction allows",
+        "Braking too early or too gently — sacrifices mid-corner speed; brake hard and release decisively",
+        "Counter-steering to fight oversteer — increases spin risk; steer into the rotation and add throttle to slow the slide",
+        "Lifting mid-corner — causes the car to grip suddenly and spin; stay committed or ease to coast, don't abruptly lift",
+        "Adjusting setup every lap — mask your real rate of improvement; do 5-10 laps before changing anything, then adjust one thing at a time"
+      ]
+    },
+    {
+      "h2": "Practice Progression"
+    },
+    {
+      "p": "Start in practice mode alone. Run ~20 laps to get a feel for the car and track. Your lap times will improve significantly as you learn the throttle application and line. Once you're consistent (lap times within 0.5 seconds of each other), move to qualifying or a race."
+    },
+    {
+      "p": "In your first races, focus on finishing. Dirt racing has contact and chaos; the goal is to stay on track and learn racecraft. As you gain confidence, you'll naturally find more grip and speed. Most beginners are 2–3 seconds per lap faster in week 5 than in week 1, simply from repeated exposure and better throttle management."
+    },
+    {
+      "p": "For deeper setup tuning and more advanced techniques like <a href=\"brake-pressure-curves-iracing-series.html\">brake pressure curves</a> and ffb optimization, consider <a href=\"moza-r9-iracing-settings.html\">reviewing your wheelbase settings</a> once you've built confidence. The fundamentals of throttle commitment and braking aggression are where your early lap time comes from, though."
+    },
+    {
+      "h2": "Gear Notes"
+    },
+    {
+      "p": "Dirt racing rewards a strong direct drive wheelbase and load-cell pedals because the ffb is busy and you need precise brake modulation. My MOZA R9 wheelbase and CRP2 load-cell pedals make the communication between car and driver crystal clear. When I'm on the verge of spinning, the ffb tells me immediately. When I'm not braking hard enough, the pedal feedback shows me. This honest communication accelerates learning significantly compared to gear with softer or delayed feedback."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why do I keep spinning out in dirt sprint cars?",
+      "a": "You're likely being too gentle with throttle application or lifting mid-corner. Dirt cars respond to commitment. Full throttle (when traction allows) and staying on the accelerator through the corner (managing the slide with steering) is faster than smooth, progressive inputs. Also check your brake bias—if you're locking up turn-in, reduce pressure by 25 kPa or add 2% front bias."
+    },
+    {
+      "q": "What's the difference between dirt sprint car setup and asphalt setup?",
+      "a": "Dirt setups prioritize mechanical grip (suspension compliance and anti-roll bar stiffness) over aerodynamic downforce. You'll run softer springs, lower tire pressures, and more cautious brake bias. The track condition changes more on dirt, so qualifying setups (light, aggressive) differ from race setups (durable, balanced). Start with the default setup and adjust brake bias and tire pressure first."
+    },
+    {
+      "q": "Should I use trail braking on dirt like I do on road courses?",
+      "a": "Not consistently. On fast corners, release your brakes completely before turn-in. On slow, tight corners, a touch of trail braking is acceptable. The key difference from road racing is that braking and turning happen in a narrower window—you brake hard, then release completely and commit to turning. Dirt doesn't reward the smooth, blended inputs that road racing does."
+    },
+    {
+      "q": "How does track condition affect lap times across a dirt race?",
+      "a": "Early laps are typically slowest because the surface is loose and hasn't built rubber. Mid-session is often fastest as the racing line hardens. Late in the race, the track may thin out again or become treacherous depending on car count and cautions. Qualifying on a clean track is different than racing on a busy, rubbered-in one. Adjust tire pressure and wing angle based on how the car feels; lower pressure for loose conditions, higher for grip."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "cockpit"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

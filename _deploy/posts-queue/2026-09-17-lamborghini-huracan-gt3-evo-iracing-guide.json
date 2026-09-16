@@ -1,0 +1,161 @@
+{
+  "slug": "lamborghini-huracan-gt3-evo-iracing-guide",
+  "tag": "Car Guide · GT Racing",
+  "author": "Carlos Martinez",
+  "readTime": "10 min read",
+  "title": "Lamborghini Huracán GT3 EVO iRacing Setup and Driving Guide",
+  "description": "Master the Huracán GT3 EVO in iRacing with proven setups, FFB tuning, and mid-corner technique. Learn how to extract pace from this front-biased, responsive GT3.",
+  "sections": [
+    {
+      "p": "The Lamborghini Huracán GT3 EVO is one of iRacing's most approachable GT3 cars—quick to learn, forgiving on entry, and genuinely fun to drive once you dial in the basics. I've spent dozens of hours in it across the seasonal schedule, and it rewards smooth inputs and patience through the technical sections. If you're transitioning from single-seaters or easier GT cars, or you just want a machine that feels planted and direct, the Huracán delivers. This guide breaks down setup priorities, FFB tuning on my MOZA R9, and the driving techniques that unlock consistent lap times."
+    },
+    {
+      "p": "The Huracán's strength is its front-end grip and mid-corner stability. Unlike some GT3s that demand aggressive brake bias or needle-precise throttle modulation, the Huracán is more forgiving—but that doesn't mean it's slow. The trade-off is a slight tendency to understeer if you carry too much speed into slow corners, and a busy, chatty rear under heavy braking on bumpy tracks. Getting those sorted makes the difference between struggling and leading."
+    },
+    {
+      "h2": "Setup Foundation: Spring Rates and Anti-Roll Bars"
+    },
+    {
+      "p": "I start every Huracán setup session with the same baseline: a fairly stiff front bar and a slightly softer rear. The car's weight distribution (front-heavy for a GT3) means you need enough front compliance to keep the nose from locking up mid-corner, but enough anti-roll stiffness to prevent the rear from wandering during sustained load."
+    },
+    {
+      "list": [
+        "Front anti-roll bar: ~13–15 clicks (track dependent; stiffer for high-speed circuits like Monza, softer for bumpy roads like Nürburgring GP)",
+        "Rear anti-roll bar: ~8–11 clicks (typically 2–4 clicks softer than front for balance)",
+        "Front springs: ~13 mm stiffness baseline; adjust ±1 mm if the front bottoms out or feels too soft",
+        "Rear springs: ~10 mm baseline; keep rear ride height ~1–2 mm higher than front to prevent bottoming under acceleration"
+      ]
+    },
+    {
+      "tip": "On bumpy street circuits, dial the rear bar down another 2–3 clicks and soften front springs by 0.5 mm. The Huracán hates porpoising in traffic, and a compliant rear soaks up curb strikes without upsetting the balance.",
+      "tipLabel": "Bumpy Track Adjustment"
+    },
+    {
+      "h2": "Brake Bias and Pressure Curves"
+    },
+    {
+      "p": "The Huracán is sensitive to brake bias, more so than, say, the Ferrari 488 or Audi R8. I typically run ~55–58% front bias depending on track. The key is that the car doesn't like a sharp transition mid-braking; a smooth, progressive pressure curve prevents that stabby mid-application understeer that kills entry speed."
+    },
+    {
+      "p": "For pressure curve (if you're using <a href=\"brake-pressure-curves-iracing-series.html\">adjustable brake pressure curves in iRacing</a>), I dial a linear or very slightly progressive shape—nothing aggressive. If you're braking into a tight corner, you want the pressure to ramp smoothly so the rear stays hooked. Conversely, for long straights with big braking zones (Spa, Monza), a more aggressive initial bite helps you slow earlier without the rear sliding."
+    },
+    {
+      "list": [
+        "Street circuits and tight corners: 56–57% bias, linear or lightly progressive pressure",
+        "Long, fast-cornering circuits: 55–56% bias, slightly more progressive to manage deceleration",
+        "Bump-heavy tracks: 57–58% bias, softer pressure ramp to avoid locking under compression",
+        "Brake balance typically stays the same throughout the session; adjust pressure curve between sessions if you're trailing-throttle braking too much"
+      ]
+    },
+    {
+      "h2": "Differential Setup for Mid-Corner Stability"
+    },
+    {
+      "p": "The Huracán's front-biased weight distribution means the differential is crucial. Too much lock on entry, and the front will push and kill your turning; too little, and the rear spins up unpredictably on exit. I run a relatively open entry diff (30–40% lock) and a moderate exit diff (50–60%) for most tracks."
+    },
+    {
+      "p": "On tight, twisty circuits like Oulton Park or Road America, I dial entry lock down to 25–30% and exit back to 45–55%, accepting a touch more understeer to keep the rear planted. For fast, flowing courses like Spa or Zandvoort, I'm more aggressive: 40–45% entry and 60–65% exit to get the car rotated and accelerating cleanly."
+    },
+    {
+      "tip": "If you're running out of mid-corner grip and the front feels numb, your brake-bias bias to slow your entry speed or dial up the front anti-roll bar by 1–2 clicks before tweaking the diff. The Huracán responds to front-end compliance first.",
+      "tipLabel": "Grip Sequencing"
+    },
+    {
+      "h2": "Force Feedback Tuning on the MOZA R9"
+    },
+    {
+      "p": "On my MOZA R9 (~9 N·m of torque), I run the Huracán with moderate gain (~85–90% in-game FFB) and a light steering lock reduction (e.g., 70–75% lock in the tune file). The car has a fairly direct steering ratio, so I don't cut it too much; I want to feel the front axle loading and front-end grip washing away as I add throttle through mid-corner."
+    },
+    {
+      "p": "The R9's strong mid-range feedback is perfect for the Huracán because it communicates front-end load so clearly. I hear and feel the car starting to push mid-corner before the setup is completely lost, which gives me time to add a touch of throttle or roll out the steering angle. On a weaker wheelbase, this feedback muddies into a mushy center."
+    },
+    {
+      "list": [
+        "FFB Gain (in-game): 85–90%, depending on track complexity and your preference for sensation vs. precision",
+        "Steering lock: 70–75% (full range on the R9 is plenty; trim steering weight in the hardware settings if you want lighter low-speed inputs)",
+        "Damper (hardware): 15–20% (just enough to smooth out high-frequency curb chatter without deadening feedback)",
+        "Friction (hardware): 2–4% (minimal; the Huracán has light, natural steering feel and friction adds dead zone)"
+      ]
+    },
+    {
+      "h2": "Driving Technique: Entry, Mid, and Exit"
+    },
+    {
+      "p": "The Huracán rewards smooth, progressive steering inputs over sudden mid-corner corrections. Unlike single-seaters that punish hesitation, this GT3 thrives when you plan your line early and roll steering out gradually as you add throttle. That's the key to lap consistency."
+    },
+    {
+      "h3": "Entry Phase"
+    },
+    {
+      "p": "Brake in a straight line, trail-brake very lightly if you're confident, but don't overdo it. The Huracán's front end is responsive enough that early steering while still braking can wash the front and kill entry speed. Release the brakes cleanly, then apply steering angle progressively as the car settles into the corner. Aim for ~80–85% of your eventual steering angle by the apex; that smoothness prevents sudden weight transfers that upset the rear."
+    },
+    {
+      "h3": "Mid-Corner and Apex"
+    },
+    {
+      "p": "Hold your line with patience. If you're pushing, stay off throttle and hold steering angle steady; don't add steering trying to find more grip—that only makes it worse. The Huracán will rotate if you wait. At the apex, you're already rolling light throttle. On faster sweepers, you can be at half throttle or more; on tight hairpins, you might be barely moving."
+    },
+    {
+      "h3": "Exit and Acceleration"
+    },
+    {
+      "p": "This is where the Huracán shines. Progressive throttle application from mid-corner to exit translates directly to lap time. The front stays planted if you're smooth, so you can be aggressive with the power sooner than in, say, a Porsche 992 Cup. Feel the car loading the rear axle as you accelerate; that's your signal that grip is available. Build throttle confidently but progressively—don't stab it."
+    },
+    {
+      "tip": "Record a clean lap and watch your own throttle trace in telemetry. Most drivers add power too late exiting slow corners. Smooth, early application saves 0.2–0.3 sec per lap on a typical track.",
+      "tipLabel": "Telemetry Habit"
+    },
+    {
+      "h2": "Common Mistakes and Fixes"
+    },
+    {
+      "list": [
+        "<strong>Front-end push mid-corner:</strong> Dial up front anti-roll bar by 1–2 clicks or soften front springs by 0.5 mm. The Huracán is nose-heavy; too much compliance and the front loads faster than the rear can support it.",
+        "<strong>Rear sliding under power on exit:</strong> Increase exit diff lock (by 5–10%) or dial in a touch more rear anti-roll bar. Also check that you're not adding throttle too aggressively; this car rewards timing over violence.",
+        "<strong>Feeling numb in the steering (no feedback of grip):</strong> Check your FFB gain in-game; if it's below 80%, the Huracán's front-end loading will feel muted. Also verify that steering lock isn't set too high; above 80% can dull the weight.",
+        "<strong>Bouncing/porpoising on curbs:</strong> Reduce rear anti-roll bar stiffness by 2–3 clicks and soften rear springs by 0.5 mm. The Huracán's front ride height is usually adequate; it's the rear that needs isolation on bumpy surfaces."
+      ]
+    },
+    {
+      "h2": "Track-Specific Tune Adjustments"
+    },
+    {
+      "p": "Once you nail the core setup, small changes go a long way. High-speed circuits like Le Mans or Road America need stiffer bars and a forward brake bias (55%). Bumpy, slow circuits like Long Beach or Silverstone want softer bars and softer springs (0.5–1 mm softer than baseline). Street circuits fall in between but favor rear compliance to manage constant surface variation."
+    },
+    {
+      "p": "If you're racing in a league or seasonal event, run a handful of practice sessions on the track before race week and log your brake input, steering angle, and FFB gain. Small tweaks—a 1–2% adjustment to FFB, a half-click on anti-roll bars—compound into a tenth or two per lap, especially over a 45-minute race where consistency matters more than peak pace."
+    },
+    {
+      "h2": "Why the Huracán Works in iRacing"
+    },
+    {
+      "p": "The Huracán GT3 EVO strikes a rare balance: it's forgiving enough for newer drivers to learn GT3 fundamentals, but responsive and stable enough that faster drivers can extract real pace. The front-biased weight distribution teaches you smooth throttle application and patience mid-corner. The direct steering and strong mid-range feedback (especially on a quality wheelbase like my MOZA R9) build confidence and precision. If you spend two or three season schedules in it, you'll develop habits that transfer directly to every other GT3. That's why I keep coming back to it, season after season."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the best starting brake bias for the Huracán GT3 EVO?",
+      "a": "I start at 56% front bias and adjust from there based on track type. Street circuits and tight corners typically need 56–57%. Fast, high-speed circuits like Monza or Spa can run 55–56%. If you're locking the front under braking, dial it back by 0.5%. If the rear is sliding, increase it by 0.5%. Pressure curve (shape of the brake application) matters as much as percentage; a smooth, progressive curve is better than an aggressive initial spike."
+    },
+    {
+      "q": "How much steering lock should I run on the MOZA R9?",
+      "a": "I typically run 70–75% lock in the tune file. The Huracán has a responsive, direct steering ratio, so cutting it too much removes valuable feedback. On the R9's full range, 70–75% is plenty for any corner. If you want lighter low-speed inputs at pit stops or slow-speed corners, adjust steering weight in the MOZA hardware settings instead of cutting lock further."
+    },
+    {
+      "q": "Why does the Huracán feel numb in the steering compared to other GT3s?",
+      "a": "The most common cause is FFB gain set too low (below 80% in-game) or steering lock cut too aggressively (above 80%). The Huracán's front end does load gradually because it's front-biased, so you need 85–90% FFB gain to feel that loading clearly. Also check that damper is 15–20% and friction is minimal (2–4%); too much damping deadens the wheel's response."
+    },
+    {
+      "q": "What's the key to exiting corners quickly in the Huracán?",
+      "a": "Smooth, progressive throttle application from mid-corner onward. The Huracán rewards early power application because the front stays planted if you're patient with steering. Record a lap and compare your throttle trace to faster drivers; most sim racers add power too late. Aim to be at 50% throttle by the apex of medium-speed corners and 75%+ by the exit. This transfers directly to lap time, especially over a 45-minute race where consistency compounds."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "cockpit",
+    "monitor-1440p-120"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

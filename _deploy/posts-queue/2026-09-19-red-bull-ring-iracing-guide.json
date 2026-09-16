@@ -1,0 +1,178 @@
+{
+  "slug": "red-bull-ring-iracing-guide",
+  "tag": "Track Guide · iRacing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Red Bull Ring iRacing Guide: Setup, Braking, and Overtaking",
+  "description": "Master the Austrian circuit's high-speed corners and tight chicanes. Setup tips, brake markers, and overtaking lines for Red Bull Ring in iRacing.",
+  "sections": [
+    {
+      "p": "The Red Bull Ring sits in the Austrian Alps and plays completely differently than most iRacing circuits you'll encounter. It's compact—only ~3.1 km—but corners come at you fast, and there's almost no margin for error. The track alternates between sweeping high-speed turns (Turn 1, the long right-hander up the hill) and technical tight sections (the chicane complex in the middle). I've spent enough laps here on my MOZA R9 to know that setup is half the battle; the other half is trusting the car through the fast stuff and nailing your braking points."
+    },
+    {
+      "p": "What makes Red Bull Ring tricky is that it doesn't reward aggression everywhere. You can carry huge speed through Turn 1 and the Remus section, but one tiny mistake in the chicane or on the exit of Turn 4 will cost you a tenth or more. I'll walk you through the track layout, my setup philosophy for common car classes, and the specific braking and cornering zones that separate mid-field from podium."
+    },
+    {
+      "h2": "Track Layout and Key Corners"
+    },
+    {
+      "p": "Red Bull Ring flows in one long counter-clockwise loop. The first half is the fast stuff; the second half is technical and demands precision."
+    },
+    {
+      "list": [
+        "<strong>Turn 1 (Remus):</strong> A long, sweeping right-hander climbing uphill. You can run a lot of speed here—brake late on the approach, carry momentum through the apex, and let the car run wide on exit. It's one of the most forgiving corners on track.",
+        "<strong>Turn 2 (Rindt):</strong> A fast left-hander at the top of the hill. Stay left-biased on entry to set up the next sequence.",
+        "<strong>Turn 3–4 (Österreichring complex):</strong> This is where the track tightens. Turn 3 is a medium right; Turn 4 is a sharp left. The exit of Turn 4 is critical—poor exit geometry here costs you on the straight.",
+        "<strong>Turns 5–6 (Chicane):</strong> A quick left-right chicane. Brake early, keep it tight, and accelerate through. This is where contact often happens in multiplayer.",
+        "<strong>Turn 7 (Boxenstrasse):</strong> A tight hairpin-style left at the end of the lap. Short braking zone; precision matters."
+      ]
+    },
+    {
+      "h2": "Setup Approach for GT3 and Single-Seaters"
+    },
+    {
+      "p": "I run GT3 here most often—the Porsche 992 Cup or Ferrari 488 GT3 Evo—and the setup philosophy is straightforward: balance aero for the fast sections without losing mechanical grip in the chicane."
+    },
+    {
+      "list": [
+        "<strong>Wing angles:</strong> Run conservative front wing (~3–5 degrees) and moderate rear wing (~8–12 degrees, depending on car). You need enough downforce for Turn 1 stability, but too much kills your top speed on the straights.",
+        "<strong>Brake balance:</strong> Front-biased (~57–60% front). The long braking zones into Turn 1 and the chicane demand consistent, progressive feel. The MOZA CRP2 pedals' load-cell gives me the sensitivity here to modulate pressure precisely.",
+        "<strong>Differential:</strong> Adjust coast lock for mid-corner stability; preload for exit grip out of Turns 4 and 7. Start neutral (~50%) and tune from there based on understeer/oversteer.",
+        "<strong>Anti-roll bars:</strong> Stiffer rear to maintain turn-in at speed through the Remus section. Front can stay moderate to keep mid-corner balance.",
+        "<strong>Ride height:</strong> Safe and even. Red Bull Ring doesn't have massive kerbs, so don't bottoming-out worries—keep it predictable."
+      ]
+    },
+    {
+      "tip": "The exit of Turn 4 is the make-or-break corner for lap time. A poor exit will cost you all the way down the straight. Practice holding a late apex and rolling on the throttle smoothly; momentum is worth more than raw turn-in speed here.",
+      "tipLabel": "Turn 4 Exit Priority"
+    },
+    {
+      "h2": "Braking Points and Threshold References"
+    },
+    {
+      "p": "Red Bull Ring has three major braking zones. I'll give you visual cues from onboard footage I've analyzed on my rig."
+    },
+    {
+      "list": [
+        "<strong>Turn 1 approach:</strong> Brake around the 100 m board; you'll see the corner open up as you slow. Late braking works here because the corner is so long. Aim to be at ~60 km/h at the apex and let the car drift out.",
+        "<strong>Chicane entry (Turn 5):</strong> Brake ~50 m before the first apex. This is a quick, tight zone—smooth, progressive pressure. Don't trail brake too long; you need full grip mid-corner.",
+        "<strong>Turn 7 (hairpin):</strong> Late brake, ~30 m out. This is nearly a full stop. Precision over speed; you'll gain time on the exit."
+      ]
+    },
+    {
+      "h2": "Turn-In, Apex, and Exit Technique"
+    },
+    {
+      "p": "The fast sections of Red Bull Ring reward smooth, patient inputs. The chicane demands precision. Here's how I approach each zone on my rig."
+    },
+    {
+      "h3": "Remus (Turn 1)"
+    },
+    {
+      "p": "Turn in late, almost at the apex. The MOZA R9's direct-drive feedback tells me exactly when the front end is on the edge of grip. I aim for a line that clips the inside kerb lightly and let the car run wide on exit—there's plenty of room. Throttle application starts mid-corner and builds progressively to full throttle by the time I'm at the widest point."
+    },
+    {
+      "h3": "Österreichring complex (Turns 3–4)"
+    },
+    {
+      "p": "This is a linked sequence. Turn 3 is a stepping stone to Turn 4's exit. Keep Turn 3 wider than you'd expect (let it roll naturally) so you can enter Turn 4 with good entry speed. The apex of Turn 4 is tight; don't run too early a line or you'll understeer. Late apex, then aggressive throttle roll-on. Exit grip is everything."
+    },
+    {
+      "h3": "The chicane (Turns 5–6)"
+    },
+    {
+      "p": "Brake fully before Turn 5. Turn in early and tight for the left—clip the apex. Immediate transition to the right (Turn 6); keep steering input smooth and deliberate. Aggressive throttle application through both apexes. The key is avoiding the outside kerb on the exit of Turn 6; run it cleanly and accelerate hard."
+    },
+    {
+      "h2": "Overtaking Zones and Defensive Lines"
+    },
+    {
+      "p": "Red Bull Ring offers limited overtaking because it's short and corners are technical. Most passes happen on the main straight after Turn 7, or occasionally into Turn 1 if you've got a run."
+    },
+    {
+      "list": [
+        "<strong>The main straight (Turn 7 to Turn 1):</strong> This is your best opportunity. If you're chasing, position yourself on the inside line into Turn 1. Late braking, hold the inside, and take the corner earlier than the car ahead. You'll be faster on exit because you've controlled entry speed.",
+        "<strong>Into the chicane:</strong> Avoid. The zone is too tight and punishes contact heavily. Defending drivers should stay committed to their line; attackers should respect the risk/reward here.",
+        "<strong>Defending Turn 1:</strong> Run the widest possible exit to block the straight. The corner is long enough that your opponent will struggle to stay alongside if you hold the racing line smoothly."
+      ]
+    },
+    {
+      "tip": "Red Bull Ring rewards consistency over one-lap pace. In race conditions, a clean, efficient lap beats a fast lap with margin-shaving inputs. Focus on hitting your marks and managing tyres rather than finding 0.05 seconds.",
+      "tipLabel": "Race Pace Over Qualifying Pace"
+    },
+    {
+      "h2": "Tyre and Fuel Strategy"
+    },
+    {
+      "p": "The compact length means fuel efficiency isn't a major concern unless you're in an endurance series. Tyres, however, degrade quickly under the sustained load of the fast corners."
+    },
+    {
+      "list": [
+        "<strong>Tyre temperatures:</strong> Front tyres will heat up through Remus and stay hot through the fast sections. Rear tyres come into temperature more slowly because of the braking-heavy chicane zone. Aim for fronts around ~95–100°C and rears ~85–95°C in equilibrium.",
+        "<strong>Degradation:</strong> Brake temperatures climb fast because of the short lap and multiple braking zones. Monitor brake wear if you're in a longer event; adjust brake balance slightly forward as pads wear.",
+        "<strong>Fuel load:</strong> Minimal impact. For practice or qualifying, load ~2 laps. For a 30-minute race, load enough for the full distance plus ~1 lap margin (usually ~15–20 liters depending on the car class)."
+      ]
+    },
+    {
+      "h2": "Common Mistakes and How to Avoid Them"
+    },
+    {
+      "p": "I've made—and seen in multiplayer—these errors repeatedly at Red Bull Ring."
+    },
+    {
+      "list": [
+        "<strong>Braking too late into the chicane:</strong> You'll lock the fronts or run wide and lose a corner's worth of track. Brake earlier than feels comfortable; the short braking zone rewards precision over aggression.",
+        "<strong>Poor Turn 4 exit:</strong> This compounds into the next lap. Commit to a late apex, hold it, and roll on the throttle smoothly. The temptation to accelerate early will kill your exit speed.",
+        "<strong>Running the kerb too aggressively in Turns 5–6:</strong> One lap you'll clip it wrong and get a penalty or lose the car entirely. Respect the chicane and take the fastest clean line, not the most aggressive one.",
+        "<strong>Over-correcting in the fast stuff:</strong> The MOZA R9 gives me direct feedback, and I can feel when I'm on the edge. Smooth, patient inputs in Remus and the Österreichring section reward you far more than snappy steering."
+      ]
+    },
+    {
+      "h2": "Telemetry Check: What to Watch"
+    },
+    {
+      "p": "After a session, I always review telemetry to spot gains. Here's what I look for at Red Bull Ring using <a href=\"iracing-telemetry-basics-reading-your-laps.html\">iRacing's telemetry tools</a>."
+    },
+    {
+      "list": [
+        "<strong>Turn 1 speed and apex placement:</strong> Compare your best lap to mid-field laps. Are you carrying significantly more speed, or is your apex earlier/later? Consistency here often yields the biggest gains.",
+        "<strong>Brake pressure trace through the chicane:</strong> Look for smooth modulation. Spiky traces mean you're fighting the car mid-braking; smooth curves mean controlled entry.",
+        "<strong>Throttle application timing:</strong> Chart when you go to full throttle out of Turns 4 and 7. Early throttle application (before the exit is settled) will show as wheelspin or understeer in acceleration data."
+      ]
+    },
+    {
+      "tip": "Red Bull Ring's compact nature means one small improvement repeats every lap. A 0.1-second gain in Turn 1 execution compounds into a full tenth over a stint. Focus on repeatability over raw pace.",
+      "tipLabel": "Compact Track = Big Gains"
+    },
+    {
+      "h2": "Final Thoughts"
+    },
+    {
+      "p": "Red Bull Ring is one of my favorite tracks to practice on because it demands smooth, technical driving without massive hardware demands. The MOZA R9's force feedback lets me feel exactly where the grip is, and the CRP2 load cells give me the modulation I need for the braking zones. If you're new to the circuit, spend 15–20 laps just focusing on smooth inputs through Remus and Turn 4; once those feel natural, the rest of the track falls into place. Run a few stint simulations, study your telemetry against a top split lap, and you'll be competitive in no time."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the best approach to Turn 1 (Remus) at Red Bull Ring?",
+      "a": "Brake around the 100 m board and carry that speed through the turn. It's a long, open corner—late apex works best. Let the car run wide on exit and focus on rolling on the throttle smoothly; momentum through this corner sets up your whole lap."
+    },
+    {
+      "q": "How do I avoid understeer or oversteer in the chicane?",
+      "a": "Brake earlier than you think you need to. The chicane (Turns 5–6) is tight and punishes late braking hard. Aim to be at full throttle by the apex of Turn 6, and avoid running the outside kerb aggressively; a clean line is worth more than a heroic lean-in."
+    },
+    {
+      "q": "What's the key to the Turn 4 exit at Red Bull Ring?",
+      "a": "Late apex and patient throttle roll-on. The exit geometry carries you down the next straight; a poor exit wastes the entire following section. Hold the apex tight, wait until you're fully pointed toward the exit, then accelerate hard."
+    },
+    {
+      "q": "How should I set brake bias and pedal pressure for Red Bull Ring?",
+      "a": "Run front-biased brake balance (around 57–60% front) because of the long braking zones into Turn 1 and the chicane. Use load-cell pedals for precision; smooth modulation is critical in the chicane entry. Practice threshold braking so you can feel the lock-up edge without going over it."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

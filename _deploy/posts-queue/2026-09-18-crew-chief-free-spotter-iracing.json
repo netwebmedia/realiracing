@@ -1,0 +1,157 @@
+{
+  "slug": "crew-chief-free-spotter-iracing",
+  "tag": "iRacing Tips · Spotting",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Crew Chief: The Free Spotter Everyone Should Be Running",
+  "description": "Crew Chief is a free spotter app that calls your gaps, track position, and tire temps in real-time. Here's why I run it on every race.",
+  "sections": [
+    {
+      "p": "I spent two years racing iRacing without a spotter. Not because I thought I didn't need one—I knew I did—but because most spotter apps cost money, and I was skeptical about whether they'd actually improve my pace or just add noise to my helmet audio. Then I discovered Crew Chief, a free, open-source spotter tool built by a single developer, and I've had it running in every race since. It's not flashy. It doesn't replace a real human spotter. But for solo racing and league events where you can't hire a dedicated spotter, it's the most genuinely useful tool I've added to my rig."
+    },
+    {
+      "h2": "What Crew Chief Actually Does"
+    },
+    {
+      "p": "Crew Chief is a free application that listens to iRacing telemetry in real-time and broadcasts voice callouts to your headset. Unlike pre-recorded spotter packs or static callout lists, it's dynamic—it reads your car position, the cars around you, your tire temperatures, fuel consumption, and track conditions, then tells you what matters in the moment."
+    },
+    {
+      "p": "Running it on my MOZA R9 setup, I get:"
+    },
+    {
+      "list": [
+        "Real-time gap calls to cars ahead and behind (e.g., \"Car ahead, seven tenths, catching you slowly\")",
+        "Tire temperature warnings when temps are falling or rising critically",
+        "Fuel consumption estimates and pit stop reminders for endurance races",
+        "Track position announcements when you gain or lose places",
+        "Traffic warnings on approach to slower cars",
+        "Session status updates (practice, qualifying, race start countdowns)",
+        "Spotter calls on restarts, pit entry/exit, and cautions"
+      ]
+    },
+    {
+      "tip": "Crew Chief speaks in a calm, professional voice—it doesn't scream. That matters. Bad spotters add stress; good ones reduce it. This one reduces it.",
+      "tipLabel": "Voice Quality"
+    },
+    {
+      "h2": "Setting Crew Chief Up (It's Simple)"
+    },
+    {
+      "p": "Installation is a five-minute process. Download from the official Crew Chief GitHub repository, run the installer, point it at your iRacing folder, and launch it before you start iRacing. The app runs in the background as an independent window. It connects to iRacing's shared memory, which means zero impact on your sim performance—no plugins, no iRacing modifications."
+    },
+    {
+      "p": "Audio routing is where people stumble. Crew Chief outputs to a default audio device, and you need to route that into your headset or racing headphones. I use a basic USB audio interface to merge my headset input and Crew Chief output, but most people either:"
+    },
+    {
+      "list": [
+        "Set Crew Chief as the default Windows audio output and let Windows mix it with game audio",
+        "Use OBS or a virtual audio cable app (like VB-Audio) to combine streams",
+        "Route Crew Chief through a Discord voice channel if you're in a league server"
+      ]
+    },
+    {
+      "p": "The first method works fine for casual racing. For league races where consistency matters, I prefer a dedicated USB mixer so I can control Crew Chief volume independently of my sim audio."
+    },
+    {
+      "h2": "What Makes It Better Than No Spotter"
+    },
+    {
+      "p": "A human spotter can't run every race with you. A paid app adds recurring cost. Crew Chief is free, always available, and runs identically every time. That consistency is valuable."
+    },
+    {
+      "p": "On oval tracks especially—where traffic and field position change lap to lap—having automated gap calls keeps me honest about my pace relative to the field. On road courses, tire temperature warnings have caught me setting up brakes wrong before I waste a full stint. In endurance races, the fuel estimation tool has saved me from missing pit windows by twenty seconds."
+    },
+    {
+      "p": "The biggest psychological win: you're not alone in the car. There's a voice feeding you information. It sounds like a spotter. Your brain receives it like a spotter. That small shift—from solo driving to feeling like you have a crew—changes how you attack corners."
+    },
+    {
+      "tip": "Crew Chief won't tell you whether you're braking too early or turning in too late. It gives you the data (gaps, temps, fuel) so you can make better decisions. Don't expect it to coach your driving—expect it to give you situational awareness.",
+      "tipLabel": "What It Can't Do"
+    },
+    {
+      "h2": "Customizing Callouts and Audio"
+    },
+    {
+      "p": "The default Crew Chief voice is professional and clear, but you can adjust nearly everything: callout frequency, which warnings to enable, gap thresholds, and tire temperature sensitivity. If you find gap calls too verbose, dial them back. If you want more fuel warnings, enable them."
+    },
+    {
+      "p": "You can also change the voice synthesis engine. The default uses Windows text-to-speech (fine), but some users have swapped in higher-quality third-party TTS engines for a more natural sound. It's optional—the default works."
+    },
+    {
+      "p": "For league racing, some teams have recorded custom intro callouts (\"This is your spotter for tonight's endurance race\") and integrated them into the Crew Chief audio stream. That's more about branding than performance, but if you want that personal touch, it's possible."
+    },
+    {
+      "h2": "One Real Limitation: Telemetry Dependency"
+    },
+    {
+      "p": "Crew Chief reads iRacing's shared memory. That means it only works when iRacing is running, and it only gives you data iRacing exposes. If iRacing has a telemetry bug or doesn't broadcast a specific data field (like a specific rival's tire compound mid-race), Crew Chief can't call it."
+    },
+    {
+      "p": "This has happened rarely in my experience, but I've had races where Crew Chief didn't call gaps reliably for ~five laps during a rolling restart. It corrected itself. Point is: it's not infallible. It's a tool that works ~99% of the time, not 100%."
+    },
+    {
+      "p": "Also, if your PC has audio driver issues or your headset cuts out, Crew Chief doesn't bypass that. It's only as reliable as your audio chain. On my rig, I've had zero audio dropouts, but if you're on a WiFi headset or a flaky USB audio interface, troubleshoot that first before blaming Crew Chief."
+    },
+    {
+      "h2": "Why I Run It Even Though I Race Casually"
+    },
+    {
+      "p": "I don't race in organized iRacing pro series. I do league races (GT3, road, some oval) and casual public hoppers. For casual racing, you might think a spotter is overkill. But the opposite is true: casual racing is exactly where having automated gap feedback helps most."
+    },
+    {
+      "p": "In a public hopper, you don't know the field. You don't know if the car that just passed you is faster, or if you're faster and just had a bad exit. Crew Chief tells you. \"Car ahead, car behind, catching you quickly.\" That's real data. You adjust. You race smarter. You hit better consistency across laps, which improves your iRating over time."
+    },
+    {
+      "p": "In league races, where field position matters and contact risk is high, those traffic warnings and gap calls are the difference between a clean pass and a crash in T1. I've aborted passing moves because Crew Chief told me a car behind was too close for me to be unsettled mid-pass."
+    },
+    {
+      "tip": "Think of Crew Chief as force feedback for your ears. Force feedback through your wheel tells you what the tires are doing. A spotter tells you what the cars around you are doing. Both are situational awareness.",
+      "tipLabel": "Analogy"
+    },
+    {
+      "h2": "Comparison to Other Spotting Options"
+    },
+    {
+      "p": "iRacing's built-in spotter gives you pit instruction and basic warnings. It's not real-time gap-focused, and it doesn't call tire temps. Crew Chief goes deeper."
+    },
+    {
+      "p": "Paid spotter apps (like some Discord-integrated bots or premium race management tools) offer more features—custom branding, league integration, data logging—but they cost money and often require league admin setup. Crew Chief is standalone, free, and runs independently."
+    },
+    {
+      "p": "Real human spotters (if you can afford them or have a friend) are obviously better. But they're not always available, and Crew Chief is always there."
+    },
+    {
+      "h2": "The Real Takeaway"
+    },
+    {
+      "p": "Crew Chief isn't magic. It won't make you three seconds faster. But it will make you race smarter, calmer, and more consistently. It fills a gap (literally—it tells you your gap to other cars) that no iRacer should ignore. And it costs nothing."
+    },
+    {
+      "p": "If you're serious about improving your iRacing pace and your <a href=\"best-sim-racing-pedals-iracing-2026.html\">pedal technique</a> or your <a href=\"moza-r9-iracing-settings.html\">FFB settings</a>, you should also take seriously the information flowing into your ears. Crew Chief does that job exceptionally well, and I'd run it even if I had to pay for it. The fact that it's free is just the icing."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Crew Chief work with every iRacing car and track?",
+      "a": "Yes. Crew Chief reads telemetry, which iRacing broadcasts for all cars and tracks. The spotter will call gaps, temps, and position regardless of what you're driving or where. Some edge cases exist (very old tracks or cars with incomplete telemetry data), but in practice it works everywhere."
+    },
+    {
+      "q": "Will Crew Chief slow down my PC or cause frame rate drops?",
+      "a": "No. Crew Chief runs as a separate application and reads iRacing's shared memory. It has zero impact on rendering, physics simulation, or frame rate. I've tested it on a lower-end rig and a high-end rig—no measurable performance change either way."
+    },
+    {
+      "q": "Can I use Crew Chief in league races, or is it considered cheating?",
+      "a": "Most leagues allow it. Check your league rules, but Crew Chief is a passive information tool—it doesn't automate your inputs or give you an unfair advantage over a human spotter. Many competitive teams use it. If your league bans third-party tools, that's when you'd need to ask an admin, but I've never heard of a league banning Crew Chief."
+    },
+    {
+      "q": "How often does Crew Chief update, and is it still actively maintained?",
+      "a": "The developer updates it regularly (several times per year) to fix bugs and add features. It's actively maintained and free. Updates are simple—download the latest version and run the installer. Your settings persist across updates. The GitHub repo is public, so you can monitor development and report issues directly."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

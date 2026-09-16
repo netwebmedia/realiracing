@@ -1,0 +1,155 @@
+{
+  "slug": "barcelona-catalunya-iracing-guide",
+  "tag": "Track Guide · iRacing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Barcelona-Catalunya iRacing Guide: Braking Points and Setup",
+  "description": "Master Barcelona's technical layout with precision braking zones, throttle application, and baseline setup for GT and formula cars.",
+  "sections": [
+    {
+      "p": "Barcelona-Catalunya is one of iRacing's most demanding road courses—a true technical test that punishes half-measures on entry and rewards smooth application on exit. I've logged serious hours here in both GT3 and single-seater series, and it's taught me more about brake modulation than almost any other track on the calendar. The circuit's mix of slow corners (Turn 1, the chicane), medium-speed technical sections (Turns 10–13), and the high-speed Turns 9 and 14 means you can't just brake hard and turn; you have to think three steps ahead."
+    },
+    {
+      "p": "Whether you're running a <a href=\"best-sim-racing-wheels-iracing.html\">GT3 or a formula car</a>, Barcelona demands precision. My MOZA R9 wheelbase (~9 N·m peak torque) delivers the feedback you need to feel lock-up risk and mid-corner load transfer, and the track layout rewards that feedback immediately. Let's break down the circuit section by section so you can build a fast, consistent lap."
+    },
+    {
+      "h2": "Track Layout and Key Sections"
+    },
+    {
+      "p": "Barcelona is a 4.7 km anti-clockwise layout split into three distinct character zones. The first is high-speed, the second is technical and slow, and the third is a mix that demands flow."
+    },
+    {
+      "list": [
+        "<strong>Turns 1–3 (Dry-Braking Zone into Tight Left):</strong> The biggest braking event on circuit. You'll brake from ~280 km/h (GT3) down to ~80 km/h by apex. This is where lock-up risk lives—especially in wet conditions. Brake stability and trail-braking control are everything.",
+        "<strong>Turns 4–9 (Technical Middle Section):</strong> A flowing sequence of right-handers and medium corners. Turn 9 is relatively high-speed; early throttle application here gains you time on the exit toward Turn 10.",
+        "<strong>Turns 10–13 (The Chicane):</strong> A tight double-chicane sequence that kills momentum. Minimize mid-corner speed loss by carrying as much exit speed from Turn 9 as you can, then brake hard for Turn 10.",
+        "<strong>Turns 14–15 (High-Speed Section):</strong> Turn 14 is nearly flat-out; Turn 15 is the second-hardest braking zone on circuit. Both reward smooth steering input and precise throttle modulation.",
+        "<strong>Turns 16–End (Esses to Line):</strong> A pair of high-speed esses that feed you back to the main straight. Any mid-corner understeer here carries all the way to the braking zone of Turn 1."
+      ]
+    },
+    {
+      "h2": "Braking Points and Trail-Braking Technique"
+    },
+    {
+      "p": "Barcelona is a trail-braking masterclass. Turn 1 is the signature corner—brake early, carry brake deep into the apex, and release gradually as you roll in. This is where my <a href=\"moza-crp2-brake-calibration-pressure-curves.html\">load-cell brake calibration</a> matters most. I run a pressure curve that allows fine modulation between ~60 and ~100 bar, so I can feel the difference between full lock-up risk and a 1–2% lock-up threshold."
+    },
+    {
+      "list": [
+        "<strong>Turn 1:</strong> Brake from ~280 km/h at the 200 m marker. Peak brake pressure ~95% of maximum. Trail brake from ~120 km/h on entry down to ~75 km/h at apex. Release brake by ~mid-corner, then apply smooth throttle as you open the steering.",
+        "<strong>Turn 10 (Chicane Entry):</strong> Brake from ~220 km/h at ~150 m marker. Peak pressure ~90%. Trail from ~110 km/h to ~60 km/h. This one stings if you're loose on entry—understeer will send you wide into the curbing.",
+        "<strong>Turn 15 (Second Major Braking Zone):</strong> Brake from ~260 km/h at ~180 m marker. Peak pressure ~93%. Trail brake down to ~85 km/h at apex. Smooth, smooth, smooth—this is a fast corner masquerading as a slow one.",
+        "<strong>Medium-Speed Corners (Turns 4–9, 11–13):</strong> Most require only light trail-braking or none at all. Focus on throttle application precision instead. Early exit throttle is where lap time lives in these sections."
+      ]
+    },
+    {
+      "tip": "Barcelona punishes over-braking hard because the track is long and braking zones are spaced far apart. I always dial my peak brake pressure 5–10% lower than my comfort limit, then work my threshold-braking technique. You'll gain more time carrying entry speed smoothly than you will by locking the wheels and missing the apex by a foot.",
+      "tipLabel": "Brake Confidence"
+    },
+    {
+      "h2": "Throttle Application and Momentum Management"
+    },
+    {
+      "p": "Where most drivers lose time at Barcelona is on the throttle. It's a momentum-sensitive track; early, smooth application out of medium-speed corners will carry you 0.3–0.5 seconds per lap faster than hard steering input followed by hard throttle."
+    },
+    {
+      "list": [
+        "<strong>Turn 1 Exit:</strong> Open steering to ~40% wheel angle by 50 m past apex. Introduce throttle at ~30% and build smoothly to 100% over the next 100 m of track. Patience here adds three tenths on the exit straight alone.",
+        "<strong>Turn 9 Exit:</strong> This feeds directly into the chicane, so early application is critical. Start throttle by ~mid-corner (60–70% steering angle), then roll it on as steering angle decreases. You want 95%+ throttle before Turn 10 braking.",
+        "<strong>Turn 15 Exit:</strong> Very similar to Turn 1 in terms of smoothness required. This corner leads to the esses, so sloppy exit application will upset the car in Turns 16–17.",
+        "<strong>Esses (Turns 16–17):</strong> Minimal throttle changes in these high-speed sections. Stay at ~85–95% throttle, adjust steering smoothly, and let the car flow through. Any hard input here will kill exit speed into Turn 1."
+      ]
+    },
+    {
+      "h2": "Baseline Setup for GT3 and Formula Cars"
+    },
+    {
+      "p": "I'll share my baseline for the Ferrari 488 GT3 Evo and a typical formula car. Barcelona rewards moderate downforce and moderate front brake bias because of the brake zone imbalance (Turn 1 is severe; Turn 15 is sustained)."
+    },
+    {
+      "h3": "Ferrari 488 GT3 Evo"
+    },
+    {
+      "list": [
+        "<strong>Aerodynamics:</strong> ~60% wing front (medium-low downforce setup). Low drag and front-end stability are your friends here.",
+        "<strong>Brake Bias:</strong> 56–57% front. Barcelona's Turn 1 is brutal, so don't be afraid to run front-heavy. Turn 15 and the esses stay stable because they're not heavy braking zones.",
+        "<strong>Anti-Roll Bars:</strong> Front ~10 mm, rear ~12 mm. Medium stiffness throughout; Barcelona isn't a high-load corner track, so don't over-stiffen.",
+        "<strong>Differential:</strong> Coast lock ~30%, accel lock ~50%. Moderate setting. Too loose on throttle and you'll spin out of Turns 9 and 15; too tight and mid-corner understeer becomes a problem.",
+        "<strong>Suspension Geometry:</strong> Camber front –2.5°, rear –1.8°. Toe-in front ~0.08°, rear ~0.14°. These are safe, neutral settings. Adjust 0.1° at a time if you see consistent mid-corner push or understeer."
+      ]
+    },
+    {
+      "h3": "Formula Car (Dallara IR-18 or equivalent)"
+    },
+    {
+      "list": [
+        "<strong>Front Wing:</strong> ~5–6 clicks (circuit median). Formula cars are more sensitive to downforce balance than GT cars; Barcelona's mix of medium and high-speed corners rewards a neutral, balanced setup.",
+        "<strong>Rear Wing:</strong> ~8–9 clicks. Slightly higher rear to maintain exit traction through the esses.",
+        "<strong>Brake Balance:</strong> 57–58% front. Formula cars need slightly more front bias because they're lighter and lock easier at the rear.",
+        "<strong>Anti-Roll Bars:</strong> Front ~8 mm, rear ~10 mm. Keep it medium; formula cars are already twitchy.",
+        "<strong>Differential:</strong> Coast ~40%, accel ~60%. Formula cars demand more aggressive diff tuning for the technical sections, especially Turns 10–13."
+      ]
+    },
+    {
+      "tip": "Don't overthink Barcelona setup. The track's most important characteristic is driver input quality, not setup micro-adjustments. Start with these baselines, run 5–10 warm-up laps, then focus on brake modulation and throttle smoothness. Nine times out of ten, setup tweaks are masking driver technique problems.",
+      "tipLabel": "Setup Philosophy"
+    },
+    {
+      "h2": "Wet-Weather Driving at Barcelona"
+    },
+    {
+      "p": "Barcelona in the rain is a different beast. The technical sections stay relatively grippy because there's minimal curbing and track runoff is generous, but the high-speed zones (Turns 9, 14, and the esses) become treacherous. Brake pressure drops significantly—I reduce my peak braking to ~75–80% of dry setting to avoid hydroplaning into Turn 1."
+    },
+    {
+      "list": [
+        "Reduce front wing by 2–3 clicks; rain reduces downforce efficiency, so less drag is preferable.",
+        "Increase brake bias by 1–2% front (to ~58–59%) because lock-up happens faster in wet with lower overall grip.",
+        "Trail-braking becomes even more critical. Brake earlier, brake softer, and release deeper into corners.",
+        "Avoid Turn 1 as a passing zone. The wet line is narrow, and any lock-up or understeer sends you into the barrier or off-track."
+      ]
+    },
+    {
+      "h2": "Common Mistakes and How to Fix Them"
+    },
+    {
+      "list": [
+        "<strong>Over-aggressive Turn 1 Entry:</strong> Brake too late or too hard, and you'll lock the front tires or miss the apex entirely. Solution: brake at the 200 m marker minimum, and commit to trail-braking. It feels slower at first; it's not.",
+        "<strong>Throttle Application Too Early in the Chicane:</strong> Turn 10 into Turn 11 is tight. If you apply throttle before steering angle has decreased to ~30%, the rear will slide, and you'll lose the exit. Solution: wait for the apex of Turn 11 before rolling on full throttle.",
+        "<strong>Understeer in the Esses:</strong> Sloppy mid-corner input or braking into Turn 16 will cause push. Solution: brake completely before the esses; once you're on throttle, smooth steering input only. Let the car flow.",
+        "<strong>Inconsistent Turn 1:</strong> Different brake points lap to lap or inconsistent trail-braking. Solution: practice hitting your 200 m braking point marker over 20 laps. Audio or visual cue helps. Once that's locked in, the lap becomes much more repeatable."
+      ]
+    },
+    {
+      "h2": "Putting It All Together: Your First Competitive Lap"
+    },
+    {
+      "p": "On your first outing, aim for a clean lap rather than a fast one. Nail the braking points, execute the trail-braking technique, and focus on smooth throttle application through Turns 9, 15, and the esses. Once you've got consistency—three laps in a row within 0.2 seconds—then start pushing setup and throttle aggression."
+    },
+    {
+      "p": "Barcelona will teach you more about smooth inputs than almost any other circuit on the iRacing roster. My MOZA R9 setup—with the direct-drive feedback and my load-cell pedals providing precise brake modulation—makes the learning process faster because you get immediate, honest feedback about where the tires are struggling. Respect the track, respect the technique, and the lap times will follow."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the ideal brake bias at Barcelona for GT3?",
+      "a": "I run 56–57% front for GT3 cars. Barcelona's signature braking event is Turn 1, which is a hard, heavy stop from high speed. Slightly front-heavy bias gives you safety margin there. Turn 15 is sustained braking but not violent, so rear bias isn't as critical. Start at 56.5% and adjust ±0.5% based on where you feel the car locking first under trail-braking."
+    },
+    {
+      "q": "How do I stop locking the front tires at Turn 1?",
+      "a": "Three-part answer: first, brake earlier (200 m marker minimum). Second, reduce peak brake pressure by 5–10% relative to your comfort limit. Third, practice trail-braking—release brake pressure gradually as you increase steering angle into the corner. Locking is usually a symptom of releasing brake too abruptly or missing the apex mid-corner due to insufficient turn-in."
+    },
+    {
+      "q": "What gear do I need through the chicane at Barcelona?",
+      "a": "Depends on your car. GT3 cars typically use 3rd gear at Turn 10 entry (~60 km/h), then 4th on the exit toward Turn 13. Formula cars are similar but shift at slightly different speeds due to smaller displacement. The key is consistent downshifting before Turn 10 so you're settled in your gear before mid-corner; hunting for the right gear mid-corner kills your corner entry."
+    },
+    {
+      "q": "Does Barcelona setup change much between dry and wet?",
+      "a": "Moderately. In the wet, I reduce front wing by 2–3 clicks, increase front brake bias by 1–2%, and drop brake pressure to ~75–80% of my dry maximum. The bigger change is driver input—brake earlier, smoother, and avoid aggressive throttle application in the technical sections. Setup tweaks help but won't save you from driver errors."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

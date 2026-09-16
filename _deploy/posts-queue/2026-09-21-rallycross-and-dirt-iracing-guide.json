@@ -1,0 +1,168 @@
+{
+  "slug": "rallycross-and-dirt-iracing-guide",
+  "tag": "iRacing Tips · Car Setup",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "RallyCross and Dirt on iRacing: Setup, Technique, and What Changes",
+  "description": "Rallycross and dirt racing demand different car setup and braking technique than asphalt. Here's how to adapt your rig and driving style.",
+  "sections": [
+    {
+      "p": "iRacing's rallycross and dirt disciplines feel radically different from the road racing and ovals I usually pilot on my MOZA R9 wheelbase. The car setup priorities flip—aggressive anti-roll bars, looser differentials, softer springs—and your throttle and brake modulation has to change in ways that aren't immediately obvious. If you've spent most of your time on tarmac, jumping into dirt without rethinking your approach will cost you lap time and a lot of frustration."
+    },
+    {
+      "p": "I spent my first few dirt races wondering why my usual trail-braking technique felt clumsy and why my setup changes weren't translating to better exit traction. Then I realized: dirt racing on iRacing requires you to almost unlearn some asphalt habits and rebuild your inputs from the ground up. This guide walks through what I've learned about suspension, braking, and throttle control on dirt, using my own rig as a baseline."
+    },
+    {
+      "h2": "How Dirt Changes Your Suspension Priorities"
+    },
+    {
+      "p": "On asphalt, I prioritize mid-corner stability and response—stiff anti-roll bars, medium springs, and damper settings that keep the car planted. Dirt is the opposite. The surface is so unpredictable that a stiff setup will fight the terrain instead of working with it. Your goal is compliance and traction, not grip control."
+    },
+    {
+      "list": [
+        "<strong>Anti-roll bars:</strong> Drop them significantly. I typically run ~50-60% of my asphalt setting. A soft bar lets each wheel track independently, following the ruts and bumps without the chassis rocking.",
+        "<strong>Springs:</strong> Softer than asphalt, but not mushy. You want enough support to keep weight transfer controlled, but enough give to let the suspension articulate.",
+        "<strong>Dampers:</strong> Reduce bump (compression) damping—your shock needs to absorb the constant small impacts of uneven terrain. Rebound can stay slightly stiffer to control the energy release.",
+        "<strong>Ride height:</strong> Lower than you'd think. Dirt cars sit relatively flat, and lowering the center of gravity helps stability despite the rough surface.",
+        "<strong>Differential:</strong> Loosen the acceleration differential (ARB) significantly. Dirt has way less grip, so you need more wheel slip to transfer torque. I usually run 40-50% on acceleration, versus 70-80% on asphalt."
+      ]
+    },
+    {
+      "tip": "The mistake I made early: I kept my stiff asphalt setup and just softened springs. The car bottomed constantly and felt uncontrollable. Dirt demands you soften everything—bars, dampers, and especially the diff—as a system.",
+      "tipLabel": "Suspension Philosophy Shift"
+    },
+    {
+      "h2": "Braking on Dirt: No More Trail Braking"
+    },
+    {
+      "p": "This is the biggest technique shift. On asphalt, <a href=\"trail-braking-load-cell-technique.html\">trail braking</a> into corners lets me bleed speed while loading the front tire, sharpening my entry angle. On dirt, that technique feels wrong because the front tire is already on the edge of grip. Trail braking on loose surface usually just locks the wheel or makes the car dive and understeer."
+    },
+    {
+      "p": "Instead, I brake hard and early, then release the pedal almost completely before I turn. My MOZA CRP2 load-cell pedals give me the precision to modulate this, but the input pattern is totally different. I'm braking in a straighter line, then rotating the car with throttle blips and small steering inputs once the brake is off."
+    },
+    {
+      "list": [
+        "<strong>Brake earlier and harder:</strong> Dirt has less friction, so you need more stopping distance. Start slowing down sooner than you would on asphalt.",
+        "<strong>Release completely before turning:</strong> Don't blend brake and turn. Get off the pedal sharply, then turn. Mixing them locks the front and kills your line.",
+        "<strong>Use threshold braking, not trail braking:</strong> Brake at the limit, then transition fully off. The on-off approach lets the tire grip the surface again as you're turning.",
+        "<strong>Modulate with the throttle instead:</strong> Once you're off the brake, use small throttle blips and feathering to fine-tune your speed and rotation angle."
+      ]
+    },
+    {
+      "p": "The physics here is simple: dirt has a grip cliff. Once your tire is spinning or the brake is on, you've got very little margin. Asphalt lets you blur the edges; dirt punishes you for it."
+    },
+    {
+      "h2": "Throttle Control and Weight Transfer on Loose Surface"
+    },
+    {
+      "p": "Throttle application on dirt is far more aggressive and binary than on asphalt. You want to get the car rotating and transferring weight rearward quickly so the driven wheels can grip and accelerate. But you can't just floor it—you need smooth application to avoid wheel spin."
+    },
+    {
+      "p": "On asphalt, I can apply throttle gradually and the traction control system (if enabled) keeps things civilized. On dirt, I'm usually running minimal TC because I want the car to move around and rotate. That means my throttle input has to be precise: firm and committed, but not violent."
+    },
+    {
+      "list": [
+        "<strong>Initial throttle:</strong> Apply smoothly but decisively, transferring weight rearward and loading the rear tires.",
+        "<strong>Manage the slide:</strong> Let the rear slide a touch if needed, but steer into it. Dirt racing is about controlled oversteer and rotation.",
+        "<strong>Commit to the exit:</strong> Once the car is rotated and you've got momentum building, press hard on the throttle and ride the slide to the next braking zone.",
+        "<strong>Avoid mid-corner corrections:</strong> If you're off-line and sliding, commit to that line or back off. Steering corrections during a slide usually just dig you deeper."
+      ]
+    },
+    {
+      "h2": "Wet Versus Dry Dirt Setup Differences"
+    },
+    {
+      "p": "iRacing includes wet dirt conditions, and the setup changes are real. Dry dirt is unpredictable but consistent within a session. Wet dirt is even looser, with less grip and more sliding. Your suspension has to soften further, and your diff needs to be even more open to manage wheel slip without locking."
+    },
+    {
+      "p": "I typically soften springs by another 10-15% in wet conditions and open the acceleration diff another 5-10 points. The driving technique stays the same—hard braking, no trail braking, aggressive throttle—but the margin for error shrinks further. Small inputs matter even more."
+    },
+    {
+      "tip": "Test in practice first. Wet dirt can change between sessions, and a setup that felt right in the dry might be a handful in rain. I spend at least 30 minutes tuning before committing to a race setup.",
+      "tipLabel": "Practice Session Discipline"
+    },
+    {
+      "h2": "Translating These Changes to Your Rig"
+    },
+    {
+      "p": "If you're coming from road racing, dirt will feel unstable and chaotic at first on your wheelbase. That's not your hardware—my MOZA R9 (~9 N·m) handles dirt just fine—it's your muscle memory. Your hands are used to making smooth, flowing inputs. Dirt demands quicker, choppier steering and sharper transitions."
+    },
+    {
+      "p": "Your load-cell brake pedal (I use MOZA CRP2s) becomes even more critical on dirt. You need the feel to understand exactly when the tire is on the edge of locking. Cable-actuated pedals or spring-loaded ones won't give you that precision. If you're still on a standard brake pedal, dirt will be harder to master until you upgrade to <a href=\"best-sim-racing-pedals-iracing-2026.html\">load-cell pedals</a>."
+    },
+    {
+      "list": [
+        "<strong>Increase FFB detail:</strong> Dirt gives you tons of microfeedback through the wheel—bumps, ruts, weight transfer. Turn up FFB linearity and detail so you feel the surface.",
+        "<strong>Lower FFB peak force if needed:</strong> Dirt is choppier, so peak torque can feel aggressive. I sometimes run ~6-7 N·m on dirt versus my normal ~8 N·m on road courses.",
+        "<strong>Pedal calibration matters:</strong> Make sure your load-cell brake is properly <a href=\"moza-crp2-brake-calibration-pressure-curves.html\">calibrated</a>. Dirt requires precise modulation, and a bad calibration will cost you braking consistency."
+      ]
+    },
+    {
+      "h2": "Shifting and Gearing Considerations"
+    },
+    {
+      "p": "Most iRacing dirt cars are manual sequential shift, which means you're constantly managing revs and gear selection. Dirt courses are short, tight, and often hilly, so gear ratios matter more than on a long road course. You'll also find yourself short-shifting or holding gear through a corner to keep the engine in the power band without too much wheelspin."
+    },
+    {
+      "p": "I typically run slightly longer gears than default because the tighter corners and shorter straightaways mean I'm not hitting top speed often. Longer ratios keep you in midrange power longer, which translates to better traction and exit acceleration. Test a few ratios in practice—the difference is noticeable."
+    },
+    {
+      "h2": "Reading the Line and Track Conditions"
+    },
+    {
+      "p": "Dirt racing online often has a dominant line where previous drivers have polished a groove. That line is faster, but it can get rutted if it's been a long session. Early in the day, I follow the groove and trust it. As the session ages, I might run slightly off the line where the dirt is fresher, or adjust my braking point to avoid the deepest rut."
+    },
+    {
+      "p": "Wet conditions expose these lines even more. The rutted line can fill with standing water, making it worse. I often move up or down the banking slightly in wet to find drier soil and better grip. It costs a few hundredths on the entry but usually saves lap time overall."
+    },
+    {
+      "h2": "Common Mistakes and How to Avoid Them"
+    },
+    {
+      "list": [
+        "<strong>Stiff setup from asphalt:</strong> This is mistake number one. Soft suspension is not slow on dirt—it's mandatory. If your car feels like it's bouncing and sliding everywhere, soften everything: bars, springs, dampers, and diff.",
+        "<strong>Trying to trail brake:</strong> Trail braking feels smooth and controlled on asphalt but causes lockups and understeer on dirt. Separate your braking from your turning. Brake, release completely, then turn.",
+        "<strong>Overdriving corner entry:</strong> Dirt cars rotate on throttle and exit speed, not precision entry speed. You can brake later and softer than you think because the exit is what counts.",
+        "<strong>Ignoring the differential:</strong> An open diff on a dirt car means more wheel spin but also more traction and rotation. Most dirt drivers run 40-50% acceleration diff, way lower than asphalt. Experiment within that range.",
+        "<strong>Not adjusting for track evolution:</strong> Dirt changes throughout a session. Your setup and line that felt perfect in Practice might be outdated by Race 2. Reserve time to retune for the actual session conditions."
+      ]
+    },
+    {
+      "tip": "Dirt racing rewards smooth, committed inputs more than asphalt does. Hitching and correcting your line makes things worse. Commit to your line and your inputs, and let the car sort itself out through the corner.",
+      "tipLabel": "Commitment Over Precision"
+    },
+    {
+      "h2": "Next Steps: Building Your Dirt Setup Bank"
+    },
+    {
+      "p": "Start with a baseline from iRacing's default setups, then make the key changes I've outlined: soften the anti-roll bars by 40%, reduce the acceleration diff by 20-30%, and drop springs by 10-15%. Test that, then refine from there. Keep notes on what works for each car and track—dirt setups are more unique than road setups because each track has a different surface character."
+    },
+    {
+      "p": "The technique side takes longer. Plan to spend a few hours in practice just getting comfortable with the brake-release-turn sequence and throttle modulation before you jump into a race. Dirt looks wild, but it rewards drivers who are smooth and deliberate. Your rig is ready for it—now it's just about retraining your inputs."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I use a different wheelbase FFB setting for dirt versus asphalt?",
+      "a": "Yes, slightly. Dirt generates a lot of microfeedback from the rough surface, so I lower my peak FFB torque by about 1-2 N·m (from my usual ~8 N·m to ~6-7 N·m) and increase detail/linearity to feel the bumps without the wheel becoming exhausting. You can run the same wheelbase on both, but tuning FFB for dirt makes it more enjoyable."
+    },
+    {
+      "q": "Why does my car feel so unstable on dirt when my setup is soft?",
+      "a": "Soft suspension transfers weight more, which is correct for dirt, but it also means the car will move around more under braking and acceleration. That's normal and actually faster. What might feel unstable is you fighting the car instead of committing to your inputs. Dirt rewards smooth, deliberate steering and throttle—not corrections."
+    },
+    {
+      "q": "Can I use my asphalt load-cell brake settings on dirt?",
+      "a": "Not exactly. You'll want a slightly higher brake pressure curve on dirt because you're braking harder and earlier, and you need cleaner on-off transitions. If your asphalt setup is very linear, consider adding a bit of progressive curve for dirt so the initial pressure builds more naturally and the final pressure point is more definitive."
+    },
+    {
+      "q": "What's the best differential setting to start with on a dirt car?",
+      "a": "Start with 45% acceleration (ARB) and 50% deceleration. That's much looser than asphalt (which is typically 70-80% accel), but dirt needs it to manage wheel slip and rotation. From there, tighten if the rear is too loose on acceleration, or loosen if you can't rotate the car on corner entry. Test in 5-point increments."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}

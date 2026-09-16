@@ -1,0 +1,153 @@
+{
+  "slug": "iracing-rain-weather-system-explained",
+  "tag": "iRacing Tips · Driving",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "iRacing Rain Weather System Explained: Wet Track Physics",
+  "description": "How iRacing's rain system changes grip, tire behavior, and braking. Learn wet-weather setup and technique for consistent wet-weather pace.",
+  "sections": [
+    {
+      "p": "Rain in iRacing isn't just a visual—it fundamentally rewires how your car feels. The wet-weather system affects tire grip, standing water, dynamic track conditions, and even how your brake load-cell pedal needs to be managed. I first noticed this when I jumped into a Tuesday night GT3 race at Spa without practicing rain; I locked up into Eau Rouge and spent the next three laps chasing understeer. Once I understood the physics and made basic setup changes, rain went from terrifying to a confidence builder. This guide walks through what actually happens to your car when it rains on the iRacing track."
+    },
+    {
+      "p": "The rain system scales across all series—from Mazda MX-5 Cup to Le Mans 300—so these principles apply whether you're in a street car or a GTP prototype. Understanding the wet-weather model means fewer lock-ups, better tire management, and real race craft in conditions that separate competitive drivers from the field."
+    },
+    {
+      "h2": "How iRacing Models Wet-Weather Grip"
+    },
+    {
+      "p": "The core of iRacing's rain system is tire-to-track friction. Wet tires have a lower friction coefficient than slicks—roughly 40–60% of dry grip depending on track surface and water depth. The game doesn't simulate different tire compounds (soft/medium/hard wet tires like F1 does); instead, all cars use a single wet tire model that scales with water accumulation and track temperature."
+    },
+    {
+      "p": "Water sits on the track in dynamic patches. Heavy rain means standing water in low spots—Eau Rouge at Spa holds water that Pouhon doesn't. Light rain or drying conditions create variable grip: full racing line is slick, but off-line you might find better grip on a drier patch. This is why wet-weather qualifying can reward finding the cleanest line or even running slightly off-line to find better adhesion. On my R9 wheelbase, this shows up immediately—the force feedback becomes mushy and less responsive, and small inputs matter more."
+    },
+    {
+      "tip": "In heavy rain, look for dry patches off the racing line—especially on wider corners. Your tire will talk to you through FFB; trust the wheel when it wants to grip a different part of the track.",
+      "tipLabel": "Wet Line Hunting"
+    },
+    {
+      "h2": "Tire Behavior and Temperature in the Rain"
+    },
+    {
+      "p": "Wet tires heat up differently than slicks. Your tire temperature climbs slower, and peak grip comes at a lower operating window. In dry conditions, you might be hunting for 95–105 °C operating temps; in rain, peak wet-tire grip is often in the 65–85 °C range. Go too hard and the tire overheats and loses grip paradoxically. Go too soft and it never reaches temperature."
+    },
+    {
+      "p": "Tire pressure also matters—higher pressure in wet conditions can increase aquaplaning risk, while lower pressure increases standing water contact and can improve initial grip but hurts mechanical response. Most setups run ~0.2–0.3 bar lower in rain than dry. Rain tire degradation is slower than slick tire wear, so a wet race doesn't punish aggressive driving the same way a dry race does; you can push harder for longer."
+    },
+    {
+      "list": [
+        "Wet tire peak grip: ~65–85 °C (lower than dry slicks)",
+        "Pressure reduction: ~0.2–0.3 bar compared to dry setup",
+        "Temperature rise: slower to build, more sensitive to overheating",
+        "Degradation: slower wear, but loss of grip more sudden when temp drops"
+      ]
+    },
+    {
+      "h2": "Braking and Threshold in Wet Conditions"
+    },
+    {
+      "p": "This is where my <a href=\"moza-crp2-brake-calibration-pressure-curves.html\">MOZA CRP2 load-cell pedals</a> make the biggest difference. Wet braking is less forgiving—you have less total stopping power, and the cliff between threshold braking and lock-up is sharper. On a slippery surface, modulation is everything."
+    },
+    {
+      "p": "In dry conditions, you can trail-brake aggressively into a corner and the tire will forgive small overshoot. In rain, that same input locks the wheels. I dial brake pressure curves softer in wet setups, reducing the maximum brake force and spreading brake application over a longer pedal travel. This gives me finer control and makes lock-ups less punishing. Brake balance also matters more—too much front bias and you'll lock the fronts under heavy rain; too much rear and you'll spin. Most drivers shift brake balance 2–4% toward the rear in rain."
+    },
+    {
+      "p": "One common mistake: using the same pedal calibration. I recalibrate my CRP2 in a practice rain session to map the new brake-pressure curve and make sure my muscle memory stays consistent. If you don't, you'll either over-brake (locking up) or under-brake (running wide) because your pressure mapping is off."
+    },
+    {
+      "tip": "Recalibrate your load-cell pedals in a wet practice session before a rain race. Your threshold pressure feels different on a slippery track, and your muscle memory needs to match the new feedback.",
+      "tipLabel": "Pedal Calibration"
+    },
+    {
+      "h2": "Setup Changes for Rain: What Actually Matters"
+    },
+    {
+      "p": "You don't need a separate rain setup for most iRacing series—the car's aerodynamic balance and spring rates work fine in wet conditions. What does change:"
+    },
+    {
+      "olist": [
+        "Brake pressure and balance: soften max pressure, shift balance rear by 2–4%",
+        "Tire pressure: reduce by 0.2–0.3 bar across all four corners",
+        "Differential lock: increase entry and exit lock slightly for more mechanical grip and less reliance on tire friction",
+        "Downforce: same setting as dry; the wet system doesn't remodel aero",
+        "Anti-roll bars: slightly softer can help with compliance on bumpy wet surfaces"
+      ]
+    },
+    {
+      "p": "Wheel torque settings matter less in rain than dry. My R9 is set to ~9 N·m across all series, but in rain the lower grip naturally softens the force feedback and makes the wheel less violent. I don't change my FFB settings for rain; the physics engine handles the reduction."
+    },
+    {
+      "p": "The biggest mistake: over-braking brake pressure. New drivers often increase brake pressure in rain thinking they need more stopping power, but with lower tire friction, less pressure with better modulation beats more pressure with lock-ups. Test in practice; find the sweet spot where you can brake hard without locking."
+    },
+    {
+      "h2": "Wet-Weather Driving Technique"
+    },
+    {
+      "p": "Rain racing separates smooth inputs from aggressive ones. Steering wheel movements need to be deliberate and smaller. On my R9, I can feel the difference immediately—in dry conditions, I can flick the wheel quickly and trust the tire to respond; in rain, sudden inputs cause understeer or oversteer because the tire can't generate grip fast enough."
+    },
+    {
+      "p": "Trail braking goes even deeper in rain. You want to extend your braking zone slightly longer (lower deceleration = less lock-up risk), then modulate on entry and through the corner. This sounds slow, but it's actually competitive—you can carry speed mid-corner because you're not fighting lock-up, and you exit cleaner."
+    },
+    {
+      "p": "Throttle application is gradual. In dry GT3, you can floor it mid-corner and the car pivots around grip. In rain, that same input spins the rear. Progressive throttle—adding power in small increments—keeps the tire in its operating window and reduces snap oversteer."
+    },
+    {
+      "list": [
+        "Steering inputs: smaller, smoother, deliberate—no sudden wheel movements",
+        "Braking zone: extend slightly, modulate on entry, avoid trailing into turn-in",
+        "Throttle: progressive and gradual, especially mid-corner and on exit",
+        "Line: look for dry patches off the racing line; wet racing line may vary lap-to-lap",
+        "Vision: look further ahead; wet braking is longer, so early apex planning matters more"
+      ]
+    },
+    {
+      "h2": "Rain Persistence and Track Evolution"
+    },
+    {
+      "p": "iRacing's rain system persists over time. A session that starts with heavy rain doesn't dry instantly; there's a gradual evolution as conditions improve. On my rig, I've learned to recognize the window: about 20–30 minutes into a rain race, the track starts to dry. That's when you need to be sharp—some drivers will be faster on full wets, others on intermediate or even slick tires, and line choices become unpredictable as grip patches appear and disappear."
+    },
+    {
+      "p": "If you're in a wet race, prepare for this transition. Have a basic understanding of tire strategy: if you start on full wets, when does switching to intermediates make sense? Most series don't allow mixed tire compounds, but understanding tire wear and track drying helps you judge pace and make strategic calls (especially in endurance racing where you might pit for a tire change)."
+    },
+    {
+      "tip": "Track drying in iRacing races follows a roughly linear curve. Plan pit stops and tire changes around the 20–30 minute mark when conditions start transitioning.",
+      "tipLabel": "Rain Race Strategy"
+    },
+    {
+      "h2": "Practice and Confidence in Rain"
+    },
+    {
+      "p": "The best way to nail wet-weather driving is to do it intentionally. Load up a practice session with rain enabled, pick a track you know, and spend 20 minutes getting comfortable with the feel. You'll lock up. You'll spin. That's the point. Your brain learns the feedback from the wheel, the pedals, and the visuals, and you build intuition for how much input the wet track will tolerate."
+    },
+    {
+      "p": "Once you're comfortable, join a league or hosted race with rain. The competitive pressure teaches you faster than practice alone. I went from avoiding rain races to actively seeking them out because the skill gap rewards you so heavily—drivers who don't practice wet conditions will lose time, and you can make up a lot of ground just by staying smooth and consistent."
+    },
+    {
+      "p": "If you're using a <a href=\"best-sim-racing-pedals-iracing-2026.html\">load-cell brake system</a>, the wet practice is doubly important. Your muscle memory for brake pressure is more critical in rain, and recalibrating between dry and wet helps you stay consistent. On my CRP2 pedals, I've learned that recalibration takes two minutes and saves me from frustrating lock-ups."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does iRacing have different wet tire compounds like soft, medium, and hard?",
+      "a": "No. iRacing uses a single wet tire model that scales with water depth and track temperature. You don't choose wet tire compounds like in F1. All cars use the same wet tire physics, but setup changes (pressure, brake balance, differentials) allow you to tune how that tire behaves."
+    },
+    {
+      "q": "What's the best brake pressure setting for rain?",
+      "a": "Lower max pressure with better modulation beats higher pressure with lock-ups. Start by reducing your dry brake pressure by 15–20% and recalibrate your load-cell pedals in a wet practice session. The exact setting depends on your car and track, but the goal is to brake hard without locking—test and find the threshold where you can modulate consistently."
+    },
+    {
+      "q": "Should I adjust wheel force feedback settings for rain?",
+      "a": "No, the wet-weather physics engine automatically reduces force feedback intensity because lower tire friction generates less force. Don't change your FFB settings between dry and wet; the game handles it for you. If your wheel feels mushy in rain, that's realistic—lower grip means less force feedback."
+    },
+    {
+      "q": "How long does a wet track take to dry in an iRacing race?",
+      "a": "Drying is gradual and usually takes 20–40 minutes depending on rain intensity. Heavy rain takes longer to dry; light rain dries faster. Plan your strategy around the 20–30 minute mark when you'll start seeing mixed grip—some patches dry faster than others, creating variable track conditions."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-16",
+  "dateLabel": "September 16, 2026"
+}
