@@ -20,6 +20,14 @@ jobs:
       - name: Verify photo attribution
         run: node _ci/validate-photo-attribution.mjs
 
+      # Suffixed twins (<slug>-2) and an exhausted topic pool. The generator
+      # used to auto-suffix a slug collision while TOPIC_POOL wrapped around to
+      # covered ground, so the two faults compounded: guaranteed collisions,
+      # each shipped as a near-identical second page competing with the first
+      # for the queries that earn the commission.
+      - name: Validate blog queue
+        run: node _ci/validate-blog-queue.mjs
+
       - name: Preflight — verify secrets
         id: preflight
         run: |

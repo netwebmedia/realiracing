@@ -11,6 +11,7 @@
 
 const fs   = require('fs');
 const path = require('path');
+const { salvageObjects, isUsablePost } = require('./lib/salvage.js');
 
 process.chdir(path.join(__dirname, '..'));
 
@@ -20,7 +21,12 @@ const API_URL       = 'https://api.anthropic.com/v1/messages';
 const MODEL         = 'claude-haiku-4-5-20251001';
 const BATCH_SIZE    = 2; // posts per API call — RealIRacing posts run 1200-1700
                           // words plus FAQs/gearKeys, so batches stay smaller
-                          // than NWM's (3) to comfortably fit the 8192-token cap.
+                          // than NWM's (3) to comfortably fit the token cap.
+// Two 1200-1700 word posts with FAQ blocks do not reliably fit 8192; the reply
+// stops mid-post and, before salvage existed below, took the whole batch with
+// it. 16000 is roughly double what a batch actually costs and still safe for a
+// non-streaming request. (Same change made in the monorepo's generator, #1175.)
+const MAX_TOKENS    = 16000;
 
 // ─── CLI args ────────────────────────────────────────────────────────────────
 
@@ -116,6 +122,139 @@ const TOPIC_POOL = [
   'secondhand sim racing gear: what to check before buying',
   'sim racing gear worth buying used vs new',
   'seasonal sales strategy for sim racing hardware purchases',
+
+  // ─── Expansion 2026-09-16 ──────────────────────────────────────────────────
+  // 48 topics against 74 published posts, in a loop that wraps with
+  // `topicIdx = 0 // cycle if needed`. The pool was guaranteed to come back
+  // around to ground already covered, and the collision handler above used to
+  // turn that into <slug>-2. Dropping the twin is the fix for the symptom; this
+  // is the fix for the cause.
+  //
+  // Weighted toward the two clusters the live corpus is actually built from and
+  // the pool barely represented — TRACK guides (12 live) and CAR guides (11
+  // live), which are also where the affiliate and search intent is — plus the
+  // areas with no coverage at all: car setup, race craft, iRacing's own systems,
+  // third-party software, and the body.
+
+  // Track guides — iRacing staples with no post yet
+  'le mans circuit de la sarthe iracing guide',
+  'imola iracing guide: kerbs, chicanes and braking zones',
+  'interlagos iracing guide: elevation and the senna S',
+  'zandvoort iracing guide: banking and blind crests',
+  'brands hatch grand prix iracing guide',
+  'donington park iracing guide',
+  'oulton park iracing guide',
+  'circuit de barcelona-catalunya iracing guide',
+  'red bull ring iracing guide',
+  'hungaroring iracing guide',
+  'laguna seca iracing guide: the corkscrew',
+  'sonoma raceway iracing guide',
+  'mid-ohio iracing guide',
+  'lime rock park iracing guide',
+  'virginia international raceway iracing guide',
+  'okayama iracing guide',
+  'tsukuba iracing guide',
+  'fuji speedway iracing guide',
+  'motegi iracing guide',
+  'snetterton iracing guide',
+  'charlotte motor speedway iracing oval guide',
+  'bristol motor speedway iracing guide',
+  'martinsville speedway iracing guide',
+  'talladega superspeedway iracing guide',
+  'phoenix raceway iracing guide',
+  'richmond raceway iracing guide',
+  'homestead-miami iracing oval guide',
+  'iowa speedway iracing guide',
+  'texas motor speedway iracing guide',
+  'darlington raceway iracing guide',
+  'indianapolis motor speedway iracing guide',
+
+  // Car guides — no post yet
+  'ferrari 296 gt3 iracing guide',
+  'bmw m4 gt3 iracing guide',
+  'chevrolet corvette c8.r gte iracing guide',
+  'porsche 911 rsr iracing guide',
+  'cadillac v-series.r gtp iracing guide',
+  'acura arx-06 gtp iracing guide',
+  'oreca 07 lmp2 iracing guide',
+  'ligier js p320 lmp3 iracing guide',
+  'radical sr10 iracing guide',
+  'super formula sf23 iracing guide',
+  'formula renault 2.0 iracing guide',
+  'formula vee iracing beginner guide',
+  'legends cars iracing beginner guide',
+  'nascar truck series iracing guide',
+  'nascar xfinity series iracing guide',
+  'late model stock iracing guide',
+  'dirt sprint car iracing beginner guide',
+  'dirt late model iracing guide',
+  'mercedes amg gt3 iracing guide',
+  'lamborghini huracan gt3 evo iracing guide',
+  'ford mustang gt3 iracing guide',
+  'aston martin vantage gt4 iracing guide',
+  'toyota gr supra gt4 iracing guide',
+  'global mazda mx-5 vs gr86: which rookie car to pick',
+  'lotus 79 and the historic formula cars on iracing',
+
+  // Car setup — the pool had nothing on this at all
+  'spring rates and ride height: what they actually change',
+  'damper settings explained without the engineering degree',
+  'anti-roll bars and how they shift the balance',
+  'differential settings for corner entry and exit',
+  'aero balance and downforce trade-offs by track type',
+  'gearing: choosing ratios for a track you do not know',
+  'camber and toe: reading tyre temps to set them',
+  'baseline setups vs setup shops: when to stop fiddling',
+  'why a fast setup can make you slower',
+  'building your own setup from the iRacing baseline',
+
+  // Race craft — beyond the overtaking/defending posts already live
+  'blue flags and lapped traffic: doing it without losing time',
+  'pit stop strategy: undercut, overcut and track position',
+  'pit lane procedure and the penalties that catch people out',
+  'spotter calls and what to actually listen for',
+  'racing in the rain: the iRacing wet weather system explained',
+  'cold tyres: the out-lap and the first two corners',
+  'saving the car after a slide instead of spinning it',
+  'consistency over pace: why lap-time spread wins races',
+  'racing clean when the other driver is not',
+  'when to pit under caution and when to stay out',
+
+  // iRacing systems
+  'the iRacing season structure and build updates explained',
+  'the iRacing tyre model: what changed and what it means',
+  'hosted sessions vs official races vs leagues',
+  'time trials and time attack: racing against yourself',
+  'the iRacing protest and sporting code process',
+  'rookie to class D: the fastest legitimate route',
+  'iRacing content strategy: which cars and tracks to buy first',
+  'practice servers and how to use them properly',
+
+  // Software and telemetry
+  'crew chief: the free spotter everyone should be running',
+  'simhub dashboards and what to put on them',
+  'garage61 and telemetry comparison tools',
+  'racelab overlays for iRacing',
+  'reading a motec trace without an engineering background',
+  'comparing your lap to a fast lap: what to look at first',
+
+  // Hardware beyond the wheel and pedals
+  'shifter choice: sequential, h-pattern and paddles',
+  'handbrake setups for rally and drift on iRacing',
+  'bass shakers and tactile feedback: worth it or gimmick',
+  'motion rigs: what they add and what they cost',
+  'wind simulators and the diminishing-returns problem',
+  'direct drive wheelbase maintenance and firmware updates',
+  'gloves for sim racing: grip, sweat and wheel wear',
+  'monitor bezels, angles and field of view maths',
+  'usb power, hubs and the peripheral dropout problem',
+
+  // The body — nothing in the pool covered this
+  'posture and back pain in a fixed cockpit',
+  'wrist and forearm strain on a high-torque wheelbase',
+  'eye strain and screen distance over long sessions',
+  'stamina for endurance stints: the unglamorous half',
+  'hydration and breaks during a two-hour race',
 ];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -229,7 +368,7 @@ Rules:
       },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 8192,
+        max_tokens: MAX_TOKENS,
         messages: [{ role: 'user', content: userPrompt }],
         system: systemPrompt,
       }),
@@ -250,7 +389,28 @@ Rules:
   const data = await res.json();
   const text = data.content[0].text.trim();
   const clean = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/, '');
-  return JSON.parse(clean);
+
+  // A bare JSON.parse here threw away every post in the batch over one bad
+  // character — an unescaped quote, or a reply that hit the ceiling mid-post.
+  // The articles were already generated and paid for. Keep the ones that are
+  // well-formed, and when nothing is salvageable say WHY, because "ran out of
+  // room" (lower BATCH_SIZE) and "wrote malformed JSON" (a prompt problem) need
+  // different fixes and the parse error alone cannot tell them apart.
+  try {
+    const arr = JSON.parse(clean);
+    if (Array.isArray(arr)) return arr;
+  } catch { /* fall through to salvage */ }
+
+  const salvaged = salvageObjects(clean).filter(isUsablePost);
+  if (salvaged.length) {
+    console.warn(`    ⚠ batch JSON was malformed; salvaged ${salvaged.length} post(s)`);
+    return salvaged;
+  }
+  throw new Error(
+    data.stop_reason === 'max_tokens'
+      ? `the model ran out of room mid-batch (stop_reason=max_tokens) — lower BATCH_SIZE or raise MAX_TOKENS (${MAX_TOKENS})`
+      : 'the model wrote JSON that could not be parsed or salvaged'
+  );
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -345,12 +505,26 @@ async function main() {
         continue;
       }
 
-      let slug = post.slug;
+      // DROP a collision, never suffix it.
+      //
+      // This used to auto-suffix: -2, then -3, then -4, forever. That is the
+      // treadmill the monorepo cleared by hand on 2026-08-25 (18 duplicates, 7
+      // of them already auto-published) and now guards with a dedicated test.
+      // Here it was worse than latent: TOPIC_POOL holds 48 topics against 74
+      // published posts, and the loop below wraps with `topicIdx = 0 // cycle
+      // if needed`, so the pool is guaranteed to come back around to ground it
+      // has already covered. Every one of those would have shipped as
+      // <slug>-2 — a near-identical second page cannibalising the first, which
+      // on an affiliate site means splitting the ranking signal for the exact
+      // queries that earn the commission.
+      //
+      // Dropping is safe: a dropped post contributes nothing to wroteThisBatch,
+      // so a batch that is entirely duplicates counts as a stall and MAX_STALLS
+      // ends the run instead of grinding out suffixed twins.
+      const slug = post.slug;
       if (used.has(slug)) {
-        let n = 2;
-        while (used.has(`${post.slug}-${n}`)) n++;
-        slug = `${post.slug}-${n}`;
-        post.slug = slug;
+        console.warn(`  ✗ dropped "${slug}" — already covered; a -2 twin splits the ranking signal`);
+        continue;
       }
 
       // Validate gearKeys against the live allowlist; never let a post ship
