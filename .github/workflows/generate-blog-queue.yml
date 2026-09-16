@@ -19,7 +19,10 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 20 posts at one-per-call, allowing for retries. The 2026-09-16 run hit the
+    # old 30-minute ceiling mid-run and GitHub cancelled the job, which skipped
+    # the commit step and threw away everything it had written.
+    timeout-minutes: 90
     permissions:
       contents: write
     steps:
@@ -60,7 +63,15 @@ jobs:
           COUNT="${{ github.event.inputs.count || '20' }}"
           node _deploy/generate-post-queue.js --count "$COUNT"
 
+      # if: always() so a job timeout still banks what was written.
+      #
+      # Every post is on disk the moment it is generated, but the commit only
+      # happened at the very end — so when the 2026-09-16 run was cancelled at
+      # the timeout, the whole run's output died with the runner: generated,
+      # paid for, discarded. always() runs on cancellation too, so a slow run
+      # now keeps its work instead of losing all of it.
       - name: Commit new posts
+        if: always()
         run: |
           git config user.name "RealIRacing Blog Bot"
           git config user.email "bot@realiracing.com"

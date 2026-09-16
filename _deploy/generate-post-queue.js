@@ -19,9 +19,20 @@ const QUEUE_DIR     = path.join('_deploy', 'posts-queue');
 const PUBLISHED_DIR = path.join(QUEUE_DIR, '_published');
 const API_URL       = 'https://api.anthropic.com/v1/messages';
 const MODEL         = 'claude-haiku-4-5-20251001';
-const BATCH_SIZE    = 2; // posts per API call — RealIRacing posts run 1200-1700
-                          // words plus FAQs/gearKeys, so batches stay smaller
-                          // than NWM's (3) to comfortably fit the token cap.
+// ONE post per API call (was 2).
+//
+// The 2026-09-16 run — the first time this generator had ever actually run —
+// died on the job timeout with every generated post discarded, and the logs say
+// why: "API request timed out after 90s", five times. Two 1200-1700 word posts
+// with FAQ blocks do not come back inside 90 seconds, and each miss cost 90s
+// plus another 90s on the retry. Roughly half the run's wall-clock was spent
+// waiting on calls that were never going to land.
+//
+// Same lesson the monorepo's golferos and marpolis generators already carry:
+// "ONE post per call — batching lands on the output ceiling and the model
+// silently truncates. One post per call gives the full budget to one article.
+// Costs the same per post; just more requests."
+const BATCH_SIZE    = 1;
 // Two 1200-1700 word posts with FAQ blocks do not reliably fit 8192; the reply
 // stops mid-post and, before salvage existed below, took the whole batch with
 // it. 16000 is roughly double what a batch actually costs and still safe for a
@@ -304,7 +315,7 @@ function shuffle(arr) {
 
 // ─── API call ────────────────────────────────────────────────────────────────
 
-const REQUEST_TIMEOUT_MS = 90000; // hard cap per API call; without this a stalled
+const REQUEST_TIMEOUT_MS = 180000; // hard cap per API call; without this a stalled
                                    // connection hangs the whole job.
 
 async function generateBatch(topics, publishDate, usedSlugs, gearOptions) {
