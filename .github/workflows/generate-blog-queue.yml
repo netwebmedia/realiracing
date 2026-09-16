@@ -31,18 +31,29 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Check API key
-        id: keycheck
+      # FAIL, don't skip.
+      #
+      # This step used to emit a ::warning:: and set has_key=false, which made
+      # the two steps below `if:`-skip while the job still reported SUCCESS.
+      # The secret was never added, so that is exactly what happened every
+      # Monday from 2026-07-27 to 2026-09-14: nine consecutive green runs,
+      # 15-20 seconds each, generating nothing. The queue sat at 0 and
+      # realiracing.com published nothing for seven weeks with no red run
+      # anywhere to say so.
+      #
+      # A missing secret is a broken pipeline, not a quiet week. deploy.yml in
+      # this same repo already gets this right for the FTP secrets — ::error::
+      # and exit 1 — and the monorepo's golferos generator says it outright:
+      # "Without it the job fails loudly rather than shipping nothing quietly."
+      - name: Require API key
         run: |
           if [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ]; then
-            echo "::warning::ANTHROPIC_API_KEY is not set — skipping this scheduled run. Add it under Settings > Secrets and variables > Actions to enable automatic queue generation."
-            echo "has_key=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "has_key=true" >> "$GITHUB_OUTPUT"
+            echo "::error::ANTHROPIC_API_KEY is not set, so this run cannot generate anything. Add it under Settings > Secrets and variables > Actions. This now fails instead of passing silently — nine scheduled runs reported success while doing nothing."
+            exit 1
           fi
+          echo "✓ key present"
 
       - name: Generate posts
-        if: steps.keycheck.outputs.has_key == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
@@ -50,7 +61,6 @@ jobs:
           node _deploy/generate-post-queue.js --count "$COUNT"
 
       - name: Commit new posts
-        if: steps.keycheck.outputs.has_key == 'true'
         run: |
           git config user.name "RealIRacing Blog Bot"
           git config user.email "bot@realiracing.com"
