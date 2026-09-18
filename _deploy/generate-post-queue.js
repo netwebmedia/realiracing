@@ -11,7 +11,7 @@
 
 const fs   = require('fs');
 const path = require('path');
-const { salvageObjects, isUsablePost } = require('./lib/salvage.js');
+const { parseBatchReply } = require('./lib/salvage.js');
 
 process.chdir(path.join(__dirname, '..'));
 
@@ -336,7 +336,7 @@ Voice rules:
 - No fabricated specs, review counts, or lap-time claims — if you don't know a number, describe the trade-off qualitatively instead
 - FAQ answers must be plain text (no inline HTML tags) since they also populate FAQPage JSON-LD
 
-Return ONLY a valid JSON array of exactly ${topics.length} blog post objects. No markdown, no explanation, just the JSON array.
+Return ONLY a valid JSON array of exactly ${topics.length} blog post objects. No markdown, no explanation, just the JSON array. Always wrap the objects in an array, including when there is only one — return [ { ... } ], never a bare object.
 
 Each object must have exactly these fields:
 - slug: URL-friendly string, lowercase, hyphens, no dates, 3-7 words, must NOT be in this already-used list: ${JSON.stringify(recentSlugs)}
@@ -401,22 +401,16 @@ Rules:
   const text = data.content[0].text.trim();
   const clean = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/, '');
 
-  // A bare JSON.parse here threw away every post in the batch over one bad
-  // character — an unescaped quote, or a reply that hit the ceiling mid-post.
-  // The articles were already generated and paid for. Keep the ones that are
-  // well-formed, and when nothing is salvageable say WHY, because "ran out of
+  // The reply shape is not ours to control — an array, a bare object, a fenced
+  // block, or something truncated mid-post. parseBatchReply keeps whatever is
+  // complete; see _deploy/lib/salvage.js. When nothing is, say WHY: "ran out of
   // room" (lower BATCH_SIZE) and "wrote malformed JSON" (a prompt problem) need
   // different fixes and the parse error alone cannot tell them apart.
-  try {
-    const arr = JSON.parse(clean);
-    if (Array.isArray(arr)) return arr;
-  } catch { /* fall through to salvage */ }
-
-  const salvaged = salvageObjects(clean).filter(isUsablePost);
-  if (salvaged.length) {
-    console.warn(`    ⚠ batch JSON was malformed; salvaged ${salvaged.length} post(s)`);
-    return salvaged;
+  const { posts, via } = parseBatchReply(clean);
+  if (via === 'salvage') {
+    console.warn(`    ⚠ batch JSON was malformed; salvaged ${posts.length} post(s)`);
   }
+  if (posts.length) return posts;
   throw new Error(
     data.stop_reason === 'max_tokens'
       ? `the model ran out of room mid-batch (stop_reason=max_tokens) — lower BATCH_SIZE or raise MAX_TOKENS (${MAX_TOKENS})`
