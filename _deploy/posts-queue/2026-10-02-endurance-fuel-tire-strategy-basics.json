@@ -1,0 +1,168 @@
+{
+  "slug": "endurance-fuel-tire-strategy-basics",
+  "tag": "iRacing Tips · Strategy",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Endurance Racing Fuel and Tire Strategy: Essential Basics",
+  "description": "Master fuel consumption and tire degradation in long-distance iRacing. Learn stint planning, pit window timing, and tire-saving techniques for GT and prototype racing.",
+  "sections": [
+    {
+      "p": "Endurance racing separates the drivers who can manage one fast lap from those who can manage five hours of consistent pace. I learned this the hard way in my first 24-hour series race—I burned through fuel like I was qualifying, watched my tires fall off a cliff at lap 18, and then sat there watching better-prepared drivers cruise past me. Fuel consumption and tire strategy aren't afterthoughts in endurance; they're the foundation of everything else."
+    },
+    {
+      "p": "On my MOZA R9 rig, running long stints forces me to be deliberate about throttle management and braking smoothness in ways shorter races don't. Bumpy inputs spike fuel burn and heat tires faster. This post covers the basics of fuel planning, tire degradation, and stint structure—the knowledge that turns a 4-hour grind into a calculated race."
+    },
+    {
+      "h2": "Understanding Fuel Consumption in iRacing"
+    },
+    {
+      "p": "Fuel burn in iRacing is directly tied to throttle input, gear selection, and driving aggression. The more you're on the gas, the more fuel you use. This isn't a surprise, but the magnitude matters: aggressive drivers can consume 15–20% more fuel per lap than smooth ones on the same car and track."
+    },
+    {
+      "p": "The first step is finding your personal fuel consumption baseline for your car and track combination. Run a 10-lap practice stint at race pace, note your fuel level at the start and end, and calculate fuel-per-lap. Do this early, before you're tired or racing against anyone. I always run this test three times to account for variation, then take a conservative average—if my runs show 2.8, 2.9, and 3.0 liters per lap, I plan for 3.0."
+    },
+    {
+      "list": [
+        "Test in similar conditions to race (track temp, fuel load weight, tire age)",
+        "Drive smoothly but at race pace—not a slow practice run",
+        "Account for fuel-save mode if your car has it, and test both on and off",
+        "Run enough laps to stabilize; first three laps often show different consumption"
+      ]
+    },
+    {
+      "tip": "Fuel consumption compounds over a race. A 5% fuel-saving error on a 4-hour endurance event costs you a full stop or a forced fuel-save stint when you should be pushing.",
+      "tipLabel": "Precision Matters"
+    },
+    {
+      "h2": "Tire Degradation and Strategy"
+    },
+    {
+      "p": "Tire life in endurance racing is measured in stints, not laps. A single set of tires in a GT car might last 60–90 minutes of racing depending on the track, car, and setup. The question isn't just \"when do I pit?\", it's \"how do I extend my tires while staying competitive, and when do I accept a tire change and take a fresh set?\""
+    },
+    {
+      "p": "Most endurance series in iRacing enforce tire restrictions—you get a set number of tires for the race, or tires must last a certain number of minutes. Check your series rules before planning. If you're in a 6-hour race and get only four sets of tires, each set needs to handle roughly 90 minutes. That forces a different driving style than an open-tire race."
+    },
+    {
+      "p": "I run tire monitoring in my telemetry constantly. The key metrics are tire temperature and peak-to-peak laptime loss. If my tires are 80–90°C and I'm losing 0.3–0.5 seconds per lap versus fresh tires, they're degraded but manageable. If I'm losing a second per lap and struggling to hold temperature, it's time to change. The transition usually happens fast; tires go from manageable to dead within a couple of laps."
+    },
+    {
+      "list": [
+        "Early stint (laps 1–10): Tires are cold and graining. Go easy on initial acceleration and braking",
+        "Mid-stint (laps 10–40): Tires are fully warm. Push harder, but smoothly—this is your fastest window",
+        "Late stint (laps 40+): Tire dropoff accelerates. Expect 0.5–1.0 second loss compared to peak. Fuel-save if needed"
+      ]
+    },
+    {
+      "h2": "Stint Planning and Pit Strategy"
+    },
+    {
+      "p": "A stint is how long one driver runs before handing the car to a teammate (or before you pit for tires and fuel if you're soloing). Stint length is a balance between tire life, fuel capacity, and driver fatigue (in real racing) or just practicality (in iRacing)."
+    },
+    {
+      "p": "For a 4-hour endurance race with a standard GT3 car and two drivers, I typically plan 90-minute stints. That means each driver does two full stints, with pit stops for fuel and tires happening every 90 minutes. The math: if my car uses 3.0 L/lap and a lap is ~2 minutes, that's 90 liters per 90-minute stint. I check my car's fuel capacity (~100 liters for most GT3s) and adjust accordingly."
+    },
+    {
+      "olist": [
+        "Calculate race duration and number of drivers.",
+        "Estimate fuel consumption per lap and tires needed for stint length.",
+        "Divide total race time by number of drivers to get approximate stint length.",
+        "Add 5–10% buffer to fuel estimates and tire life (better to pit early than run out).",
+        "Plan pit stops at least 15 minutes apart to avoid traffic and chaos."
+      ]
+    },
+    {
+      "h2": "Fuel-Save Driving and Tire Management Techniques"
+    },
+    {
+      "p": "There will be moments when you need to stretch fuel or tires beyond comfort. Maybe the pit window closes, or a caution period got canceled, or you miscalculated. Fuel-save driving is a skill, not panic mode."
+    },
+    {
+      "p": "On the MOZA R9, I feel throttle response precision directly—it's where smooth inputs shine. Fuel-save driving prioritizes smoothness: coast into corners more, roll throttle gradually out of them, and avoid hard acceleration on straights. You're aiming to lose 3–5 seconds per lap, not 10. Losing too much pace makes fuel-save pointless because traffic kills you or you fall back to a lower split."
+    },
+    {
+      "list": [
+        "Reduce corner entry speed slightly; brake earlier to avoid over-slowing on the straight",
+        "Accelerate smoothly and gradually; avoid wheelspin or aggressive throttle application",
+        "Coast into long straights; let momentum carry you further before reaccelerating",
+        "In traffic, accept the time loss and focus on safety; hitting someone costs more fuel and tires than just losing pace",
+        "Check fuel math every few laps; if you're on pace to make it, resume normal driving"
+      ]
+    },
+    {
+      "p": "Tire-save driving is similar: smoother inputs, less aggressive line choices, and accepting slight pace loss. The goal is reaching the end of your stint without graining or blistering the tires. One blistered front-left that causes a vibration can cost 2–3 seconds per lap and force an early pit stop."
+    },
+    {
+      "h2": "Reading the Race and Adjusting Strategy"
+    },
+    {
+      "p": "Endurance racing is reactive. Your pre-race plan is a starting point, but cautions, traffic incidents, or teammate performance changes demand adjustments mid-race."
+    },
+    {
+      "p": "Track a few key numbers: your fuel margin (liters remaining versus laps to go), tire age (minutes on the set), and position relative to your target. If you're running 50 laps but have only 140 liters and burn 3.0 per lap, you're short by 10 liters. You either fuel-save the last 15 laps, pit early and take a splash, or risk running out. Most series don't let you finish on fumes, so adjust early."
+    },
+    {
+      "p": "Also monitor your teammates' pace if it's a team race. If your co-driver is consistently 1.5 seconds slower than you, they burn less fuel and manage tires more conservatively. Plan their stints accordingly. A slower driver might do three stints instead of two, or you might fuel-save more yourself to keep pits regular and minimize downtime.</p>"
+    },
+    {
+      "tip": "When in doubt, pit early. A 10-second pit stop costs less than running out of fuel or limping on dead tires.",
+      "tipLabel": "Conservative Wins Endurance"
+    },
+    {
+      "h2": "Common Mistakes and How to Avoid Them"
+    },
+    {
+      "list": [
+        "<strong>Underestimating fuel consumption:</strong> Testing at one track condition doesn't account for race-day heat or fuel-save mode. Always add a 10% safety margin.",
+        "<strong>Ignoring tire temperature:</strong> Pushing cold tires at the start of a stint causes graining and early degradation. Spend 3–4 laps warming them.",
+        "<strong>Racing for position too early:</strong> Laps 1–10 of your stint, focus on tire warm-up and fuel stability. Racecraft happens in the middle stint.",
+        "<strong>Missing pit-window math:</strong> Know when your pit window opens (when fuel or tires require a stop) and close (when you must pit or accept penalty). Misjudging costs a position or race finish.",
+        "<strong>Pit-stop chaos:</strong> Coordinate pit timing with teammates. Two cars pitting at once creates crew confusion and longer stops."
+      ]
+    },
+    {
+      "h2": "Practical Example: 4-Hour Endurance Setup"
+    },
+    {
+      "p": "Let's say you're running a 4-hour GT3 race with one teammate. You've tested and found 2.8 L/lap average fuel consumption (conservative). Your car holds ~100 liters. A lap takes ~2 minutes, so 2 minutes × 2.8 liters = 5.6 liters per 2-minute lap, or 168 liters per 60 minutes. At 100-liter capacity, you get roughly 35–36 minutes of fuel per stint before pitting."
+    },
+    {
+      "p": "For a 4-hour (240-minute) race with two drivers, that's 120 minutes each. You'd run three fuel stops at roughly 35-minute intervals: lap 1–35 (pit, fuel and tires), 35–70 (pit, fuel and tires), 70–120 (finish). Each stint is manageable, tires get fresh mid-race, and you avoid risk."
+    },
+    {
+      "p": "Your teammate does the same. Coordinate pit stops—if you pit at the 35-minute mark, have your teammate pit 2 minutes later to avoid crew traffic. This structure keeps pace predictable and reduces the chance of fuel or tire failure ruining the race.</p>"
+    },
+    {
+      "h2": "Building Your Strategy Notes"
+    },
+    {
+      "p": "Write down your strategy before the race. I use a simple format: fuel per lap, tires per stint, pit-stop times, and approximate pace targets. Share it with teammates if you're in a team race. During the race, update it with actual data—if fuel is running higher or lower than expected, adjust the math and communicate the change."
+    },
+    {
+      "p": "Endurance racing rewards preparation and calm decision-making over raw pace. Master fuel and tire strategy, and you'll finish more races than drivers twice as fast. It's a different skill, and it's worth learning well.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I know if I'm consuming too much fuel for my car and track?",
+      "a": "Run a 10-lap test stint at race pace in similar conditions to the actual race. Fuel consumption between 2.5 and 3.5 liters per lap is typical for GT3 cars depending on track and setup. If you're above 4.0, your car setup is likely inefficient, or you're driving too aggressively. Use telemetry to check for excessive wheelspin, late braking, or overspeed in corners."
+    },
+    {
+      "q": "When should I change tires during a long race?",
+      "a": "Change tires when they're losing more than 0.8–1.0 second per lap compared to peak, or when you see graining or blistering on the tire telemetry. Most endurance cars can run 60–90 minutes on a set. Plan tire changes to coincide with fuel stops to avoid an extra pit stop. If your series limits tire sets, calculate how many minutes each set must last and manage pace accordingly."
+    },
+    {
+      "q": "How do I fuel-save without losing too many positions?",
+      "a": "Fuel-save gradually: reduce throttle aggression, brake earlier, and coast more on straights. This typically costs 3–5 seconds per lap, which is manageable. Avoid fuel-saving so much you drop positions to slower traffic. Every few laps, recalculate fuel math; if you're on pace to make the end, resume normal driving. Practice fuel-save technique in practice sessions so it feels natural during the race."
+    },
+    {
+      "q": "What's the best pit-stop strategy for a two-driver endurance race?",
+      "a": "Divide race duration by two to get each driver's stint time. Calculate fuel and tires needed for that stint length. Pit every 35–50 minutes for standard GT3 cars. Stagger pit stops with your teammate by 2–3 minutes to avoid crew congestion. Always maintain a fuel and tire safety margin; it's better to pit 5 minutes early than to risk running out or suffering on degraded tires."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-21",
+  "dateLabel": "September 21, 2026"
+}

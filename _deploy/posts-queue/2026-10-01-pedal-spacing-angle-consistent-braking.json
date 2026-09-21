@@ -1,0 +1,145 @@
+{
+  "slug": "pedal-spacing-angle-consistent-braking",
+  "tag": "Setup Guides · Pedals",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "Pedal Spacing and Angle Setup for Consistent Braking",
+  "description": "How to position your pedals for repeatable brake pressure and muscle memory. Small geometry changes create big consistency gains.",
+  "sections": [
+    {
+      "p": "I've rebuilt my pedal setup three times in the past year — not because my MOZA CRP2s failed, but because I kept tweaking spacing and angle looking for that sweet spot where braking feels natural and repeatable. The frustrating truth is that pedal geometry is deeply personal, but there are objective principles that separate fast, consistent brakers from those who leak lap time to inconsistent pressure application."
+    },
+    {
+      "p": "Most sim racers treat pedal mounting as a one-time bolt-down. They don't. Spacing, angle, and height relative to your hip create the foundation for muscle memory. Get it wrong, and you're fighting your own body geometry every lap. Get it right, and your brake point becomes automatic."
+    },
+    {
+      "h2": "Why Pedal Spacing Matters More Than You Think"
+    },
+    {
+      "p": "Pedal spacing — the distance between brake and throttle — determines how much ankle rotation you need to transition between them. Too close, and your foot jabs the brake while still touching throttle. Too far, and you're making large leg movements that break rhythm and invite mid-corner input errors."
+    },
+    {
+      "p": "On my rig, I run roughly 100–120 mm between the brake and throttle pedals (measured center-to-center at the pedal pads). That gives me enough separation to distinguish inputs without requiring exaggerated ankle work. If you're coming from console games where pedal placement was fixed, this spacing might feel wrong at first — your muscle memory is calibrated to something that doesn't physically exist. You have to rebuild it."
+    },
+    {
+      "list": [
+        "<strong>Too close (&lt;80 mm):</strong> Risk of trailing brake into corners, harder to modulate smoothly, ankle fatigue from constant micro-adjustments",
+        "<strong>Optimal (90–130 mm):</strong> Clean transitions, repeatable pressure curves, reduced fatigue over long races",
+        "<strong>Too far (&gt;150 mm):</strong> Large weight shift between pedals, inconsistent application timing, harder to trail-brake"
+      ]
+    },
+    {
+      "tip": "Measure your real car's pedal spacing as a reality check. Most road cars run 80–120 mm; GT race cars are often tighter, around 60–90 mm. Your sim rig should mirror the car you're driving, not what feels 'easiest.'",
+      "tipLabel": "Real-world reference"
+    },
+    {
+      "h2": "Pedal Angle: The Hidden Consistency Lever"
+    },
+    {
+      "p": "Angle is where I see the biggest variance across rigs. Some people mount pedals flat (0°). Others angle them 20–30° relative to the floor. There's no universal 'right' angle, but there's definitely an optimal angle for <em>your</em> leg length, seat height, and hip position."
+    },
+    {
+      "p": "I run my pedals at roughly 15° forward rake (the pedal face angles slightly away from me). This lets me apply brake pressure with my foot flat and my leg at a natural extension — no toe-down clawing required. If I angle them too steep, my foot slides forward on every hard braking event. Too flat, and I'm applying pressure from my toes, which divorces the pedal input from my big muscle groups and kills repeatability."
+    },
+    {
+      "p": "The key is aligning your pedal plane with your natural leg position when you're seated correctly. Sit in your rig as you would for a 2-hour endurance race. Where does your foot naturally rest? That's your baseline angle. Adjust from there."
+    },
+    {
+      "h2": "Height Relative to Your Seat: The Overlooked Variable"
+    },
+    {
+      "p": "I've seen rigs where the pedals are mounted much lower than the seat, forcing the driver into a stretched-leg position. Others have the pedals nearly level with the seat. Both create problems."
+    },
+    {
+      "p": "Ideally, your pedals sit roughly 3–5 cm below the level of your seat. Your knee should be bent at approximately 90–110° when your foot is fully on the brake. This posture lets you apply consistent pressure using your whole leg — quads, glutes, core — not just your foot. It also reduces strain on your ankle and lets you modulate finer pressure changes without cramping."
+    },
+    {
+      "p": "If your pedals are too high, you're driving from a stretched position that tires fast and invites inconsistency. Too low, and you're working with a flexed knee that limits your force range and makes trail-braking harder to control."
+    },
+    {
+      "h2": "Setting Up Your Own Spacing and Angle"
+    },
+    {
+      "olist": [
+        "Mount your pedals in a neutral starting position — brake and throttle roughly parallel, roughly 100 mm apart, pedal face at 10–15° forward rake.",
+        "Sit in your rig in full race position — back firmly in seat, hands on wheel. Relax your leg fully on the pedals.",
+        "Check your knee angle. Adjust seat height until you're bent at ~100°.",
+        "Check your ankle position. Your foot should rest flat on the brake pad without toe-down claw or heel-up stretch. Adjust rake angle if needed.",
+        "Test transitions. Move from full throttle to full brake 10 times. The motion should feel smooth and rhythm-based, not cramped or overextended.",
+        "Record your baseline: measure spacing (center-to-center), angle (use a phone level on the pedal face), and seat height relative to pedal level.",
+        "Drive a familiar track for 3–5 laps. If you're consistently missing apexes or locking up under braking, adjust one variable at a time (spacing first, then angle, then height).",
+        "Document your final setup. Photo your pedal assembly with measurements. If you ever rebuild, you'll have a reference."
+      ]
+    },
+    {
+      "tip": "Most consistency problems feel like 'the pedal is wrong' when it's actually that your spacing or angle changed after a crash or rebuild. I take a phone photo of my pedal side-view quarterly just to verify nothing's shifted.",
+      "tipLabel": "Prevention beats troubleshooting"
+    },
+    {
+      "h2": "Spacing and Angle on the MOZA CRP2: Practical Notes"
+    },
+    {
+      "p": "The MOZA CRP2 pedal set is modular — you can adjust spacing via the mounting plate and angle via the cockpit frame. I've experimented with both, and here's what I've learned:"
+    },
+    {
+      "list": [
+        "The brake pedal itself has adjustable resistance (via firmware and mechanical springs), but spacing and angle are hardware-limited by your cockpit. Don't expect software to fix bad geometry.",
+        "The CRP2 brake's load-cell sensor is extremely sensitive to entry angle. If you angle the pedal face more than 20° off-perpendicular to your leg's natural motion, you'll get non-linear pressure curves and dead zones.",
+        "Start with the pedal pads mounted parallel to the floor, then angle the entire pedal assembly forward. This preserves linear sensor response while matching your leg geometry.",
+        "Test your spacing with a dummy foot (or wearing the shoes you race in). Barefoot testing can be misleading — your actual braking shoes may be thicker than you expect."
+      ]
+    },
+    {
+      "h2": "Common Mistakes That Kill Consistency"
+    },
+    {
+      "list": [
+        "<strong>Matching real-car spacing exactly:</strong> Real cars have narrower spacing partly because you're not looking at them while driving. In VR or triples, you can see your feet; cramped spacing feels worse than it is. Sim spacing can be 10–20% wider than real cars.",
+        "<strong>Angling for 'ease' instead of 'naturalness':</strong> A flat pedal is easier to build than a raked one, but it usually feels unnatural. Ease in mounting isn't the same as ease in driving.",
+        "<strong>Forgetting that angle changes effective spacing:</strong> If you rake your pedals 20° forward, the visual spacing increases even though the hardware spacing didn't. Your brain notices. Angle and spacing interact; adjust together, not in isolation.",
+        "<strong>Mounting pedals too high or too low relative to your seat:</strong> This is a primary cause of locked brakes and missed apexes. Get the height right first — spacing and angle are secondary."
+      ]
+    },
+    {
+      "h2": "Track Testing Your New Setup"
+    },
+    {
+      "p": "After any spacing or angle change, spend at least 5–10 laps on a familiar track before you judge the setup. Your muscle memory is deep; even small changes take 2–3 laps to feel 'normal,' and another 3–5 laps to judge whether the new geometry is actually faster."
+    },
+    {
+      "p": "I usually test on a short circuit where I have a known baseline. I'll do 5 laps at the old spacing, then switch and do 5 laps at the new spacing. Same car, same track, same conditions — the lap-time delta tells me if I've gained or lost. If lap times are within 0.2 seconds, it's probably just muscle-memory lag, and I'll stick with the new setup for a week.</p>"
+    },
+    {
+      "p": "Pay attention to specific corners. Some pedal setups are faster on trail-brake entries but slower on hard-stop corners. A truly good spacing and angle setup feels fast <em>everywhere</em>, not just in your strongest braking zones."
+    },
+    {
+      "tip": "Use telemetry to check your brake pressure curves after changing pedal geometry. If your brake-pressure graph is suddenly spiky or inconsistent, the new angle is working against your muscle memory. That's fixable — just takes practice — but it's good to know upfront.",
+      "tipLabel": "Telemetry catch"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should my pedal spacing match the car I'm driving?",
+      "a": "Not exactly. Real cars have physical constraints — floor pans, transmission tunnels — that force tight spacing. Your sim rig should match the car's spacing as a starting point, but if it feels wrong for your leg geometry or shoe size, it's okay to adjust 10–20 mm. Consistency matters more than absolute realism. If the car has 70 mm spacing and that causes constant lockups on your rig, go to 85–90 mm and practice."
+    },
+    {
+      "q": "How do I know if my pedals are angled correctly?",
+      "a": "Your foot should rest flat on the brake pad without toe-down claw (toes curled down for pressure) or heel-up stretch (heel lifting off). When you apply brake, the motion should come from your foot and ankle moving slightly, not from your whole leg shifting forward. If you're constantly fighting the angle to make smooth transitions, it's wrong. Adjust in 5–10° increments and retest."
+    },
+    {
+      "q": "Does pedal spacing affect trail-braking ability?",
+      "a": "Yes, significantly. Wider spacing (>130 mm) makes it harder to blend brake and throttle inputs, which makes trail-braking feel choppy. Tighter spacing (<90 mm) can cause accidental throttle blip while you're still trailing brake. The sweet zone for trail-braking is usually 90–120 mm, where your ankle can smoothly transition both pedals in a coordinated motion without one input interfering with the other."
+    },
+    {
+      "q": "Should I adjust pedal angle for different cars or series?",
+      "a": "No. Your pedal hardware should stay fixed; the car's input sensitivity and brake balance are what change. What does change is how you drive — a formula car with a short wheelbase and hyper-responsive brakes will demand different pressure modulation than a heavy GT3. But your pedal angle, spacing, and height should be tailored to your body and cockpit geometry, then left alone. Consistency comes from trusting your setup."
+    }
+  ],
+  "gearKeys": [
+    "moza-crp2",
+    "cockpit",
+    "moza-r9"
+  ],
+  "published": "2026-09-21",
+  "dateLabel": "September 21, 2026"
+}

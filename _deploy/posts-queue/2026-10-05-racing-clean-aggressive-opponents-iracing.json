@@ -1,0 +1,136 @@
+{
+  "slug": "racing-clean-aggressive-opponents-iracing",
+  "tag": "iRacing Tips · Racecraft",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Racing Clean When Your Opponent Won't: Survival and Speed",
+  "description": "How to stay competitive and incident-free when facing aggressive drivers. Practical defensive lines, positioning, and mental shifts.",
+  "sections": [
+    {
+      "p": "I've been nose-to-rear with drivers who see every corner as a WWE audition. On my MOZA R9 setup, where I can feel every lock-up and understeer moment in real time, I've learned that staying clean against aggressive racers isn't about being slow or passive. It's about anticipating aggression, controlling the narrative of the corner, and making yourself too expensive to overtake."
+    },
+    {
+      "p": "The frustration is real. You're hitting your marks, braking consistently thanks to your load-cell pedals, and some driver three seconds back decides a divebomb is their only strategy. But here's the truth: clean racing when others won't is where racecraft separates the mid-field grinders from drivers who move up."
+    },
+    {
+      "h2": "Recognize the Aggressive Driver Early"
+    },
+    {
+      "p": "The first lap is your diagnostic. Watch how they behave in the first two corners. Are they carrying too much speed into turn-in? Do they brake late and drift wide every single lap? Are they making aggressive moves under braking when they're nowhere near a passing opportunity? That's a driver operating above their own limit, which means they're unpredictable."
+    },
+    {
+      "p": "On my R9 rig, I can sense throttle application and brake timing through FFB. An aggressive driver typically shows erratic inputs—big corrections, late trail-braking, sudden lock-ups. Once you identify them, your job isn't to race faster; it's to be unpassable."
+    },
+    {
+      "list": [
+        "Late or sloppy braking = opportunity to lock them out with defensive positioning",
+        "Weak corner exit = they'll be slow down the next straight; don't panic",
+        "Multiple wide lines = they're not committed; don't leave racing room on their preferred side",
+        "Dive bombing attempts = they're desperate; one mistake ends their race, not yours"
+      ]
+    },
+    {
+      "h2": "Control the Defensive Line Without the Drama"
+    },
+    {
+      "p": "Defensive driving isn't blocking. Blocking earns you a protest and a 4x. Defensive driving is taking the line that is fastest for you and happens to make their life hard."
+    },
+    {
+      "p": "When an aggressive driver is approaching for an overtake, the key is to run the legitimate racing line and commit to it early. Turn-in earlier than you normally would—not erratically, but decisively. This accomplishes two things: you're on the apex, which is the fastest point, and they can't nosedive down the inside because you're already there. On a track like Mid-Ohio or any short course, this is critical."
+    },
+    {
+      "p": "On straights, if they're closing in, I move to the middle line early and hold it smoothly. No sudden switches. Smooth, committed movement. Sudden jerks look like blocking and invite contact. But a driver committed to the racing line from 100 meters out? That's just where you're driving."
+    },
+    {
+      "tip": "The fastest defensive line is your actual fast line. Don't compromise your entry, apex, or exit trying to \"block\" them. Commit to your rhythm and let their desperation be their problem.",
+      "tipLabel": "Fast = Safe"
+    },
+    {
+      "h2": "Position for the Escape Route"
+    },
+    {
+      "p": "This is the mental shift that changed how I race against aggressive fields. Instead of defending the apex, think about where you'll be after the apex if they dive-bomb you."
+    },
+    {
+      "p": "Let's say turn 1 on a circuit. You know this driver is loose on braking. You can either grip the inside apex tightly (risky—they'll hit you), or you can take a line that runs you slightly wider on the exit, which puts you on the racing line and gives you room to make a sharp correction if they clip your rear. You're not sacrificing pace; you're taking the exit that actually sets up turn 2."
+    },
+    {
+      "olist": [
+        "Take your fast line through the corner—don't sacrifice the line for defense",
+        "Plan your exit in a way that gives you distance from where they'll likely end up",
+        "If they hit you, the contact is marginal because you're both on the racing line (not your fault)",
+        "If they miss, you're already accelerating onto the straight with momentum and turn-in for the next corner"
+      ]
+    },
+    {
+      "h2": "Brake Pressure and the Psychological Edge"
+    },
+    {
+      "p": "With my MOZA CRP2 load-cell pedals, I can feel exactly where threshold braking lives. Aggressive drivers often rely on seeing your brake lights late, thinking you're committing to a certain line. They're not reading your inputs; they're reading your brake glow."
+    },
+    {
+      "p": "If I sense an aggressive overtake attempt brewing, I'll brake a fraction earlier than I normally would—not early enough to compromise my line, but early enough that my brake lights come on sooner. This convinces them I'm turning in earlier than I actually am, and they run out of stopping distance before the corner. They'll pass me on the straight but lock up into the turn. Advantage: you."
+    },
+    {
+      "p": "It's not about being slow. It's about controlling information. Consistent, predictable braking is harder to attack than nervous, late braking."
+    },
+    {
+      "h2": "The Mental Game: Don't Let Them Infect Your Driving"
+    },
+    {
+      "p": "This is the part that costs drivers the most. You get frustrated, you try to race back, and suddenly you're the aggressive one. Your lap times collapse. Now you're fighting two problems: the other driver and your own anger."
+    },
+    {
+      "p": "I use this rule: one position lost to aggression per race, I accept it. If they're going to drive into my side pod because they misjudged braking, I let them. I drive the next lap clean, nail the setup, and watch them spin out three laps later because they're still above their limit. Aggressive drivers crash themselves. Your job is to not be their crash dummy."
+    },
+    {
+      "p": "Focus on your pace, your consistency, and your safety rating. A driver with a +1.00 iRating gain and a +0.10 safety rating gain is on an upward trajectory. That driver in your mirrors with a -2.00 iRating and damage all over their car? They're on the downward spiral."
+    },
+    {
+      "tip": "Clean racing compounds over time. Dirty racing is a short-term play that collapses under repetition. Maintain your focus and let statistics do the talking.",
+      "tipLabel": "Time Is Your Ally"
+    },
+    {
+      "h2": "Track-Specific Aggressive Patterns"
+    },
+    {
+      "p": "Certain corners breed aggression. High-speed corners (Copse at Silverstone, the carousel at Road America) are where aggressive drivers try to out-brake you. Low-speed hairpins are where they think they can carry extra mid-corner speed. Runoff areas invite bold moves."
+    },
+    {
+      "p": "Know your track's aggression hotspot. At that corner, be extra disciplined. Take a slightly wider line if it's safe to do so. Brake a fraction earlier. You're not surrendering the position; you're avoiding the point of contact. The overtake attempt at the next corner, where there's no runoff and they have to be precise? That's when they'll make a real mistake."
+    },
+    {
+      "h2": "The Documentation Mindset"
+    },
+    {
+      "p": "If an aggressive driver causes contact or you think they've driven unfairly, keep that moment in your head for the next race. Not to retaliate—to be ready. You'll likely see them again. Now you know their pattern: which corner they attack, how they brake, what line they prefer. You'll be ready with better positioning, earlier turn-in, or a defensive line that makes their playbook obsolete."
+    },
+    {
+      "p": "I've seen drivers I faced three seasons ago show up in my split and attack the same turn in the same way. They haven't improved. I have. That's the win."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is defensive driving the same as blocking? Will I get protested for moving to defend my line?",
+      "a": "No. Blocking is a sudden, reactive swerve directly into an opponent. Defensive driving is committing to your racing line early and holding it. If you turn in to apex at the normal point and a driver crashes into you trying to out-brake you, that's their fault, not yours. You're not moved laterally; you're on the line you should be on. Blocks are sudden and erratic; good defense looks deliberate and smooth."
+    },
+    {
+      "q": "What if they just keep dive-bombing me every corner? Should I protest?",
+      "a": "One or two aggressive attempts in a race is typical. If a driver is making zero effort to make the corner and is just using you as a braking marker lap after lap, that's worth noting. Document it with the replay. That said, a single protest usually doesn't stick unless there's intentional ramming. Your best response is to out-drive them or accept the position loss and move on. Consistency beats aggression over a season."
+    },
+    {
+      "q": "Does this advice apply in ovals and road course racing the same way?",
+      "a": "Road course and oval are different. On ovals, aggressive drivers play drafting games and inside-line commits. The same principle applies—commit to your line early, don't flinch—but you have fewer corners and more straightaway chess. On road courses, corners are your control points. Aggressive drivers struggle on technical road courses because precision requires patience. Choose your defensive moments at high-speed corners where they're most likely to make mistakes."
+    },
+    {
+      "q": "How do I stay mentally calm when someone else is driving dirty?",
+      "a": "Remind yourself that aggressive drivers are usually losing iRating and safety rating long-term. Your job is to stay clean, hit your marks, and let time sort it out. I use focus on telemetry between sessions: review your lines, brake points, and lap consistency. Shift your anger into data. That driver lost you three positions? Now you have three positions of data on where you can improve your pace. Clean drivers move up. Aggressive ones plateau or drop."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-21",
+  "dateLabel": "September 21, 2026"
+}

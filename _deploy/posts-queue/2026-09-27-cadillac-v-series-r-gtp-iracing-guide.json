@@ -1,0 +1,174 @@
+{
+  "slug": "cadillac-v-series-r-gtp-iracing-guide",
+  "tag": "Car Guide · GTP Racing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Cadillac V-Series.R GTP iRacing Guide: Setup and Technique",
+  "description": "Master the Cadillac V-Series.R GTP with proven setup adjustments, brake calibration, and racecraft tactics for iRacing's top prototype class.",
+  "sections": [
+    {
+      "p": "The Cadillac V-Series.R is one of the most rewarding cars I've driven in iRacing's GTP class—fast, stable, and genuinely fun once you nail the fundamentals. Unlike some prototypes that demand razor-edge precision, the Cadillac rewards smooth inputs and consistent throttle control, which means a well-sorted rig and disciplined technique can pull you up the field quickly. I've spent serious hours on this thing across Le Mans, Daytona, and Spa, and I want to walk you through the setup changes, pedal calibration work, and racecraft moves that actually move lap times."
+    },
+    {
+      "p": "This is not a \"quick tune\" guide. This is about understanding why the Cadillac feels the way it does on your rig, how to adjust it for consistency, and how to drive it smoothly in traffic. If you're coming from GT3, the GTP car will feel less forgiving on curbs and less stable at the absolute limit—but that's where the speed lives."
+    },
+    {
+      "h2": "Your Brake Setup: Pressure Curve and Modulation"
+    },
+    {
+      "p": "On my MOZA CRP2 load-cell pedals, I start with a brake pressure curve that sits around 0.85–0.90 across the entire travel range. The Cadillac's hydraulic brakes respond well to a slightly softer initial ramp than you might use in GT3; you're trading the ability to dump it from 100 to 0 kph in one move for better modulation and consistency in trail-braking zones."
+    },
+    {
+      "list": [
+        "Set your load-cell pedal curve to ~85–90% peak pressure across full travel; too aggressive and you'll lock the rears under heavy downforce",
+        "Bias sits around 52–54% front on most configurations; increase 1–2% if you're locking rears at 150+ kph, decrease if fronts slide under 100 kph",
+        "Brake pressure scale in-sim: set to 0.90–0.95 to avoid over-sensitivity; load-cell pedals don't need aggressive simulation scaling",
+        "Calibrate your pedal's zero point after every session, especially if your rig sees temperature swings; I use <a href=\"moza-crp2-brake-calibration-pressure-curves.html\">my standard CRP2 calibration routine</a> before serious driving"
+      ]
+    },
+    {
+      "tip": "The Cadillac's brake feel improves dramatically once you dial out pedal flex. If your cockpit is bouncing under hard braking, you'll chase setup changes that aren't the real problem. Check your wheelbase and pedal-plate mounting first.",
+      "tipLabel": "Brake Stability First"
+    },
+    {
+      "h2": "Suspension Baseline: Aero Balance and Stability"
+    },
+    {
+      "p": "The Cadillac loves a balanced aero setup. I always start by setting front and rear wing angles to match the track's turn density: tight stuff like Monaco or Road America gets a moderate front wing (~10–12°) and neutral rear (~8–10°), while high-speed circuits like Spa or COTA want more downforce overall but balanced, not nose-heavy."
+    },
+    {
+      "list": [
+        "Anti-roll bars (ARB): start symmetrical at 10–12 front, 12–14 rear; the car prefers slight understeer bias—add 1–2 front ARB if oversteer at turn-in, add rear ARB if mid-corner push",
+        "Ride height: drop front and rear 1–2 clicks below default if track surface is smooth; higher clearance if there are rumbles or quick bumps that upset the car",
+        "Brake ducts: leave cooling at stock unless you're doing a 3-hour endurance stint; overheating is not your primary concern in qualifying or short sprints",
+        "Diff lock: rear diff on-power lock sits around 30–40% at most tracks; Cadillac doesn't need aggressive locking, which just makes rotation harder mid-corner"
+      ]
+    },
+    {
+      "p": "I test suspension changes in short runs—3 laps hot, 2 cool-down laps, repeat. The Cadillac's behavior is so consistent that small adjustments (1 click on spring rates or ARB) show up clearly by lap 2 of the next run."
+    },
+    {
+      "h2": "Throttle Control and Wheelspin Management"
+    },
+    {
+      "p": "This is where I see the biggest difference between casual GTP drivers and quick ones. The Cadillac has enough power to light up the rear tires on corner exit if you're sloppy, but it also has enough grip that smooth throttle application actually pays time versus aggressive mid-range inputs. I practice rolling on the throttle in 25% increments until the car feels settled, then applying full throttle only when aero load is building through the apex."
+    },
+    {
+      "list": [
+        "First ~10% throttle should happen before you're even at the apex; if you wait until the track-out point, you'll wheelie or spin",
+        "Traction control: I run TCS at 4–5 for most road courses; high enough to catch wheelspin under 150 kph, low enough to feel the edge above that",
+        "If you're spinning mid-corner after applying throttle, you're carrying too much brake into the turn—don't fix it in setup or traction control; fix your line",
+        "Test throttle modulation on a long straight with lots of DRS or slipstreaming potential; the Cadillac's low-mid-range torque is where consistency lives"
+      ]
+    },
+    {
+      "h2": "Qualifying Setup vs. Race Setup"
+    },
+    {
+      "p": "For qualifying, I run low fuel (~15 liters), aggressive wing angles, and a softer front ARB to maximize turn-in response on a single flying lap. Fuel weighs the car down and eats into aero efficiency, so lighter is always faster for Q pace. In races, I shift gears completely: higher fuel load, conservative aero if the race is sprint-length, and a slightly stiffer setup that tolerates tire degradation and fuel weight without becoming a rolling tank."
+    },
+    {
+      "olist": [
+        "Qualifying: fuel to 15 liters, front wing +1–2°, soften front ARB by 1–2 clicks, lower brake pressure bias by 1% (less fuel = less brake force needed)",
+        "Race stint 1–2 hours: fuel to 35–40 liters, revert to balanced aero, stiffen ARB by 1 click to handle heavier weight, increase brake pressure bias by 1–2%",
+        "Race stint 2+ hours: fuel to survival level (usually 25 liters), max aero for high-speed flow, stiff front and rear ARB to compensate for tired tires"
+      ]
+    },
+    {
+      "tip": "Fuel weight changes how the car rotates and where it loses grip first. If your race setup suddenly feels planted compared to qualifying, it's not magic—it's lower fuel loading. When you pit and refuel, expect a quarter-lap of readjustment even if you don't touch setup.",
+      "tipLabel": "Fuel Load Matters More Than You Think"
+    },
+    {
+      "h2": "Racecraft: Traffic and Defensive Driving"
+    },
+    {
+      "p": "The Cadillac is quick in isolation, but where it really shines is in multi-car racing. Its balanced setup and predictable brake response make it easy to follow closely without losing pace, and its straight-line speed is competitive enough that slipstream passes are genuine opportunities rather than desperate moves."
+    },
+    {
+      "list": [
+        "Following: sit 1.5–2.0 car-lengths back to stay in cleaner air, but close enough to pick up the slipstream down straights; the Cadillac's aero is efficient, so draft gains are real",
+        "Passing: use slipstream to set up an outside move on slow corners (Road America, VIR) or an inside dive-bomb on faster corners where the lead car runs wide lines; patience beats aggression",
+        "Defending: if someone is hunting you with a tow, use late apexes and track-out depth to kill their run on the following straight; the Cadillac is easier to defend with than GT3 because it rotates predictably",
+        "Restarts and restarts after yellows: accelerate in a straight line, no weaving—the Cadillac's traction is good enough that illegal movement isn't necessary and will cost you penalties"
+      ]
+    },
+    {
+      "h2": "Common Mistakes and How to Fix Them"
+    },
+    {
+      "p": "After dozens of sessions, I've identified the three killers for Cadillac pace: over-aggressive braking under high downforce, under-rotating on entry because of stiff ARB settings, and chasing tail-happy exit behavior with TCS instead of line adjustments."
+    },
+    {
+      "list": [
+        "<strong>Locking rears on 150+ kph braking:</strong> Drop front anti-roll bar by 1–2 clicks instead of increasing brake bias; the car is actually under-rotating, not over-braking",
+        "<strong>Loose on exit after good entry:</strong> Don't add rear wing; soften rear ARB by 1 click first and adjust your throttle roll-on speed. Mid-corner grip loss usually means you're asking for rotation too early",
+        "<strong>Front end feels plowed and unresponsive:</strong> Check your brake pressure bias—if it's over 55%, the front tires are overloaded on entry. Drop bias 1–2% and confirm rig flex isn't eating input",
+        "<strong>Consistent understeer mid-corner:</strong> Add front wing angle by 0.5–1.0°, not front ARB; the Cadillac prefers aero balance over suspension stiffness for turn-in response"
+      ]
+    },
+    {
+      "h2": "Track-Specific Notes"
+    },
+    {
+      "p": "Every track demands slightly different Cadillac tuning, but the principle is consistent: match aero load to turn density, and let the brake bias and ARB do the rest. Here's what I've learned on the most popular GTP circuits:"
+    },
+    {
+      "list": [
+        "<strong>Spa and COTA (fast, high-downforce):</strong> Rear wing 12–14°, front wing 11–12°, soft front ARB (9–10), stiff rear ARB (14–16). Let the car hunt for grip rather than trying to force turn-in with suspension.",
+        "<strong>Le Mans and Road America (flowing, technical):</strong> Moderate aero (front 9–10°, rear 9–10°), balanced ARB (10 front, 12 rear). These tracks reward smooth inputs and consistency, so avoid aggressive adjustments.",
+        "<strong>Daytona Road Course (bumpy, varied corners):</strong> Soft front and rear ARB (9 and 11), higher ride height to clear bumps. Front wing sits at 10–11° even though there's a banked turn; aero doesn't scale with banking.",
+        "<strong>Sebring (rough, abrasive):</strong> Stiff rear ARB (13–15) to control tire loading over bumps, soft front (10–11) to help front-end compliance. Brake ducts matter here because hard braking + rough surface = heat.",
+        "For <a href=\"monza-iracing-guide.html\">high-speed low-downforce circuits like Monza</a>, run minimum aero (front 8°, rear 7°), soft ARB all around, and accept that turn-in will be sluggish—the car is aerodynamically limited, not suspension-limited"
+      ]
+    },
+    {
+      "h2": "FFB Tuning on the MOZA R9"
+    },
+    {
+      "p": "My MOZA R9 wheelbase (~9 N·m peak torque) handles the Cadillac beautifully. I use a moderate FFB strength (around 60–70% in-sim) because the car's high downforce naturally loads the steering, and over-amplifying would just be noise. The key is setting understeer margin and natural vibration high enough to feel what the tires are doing."
+    },
+    {
+      "list": [
+        "FFB strength: 60–70% depending on downforce level; higher downforce = lighter FFB percentage needed",
+        "Understeer margin: 1.2–1.4; enough to feel when grip is leaving, not so high you get phantom vibration at 100% grip",
+        "Natural vibration: 0.8–0.9; road bumps and curbs should feed back clearly, but not so much that your hands are constantly correcting",
+        "Damping and spring: leave both at 0 unless you want a heavy, slower-responding wheel for endurance work; FFB strength and natural vibration do all the work"
+      ]
+    },
+    {
+      "tip": "The Cadillac rewards sensitivity to FFB feedback. Spend a session dialing your MOZA settings and learning what mid-corner understeer, trail-brake lockup, and traction loss feel like through the wheel. That muscle memory is worth more than any setup change.",
+      "tipLabel": "FFB Is Communication, Not Gimmick"
+    },
+    {
+      "h2": "Final Thoughts: Why the Cadillac Matters"
+    },
+    {
+      "p": "The Cadillac V-Series.R is not the fastest GTP car in raw pace, but it's the most consistent and the easiest to improve with. Every session teaches you something about fuel load, brake modulation, or line work because the car is so responsive to small inputs. If you're looking to climb the GTP grid or prepare for endurance racing, mastering the Cadillac is a smart investment in your fundamentals. Focus on smooth throttle, modulated braking, and feeding the tires progressively—and you'll find yourself competitive on any track iRacing throws at you."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the ideal brake pressure curve for the Cadillac V-Series.R on load-cell pedals?",
+      "a": "Start with a curve that delivers roughly 85–90% peak pressure across your full pedal travel. This gives you modulation in trail-braking zones without lock-ups under downforce. Adjust bias around 52–54% front depending on track and setup; increase bias if rears lock at high speeds, decrease if fronts slide under 100 kph."
+    },
+    {
+      "q": "How do I fix constant mid-corner understeer in the Cadillac?",
+      "a": "Add front wing angle by 0.5–1.0 degrees first—understeer is usually an aero balance issue, not suspension. If that doesn't work, soften the front anti-roll bar by 1 click to help turn-in response. Avoid stiffening the rear ARB as a fix; the Cadillac prefers aero-led balance."
+    },
+    {
+      "q": "Should I run different setups for qualifying versus a long race?",
+      "a": "Yes. For qualifying, use 15 liters of fuel, aggressive wing angles, and a softer front ARB for maximum turn-in response. For race stints, increase fuel to 35–40 liters, revert to balanced aero, and stiffen the front ARB by 1–2 clicks to handle the added weight. Adjust brake bias up 1–2% because fuel weight requires more braking force."
+    },
+    {
+      "q": "What's the best throttle management technique for avoiding wheelspin on corner exit?",
+      "a": "Apply the first 10% of throttle before you reach the apex—do not wait until track-out. Roll on smoothly in 25% increments as aero load builds through the turn, then apply full throttle only when the car is stable and settled. If you're spinning, you're either carrying too much brake into the turn or asking for rotation too early, not a traction control problem."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "cockpit"
+  ],
+  "published": "2026-09-21",
+  "dateLabel": "September 21, 2026"
+}

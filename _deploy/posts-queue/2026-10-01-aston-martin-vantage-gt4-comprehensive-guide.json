@@ -1,0 +1,158 @@
+{
+  "slug": "aston-martin-vantage-gt4-comprehensive-guide",
+  "tag": "Car Guide · GT Racing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Aston Martin Vantage GT4 iRacing: Setup, Braking, and Race Craft",
+  "description": "Master the Vantage GT4's mid-range performance with practical setup guidance, brake calibration, and overtaking lines for consistent GT4 racing.",
+  "sections": [
+    {
+      "p": "The Aston Martin Vantage GT4 sits right in the middle of the GT4 grid — not the fastest, not the slowest, but demanding of precision. I've spent enough laps in this car on my MOZA R9 to know that smooth inputs and consistent trail braking are what separate a safe mid-field runner from someone climbing the grid. It's a car that rewards patience and punishes impatience, which makes it an excellent teacher for drivers serious about GT4 racing."
+    },
+    {
+      "p": "This guide covers the real-world setup tweaks I've found useful, how to exploit its particular brake characteristics with my CRP2 load-cell pedals, and the race craft lines that turn the Vantage into a competitive weapon despite its modest power figures."
+    },
+    {
+      "h2": "Understanding the Vantage GT4's Strengths and Weaknesses"
+    },
+    {
+      "p": "The Vantage GT4 is a balanced car that doesn't excel in any single area but remains forgiving across diverse track types. Its straight-line speed is competitive but not dominant — you won't out-drag a Porsche 718 or BMW M4 GT4, but you can match most grid peers in acceleration. Where it shines is mid-corner stability and tire consistency. The suspension geometry rewards drivers who carry momentum through technical sections rather than those hunting apex speed."
+    },
+    {
+      "p": "The car's weakness is outright corner exit traction. Compared to the Porsche 718 Cayman, which feelsplanted exiting slow corners, the Vantage requires a softer touch on throttle application. This is where your setup and trail-braking technique become critical — you're trading outright corner exit power for mid-corner speed and longitudinal stability."
+    },
+    {
+      "list": [
+        "Mid-corner grip is excellent; use this in technical sections like Eau Rouge or Turn 1 at Suzuka",
+        "Brake stability is strong; the car remains composed even under heavy threshold braking",
+        "Tire degradation is moderate and fairly linear — no sudden cliffs late-race",
+        "Throttle response is sensitive; small inputs compound quickly at corner exit",
+        "Downforce efficiency is reasonable but not class-leading"
+      ]
+    },
+    {
+      "h2": "Base Setup Strategy for GT4 Racing"
+    },
+    {
+      "p": "I always start with the official iRacing baseline and adjust from there rather than wholesale rebuilding. The Vantage's stock setup is honest and reasonably quick — you're not fighting against a broken foundation. My first move is always brake bias. On most road courses, I run ~56–58% front brake bias, which feels natural on my load-cell pedals. The Vantage wants slightly more front bias than I'd run in a Porsche, because the rear axle is softer and more prone to lock-up under heavy braking."
+    },
+    {
+      "p": "Anti-roll bar stiffness is where personality creeps in. I typically soften the front ARB by 2–3 clicks from stock on technical tracks (Suzuka, Red Bull Ring, Brands Hatch) to improve turn-in feel and reduce snap oversteer. On high-speed circuits (Road America, Spa), I leave it closer to stock or stiffen slightly for stability. The rear ARB is less sensitive — I rarely touch it more than one click either direction."
+    },
+    {
+      "p": "Suspension geometry (camber, caster, toe) is track-dependent, but a sensible starting point is: front camber -3.5° to -4.0°, rear camber -2.5° to -3.0°, front toe-in 0.15°–0.25°, and rear toe-out 0.10°. These figures hold across most road courses and will get you within 0.5 seconds of pace on your first session."
+    },
+    {
+      "tip": "The Vantage's brake balance is more forgiving than you might think. Don't obsess over it. A 56% front, 44% rear split will work on almost any track; small adjustments (±1%) won't tank your lap time. Focus instead on consistency with your pedal pressure.",
+      "tipLabel": "Brake Tuning"
+    },
+    {
+      "h2": "Brake Calibration and Pressure Curves"
+    },
+    {
+      "p": "Braking is where my CRP2 load-cell pedals shine with the Vantage. Load-cell brakes demand you build a muscle memory for pressure modulation, which the Vantage rewards more than other GT4 cars. The car's stable brake bias means you can be aggressive on initial application without fear of the rear locking — you're learning to trail-brake with confidence rather than caution."
+    },
+    {
+      "p": "My typical brake pressure curve is linear with a slight softness in the first 10% travel to smooth any jerk on trail-braking entries. The pedal reaches full pressure at ~85–90% travel, leaving the last 10–15% as a safety margin. This prevents accidental over-application while still giving me the full ~300 bar stopping power when needed. I calibrate this curve in practice sessions and leave it locked for the race weekend — consistency matters more than perfection here."
+    },
+    {
+      "p": "Trail braking with the Vantage requires patience. The car responds well to smooth pressure blending mid-corner, especially on longer deceleration zones (Turn 1 at Monza, the chicane at Paul Ricard, Eau Rouge at Spa). I typically hold brake pressure for 0.5–1 second longer than I would in the Porsche, then decay gradually over the next 2–3 car-lengths. This keeps the Vantage's front end loaded and stable, preventing the rear from tightening mid-apex."
+    },
+    {
+      "list": [
+        "Use the car's stable brake balance to practice aggressive threshold braking without fear of lockup",
+        "Decay pressure gradually; the Vantage doesn't like sudden pedal releases mid-corner",
+        "On short braking zones (hairpins, sharp direction changes), modulate with full pressure rather than feathering",
+        "Reference your telemetry: brake pressure should never spike suddenly unless you're panicking"
+      ]
+    },
+    {
+      "h2": "Race Craft: Overtaking and Defending"
+    },
+    {
+      "p": "The Vantage's mid-field position in the GT4 grid means you'll spend time both overtaking and being overtaken. Its strength is consistency; most drivers will drive in a straight line around you rather than attempt a dive. Exploit this by controlling the braking zone. The car's brake stability means you can brake later than faster cars, allowing you to out-decelerate them and claim the racing line."
+    },
+    {
+      "p": "When overtaking a car with more power (Porsche 718, BMW M4), avoid trying to match them on corner exit. Instead, brake deeper into the hairpin or technical complex, claim the inside line, and accept that they'll slipstream you back down the straight. Then brake again, late, and take the next corner. This leapfrog approach works because the Vantage's brake stability is a genuine advantage — you'll feel more confident on the threshold than a driver wrestling an M4 GT4."
+    },
+    {
+      "p": "Defending is straightforward: hold the normal racing line and assume your opponent will brake late. Don't move defensively; just drive smoothly and make your car a large target. The Vantage isn't slippery in a draft, and your mid-range speed will discourage all but the most aggressive drivers from committing to a desperate pass. If someone does commit, let them go; you'll likely reclaim the position on the next technical section where your mid-corner grip shines."
+    },
+    {
+      "h2": "Track-Specific Setup Notes"
+    },
+    {
+      "h3": "Spa and High-Speed Circuits"
+    },
+    {
+      "p": "At Spa, the Vantage struggles slightly with outright straight-line speed. Compensate by being smoother on throttle application exiting Blanchimont, Turn 1, and other long corners. I run slightly stiffer front anti-roll bar (~1 click stiffer than baseline) and reduce wing angle slightly to gain 1–2 km/h on the straights. Brake balance stays around 56% front. The car's brake stability means Eau Rouge is a genuine passing opportunity — brake deep into the chicane and claim the inside line."
+    },
+    {
+      "h3": "Monza and Short-Gear Circuits"
+    },
+    {
+      "p": "Monza exposes the Vantage's lack of rear-end traction. Setup-wise, I soften the rear anti-roll bar by 1–2 clicks to improve corner exit grip, and I'm even gentler with throttle application than usual. Don't try to match a BMW M4 out of the Parabolica; instead, focus on consistent trail braking into Turn 1 and Trust the car's brake balance to get you stopped before the apex. The chicane at Turn 2 is where you'll find most passing opportunities."
+    },
+    {
+      "h3": "Suzuka and Technical Circuits"
+    },
+    {
+      "p": "This is where the Vantage thrives. The car's mid-corner grip is excellent, and its sensitivity to throttle input rewards smooth, patient driving. I run softer front anti-roll bar settings here (~2 clicks softer than high-speed baseline) and focus entirely on smooth line execution through the technical sections (130R, Spoon Curve, the first sector). Brake bias can creep forward slightly (57–58%) because you're braking harder into slower corners. Your advantage here is precision, not speed — drive a mistake-free race and you'll run in the top five of any clean GT4 grid."
+    },
+    {
+      "tip": "The Vantage teaches you to smooth. Lap time gains come from eliminating micro-corrections, not from more aggressive inputs. If you're getting frustrated with the car's response, you're probably steering and braking too hard.",
+      "tipLabel": "Driver Technique"
+    },
+    {
+      "h2": "Tire Management Over a Race Stint"
+    },
+    {
+      "p": "GT4 tire degradation is mild compared to faster racing series, but the Vantage's tire behavior does change over a 30–60 minute stint. Fresh tires are twitchy; the car wants small inputs and smooth throttle application. After 10–15 laps, the tires heat up and you'll gain 0.3–0.5 seconds of pace as grip improves. By lap 25–30, you've found your optimum window. From there, degradation is gradual and fairly linear — no sudden cliffs."
+    },
+    {
+      "p": "My strategy is to be conservative on lap 1 (one flying lap only if it's a rolling start), build into the tires over the next 5–10 laps, then settle into a sustainable pace that you can repeat for the final 20 minutes of the stint. The Vantage rewards consistency over heroics, and tire life management rewards drivers who don't scrub speed with excessive steering lock or aggressive braking."
+    },
+    {
+      "list": [
+        "Lap 1–5: Be conservative; the tires are cold and will lock or oversteer easily",
+        "Lap 6–15: Build gradually; lap times will drop 0.2–0.3 seconds per lap as tires heat",
+        "Lap 16–35: Settle into your race pace; this is where you'll spend most of the race",
+        "Lap 36+: Monitor tire feel; if the rear is loose, traffic is coming, or you're defending, fuel mixture up slightly"
+      ]
+    },
+    {
+      "h2": "Practical Insights from Real Driving"
+    },
+    {
+      "p": "After many hours in the Vantage, I've learned that this car separates drivers by smoothness, not speed. Faster drivers in Porsches or BMWs will beat you on raw pace — that's physics. But in a 60-minute race with traffic, pit stops, and restarts, the Vantage driver who makes no mistakes and never tightens under pressure will finish ahead of someone thrashing a faster car. This is genuinely useful feedback: the Vantage is a teaching car. If you can run a clean, consistent race in a Vantage, you're ready for hotter cars like the Porsche 911 GT3 or faster series entirely."
+    },
+    {
+      "p": "I also find the Vantage rewarding on practice starts and restarts. Its stable throttle response means you can plant the power cleanly on a rolling start without dramatic wheelspin, which wins races. Use this advantage whenever the safety car is out or when starting from pit lane after a pitstop. One clean restart where you gain two places will do more for your race than one perfect flying lap."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the optimal brake bias for the Vantage GT4 on most road courses?",
+      "a": "Start at ~56-58% front, 42-44% rear. The Vantage's stable rear axle allows this bias without rear-lock risk. Adjust ±1% based on track characteristics — high-speed circuits may go slightly rearward (55%), while technical tracks can go forward (58%). The key is consistency: lock in your bias for the race and focus on smooth pedal modulation rather than tweaking."
+    },
+    {
+      "q": "How should I adjust the Vantage for high-speed versus technical circuits?",
+      "a": "High-speed circuits (Spa, Road America): stiffer front anti-roll bar (+1 click), normal rear ARB, slightly reduced wing angle for top speed. Technical circuits (Suzuka, Red Bull Ring): softer front anti-roll bar (-2 clicks), slightly reduced rear ARB, normal or increased wing for stability. The front ARB is your primary adjustment tool; the car's mid-corner character changes dramatically with even small changes."
+    },
+    {
+      "q": "What's the best strategy for overtaking in a Vantage GT4?",
+      "a": "Use brake superiority. The Vantage's stable braking means you can brake deeper and later than competitors, especially faster cars with twitchy rears. Brake deep into a slow-speed corner or chicane, claim the inside line, and accept the slipstream loss exiting that corner. Retake the position at the next braking opportunity. Avoid trying to match corner-exit power; you'll lose every time."
+    },
+    {
+      "q": "How does tire degradation affect my race pace over a 60-minute stint?",
+      "a": "Fresh tires are twitchy (laps 1-5); build into them gradually over the first 10-15 laps, during which you'll gain 0.3-0.5 seconds. Laps 16-35 are your optimum window with linear, mild degradation. By lap 40+, you may notice slight rear looseness, especially in high-speed corners. Plan your pit window for lap 25-35 to exit with fresh rubber and finish strong rather than nursing old tires to the flag."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "cockpit"
+  ],
+  "published": "2026-09-21",
+  "dateLabel": "September 21, 2026"
+}

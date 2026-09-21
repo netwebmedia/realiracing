@@ -1,0 +1,149 @@
+{
+  "slug": "zandvoort-iracing-guide-banking-crests",
+  "tag": "Track Guides · iRacing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Zandvoort iRacing Guide: Banking, Blind Crests, and Line Choice",
+  "description": "Master Zandvoort's unique banking and blind-crest challenges. Learn where to brake, how to trust the banking, and why your throttle discipline matters more than your wheel.",
+  "sections": [
+    {
+      "p": "Zandvoort is the first track I load when I want to remind myself why sim racing isn't about being smooth—it's about being brave in the right places. The Dutch circuit sits right on the beach, and that coastal setting meant they had to build elevation changes into every corner to create proper racing ground. The result is a track that punishes brake hesitation in the banking and demands absolute commitment through blind crests. On my MOZA R9 rig, I feel every degree of that bank, and that feedback is exactly what separates a 1:36 from a 1:34 lap."
+    },
+    {
+      "p": "The banking is real, but it's not your friend—at least not initially. And the blind crests aren't just visual tricks; they change how your car's weight transfers and where you can actually place your throttle. This guide covers the line, the braking points, and the mindset adjustments that make Zandvoort click."
+    },
+    {
+      "h2": "Understanding Zandvoort's Banking and Why It Feels Wrong"
+    },
+    {
+      "p": "The banking at Zandvoort—particularly through turns 1, 3, and 8—is roughly 15–19 degrees. That's steep enough to feel alien if you're used to flat circuits, but not steep enough to let you carry corner speed blindly. The banking wants to push you wide, not help you turn in."
+    },
+    {
+      "p": "Here's what I learned on my rig: the banking doesn't support your speed; it fights your geometry. When I brake into Turn 1 (the first banked corner after the long straight), I'm braking in a straight line, but the moment I start to turn in, the banking is actively pushing my front tires away from the apex. That means I can't modulate brake pressure through the corner like I would on a flat track. I have to release the brakes earlier and more completely, then immediately commit to throttle. There's almost no mid-corner steering adjustment possible."
+    },
+    {
+      "tip": "The banking amplifies weight transfer sensitivity. Release the brakes hard, and the weight shift will make your front snap—hit the limit and you'll oversteer. Dragging brake into the banking is a confidence killer and will cost you 0.3 seconds a lap.",
+      "tipLabel": "Banking Weight Transfer"
+    },
+    {
+      "h2": "Brake Zones: The Banking Demands Complete Release"
+    },
+    {
+      "p": "At banked corners, I brake much later than I initially thought I should, then release all pressure at once. This goes against every instinct from flat-track racing, where you milk the brake into the corner. At Zandvoort, that approach stuffs your front tires."
+    },
+    {
+      "list": [
+        "Turn 1: Brake hard on the straight, release completely by ~60m before the apex. Let the banking and your entry speed do the work. Trailbraking makes Turn 1 a slide show.",
+        "Turn 3 (the Gerlach bend): Similar commit—brake into the approach, release early, accept that you're turning in on throttle, not brakes. The car will feel like it's running wide; that's correct.",
+        "Turn 8 (Tarzan): Brake later than you'd expect, release fully before the banking grabs you. This corner bites hard if you're still decelerating when the bank kicks in.",
+        "Non-banked corners (2, 5, 6, 7, 9, 10, 11, 12): Trail braking works normally here. These are your rhythm corners."
+      ]
+    },
+    {
+      "p": "The shift from banked to flat corners is jarring. Turn 2 follows Turn 1 immediately and is flat; the contrast means I often overdrive my entry there because I'm still in the high-commitment mindset. Shift back to normal braking modulation for turn 2, or you'll understeer wide."
+    },
+    {
+      "h2": "Blind Crests and Weight Compression"
+    },
+    {
+      "p": "Zandvoort's blind crests—particularly over the rise at Turn 3 and the swell before Turn 9—do something that flat-track experience doesn't prepare you for: they compress your suspension hard, then unload it violently. If you're on throttle cresting a blind hill, your car gets lighter in a way that makes traction fragile."
+    },
+    {
+      "p": "At Turn 3 (Gerlach), the road pitches upward as it banks. You crest the hill while the banking is still working, and if you've fed in too much throttle early (trying to exit hard), the weight transfer will spin your rear out. I learned this the hard way: I was aggressive leaving Turn 3, trusting the bank, and got a violent snap at the top of the rise because my rear tires lost load exactly when I needed grip."
+    },
+    {
+      "p": "The blind crest before Turn 9 is less severe but more treacherous because you can't see the apex. You enter on throttle through a kink, then the road rises and the turn tightens. Throttle discipline is everything. I ease in, feel the weight come off the rear, then feed it in progressively as I crest the hill and start to see the track open up again."
+    },
+    {
+      "tip": "Blind crests feel slower but are usually faster. Lifting early and easing throttle into a blind compression is worth 0.2 seconds because you exit with more traction and stability.",
+      "tipLabel": "Blind Crest Strategy"
+    },
+    {
+      "h2": "Line and Throttle Through the Banking"
+    },
+    {
+      "p": "The banking wants you low and running tight to the curb, but the line isn't obvious because you're fighting centrifugal force while trying to turn. Here's what works on my rig:"
+    },
+    {
+      "olist": [
+        "Turn 1: Brake on the straight, turn in early and tight to the apex. The banking will try to push you wide; fight it and run low. This creates an early-apex geometry that uses the bank to keep you in.",
+        "Turn 3: Same principle, but you're cresting a hill. Turn in slightly earlier than on a flat track, run the inside line, and avoid being aggressive until the road flattens at the exit.",
+        "Turn 8: The tightest banked corner. Short, sharp turn-in, apex-focused, then wait until you're past the rise to feed in throttle.",
+        "Exit throttle placement: On all banked exits, I wait until the road begins to flatten before going full throttle. Timing this transition is the difference between a clean exit and a spin."
+      ]
+    },
+    {
+      "p": "Visually, banked corners feel like you should run wide to use all the track. Resist that instinct. Run tight, low, and committed. The wider line actually compresses your suspension into understeer because the banking is pushing you away from the apex."
+    },
+    {
+      "h2": "Gear and Setup Sensitivity at Zandvoort"
+    },
+    {
+      "p": "Zandvoort's mix of banking, high-speed kinks, and tight second-gear hairpins means your setup has to compromise. On my MOZA R9 setup, I notice force feedback is crucial here because the banking creates feedback that feels wrong until you trust it. My R9 transmits the banking pressure clearly—that push against your turn-in. That feedback is what lets you know when you're at the limit of the banking's support."
+    },
+    {
+      "p": "If your FFB is dampened or filtered, you'll lose confidence at Zandvoort because you won't feel when the banking stops helping. On my CRP2 pedals, I run slightly softer brake pressure (lowering the load cell range by 5–10%) at Zandvoort because the banking and weight transfers demand more finely-tuned inputs. A stiff brake pedal and Zandvoort's aggressive weight shifts don't mix well—you'll modulate badly and lock tires."
+    },
+    {
+      "list": [
+        "Brake pressure: Lower than on flat tracks. The banking amplifies every brake modulation. Aim for smooth pressure zones, not trails.",
+        "Differential: A slightly more aggressive engine brake (via differential lock on coast) helps with the banked-exit transitions.",
+        "Downforce: Zandvoort is medium-speed, so your baseline setup matters. The banking reduces the value of front wing; if you're running a lot of front wing on flat circuits, you can dial it back 2–3 points here.",
+        "Suspension stiffness: Stiffer springs and anti-roll bars help manage the banking's weight transfer, but too much stiffness will make the blind crests uncontrollable."
+      ]
+    },
+    {
+      "h2": "Common Mistakes and How to Fix Them"
+    },
+    {
+      "p": "I see three mistakes repeat across split times at Zandvoort:"
+    },
+    {
+      "list": [
+        "<strong>Overbraking into the banking.</strong> Drivers hit the brakes too hard or drag them too long into banked corners, which loads the front tires and forces understeer or a mid-corner lockup. Fix: Release brakes earlier, accept the car will feel loose, and manage the rotate with smooth throttle modulation.",
+        "<strong>Running the wide line.</strong> It looks natural on a bank, but it's actually slower. The wider line uses more of the turn's radius and forces you to handle more weight transfer. Fix: Aim for a tight, low line through all banked corners. It will feel cramped, but it's correct.",
+        "<strong>Aggressive throttle on crests.</strong> Blind crests eat cars when drivers feed in throttle too early. You crest, the car gets light, and the rear lets go. Fix: Ease throttle into blind rises, then open it up as the road flattens."
+      ]
+    },
+    {
+      "h2": "Building Confidence at Zandvoort"
+    },
+    {
+      "p": "Zandvoort feels unsafe at speed because the banking and blind crests create genuinely strange sensations. My first session, I was timid, and my times showed it. The moment I committed—trusting the setup, the line, and the banking—lap times dropped 0.4 seconds immediately. That's not a small gain; it's the difference between competitive times and embarrassing ones."
+    },
+    {
+      "p": "Spend one session just learning the commitment points. Mark where you start turning in at each banked corner. Mark where you release the brake fully. Mark where you begin feeding throttle on the exit. Then do a second session focusing only on holding those marks. By the third session, the confidence will click."
+    },
+    {
+      "tip": "Record a reference lap and watch it back. Payback attention to your brake releases and throttle transitions at the banking. You're probably releasing brakes too late and feeding throttle too early—that's what most of us do initially.",
+      "tipLabel": "Telemetry Check"
+    },
+    {
+      "p": "Zandvoort rewards bravery and punishes hesitation. It's a short lap (~1:37 in GT cars on my rig), so every corner matters. Once you own the banking and respect the crests, it's one of the most satisfying circuits to drive. The feedback is honest, the consequences are clear, and the pace gains are real."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why does braking feel so sensitive at Zandvoort compared to other tracks?",
+      "a": "The banking amplifies weight transfer. When you brake on a banked surface, the weight shift is magnified because the banking is already pushing your car sideways. Release brake pressure later than you normally would, and you'll load the front tires beyond their limit and trigger understeer or a lockup. Release brakes completely earlier than feels natural, and let the banking support your turn-in instead."
+    },
+    {
+      "q": "Should I use trail braking through the banked corners?",
+      "a": "No. Trail braking at Zandvoort's banked corners will load your front tires and cause you to push wide or understeer. Instead, brake hard on the straight, release completely well before the apex, then manage your line entirely with throttle. It feels wrong, but it's faster and more consistent than trying to modulate brakes mid-corner on a bank."
+    },
+    {
+      "q": "Why do I spin on throttle at the blind crests?",
+      "a": "Blind crests unload your suspension, which removes weight from the rear tires exactly when you're feeding throttle. If you're too aggressive with throttle input while cresting blind terrain, the rear loses grip and spins. Ease throttle into blind compressions, wait until the road flattens and you can see the apex, then progressively feed in full throttle."
+    },
+    {
+      "q": "What setup changes should I make specifically for the banking?",
+      "a": "Focus on brake pressure first—lower the load cell range or soften brake stiffness to allow more modulation sensitivity. Slightly increase anti-roll bars to control the banking's weight transfer. You can reduce front wing by 2–3 points compared to your baseline since the banking reduces the relative benefit of high downforce. Avoid very stiff suspension overall, as the blind crests will make the car unsettled."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-21",
+  "dateLabel": "September 21, 2026"
+}
