@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Your Own Setup From iRacing's Baseline: When and How</title>
+  <meta name="description" content="Learn when to stop relying on baseline setups and start modifying for your rig, driving style, and track conditions." />
+  <link rel="canonical" href="https://realiracing.com/blog/building-setup-from-iracing-baseline.html" />
+  <meta property="og:title" content="Building Your Own Setup From iRacing's Baseline: When and How" />
+  <meta property="og:description" content="Learn when to stop relying on baseline setups and start modifying for your rig, driving style, and track conditions." />
+  <meta property="og:url" content="https://realiracing.com/blog/building-setup-from-iracing-baseline.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://realiracing.com/assets/photos/rig-seat.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="750" />
+  <meta property="og:image:alt" content="A racing bucket seat and harness" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://realiracing.com/assets/photos/rig-seat.jpg" />
+  <link rel="stylesheet" href="blog.css?v=20260826" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Building Your Own Setup From iRacing's Baseline: When and How",
+    "description": "Learn when to stop relying on baseline setups and start modifying for your rig, driving style, and track conditions.",
+    "author": { "@type": "Person", "name": "Carlos Martinez", "url": "https://realiracing.com" },
+    "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "https://realiracing.com" },
+    "mainEntityOfPage": "https://realiracing.com/blog/building-setup-from-iracing-baseline.html",
+    "image": "https://realiracing.com/assets/photos/rig-seat.jpg",
+    "datePublished": "2026-09-21",
+    "dateModified": "2026-09-21"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many laps should I drive a baseline before I modify it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "At least 15–20 laps at racing pace. You need enough time to understand the car's behavior across multiple corners and fuel loads, and to confirm whether a problem is setup or your own driving. If you're still finding faster lines lap 10, keep driving before you change anything." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I modify a baseline for practice or save my changes for race day?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Practice only. A baseline is designed for consistency and safety. Use practice sessions to build your personal baseline—a setup tailored to your rig and driving that you'll keep using. Never race on a setup you've only tested for 10 laps. You need 30+ racing laps at that setup before you trust it in a race." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it better to download a shared setup from the community or build from the baseline?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Download a shared setup to understand what the community is doing, but race a setup you understand. A shared setup optimized for someone else's rig, pedal pressure, and driving style will feel wrong on yours. Use it as inspiration: load it, compare it to the baseline, ask why they adjusted what they did. Then build your own." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I make a change and the car feels worse but my lap times are the same?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Revert it and move on. If a change doesn't show a clear lap-time improvement or doesn't fix a specific problem you identified, it's not a real gain. Sim racing setup changes should feel good and be measurable. If it's only one but not the other, trust your lap times—feeling is subjective, timing is not." }
+    }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">
+      <svg class="nav-logo-wheel" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#e8ff00" stroke-width="2.5"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#2a2d35" stroke-width="7"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#e8ff00" stroke-width="2" stroke-dasharray="14 56" stroke-dashoffset="-10"/>
+        <line x1="20" y1="20" x2="7" y2="24" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="33" y2="16" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="20" y2="34" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3" fill="#e8ff00"/>
+      </svg>
+      <span>Real</span>IRacing
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#media">Media</a></li>
+      <li><a href="/#content">Content</a></li>
+      <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
+      <li><a href="/#platforms">Platforms</a></li>
+      <li><a class="nav-cta" href="https://www.youtube.com/@realtape" target="_blank">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <p class="section-label">Setup Guides · Car Setup</p>
+    <h1>Building Your Own Setup From iRacing's Baseline: When and How</h1>
+    <div class="article-meta">
+      <span class="author">Carlos Martinez</span>
+      <span class="dot">·</span>
+      <span>Updated September 21, 2026</span>
+      <span class="dot">·</span>
+      <span>9 min read</span>
+    </div>
+
+        <figure class="article-photo">
+          <img src="/assets/photos/rig-seat.jpg" width="1000" height="750" alt="A racing bucket seat and harness" loading="eager" decoding="async">
+          <figcaption>Photo: <a href="https://www.flickr.com/photos/25632349@N04" target="_blank" rel="noopener nofollow">The Car Spy</a> · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener nofollow">CC BY 2.0</a> · Source: <a href="https://commons.wikimedia.org/wiki/File:Bucket_seat_with_Schroth_six-point_harness_in_a_2010_Porsche_997_GT3_RS_3.8.jpg" target="_blank" rel="noopener nofollow">Wikimedia Commons</a></figcaption>
+        </figure>
+
+    <div class="article-body">
+      <p class="disclosure">Some links on this page may earn RealIRacing a commission at no extra cost to you. Gear I personally race on is called out as such; other picks are researched recommendations.</p>
+
+      <p class="article-lead">The first time I loaded a baseline setup in iRacing, I thought I'd found the cheat code. Here was a setup crafted by professional drivers, ready to go, promising consistency. I locked it in, hit the track, and... felt like I was fighting the car. Not because the baseline was bad—it wasn't—but because a baseline setup is a starting point, not a destination. It doesn't know my rig, my braking pressure preferences, or how the weather has shifted since it was published.</p>
+
+      <p>After ~2 years on my MOZA R9 and CRP2 pedals, I've learned the difference between following a setup and understanding one. The baseline teaches you structure. Building from it teaches you *why*. This is where lap time stops being luck and starts being intentional.</p>
+
+      <h2>Why Baselines Work—and Why They Don't</h2>
+
+      <p>A baseline setup is a safety net. It's been tested across dozens of drivers and rigs, tuned for the median experience, and it's usually quick enough to be competitive in rookie and lower-division series. On my rig, a baseline typically puts me within 0.3–0.5 seconds of my personal best in the first 20 minutes. That's genuinely useful.</p>
+
+      <p>But here's the catch: a baseline setup is built to work everywhere and optimize nothing. It's balanced in a way that appeals to many drivers because it offends few. Brake bias is conservative. Anti-roll bars are middle-ground. Differential settings assume you're neither a trail-braker nor a late-apex guy. That generality means the moment you understand your own driving—your pressure curve, your corner speeds, your confidence in turn-in—a baseline becomes a ceiling, not a floor.</p>
+
+      <p>Your rig matters too. The MOZA R9's ~9 N·m of force feedback feels different than a belt-drive wheel at the same torque setting. Your cockpit's stiffness, your pedal pressure curve, your monitor's latency—they all shift the window of what feels "right" in the car. A baseline tuned on someone's Fanatec rig won't translate 1:1 to mine.</p>
+
+      <h2>Know When You're Ready to Modify</h2>
+
+      <p>I used baselines for my first 50 hours without touching a single slider. That was correct. If you're still learning the track, still figuring out the car's behavior at the limit, a baseline removes one variable—setup chaos—so you can focus on driving. Modify too early and you'll blame the setup for every mistake when the problem is really you.</p>
+
+      <p>Here are the signals that you're ready to start building:</p>
+
+      <ul>
+        <li>You can hit your target lap time consistently within 0.1 seconds across 10 laps.</li>
+        <li>You can identify a specific problem: "The car wants to understeer mid-corner," not "The car feels weird."</li>
+        <li>You've driven the track 20+ laps and understand the flow.</li>
+        <li>You know your own driving quirks—whether you prefer mid-high brake pressure, trail-braking, or late apexes.</li>
+      </ul>
+
+      <p>If you're still hunting for one good lap in ten, the baseline is your friend. If you're hunting for a tenth on lap 25, it's time to build.</p>
+
+      <h2>The Three-Step Framework I Use</h2>
+
+      <h3>Step 1: Identify Your Limiting Factor</h3>
+
+      <p>I start by driving the baseline for 15–20 laps and writing down what bothers me. On my MOZA R9 setup, I watch for: Where does the car fight me most? Is it slow into corners? Unstable mid-corner? Does the rear slide when I accelerate? Does brake pressure feel inconsistent with my pedal travel?</p>
+
+      <p>The limiting factor is usually not what you think it is. I once spent an hour tweaking anti-roll bars for understeer when the real problem was that my brake bias was too rear-biased, making the car pitch forward and load the front. I modified the wrong thing because I didn't diagnose correctly.</p>
+
+      <p>Use telemetry. iRacing's built-in telemetry viewer shows you speed loss in every corner. If you're losing 5 mph more than the baseline in the same corner, that's a signal. Download a baseline telemetry file and compare yours to it lap-by-lap. That's diagnostic gold.</p>
+
+      <h3>Step 2: Change One Thing, Drive 10 Laps, Compare</h3>
+
+      <p>This is non-negotiable, and it's where patience separates builders from tinkerers. On my first attempt to modify a baseline, I adjusted brake bias, anti-roll bar stiffness, and differential lock in the same session. The car felt faster for one lap, then worse for the rest, and I had no idea which change caused what.</p>
+
+      <p>Now I adjust one parameter—say, increase front anti-roll bar stiffness by 2 points. I drive 10 laps at racing pace, note how the car responds in 2–3 key corners, and decide: better, worse, or no real difference. Only then do I move to the next adjustment. This takes longer, but you build *understanding*, not luck.</p>
+
+      <div class="tip-box">
+        <span class="box-label">The 10-Lap Rule</span>
+        <p>If you're unsure whether a change helped, it didn't. Real improvements feel obvious after 10 laps. If you need 50 laps to decide, you've moved away from your baseline without gaining clarity.</p>
+      </div>
+
+      <h3>Step 3: Establish Your Baseline for Your Rig</h3>
+
+      <p>After I've made 3–5 meaningful changes, I save that setup as *my* baseline—not the series baseline, but the version dialed for my driving and rig. On the MOZA R9 with my braking style and my cockpit geometry, this becomes the starting point I use for future tracks in the same series.</p>
+
+      <p>A GT3 baseline you've modified for your rig will serve you better across 10 tracks than ten different baselines will. You're not reinventing the wheel every session; you're evolving.</p>
+
+      <h2>The Areas That Make the Most Difference</h2>
+
+      <p>Not all adjustments move the needle equally. Some changes are worth your time; others are setup theater. These are the high-leverage adjustments I prioritize when building from a baseline:</p>
+
+      <ul>
+        <li><strong>Brake bias.</strong> This is personal to your pedal pressure curve and your driving style. A baseline assumes moderate brake pressure; if you prefer higher pressure for modulation (like I do with the CRP2), you may need more rear bias to avoid locking the front.</li>
+        <li><strong>Anti-roll bars (front and rear).</strong> These change how the car loads in corners and directly affect understeer/oversteer balance. The baseline is usually neutral; you can lean front-heavy for confidence or rear-heavy for aggression.</li>
+        <li><strong>Differential lock (acceleration and deceleration).</strong> Higher lock = more grip mid-exit but less forgiveness if you're sloppy. Lower lock = smoother but less rear traction. Tune this to your throttle modulation.</li>
+        <li><strong>Brake pressure balance.</strong> If the baseline forces you into uncomfortable pedal pressures, adjust brake force to match your preference. A baseline might require ~70% pedal pressure for 100% braking; you can shift that window.</li>
+        <li><strong>Suspension geometry (front camber and toe).</strong> Only if you've exhausted other options. Geometry changes are subtle and demand you really understand the track and your driving.</li>
+      </ul>
+
+      <p>I rarely touch fuel consumption, radiator settings, or brake duct cooling on my first pass. Those address specific race conditions; they're not limiting factors in a practice or qualifying session.</p>
+
+      <h2>Track-Specific Adaptation (The Real Skill)</h2>
+
+      <p>Once I've built a setup that works for me in a car, I can adapt it to any track in that series in 20 minutes instead of 90. The framework stays the same: identify the problem, change one thing, compare. But now I'm not starting from zero; I'm refining from a known good point.</p>
+
+      <p>A high-downforce track like Monaco needs more aggressive anti-roll bars and different brake bias than a fast, flowing track like Road America. But if I understand *why* I chose my baseline settings—why *I* prefer a certain brake bias or differential lock—I can adjust intelligently instead of chasing random changes.</p>
+
+      <p>This is where baselines fail completely and you have to think. The baseline for Monza isn't the right baseline for Nurburgring. But your baseline—the setup tuned to your rig and driving—is portable. You evolve it, not replace it.</p>
+
+      <h2>Common Mistakes I've Made (So You Don't Have To)</h2>
+
+      <ul>
+        <li>Trusting a shared setup without understanding it. A setup that's quick for someone else's rig and braking style will feel wrong on mine. I now view shared setups as inspiration, not gospel.</li>
+        <li>Adjusting too much too soon. I once changed 8 parameters in one session and couldn't identify what actually helped. The car felt different, but worse, and I wasted 90 minutes.</li>
+        <li>Forgetting that baseline setups are tuned for one track. Using a Spa baseline at Silverstone without adaptation is lazy. Conditions, layout, and grip levels are completely different.</li>
+        <li>Not recording what I changed and why. I now keep a simple note for each adjustment: what I changed, what I expected, what actually happened. Two weeks later, that discipline saves me hours of re-experimenting.</li>
+      </ul>
+
+      <div class="tip-box">
+        <span class="box-label">Your Personal Baseline</span>
+        <p>Save your rig-specific baseline as a separate file the moment you've made 3–4 intentional changes. Name it clearly: 'GT3_MyBaseline_R9_Jan2026.' This becomes your launching point for every new track.</p>
+      </div>
+
+      <h2>The Bigger Picture: Understanding vs. Following</h2>
+
+      <p>A baseline setup is a tool, not a crutch. The real skill in sim racing isn't setting up fast cars; it's understanding why a fast car is fast and adapting that understanding to your rig, your driving, and the track in front of you. Build from the baseline deliberately, stay patient, and you'll stop needing them altogether—you'll just *have* a baseline that's yours.</p>
+
+      <p>On my MOZA R9 rig, that evolution took time, but now I can load any series, take the baseline, spend 30 minutes understanding the track and car, and have a setup that's 99% of the way to my personal best. I got there by respecting the baseline enough to learn from it, then confident enough to move beyond it. That's the balance.</p>
+
+      <div id="rir-gear"><div class="gear-box">
+        <span class="box-label">The gear in this guide</span>
+        <ul>
+          <li><a href="https://www.amazon.com/s?k=MOZA+R9+wheel+base&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-r9" target="_blank" rel="sponsored noopener">MOZA R9 Direct Drive Wheelbase</a> — 9 N·m direct drive — the base bolted to my rig right now</li>
+          <li><a href="https://www.amazon.com/s?k=MOZA+CRP2+pedals&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-crp2" target="_blank" rel="sponsored noopener">MOZA CRP2 Load Cell Pedals</a> — load-cell brake, managed in the same Pit House software</li>
+          <li><a href="https://www.amazon.com/s?k=sim+racing+cockpit+stand&amp;tag=realiracing-20" data-aff="cockpit" target="_blank" rel="sponsored noopener">Sim Racing Cockpit / Wheel Stand</a> — a rigid mount matters more than the brand — flex kills FFB detail</li>
+        </ul>
+        <p class="aff-note">Some links are affiliate links — I may earn a commission at no cost to you.</p>
+      </div></div>
+
+      <div class="cta-box">
+        <h3>Watch it, don't just read about it</h3>
+        <p>I stream and upload iRacing races on my MOZA R9 rig — real laps, real force feedback, real mistakes. See the gear from this guide working before you spend a cent.</p>
+        <a class="btn-primary" href="https://www.youtube.com/@realtape" target="_blank">▶ Subscribe on YouTube</a>
+      </div>
+
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h3>How many laps should I drive a baseline before I modify it?</h3>
+        <p>At least 15–20 laps at racing pace. You need enough time to understand the car's behavior across multiple corners and fuel loads, and to confirm whether a problem is setup or your own driving. If you're still finding faster lines lap 10, keep driving before you change anything.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I modify a baseline for practice or save my changes for race day?</h3>
+        <p>Practice only. A baseline is designed for consistency and safety. Use practice sessions to build your personal baseline—a setup tailored to your rig and driving that you'll keep using. Never race on a setup you've only tested for 10 laps. You need 30+ racing laps at that setup before you trust it in a race.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it better to download a shared setup from the community or build from the baseline?</h3>
+        <p>Download a shared setup to understand what the community is doing, but race a setup you understand. A shared setup optimized for someone else's rig, pedal pressure, and driving style will feel wrong on yours. Use it as inspiration: load it, compare it to the baseline, ask why they adjusted what they did. Then build your own.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I make a change and the car feels worse but my lap times are the same?</h3>
+        <p>Revert it and move on. If a change doesn't show a clear lap-time improvement or doesn't fix a specific problem you identified, it's not a real gain. Sim racing setup changes should feel good and be measurable. If it's only one but not the other, trust your lap times—feeling is subjective, timing is not.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Keep reading</h2>
+    <div class="related-grid">
+      <a class="related-card" href="baseline-setup-vs-setup-shops-when-to-stop-fiddling.html"><span>Setup Guides</span>Baseline Setups vs. Setup Shops: When to Stop Fiddling</a>
+      <a class="related-card" href="direct-drive-damping-friction-settings.html"><span>Setup Guides</span>Direct Drive Damping and Friction: Finding Your Feel</a>
+      <a class="related-card" href="iracing-ffb-clipping-how-to-diagnose-and-fix.html"><span>Setup Guides</span>iRacing FFB Clipping — How to Diagnose It and Fix It Without Losing Detail</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 RealIRacing · iRacing User: <strong>Carlos Martinez9</strong> · Built with 🏎️</p>
+    <p style="margin-top:6px;font-size:0.78rem;">
+      <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
+      <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
+    </p>
+  </footer>
+
+  <script src="/js/ga4.js" defer></script>
+  <script src="/js/affiliates.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof renderGearBox === 'function') {
+        renderGearBox('rir-gear', ["moza-r9","moza-crp2","cockpit"], 'The gear in this guide');
+      }
+      if (window.RIR_AFF) { RIR_AFF.hydrateLinks(); }
+    });
+  </script>
+
+</body>
+</html>
