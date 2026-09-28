@@ -1,0 +1,167 @@
+{
+  "slug": "indianapolis-motor-speedway-iracing-guide",
+  "tag": "Track Guides · Oval Racing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Indianapolis Motor Speedway iRacing Guide: Line, Setup, Drafting",
+  "description": "Master Indy's high-speed oval. Learn the racing line, brake zones, setup priorities, and drafting strategy for clean, competitive lap times.",
+  "sections": [
+    {
+      "p": "Indianapolis Motor Speedway on iRacing is where oval racing demands precision and speed in equal measure. Whether you're running the Dallara IR18 IndyCar or the stock car, the 2.5-mile D-shaped oval will punish inconsistency and reward smooth inputs. I've spent enough laps here to know that Indy separates drivers who understand momentum from those who just stab the throttle. The high banking, long straightaways, and tight corners create a unique rhythm—and if you get it wrong, you'll either be loose off the apex or washing up into the wall."
+    },
+    {
+      "p": "My MOZA R9 setup for Indy is pure speed-focused: minimal damping, high edge sharpness to feel the car balance, and enough linearity to catch slides early. The track demands honest feedback about grip, especially in the high-speed corners where you're carrying ~190+ mph through Turns 1–2 and 3–4. Let's break down what actually matters at Indy."
+    },
+    {
+      "h2": "Understanding Indy's Layout and Racing Line"
+    },
+    {
+      "p": "Indy is a 2.5-mile oval with ~9° banking in Turns 1–2 and ~9° in Turns 3–4. The two straightaways are long and wide, and the corners are tight relative to the speed you're carrying. The racing line isn't obvious at first: you don't apex like a road course. Instead, you're managing a high-speed drift through each corner, sacrificing mid-corner speed for exit velocity and straight-line performance."
+    },
+    {
+      "p": "In Turns 1–2, I run the widest entry I can—almost to the wall—then track down to the bottom of the track at the apex. Same for Turns 3–4. The key is not braking too late or too hard; if you're sliding up the banking, you've lost the line and you're chasing it the rest of the lap. On my R9, I feel that understeer immediately if I'm greedy on entry."
+    },
+    {
+      "list": [
+        "<strong>Turns 1–2:</strong> Brake in a straight line well before the apex. Coast mid-corner. Apex around the bottom line. Full throttle by mid-exit.",
+        "<strong>Main straightaway:</strong> Flat-out acceleration. Position yourself for the next turn's entry—slightly higher on the banking if you need to manage air/draft.",
+        "<strong>Turns 3–4:</strong> Same as 1–2, but watch your exit line; a loose exit kills your speed up the backmarker straightaway.",
+        "<strong>Backmarker straightaway:</strong> Shorter, but you'll see traffic here. Be aware of your positioning for Turn 3 entry."
+      ]
+    },
+    {
+      "tip": "On oval turns at Indy, apex isn't a point—it's a zone. You're looking to be at the bottom of the banking with full throttle as early as possible, not turning mid-corner to hit a geometric apex. Your goal is momentum and exit speed.",
+      "tipLabel": "Apex Strategy"
+    },
+    {
+      "h2": "Brake Zones and Turn-In Discipline"
+    },
+    {
+      "p": "Braking at Indy is aggressive but short. You're coming off a ~220 mph straightaway and need to scrub speed down to ~140–150 mph for the corner entry. I brake for ~1.5–2 seconds in a straight line, and the brake pressure I apply through my <a href=\"best-sim-racing-pedals-iracing-2026.html\">CRP2 load-cell pedals</a> is firm but not maximum. Around ~75–80% brake pedal gets me to the right speed without locking the tires or unsettling the car."
+    },
+    {
+      "p": "What kills most Indy drivers is turning in too early or braking while turning. The banking wants to push you up; brake in a straight line, release the brake before you turn, then turn smoothly. If you're still on the pedal when you're turning, you'll either understeer up the track or spin. I trail-brake maybe 5–10% through the turn-in, just to help rotate the car, but the bulk of deceleration happens before the turn."
+    },
+    {
+      "olist": [
+        "Brake in a straight line at ~75–80% pressure for ~1.5 seconds (turn-specific).",
+        "Release completely before turn-in. Small pause if needed.",
+        "Turn smoothly with light steering input—big inputs = slide.",
+        "Short trail-brake (if any) to help rotation; coast most of mid-corner.",
+        "Throttle in as soon as the car is pointed at exit; full throttle by mid-exit."
+      ]
+    },
+    {
+      "h2": "Setup Priorities for High-Speed Oval Running"
+    },
+    {
+      "p": "Indy is fast and flat, so setup philosophy differs from road courses. You want the car balanced for high-speed stability but nimble enough to rotate through the corners without being a handful."
+    },
+    {
+      "list": [
+        "<strong>Downforce:</strong> Medium-to-high wing angle for stability. Full downforce setups feel planted but slow your corner exit; low downforce is twitchy and risky. I run somewhere in the middle, favoring rear wing angle to keep the car planted.",
+        "<strong>Anti-roll bars (sway bars):</strong> Stiffer front to reduce understeer, help rotation. Rear can be medium to resist the car getting loose off the apex.",
+        "<strong>Spring rates:</strong> Fairly stiff to keep the car settled and predictable at speed. Softer springs = instability through the banking.",
+        "<strong>Brake bias:</strong> Front-biased (~60–65% front) because you're braking in a straight line, not under cornering load. IndyCar setups lean further front; stock cars can be more balanced.",
+        "<strong>Tire pressure:</strong> Monitor closely. Indy's long straights heat tires quickly. Hot pressures can cause instability; cold pressures are faster in the corners but offer less feedback. Settle at a warm-up that feels stable."
+      ]
+    },
+    {
+      "tip": "Indy reward smooth, committed inputs and punish hesitation. Tweak springs and bars for confidence, not sharpness. A car that's predictable and slightly slow beats a loose cannon every time.",
+      "tipLabel": "Setup Philosophy"
+    },
+    {
+      "h2": "Drafting and Traffic Management"
+    },
+    {
+      "p": "If you're running a full race at Indy, you'll encounter traffic. The straightaways are long, and drafting is a real factor—slipstreaming can gain you ~3–5 mph on the straights, which translates to faster lap times or passing opportunities. I use draft strategically, but I don't rely on it for my base pace."
+    },
+    {
+      "p": "In the main straightaway, if a car is ahead, you're in the draft behind them and will gain speed. The trick is positioning: if you're too close, you'll get loose in the turns because of the disturbed air. If you're too far, you lose the draft. I try to sit ~3–4 car lengths back on the main straight, then back off before the turn to avoid instability."
+    },
+    {
+      "p": "When you're the one being chased, stay smooth and predictable. Don't block erratically. If someone wants to pass on the backmarker straight, make a move, but commit to it. Defensive driving at Indy is about consistency and patience, not weaving."
+    },
+    {
+      "list": [
+        "Use draft on the straights to your advantage, but position yourself for clean entry to the next turn.",
+        "Avoid sitting directly behind another car through the turns; you'll get loose from disturbed air.",
+        "When defending, pick a line and hold it. Sudden moves = mistakes.",
+        "If you're being lapped, yield early and cleanly. Pride is expensive in iRacing."
+      ]
+    },
+    {
+      "h2": "Fuel and Tire Strategy in Longer Races"
+    },
+    {
+      "p": "At Indy, fuel mileage is usually better than at shorter ovals, but tire wear is a factor in endurance events. I focus on smooth inputs to preserve tires and fuel. If you're doing a 30-minute or longer race, plan pit stops carefully."
+    },
+    {
+      "p": "Tire temperatures are critical. Front tires tend to run warm at Indy because of the banking and cornering load, while rears can be cooler. I monitor lap-by-lap pace; if I suddenly lose grip, that's usually a sign tires are nearing the edge of performance. A pit stop to swap fresh tires often costs time on track but gains it back if you can run harder in the final stint."
+    },
+    {
+      "p": "Fuel-wise, steady smooth throttle management is best. Aggressive acceleration and braking burn fuel faster. If you're unsure about fuel range, pit a lap early and run a conservative final stint rather than risk running out—which will either disqualify you or force a slow crawl."
+    },
+    {
+      "h2": "Force Feedback and Pedal Tuning on My MOZA Setup"
+    },
+    {
+      "p": "For Indy on my R9, I reduce damping compared to road-course settings because the forces are more stable and predictable. The straightaways don't require constant micro-corrections, so I don't need high damping eating my FFB detail. I run ~40% damping, ~70% edge sharpness, and ~100% natural frequency. The car feels responsive but not jittery."
+    },
+    {
+      "p": "The CRP2 pedals benefit from a graduated brake pressure curve rather than a linear one. Indy's braking is all-in or all-out, but I want the first 50% of pedal travel to give me fine control in the ~50–70% brake range. I've tuned the curve to feel natural: progressive off the top, then plateauing toward full lock-up. This gives me confidence under heavy braking into the turns."
+    },
+    {
+      "p": "Throttle is straightforward: nearly linear, with just a touch of deadzone at the very top to avoid over-sensitivity during full acceleration. Clutch (if you're in an IndyCar) is treated like road-course driving: smooth engagement and disengagement during gear changes."
+    },
+    {
+      "h2": "Common Mistakes and How to Avoid Them"
+    },
+    {
+      "list": [
+        "<strong>Braking too late:</strong> You'll overshoot the apex and run up the banking. Brake earlier than feels right, then adjust.",
+        "<strong>Steering input lag or hesitation:</strong> The car will wash up the track if you turn after braking. Commit to your braking zone, then turn decisively.",
+        "<strong>Over-correcting in the turns:</strong> If you feel the car getting loose, resist the urge to counter-steer aggressively. A smooth, small correction is much better.",
+        "<strong>Not accounting for traffic:</strong> Hit someone on the straightaway because you weren't watching your mirrors? That's a protest waiting to happen. Stay aware.",
+        "<strong>Ignoring tire temperatures:</strong> Running flat-out when tires are cold will cause erratic pace. A few warm-up laps matter, even in practice."
+      ]
+    },
+    {
+      "h2": "Practice and Progression"
+    },
+    {
+      "p": "Start in time-trial to get the line and brake zones dialed. Spend a couple of hours on my rig just doing lap after lap, feeling for consistency. Once you're comfortable with single-lap pace, jump into a practice race or league event. The real learning happens against other drivers."
+    },
+    {
+      "p": "Indy is unforgiving, but it's also honest. If you're smooth and disciplined, you'll be competitive. If you're loose and impatient, the wall will find you quickly. Respect the speed, nail the fundamentals, and you'll be posting solid lap times in no time."
+    },
+    {
+      "tip": "Watch your onboard and telemetry after a race. Look for inconsistency: brake-point variation, exit-speed loss, or sudden understeer. Small fixes in those areas often yield big lap-time gains at Indy.",
+      "tipLabel": "Data Review"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the optimal brake pressure for Indy?",
+      "a": "Around 75-80% brake pedal pressure for most cars. Indy's straights are long, so you have room to scrub speed in a straight line without locking up. Experiment in practice to find the sweet spot where you're not sliding tires but also not leaving braking distance on the table. Load-cell pedals help here because you can feel the car's response and adjust pressure smoothly."
+    },
+    {
+      "q": "How much does drafting actually matter at Indy?",
+      "a": "Drafting adds 3-5 mph on the straights, which is real but not game-changing for single-lap pace. In a race, though, it becomes a factor for passing and tire management. You'll see strategic line changes to gain or lose the draft, but your base pace comes from the corners. Focus on your turn-in and exit first; draft is a bonus."
+    },
+    {
+      "q": "Should I use higher or lower downforce at Indy?",
+      "a": "Medium-to-high downforce is usually faster. High downforce keeps the car planted and predictable, which matters at high speed. Low downforce requires more steering input and feels twitchy through the banking. If you're loose or the car feels unpredictable, add downforce before adjusting other settings."
+    },
+    {
+      "q": "What tire wear rate should I expect in a 30-minute race?",
+      "a": "Tires degrade moderately at Indy—not as fast as shorter ovals, but noticeable. Expect a small pace drop every 10 laps or so as tires wear. A fresh set of tires after 20-25 laps usually nets a 0.1-0.2 second improvement, which is worth a pit stop in longer races. Monitor your lap times and adjust strategy accordingly."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}

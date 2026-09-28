@@ -1,0 +1,166 @@
+{
+  "slug": "chevrolet-corvette-c8r-gte-iracing-guide",
+  "tag": "Car Guide · GT Racing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Chevrolet Corvette C8.R GTE iRacing Guide: Setup, Braking, Lines",
+  "description": "Master the Corvette C8.R in iRacing with proven setup tuning, braking technique, and racing lines. Learn how to unlock the car's balance and competitive pace.",
+  "sections": [
+    {
+      "p": "The Chevrolet Corvette C8.R in iRacing is a handful—but in the best way. It's a modern, front-engined, mid-mounted-transmission machine that rewards precision and punishes sloppiness with immediate oversteer. I've spent enough hours in it on my MOZA R9 rig to know that the C8.R demands a different mental approach than its rivals. The Ferrari and Porsche feel more forgiving; the Corvette feels honest. That honesty is what makes it fun, and what makes it quick once you learn its quirks."
+    },
+    {
+      "p": "This guide covers the fundamentals: how to set it up, how to brake with load cell consistency, where the apex lives on typical GTE tracks, and how to extract pace without spinning. I'm writing from my own cockpit, using real telemetry and real frustration as my teacher."
+    },
+    {
+      "h2": "Core Setup Philosophy"
+    },
+    {
+      "p": "The C8.R is naturally rear-biased in understeer tendency—a product of that front-engine layout and the way iRacing models weight transfer. Out of the box, many drivers complain about looseness on corner entry and oversteer on exit. The fix isn't to add massive downforce; it's to build a setup that manages that rotation smoothly."
+    },
+    {
+      "p": "I start with the iRacing baseline and make three critical moves: (1) reduce front wing angle by 1–2 clicks below baseline to reduce understeer without going overboard, (2) stiffen front roll bar by 2–3 clicks to control that initial turn-in, and (3) dial in rear brake bias at around 55–58% rear (depending on track layout) so the rear doesn't lock earlier than the front. These aren't radical changes; they're calibrations."
+    },
+    {
+      "list": [
+        "Front wing angle: 1–2 clicks below baseline to promote rotation without losing downforce",
+        "Front roll bar: stiffer by 2–3 clicks to stabilize turn-in and reduce initial understeer",
+        "Rear brake bias: 55–58% rear for balanced lockup tendency (adjust for high-speed vs. tight layouts)",
+        "Damper bump (compression): slightly stiffer in front to control initial load transfer",
+        "Differential lock: 50% coast, 70% accel as a sensible middle ground"
+      ]
+    },
+    {
+      "tip": "The C8.R is sensitive to brake bias asymmetry. If your front-left is rolling over before the rear settles, your brakes are biased too forward and you've lost mid-corner stability. Dial rear bias up by 1% at a time until corner exit feels planted.",
+      "tipLabel": "Brake Bias Tuning"
+    },
+    {
+      "h2": "Braking Technique with Load Cell Pedals"
+    },
+    {
+      "p": "I race with the MOZA CRP2 load cell pedals, which give me pressure-based feedback, not travel. On the Corvette, that's essential because the car rewards smooth trail-braking into slower corners. If you stomp the pedal, you'll find the rear end is ready to step out—especially on turn-in."
+    },
+    {
+      "p": "For tight corners (hairpins, slow 90-degree turns), I brake to about 75–80% pedal pressure and trail that down as I rotate the wheel. The key is gradual release, not a sharp off-off-off instant. On fast corners (sweepers, high-speed chicanes), I'm at 85–90% pressure and off the pedal earlier because trail-braking there just adds understeer. On my CRP2 pedals, I calibrate the brake to a curve that gives me ~15% pressure at heel-off and full pressure at ~80 N of force—that gives me fine control in the mid-range."
+    },
+    {
+      "list": [
+        "Hairpins and 90-degree corners: trail brake to ~50% midway through rotation, hold there until apex",
+        "Fast sweepers: hit full pressure early, release hard by turn-in to avoid understeer",
+        "Heavy-braking zones: build pressure progressively; don't spike the brake pedal",
+        "Downshifts: match throttle revs before releasing the brake fully to keep the car stable"
+      ]
+    },
+    {
+      "h2": "Racing Lines and Apex Speed"
+    },
+    {
+      "p": "The Corvette rewards an aggressive mid-corner speed more than many other GTE cars. That front-engine weight lets you carry speed through a corner if your brake point is precise and your line is clean. My approach is to brake late and deep, apex early (before the geometric apex), and trust the car to rotate."
+    },
+    {
+      "p": "On a typical high-speed corner, I'll brake in a straight line, then move to initial steering input while still on the pedal (load cell feedback is vital here), then gradually unwind my hands as I feel the car settle. The inside of the steering wheel should be lighter than the outside at apex—that's rotation happening. If both sides feel heavy, you're carrying too much speed or the anti-roll bar is too stiff."
+    },
+    {
+      "list": [
+        "Brake deep and straight; delay turn-in until mid-brake or even exit of the braking zone",
+        "Apex early (fractionally before the geometric apex) to set up a clean exit",
+        "Unwind hands smoothly; don't snatch the steering at apex",
+        "Throttle on gently; let the car track out, don't force it wide",
+        "On exits, trust the car—over-correcting kills exit speed"
+      ]
+    },
+    {
+      "tip": "If you're outbraking yourself and spinning on corner entry, it's usually not the setup—it's your brake release curve. Practice staying lighter on the brakes as you add steering input. Load cell pedals reward subtlety here.",
+      "tipLabel": "Entry Oversteer Fix"
+    },
+    {
+      "h2": "Downshift and Engine Braking Management"
+    },
+    {
+      "p": "The C8.R has a naturally high engine-braking coefficient because of that rear-mounted transaxle. I usually run 3–4 clicks of downshift time to let throttle blip work cleanly without overrevving. On straights, I'll downshift early (before braking) to let engine braking help stabilize the platform. In slower corners where I'm already at low speed, I might downshift after I've begun rotating to avoid upsetting the balance."
+    },
+    {
+      "p": "The rule of thumb: if you feel a sudden rearward weight transfer during a downshift (rear feels light or the car snaps loose), reduce downshift time by 1 click. If revs stay high and the blip doesn't match, increase it by 1 click. I find ~3 clicks works for most road courses; ovals might need less."
+    },
+    {
+      "h2": "Track-Specific Setup Adjustments"
+    },
+    {
+      "h3": "High-Speed Layouts (Le Mans, Spa, Daytona Road Course)"
+    },
+    {
+      "p": "These tracks ask for lower downforce angles and longer braking zones. I dial wing back by 1–2 clicks from my baseline, soften the front anti-roll bar slightly to reduce tire scrub under high-speed direction changes, and be patient with throttle application on corner exit. Engine braking is your friend here; use it."
+    },
+    {
+      "h3": "Technical, Slow Tracks (Sebring, Road Atlanta, Watkins Glen)"
+    },
+    {
+      "p": "More downforce, firmer anti-roll bars, and priority on mid-corner rotation. I'll add 1 click of front wing and stiffen the front bar by 1–2 extra clicks. Brake bias can shift toward the front (53–55% rear) because slower speeds mean less rear load. <a href=\"sebring-iracing-guide.html\">See my Sebring guide for more detail on this type of setup.</a>"
+    },
+    {
+      "h3": "Mixed-Speed Tracks (Silverstone, Brands Hatch, Red Bull Ring)"
+    },
+    {
+      "p": "Use the baseline as your starting point. These layouts don't reward extremes, so split the difference: neutral front wing, medium anti-roll bars, and brake bias around 56% rear. Dial into your own pace over 3–4 laps before you start chasing hundredths."
+    },
+    {
+      "h2": "Tire Temperature and Pressure Management"
+    },
+    {
+      "p": "The Corvette's Michelin tires are reasonably forgiving but do have a sweet spot. Cold, they're slippery; hot, they can overheat and turn greasy, especially on the rear. In qualifying, I build heat progressively—first lap 60%, second lap 80%, third lap full attack. That avoids flat-spotting and lets tire pressure rise naturally. In a race, the first lap is about scrubbing heat in; aggressive driving comes lap two onward."
+    },
+    {
+      "p": "Watch your tire-temperature telemetry in iRacing. If the rears are above 105°C and you're losing grip on exit, you're overdriving the car. Back off by 2–3 mph in corner speed and you'll warm them up to ~100°C, where they're most responsive. Front tires tend to run ~5°C cooler than rears in my experience; if fronts are below 95°C and you're understeering badly, you likely need more brake bias forward or a slightly earlier brake point."
+    },
+    {
+      "h2": "Common Mistakes and How to Avoid Them"
+    },
+    {
+      "list": [
+        "<strong>Over-correcting in understeer:</strong> The C8.R will understeer if you're too aggressive with throttle at mid-corner. Ease off the gas and wait; don't add steering.",
+        "<strong>Brake bias too aggressive forward:</strong> This reduces rear load and kills corner-exit traction. Start at 56% rear and only go more forward for ultra-tight hairpins.",
+        "<strong>Too much downforce for the track:</strong> The baseline wing angles can feel draggy on faster circuits. Dial down progressively and feel the car breathe.",
+        "<strong>Forgetting engine braking on entry:</strong> The C8.R's rear transaxle helps slow the car on downshifts. Use it instead of fighting the chassis.",
+        "<strong>Cold-tire aggression:</strong> A cold Corvette is loose and tricky. Spend lap one building heat, not chasing lap records."
+      ]
+    },
+    {
+      "tip": "If you're consistently faster in the Ferrari 488 or Porsche 911 RSR, the C8.R probably just doesn't suit your natural driving style yet. That's okay—run 5–10 longer stints to build muscle memory for its rotation tendency. It'll click eventually.",
+      "tipLabel": "Building Rapport with the Corvette"
+    },
+    {
+      "h2": "Final Thoughts"
+    },
+    {
+      "p": "The Corvette C8.R rewards patience and precision over aggression. Its front-engine layout and responsive steering make it a joy on technical tracks, but that responsiveness comes with the burden of managing mid-corner balance. Setup helps, but your brake pedal pressure and steering smoothness matter more. On my MOZA CRP2 pedals, I can feel exactly where that balance point is, and that's what makes it click."
+    },
+    {
+      "p": "Spend time in practice mode, build your baseline, then adjust for the specific track. Don't chase setup changes looking for pace; chase consistency first, and pace will follow. The Corvette rewards racers who understand its nature—you don't drive it aggressively, you drive it *with* it."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the best brake bias for the C8.R across most road courses?",
+      "a": "I run 56% rear as a baseline for mixed-speed tracks. For high-speed layouts like Spa or Le Mans, I move to 54–55% rear because the car carries more momentum and needs later, longer brake zones. For tight technical tracks like Sebring, 57–58% rear works better because the car spends more time in slow corners where the rear doesn't load as much. Always start conservatively and increase rear bias if the rear locks before the front in your test braking zones."
+    },
+    {
+      "q": "Is the C8.R harder to drive than the Ferrari 488 or Porsche 911?",
+      "a": "It's different, not harder—just less forgiving. The Ferrari and Porsche are mid-engine cars with naturally balanced weight distribution. The Corvette's front engine makes it slightly nose-heavy and rotation-biased, so you have to manage mid-corner speed more actively. If you're used to trail-braking everything, the Corvette will bite you. If you're precise with your brake release and steering input, it's actually faster than the Porsche on most technical tracks because it rotates more eagerly."
+    },
+    {
+      "q": "Should I use more downforce on the C8.R than other GTE cars?",
+      "a": "Not necessarily. The Corvette is already fairly grippy at mid-speed because of its engine placement. I actually run slightly less front wing than the baseline suggests, then adjust based on understeer feel. More downforce just loads the tires faster and creates oversteer on corner entry. Start with the baseline and dial down by 1–2 clicks; you'll probably be faster."
+    },
+    {
+      "q": "How do I stop the C8.R from oversteering on acceleration out of corners?",
+      "a": "Dial in rear brake bias 1–2% more toward the rear (higher %), and ease off throttle earlier in the corner, waiting until the steering wheel is straight before you commit to power. Also check your anti-roll bar settings—if the front bar is too soft, the outside front tire loses load and the rear steps out. Add 1–2 clicks to the front bar and re-test."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "cockpit"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}

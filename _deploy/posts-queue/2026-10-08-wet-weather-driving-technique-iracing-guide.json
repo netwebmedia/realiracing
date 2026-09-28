@@ -1,0 +1,158 @@
+{
+  "slug": "wet-weather-driving-technique-iracing-guide",
+  "tag": "iRacing Tips · Technique",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Wet Weather Driving in iRacing: Technique, Setup, and Survival",
+  "description": "Master rain driving in iRacing with throttle control, braking zones, and setup tweaks. Learn how wet weather demands smoother inputs and longer planning horizons.",
+  "sections": [
+    {
+      "p": "Rain in iRacing feels nothing like a racing simulator—it feels like driving on a sheet of ice in a car that won't respond to your inputs the way you expect. The first time I hit a wet track in iRacing, I arrived at turn one with the same entry speed I'd used in the dry, got zero front-end grip, and slid off into the wall within 5 meters. That's the moment I realized wet weather demands a fundamentally different mindset than dry racing."
+    },
+    {
+      "p": "Wet weather in iRacing is unforgiving because the tire model doesn't have the progressive grip structure of real rain tires. Instead, you get a narrow operating window where grip exists, and the moment you push even slightly beyond that window, the car becomes a toboggan. That forces you to drive with precision that dry racing often lets you gloss over. Over the past year of racing rain in various iRacing series, I've learned that wet weather isn't about being brave—it's about being deliberate."
+    },
+    {
+      "h2": "The Core Principle: Smooth Over Fast"
+    },
+    {
+      "p": "Every ounce of wet-weather improvement comes from reducing the rate at which you change steering angle, throttle position, and brake pressure. Your car loses grip the instant it perceives sudden input. On my MOZA R9 wheelbase (~9 N·m of torque), I can feel that loss immediately—the wheel goes light, and ffb feedback goes hollow."
+    },
+    {
+      "p": "In the dry, you can be aggressive with steering inputs and trust the tire to find grip as you adjust. In the wet, steering input is a commitment. Turn the wheel 10 degrees and expect that angle to stick for the next two seconds. Small corrections don't work; they compound instability. Instead, commit to a larger entry angle earlier and hold it steady."
+    },
+    {
+      "list": [
+        "Enter corners with throttle fully off—no trail-braking aggression like you'd use in the dry",
+        "Accelerate out of the apex only once the steering wheel is pointing straighter (past 50% straightness minimum)",
+        "Change brake pressure gradually over 0.5–1.5 seconds rather than on-off transitions",
+        "Plan your line to use the widest possible radius, even if it means traveling further around the track"
+      ]
+    },
+    {
+      "tip": "Wet-weather laps are won by minimizing correction inputs. If you need to adjust mid-corner, the line was wrong from the start. Plan tighter and earlier.",
+      "tipLabel": "Plan Ahead"
+    },
+    {
+      "h2": "Braking in the Rain: Threshold Without Locking"
+    },
+    {
+      "p": "Braking is where most wet-weather off-tracks happen. In the dry, I can brake late and modulate to the apex. In the wet, I brake earlier and with less aggression, then begin rolling off brake pressure well before the turn-in point."
+    },
+    {
+      "p": "My MOZA CRP2 load-cell pedals give me the precision to feel when the car is on the edge of locking. In the wet, that edge is much thinner. A 5% harder press can lock the rear axle instantly. I find myself braking at ~70% pedal pressure and modulating within a 10% window rather than the full pedal travel I'd use in the dry."
+    },
+    {
+      "list": [
+        "Reduce peak braking pressure by 15–25% compared to dry baseline",
+        "Extend brake duration rather than compress it (brake earlier, softer, longer)",
+        "Release 30–50% of brake pressure before turn-in; arrive at the corner already decelerating smoothly",
+        "In heavy rain, avoid trail-braking entirely; separate braking and turning into two distinct phases",
+        "Use engine braking to stabilize the car as you roll off the pedal—downshift early"
+      ]
+    },
+    {
+      "h2": "Throttle Management: The Most Important Control"
+    },
+    {
+      "p": "In the dry, you can snap the throttle open at the apex and trust the tire to deliver power. In the wet, throttle control separates consistent drivers from those who spin. I think of wet throttle as a dial you're constantly adjusting, not a switch you're flicking on and off."
+    },
+    {
+      "p": "The rule I follow: don't increase throttle opening faster than once per second. If I'm at 30% throttle at the apex, I'll be at 40% a second later, 50% another second after that. This prevents sudden load transfer that causes the rear to slide. It also feels unnatural at first—you're going slower than you could, which creates anxiety. But consistency beats heroics every lap."
+    },
+    {
+      "list": [
+        "Apex throttle: 20–40% depending on corner speed and car balance",
+        "Exit throttle: increase by no more than 10–15% per second of elapsed time",
+        "Straight sections: accelerate to full throttle only once the car is perfectly straight",
+        "If the rear steps out while accelerating, lift immediately (don't countersteer aggressively); let the car settle, then try a smaller throttle increment"
+      ]
+    },
+    {
+      "h2": "Setup Changes for Wet Conditions"
+    },
+    {
+      "p": "Most iRacing series let you adjust setup for rain. You won't have unlimited freedom, but modest changes make a real difference. The goal is to reduce overall grip demand, increase stability margins, and make the car more predictable."
+    },
+    {
+      "olist": [
+        "Lower front wing (or increase angle 2–4 clicks if possible) to reduce understeer and improve turn-in feel",
+        "Increase brake bias rearward by 1–2% to improve stopping balance and reduce lock-up sensitivity",
+        "Reduce front anti-roll bar stiffness (soften by 2–3 clicks) to increase compliance and reduce sudden grip loss",
+        "Increase ride height by 5–10 mm to reduce bottoming and improve splitter/undertray clearance over puddles",
+        "Slightly increase tire pressures (0.1–0.2 psi above dry baseline) to reduce aquaplaning risk",
+        "If allowed, reduce differential lock slightly to improve exit traction and reduce oversteer tendency"
+      ]
+    },
+    {
+      "p": "These are starting points. Every car and track combination is different, so test in practice and adjust by feel. A setup that feels planted in light rain might feel numb in heavy rain."
+    },
+    {
+      "h2": "Wet-Weather Line Work and Vision"
+    },
+    {
+      "p": "Your racing line changes in the wet. Wet patches (darker asphalt) have lower grip than dry patches, so you'll want to steer around them when possible. This isn't always feasible in heavy rain, but in light rain, staying on the driest part of the track makes a measurable difference."
+    },
+    {
+      "p": "Look ahead aggressively. In the dry, I'm thinking about the next corner as I exit the current one. In the wet, I'm two corners ahead, planning my line around wet patches and setting up exits that flow into the next braking zone. This extended horizon prevents reactive steering and the corrections that cause aquaplaning."
+    },
+    {
+      "list": [
+        "Plan wider, gentler arcs—tighter turns demand more grip than the car has available",
+        "Avoid apex-hunting; aim to be 0.5–1 meter earlier than your dry racing line to open the exit",
+        "Use road camber and track topography to run toward drier asphalt",
+        "In heavy rain, accept that single-lap pace is irrelevant; consistency over a stint is everything",
+        "Practice wet sessions in your usual cars before racing rain; feel the grip threshold rather than fighting it"
+      ]
+    },
+    {
+      "tip": "Record your wet sessions and watch your steering input trace. You'll notice successful laps have fewer mid-corner corrections and longer straightness periods. Copy that input smoothness on your next attempt.",
+      "tipLabel": "Learn From Video"
+    },
+    {
+      "h2": "Mental Approach: Patience Over Pace"
+    },
+    {
+      "p": "The hardest part of wet-weather iRacing is accepting that you will be slower. A lot slower. My dry lap time at Suzuka is ~2:05, and in heavy rain I'm running 2:25–2:30. That's 20 seconds slower. Most drivers fight this reality and end up crashing. I accept the loss and focus on being the cleanest, steadiest driver in the field. Wet weather is where small tire advantages compound over a race distance."
+    },
+    {
+      "p": "I also accept that aquaplaning happens. No matter how smooth your inputs are, heavy rain on certain track sections will hydro-plane the car unpredictably. The difference between a good wet-weather driver and a bad one is what happens after the aquaplane: I lift throttle, don't countersteer hard, and let the car settle. Many drivers panic and yank the wheel, which guarantees a spin."
+    },
+    {
+      "h2": "Practical Wet-Weather Racing Strategy"
+    },
+    {
+      "list": [
+        "Start conservatively—match the pace of the field leader; don't attack positions in lap 1",
+        "Focus on tire temperature and feel; wet tires need a few laps to reach operating range",
+        "If rain is forecast to increase, preserve fuel and brake life early; the pace will come later as conditions worsen and mistakes compound",
+        "Stay alert for other cars losing it—wet races have more DNFs, so avoid trying to overtake in high-traffic zones",
+        "Use practice sessions to learn where wet patches form; that knowledge persists across seasons"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why does my car feel so unpredictable in the wet compared to the dry?",
+      "a": "Wet tires in iRacing have a narrower grip operating window than dry tires. You lose grip almost instantly once you exceed that window, and the transition is abrupt rather than progressive. This means small input errors compound quickly. Dry tires forgive sloppy inputs; wet tires punish them immediately. The key is smaller, slower steering and throttle inputs."
+    },
+    {
+      "q": "Should I brake and turn at the same time in the wet?",
+      "a": "No. Trail-braking works in the dry because the tire can generate both braking and cornering force simultaneously. In the wet, those forces have a much smaller combined limit. Separate braking and turning into distinct phases: brake hard and early, fully release the brake well before turn-in, then turn and accelerate. This gives each control its own time window and prevents the tire from exceeding its limit."
+    },
+    {
+      "q": "How do I know if my wet setup is right?",
+      "a": "A good wet setup feels plant and predictable mid-corner but not understeery on entry. If the front won't turn in, add front wing or soften front anti-roll bars. If the rear slides on exit, reduce throttle aggression first (it's likely a driver input problem), then consider adding rear wing if available. Practice in a few laps and feel whether the car responds smoothly or suddenly to inputs; smooth feedback means you're in a workable setup."
+    },
+    {
+      "q": "What's the biggest mistake wet-weather drivers make?",
+      "a": "Trying to drive the wet like they drive the dry. Aggressive throttle application, late braking, tight lines, and quick steering inputs all work in the dry and all fail in the wet. The hardest adjustment is accepting that wet-weather pace is 10-20% slower than dry pace, and that's normal. Drivers who fight this reality and push for dry-pace lap times crash. Accept the loss, drive smoothly, and position yourself for the end of the stint when tire and fuel management separates the field."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}

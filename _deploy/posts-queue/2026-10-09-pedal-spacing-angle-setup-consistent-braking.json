@@ -1,0 +1,152 @@
+{
+  "slug": "pedal-spacing-angle-setup-consistent-braking",
+  "tag": "Setup Guides · Pedals",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Pedal Spacing and Angle: The Setup Most Drivers Skip",
+  "description": "Brake consistency starts before FFB tuning. How pedal geometry kills or builds confidence lap after lap.",
+  "sections": [
+    {
+      "p": "I spent three months chasing brake balance adjustments before realizing my problem wasn't the car—it was my feet. My MOZA CRP2 pedals were mounted at an angle that made heel-toe almost impossible, and my spacing forced me to contort my ankle to hit both throttle and brake cleanly. Every lap felt like negotiating with my own body instead of focusing on the line. Once I fixed the geometry, my brake inconsistency vanished. No new pedals. No firmware updates. Just inches of aluminum and a realization that I'd been fighting my rig for weeks."
+    },
+    {
+      "p": "Pedal spacing and angle are the unglamorous foundation of consistent braking. They determine whether your foot falls naturally from brake to throttle or lurches across unforgiving distance. They control whether you can execute trail braking without your ankle angle shifting mid-corner. They're the reason some drivers lock up the same wheel repeatedly while others brake with millimeter repeatability. This isn't theory—it's biomechanics meeting your cockpit."
+    },
+    {
+      "h2": "Why Spacing and Angle Matter More Than You Think"
+    },
+    {
+      "p": "Brake input repeatability is a function of muscle memory, and muscle memory is a function of consistent body position. If your throttle and brake are too far apart, you're making a deliberate, conscious lateral foot motion every time you transition. That's variation built into the hardware. If they're spaced correctly, your foot naturally pivots. The motion becomes reflexive. The pressure curve becomes reproducible."
+    },
+    {
+      "p": "Pedal angle compounds this. If your brake is angled too steeply relative to your leg, you're either over-extending your ankle or clamping your heel down to stay in position. Both introduce fatigue and inconsistency. If it's too shallow, you're fighting the angle of attack to apply force cleanly. The ideal setup meets your natural leg angle so pressure application feels like a natural pivot, not a reach or a cramp."
+    },
+    {
+      "list": [
+        "Spacing that's too wide forces lateral foot motion—adds a movement variable that kills consistency.",
+        "Spacing that's too narrow makes it impossible to distinguish brake from throttle without looking.",
+        "Angle too steep creates calf fatigue and forces you to use heel pressure instead of forefoot control.",
+        "Angle too shallow makes trail braking harder because your ankle angle changes as you modulate.",
+        "Inconsistent geometry means every braking session teaches a slightly different muscle pattern."
+      ]
+    },
+    {
+      "tip": "Your pedals are never the problem if the spacing and angle don't match your body. Upgrading from load-cell to load-cell while ignoring geometry won't fix brake oscillation—it'll just expose it faster.",
+      "tipLabel": "Setup Before Specs"
+    },
+    {
+      "h2": "Finding Your Ideal Spacing on the CRP2"
+    },
+    {
+      "p": "The MOZA CRP2 comes with a fixed ~100 mm spacing between brake and throttle centerlines. That's tighter than a real car, but it's adjustable because the pedals mount on a slotted aluminum plate. I can move the brake pedal forward or back relative to the throttle within reason. The goal is to find the distance where your foot naturally pivots from one to the other without conscious lateral motion."
+    },
+    {
+      "p": "Start by sitting in your rig in your normal driving position. Place your right foot on the throttle, heel on the rig floor, forefoot on the pedal. Now pivot your foot to the brake. Your foot should move naturally without your hip or torso shifting. If you need to rotate your whole body or slide your foot sideways, the spacing is wrong. Measure the distance between brake and throttle contact points. That's your starting reference."
+    },
+    {
+      "p": "Most drivers find consistency in the ~90–120 mm range on a load-cell pedal set, but smaller drivers often prefer closer spacing (~80–100 mm) and larger drivers often need wider (~110–130 mm). The math is simple: wider spacing feels more realistic but requires more conscious foot movement; tighter spacing requires smaller pedal pivots but can feel cramped if your leg is long. My setup lands at ~105 mm because that's where my foot naturally transitions without thinking."
+    },
+    {
+      "olist": [
+        "Sit in your rig in normal driving posture, heel planted on the rig floor.",
+        "Place your forefoot on the throttle and note the pedal position.",
+        "Pivot your foot to the brake without sliding your heel sideways.",
+        "Measure the linear distance between the two pedal contact points.",
+        "Mount your brake pedal at that distance and do a test session.",
+        "Adjust ±5–10 mm if the transition feels unnatural or forced."
+      ]
+    },
+    {
+      "h2": "Pedal Angle: The Forgotten Dimension"
+    },
+    {
+      "p": "Angle is harder to dial because it involves your entire leg geometry, not just distance. In a real car, your brake and throttle sit at roughly the same angle—both angled downward from the steering column, with your foot naturally pressing down and slightly forward. On a fixed cockpit, you have to create that angle deliberately."
+    },
+    {
+      "p": "The CRP2 pedals mount on an aluminum plate that can be angled relative to the floor. My current setup has both brake and throttle angled at roughly 40–45 degrees from horizontal. That means my leg sits in a natural, relaxed position with my heel on the rig floor and my forefoot applying pressure straight down into the pedal. I'm not reaching. I'm not over-extending. I'm just pushing, which makes pressure modulation repeatable session after session."
+    },
+    {
+      "p": "If your angle is too steep (70+ degrees), you're forcing your ankle into plantarflexion, which tires your calf and makes it hard to apply smooth pressure. If it's too shallow (20–30 degrees), you're reaching forward and having to use mostly toe pressure, which is harder to modulate precisely. The sweet spot is usually 35–50 degrees, where your leg angle is relaxed and your forefoot naturally applies force into the pedal without fatigue."
+    },
+    {
+      "tip": "Test angle by doing 10 hard braking points from 200 km/h. If your calf is burning or your ankle feels locked, the angle is too steep. If you're losing pressure consistency on the fifth brake application, fatigue is entering the equation—your angle is fighting your body.",
+      "tipLabel": "The Fatigue Test"
+    },
+    {
+      "h2": "Heel-Toe and Trail Braking Setup"
+    },
+    {
+      "p": "Heel-toe is only possible if your pedal spacing and angle allow your right foot to make two independent inputs cleanly. On my rig, I can brake with my forefoot while rolling my heel over to blip the throttle without my brake pressure changing. That only works because the spacing is tight enough that both pedals are within one foot's control zone, and the angle is shallow enough that my ankle doesn't lock or fatigue during the transition."
+    },
+    {
+      "p": "Trail braking—modulating brake pressure while already rolling off the brake pedal—depends even more on angle consistency. If your brake pedal angle changes under your foot as you modulate, your brake pressure curve shifts, and trail braking becomes a guessing game. A fixed, natural angle means the pressure-to-input relationship stays the same from on-throttle to full brake and everywhere between."
+    },
+    {
+      "list": [
+        "Heel-toe requires brake and throttle within one foot's natural range—usually 80–120 mm on load-cell pedals.",
+        "Heel-toe also requires an angle shallow enough that your heel can roll naturally to the throttle.",
+        "Trail braking requires an angle where you can modulate brake pressure without your foot angle shifting.",
+        "Trail braking requires spacing where brake modulation doesn't force compensatory hip or torso movement.",
+        "Test both techniques in slower corners first—they expose spacing and angle problems immediately."
+      ]
+    },
+    {
+      "h2": "Measuring and Mounting: The Practical Steps"
+    },
+    {
+      "p": "On my rig, I used a simple aluminum extrusion as the pedal mounting plate. The MOZA CRP2 pedals have three mounting points each, which means I can adjust both spacing and angle by moving pedals along the extrusion and tilting the extrusion itself. Before I made any permanent changes, I tested five different configurations over five separate race sessions, changing one variable at a time."
+    },
+    {
+      "p": "For spacing: I marked the pedal positions in tape, did a session, then moved the brake pedal ±10 mm and did another session. I repeated until the transition felt natural. For angle: I started at 45 degrees, tested, then tried 40 and 50 degrees in separate sessions. The 40-degree angle felt slightly under-damped; 50 degrees felt slightly cramped. Forty-five was the sweet spot."
+    },
+    {
+      "p": "The key is changing one variable at a time and giving yourself at least 20 minutes per session to build muscle memory. Pedal geometry takes time to adjust to because your body has to relearn the motion. A five-minute test drive won't tell you anything reliable. A full qualifying session will."
+    },
+    {
+      "olist": [
+        "Mount your pedals at a baseline spacing (start with 100 mm on CRP2).",
+        "Mount them at a baseline angle (start with 45 degrees).",
+        "Do a 20-minute session and note brake consistency in telemetry.",
+        "Adjust spacing by ±10 mm, repeat, and compare telemetry.",
+        "Once spacing is set, adjust angle in 5-degree increments over separate sessions.",
+        "Lock in the configuration once brake pressure traces show minimal variation lap-to-lap."
+      ]
+    },
+    {
+      "h2": "The Consistency Payoff"
+    },
+    {
+      "p": "Once spacing and angle are dialed, brake consistency improves faster than any FFB or pedal firmware change can deliver. My peak brake pressure variation dropped from ±8–10% to ±2–3% within a week. My trail-braking markers became reproducible. My heel-toe entries stopped feeling like coordination tests and started feeling automatic."
+    },
+    {
+      "p": "That consistency compounds. Once your feet aren't fighting the geometry, your brain can focus entirely on the line, the throttle application, and the car's response. You learn the track faster. You spot setup issues faster because your inputs are reliable and the car's behavior is the variable. You can actually trust your lap-to-lap telemetry because your driving input is consistent."
+    },
+    {
+      "p": "Pedal spacing and angle won't make you fast overnight. But they're the foundation that makes every other improvement—brake balance, load-cell calibration, <a href=\"moza-crp2-brake-calibration-pressure-curves.html\">pressure curves</a>—actually stick. Skip them and you're building on sand."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I know if my spacing is too wide or too narrow?",
+      "a": "Too wide: your foot makes a conscious lateral motion every time you transition from throttle to brake, and you have to look down or feel around to find the brake. Too narrow: your foot feels cramped, and you can't pivot cleanly without your heel slipping. Correct spacing feels like a natural 15-20 degree pivot with your foot staying centered over both pedals."
+    },
+    {
+      "q": "What angle should my pedals be at?",
+      "a": "Start at 40-45 degrees from horizontal, where your leg is relaxed and your forefoot naturally applies force downward. If your calf burns during long braking sequences, the angle is too steep. If you're losing brake pressure consistency, the angle is too shallow or too inconsistent. Test in 5-degree increments over multiple sessions."
+    },
+    {
+      "q": "Can I do heel-toe without tight spacing?",
+      "a": "Not cleanly. Heel-toe requires brake and throttle to be within one foot's natural control zone, typically 80-120 mm on load-cell pedals. Wider spacing requires a conscious foot slide, which breaks the timing of the blip. If you want reliable heel-toe, spacing is non-negotiable."
+    },
+    {
+      "q": "How do I test if my setup is dialed without buying new pedals?",
+      "a": "Adjust spacing and angle first using your existing pedal mount. Measure brake pressure traces in telemetry across 10 consecutive braking points at the same corner. Consistent spacing and angle show pressure variation under 3-4 percent. If variation is 8 percent or higher, geometry is the culprit, not the pedals."
+    }
+  ],
+  "gearKeys": [
+    "moza-crp2",
+    "cockpit"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}
