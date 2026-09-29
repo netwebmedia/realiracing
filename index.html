@@ -847,6 +847,17 @@
       .nav-links::-webkit-scrollbar { display: none; }
       .nav-links li { flex: 0 0 auto; }
       .nav-links a { font-size: 0.82rem; white-space: nowrap; }
+      /* 2026-09-29: the Subscribe pill is the last item of this scrolling row, so
+         at 375px it sat past the right edge (QA F3, 2026-09-05). Pin it to the
+         right edge of the row; the other links scroll underneath it. The opaque
+         fade keeps their text from showing through the pill. */
+      .nav-links li:last-child {
+        position: sticky;
+        right: 0;
+        margin-left: auto;
+        padding-left: 14px;
+        background: linear-gradient(90deg, rgba(10,10,10,0), #0a0a0a 14px);
+      }
       .stats-bar { gap: 30px; }
       section { padding: 60px 20px; }
       .media-grid, .yt-grid { grid-template-columns: 1fr; }
