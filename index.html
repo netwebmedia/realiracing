@@ -56,7 +56,127 @@
         "name": "RealIRacing",
         "url": "https://realiracing.com/",
         "description": "iRacing sim racing content, race highlights, setup guides, rig tours and tips.",
+        "dateModified": "2026-09-29",
         "publisher": { "@id": "https://realiracing.com/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is behind RealIRacing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RealIRacing is run by Carlos Martinez, who races on iRacing under the user name Carlos Martinez9. The site and the @realtape YouTube channel cover iRacing from a racer's perspective with real motorsport roots; the channel lists 975+ videos and 1,700+ subscribers, and has been on YouTube for 15 years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What sim racing gear does RealIRacing race on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The rig is a MOZA R9 direct drive wheelbase (9 N·m), a MOZA CS V2 steering wheel and MOZA CRP2 load cell pedals, driven by an RTX 5060 Ti and a Ryzen 7 5700 with 32 GB of RAM on a single 1440p 120 Hz monitor. Every part is hardware Carlos owns and races on, and the full breakdown is on the My Rig page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What content does RealIRacing publish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Four kinds of content: race highlights, setup guides, rig tours and iRacing tips. The blog adds written guides on force feedback settings, wheel and pedal buyer's guides, safety rating and racecraft, car and track guides, and OBS streaming configurations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the gear links on RealIRacing affiliate links?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Gear links go to Amazon and carry an affiliate tag, so Carlos may earn a small commission if you buy, at no extra cost to you. That income helps keep the site running. The affiliate disclosure sits in the gear section of this page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I watch and follow RealIRacing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Watch race highlights, setup guides and rig tours on YouTube at @realtape. Follow @realiracing on Instagram, TikTok and X, or find every platform in one place at realiracing.com/go."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json" id="latest-posts-ld">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Latest RealIRacing blog posts",
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "numberOfItems": 10,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://realiracing.com/blog/iracing-qualifying-best-practices-pace.html",
+        "name": "iRacing Qualifying Best Practices: Strategy, Pace, and Grid Position"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://realiracing.com/blog/prevent-eye-strain-sim-racing-distance.html",
+        "name": "Eye Strain and Screen Distance: Preventing Fatigue in Long iRacing Sessions"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://realiracing.com/blog/cadillac-v-series-r-gtp-iracing-guide.html",
+        "name": "Cadillac V-Series.R GTP iRacing Guide: Setup and Technique"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://realiracing.com/blog/direct-drive-damping-friction-settings.html",
+        "name": "Direct Drive Damping and Friction: Finding Your Feel"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://realiracing.com/blog/iracing-incident-points-how-they-work.html",
+        "name": "iRacing Incident Points Explained: What Actually Causes Them"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://realiracing.com/blog/zandvoort-iracing-guide-banking-crests.html",
+        "name": "Zandvoort iRacing Guide: Banking, Blind Crests, and Line Choice"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://realiracing.com/blog/dirt-sprint-car-iracing-beginners-guide.html",
+        "name": "Dirt Sprint Car iRacing Beginner Guide: Setup and Technique"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://realiracing.com/blog/iracing-ffb-clipping-diagnosis-and-fixes.html",
+        "name": "iRacing FFB Clipping: How to Diagnose and Fix It Now"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://realiracing.com/blog/anti-roll-bars-balance-shift-explained.html",
+        "name": "Anti-Roll Bars and Balance: How ARB Stiffness Shifts Weight"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://realiracing.com/blog/brands-hatch-grand-prix-iracing-guide.html",
+        "name": "Brands Hatch Grand Prix iRacing Guide: Setup, Lines, Braking"
       }
     ]
   }
@@ -84,6 +204,15 @@
       font-family: var(--font);
       line-height: 1.6;
     }
+
+    /* ── FAQ ─────────────────────────────── */
+    #faq { max-width: 900px; margin: 0 auto; padding: 80px 24px; }
+    #faq h2 { margin-bottom: 8px; }
+    .faq-updated { color: var(--muted); font-size: 0.8rem; margin-bottom: 28px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 14px; }
+    .faq-item h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .faq-item p { color: var(--muted); font-size: 0.95rem; }
+    .faq-item a { color: var(--accent2); }
 
     /* ── NAV ─────────────────────────────── */
     nav {
@@ -1521,6 +1650,33 @@
         <strong style="color:var(--text);">Affiliate Disclosure:</strong> Some links on this page are affiliate links. I may earn a commission at no cost to you. Everything pictured is hardware I personally own and race on.
       </div>
     </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <p class="section-label">FAQ</p>
+    <h2>Frequently asked questions</h2>
+    <p class="faq-updated">Last updated: <time datetime="2026-09-29">September 29, 2026</time></p>
+      <div class="faq-item">
+        <h3>Who is behind RealIRacing?</h3>
+        <p>RealIRacing is run by Carlos Martinez, who races on iRacing under the user name Carlos Martinez9. The site and the @realtape YouTube channel cover iRacing from a racer's perspective with real motorsport roots; the channel lists 975+ videos and 1,700+ subscribers, and has been on YouTube for 15 years.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What sim racing gear does RealIRacing race on?</h3>
+        <p>The rig is a MOZA R9 direct drive wheelbase (9 N·m), a MOZA CS V2 steering wheel and MOZA CRP2 load cell pedals, driven by an RTX 5060 Ti and a Ryzen 7 5700 with 32 GB of RAM on a single 1440p 120 Hz monitor. Every part is hardware Carlos owns and races on, and the full breakdown is on the <a href="/gear.html">My Rig page</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What content does RealIRacing publish?</h3>
+        <p>Four kinds of content: race highlights, setup guides, rig tours and iRacing tips. The <a href="/blog/">blog</a> adds written guides on force feedback settings, wheel and pedal buyer's guides, safety rating and racecraft, car and track guides, and OBS streaming configurations.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are the gear links on RealIRacing affiliate links?</h3>
+        <p>Yes. Gear links go to Amazon and carry an affiliate tag, so Carlos may earn a small commission if you buy, at no extra cost to you. That income helps keep the site running. The affiliate disclosure sits in the gear section of this page.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where can I watch and follow RealIRacing?</h3>
+        <p>Watch race highlights, setup guides and rig tours on YouTube at @realtape. Follow @realiracing on Instagram, TikTok and X, or find every platform in one place at <a href="/go/">realiracing.com/go</a>.</p>
+      </div>
   </section>
 
   <!-- PLATFORMS -->

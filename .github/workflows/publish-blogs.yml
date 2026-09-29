@@ -105,7 +105,7 @@ jobs:
           git config user.name "RealIRacing Blog Bot"
           git config user.email "bot@realiracing.com"
           git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
-          git add blog/ _deploy/posts-queue/ sitemap.xml go/
+          git add blog/ _deploy/posts-queue/ sitemap.xml go/ llms.txt llms-full.txt index.html
           git commit -m "publish: auto-publish $(date -u '+%Y-%m-%d %H:%M') UTC"
           # Retry push with rebase --autostash for concurrent push + unstaged residuals
           for attempt in 1 2 3 4 5; do

@@ -581,6 +581,7 @@ if (rendered > 0) {
   const smOk = updateSitemap(renderedPosts);
   console.log(idxOk ? 'Updated blog/index.html.' : 'blog/index.html not updated.');
   console.log(smOk ? 'Updated sitemap.xml.' : 'sitemap.xml not updated.');
+  try { require('./build-aeo.js').build(); } catch (e) { console.warn('build-aeo failed (non-fatal):', e.message); }
 } else {
   console.log('Nothing to render.');
 }
