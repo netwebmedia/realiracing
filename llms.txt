@@ -6,7 +6,7 @@
 - Author: Carlos Martinez (iRacing user "Carlos Martinez9"). Home: https://realiracing.com/
 - Rig: MOZA R9 direct drive wheelbase, MOZA CS V2 wheel, MOZA CRP2 load cell pedals, RTX 5060 Ti, 1440p 120 Hz monitor. Full breakdown: https://realiracing.com/gear.html
 - Affiliate disclosure: gear links go to Amazon and carry an affiliate tag; the author may earn a commission at no cost to the reader. The site does not use sponsored loaner hardware.
-- 127 blog guides published so far; new posts appear several times a week.
+- 129 blog guides published so far; new posts appear several times a week.
 
 ## Main sections
 - [Home](https://realiracing.com/): channel overview, content types, gear picks, FAQ
@@ -18,6 +18,8 @@
 
 ## Latest blog posts (newest first)
 
+- [Fuji Speedway iRacing Guide: Lines, Setup, Wet Weather](https://realiracing.com/blog/fuji-speedway-iracing-guide.html): Master Fuji's fast uphill corners and technical downhill sections. Learn racing lines, brake points, and setup tweaks for both wet and dry conditions.
+- [Indianapolis Motor Speedway iRacing Guide: Line, Setup, Drafting](https://realiracing.com/blog/indianapolis-motor-speedway-iracing-guide.html): Master Indy's high-speed oval. Learn the racing line, brake zones, setup priorities, and drafting strategy for clean, competitive lap times.
 - [iRacing Qualifying Best Practices: Strategy, Pace, and Grid Position](https://realiracing.com/blog/iracing-qualifying-best-practices-pace.html): Master iRacing qualifying with proven techniques for tire prep, fuel strategy, and consistent pace. Learn when to push and how to avoid costly mistakes.
 - [Eye Strain and Screen Distance: Preventing Fatigue in Long iRacing Sessions](https://realiracing.com/blog/prevent-eye-strain-sim-racing-distance.html): How screen distance, monitor size, and viewing angles affect eye fatigue in sim racing. Real solutions I use on my rig to race injury-free for hours.
 - [Cadillac V-Series.R GTP iRacing Guide: Setup and Technique](https://realiracing.com/blog/cadillac-v-series-r-gtp-iracing-guide.html): Master the Cadillac V-Series.R GTP with proven setup adjustments, brake calibration, and racecraft tactics for iRacing's top prototype class.
@@ -36,8 +38,6 @@
 - [Posture and Back Pain in a Fixed Cockpit: Real Solutions](https://realiracing.com/blog/posture-back-pain-fixed-cockpit-solutions.html): Fix lower back pain and poor posture in your fixed sim rig. Practical adjustments to seat angle, wheel height, and pedal position that actually work.
 - [Garage61 vs Telemetry Comparison Tools: Which Fits Your iRacing Workflow](https://realiracing.com/blog/garage61-telemetry-comparison-tools.html): Compare Garage61, iSpeed, and other telemetry tools to find the right fit for your setup analysis and lap improvement workflow.
 - [iRacing Protest and Sporting Code: The Complete Process](https://realiracing.com/blog/iracing-protest-sporting-code-process.html): Understand when to protest, how iRacing investigates incidents, and what the sporting code means for your account and iRating.
-- [Direct Drive Wheelbase Maintenance and Firmware Updates Guide](https://realiracing.com/blog/direct-drive-wheelbase-maintenance-firmware.html): Keep your direct drive wheelbase running smooth: firmware updates, bearing care, coil cleaning, and real-world maintenance on the MOZA R9.
-- [Racing Clean When Your Opponent Won't: Survival and Speed](https://realiracing.com/blog/racing-clean-aggressive-opponents-iracing.html): How to stay competitive and incident-free when facing aggressive drivers. Practical defensive lines, positioning, and mental shifts.
 
 ## More
 - Every post, one line each: https://realiracing.com/llms-full.txt
