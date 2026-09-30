@@ -3,7 +3,7 @@
    netwebmedia's api-php/routes/catalogue.php AND the matching usd values in
    checkout.html. While false, buy buttons stay "notify me" mailto links. */
 (function () {
-  var PACKS_LIVE = false;
+  var PACKS_LIVE = true;
   if (!PACKS_LIVE) return;
   var b = document.getElementById('pack-buy');
   if (b && b.getAttribute('data-pack-url')) {
@@ -11,5 +11,5 @@
     b.textContent = 'Buy the pack';
   }
   var n = document.getElementById('pack-price-note');
-  if (n) n.textContent = 'Instant email delivery. 7-day money-back guarantee.';
+  if (n) n.textContent = '$19 · Instant email delivery. 7-day money-back guarantee.';
 })();
