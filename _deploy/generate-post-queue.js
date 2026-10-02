@@ -266,6 +266,20 @@ const TOPIC_POOL = [
   'eye strain and screen distance over long sessions',
   'stamina for endurance stints: the unglamorous half',
   'hydration and breaks during a two-hour race',
+
+  // Tracks not yet covered
+  'laguna seca iracing guide: the corkscrew and turn 1',
+  'imola iracing guide: chicanes, kerbs and the tamburello legacy',
+  'road atlanta iracing guide: the esses and braking for turn 10',
+  'lime rock park iracing guide: short-track road racing habits',
+  'interlagos iracing guide: reading the senna s and the long back straight',
+  'le mans circuit de la sarthe iracing guide for endurance drivers',
+  'martinsville iracing guide: braking and rotation on a paperclip oval',
+  'bristol motor speedway iracing guide: banking, tire wear and lane choice',
+  'indianapolis motor speedway oval iracing guide: trim and drafting',
+  'phillip island iracing guide: fast sweepers and the high-speed lines',
+  'sonoma raceway iracing guide: elevation and the carousel',
+  'charlotte roval iracing guide: the infield chicane and the banking',
 ];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────

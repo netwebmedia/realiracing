@@ -1,0 +1,167 @@
+{
+  "slug": "sonoma-raceway-iracing-guide",
+  "tag": "Track Guides · Setup",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Sonoma Raceway iRacing Guide: Turn-In, Apexes, Brake Points",
+  "description": "Master Sonoma's fast transitions and heavy braking zones. Learn turn-in geometry, trail-braking technique, and setup adjustments for this medium-speed California road course.",
+  "sections": [
+    {
+      "p": "Sonoma Raceway is one of iRacing's most rewarding mid-field road courses—tight enough that precision matters, fast enough that momentum carries weight, and punishing enough that one bad corner ruins your lap. I've put in serious time here across multiple series, and I've found that Sonoma rewards drivers who understand its rhythm: it's a course of hard braking, early apex commitment, and carrying speed through transition zones."
+    },
+    {
+      "p": "Unlike some road courses where you can point-and-shoot the entry, Sonoma demands that you respect brake markers, find the right turn-in angle on corner entry, and commit to your line before the apex appears. The elevation changes add an extra layer of difficulty, and the runoff is forgiving enough to let you explore limits, but punishing enough that overstep and you'll lose 3-4 tenths in a heartbeat."
+    },
+    {
+      "h2": "The Layout: Brake Zones and Transitions"
+    },
+    {
+      "p": "Sonoma is a 2.52-mile, 12-turn course that flows in two distinct halves. The first half—Turns 1 through 6—is a series of hard-braking, downhill entries followed by medium-speed corners. The second half is lighter on braking but demands smooth, early throttle application to carry momentum through fast direction changes."
+    },
+    {
+      "list": [
+        "Turn 1 (Grange): Hard brake at ~180 m from the start line, trail brake deep, commit to a medium-speed left turn. This is your first chance to gain or lose time. Lock-up here kills your entry speed into the carousel.",
+        "Turn 2 (Carousel): A slow-speed sweeper that flows into Turn 3. Early throttle here matters; the faster you roll speed through the carousel, the better your entry into the next section.",
+        "Turn 5 (Sears Point): The second-hardest braking zone on track. Brake straight, late entry, let off hard brakes ~20 m before apex so you can roll throttle entry. Miss this and you're wide or off.",
+        "Turns 7–9 (the high-speed section): Nearly flat-out transitions. Focus on early apex, late throttle, and carrying momentum. This is where you gain ground on the field or surrender it.",
+        "Turn 11 (the hairpin): A second-gear forced-downshift. Braking zone is short but critical; lock-up here carries you into the curbing. Trail brake to apex and roll throttle hard out of here."
+      ]
+    },
+    {
+      "h2": "Brake Points and Trail-Braking Zones"
+    },
+    {
+      "p": "On my MOZA CRP2 pedals, I've dialed in pressure curves that let me feel the threshold without locking. Sonoma is all about late braking and trail-braking—you cannot simply stab the brakes and coast to apex. The car needs a little brake pressure still on when you hit the turn-in point, or you'll understeer and push wide."
+    },
+    {
+      "list": [
+        "Turn 1: 85% brake pressure at the marker (~180 m), downshift to 3rd. Trail brake to 20% at turn-in; throttle rolls in gradually as the wheel unwinds.",
+        "Turn 5: Same philosophy. 90% brake at marker, heavy trail-brake to ~25–30% pressure as you turn in. The car is still decelerating when apex arrives; this prevents running wide.",
+        "Turn 11 (hairpin): A short, sharp braking zone. Full brake to 95% for ~1.5 seconds, trail to 30–40% as you turn in hard. Roll throttle as soon as the wheel is centered.",
+        "Turns 7–9: Minimal braking. You're already rolling at good speed; dab the brakes before entry, but do not trail brake. These corners reward smooth, early throttle application."
+      ]
+    },
+    {
+      "tip": "Set your brake pressure curve on the CRP2 so that 80% pedal pressure gives you 80–85% braking force. This lets you modulate the last 15% of pedal travel for precision threshold braking without spiking into lockup. Sonoma's braking zones are long enough that you'll use the whole pedal on hard corners.",
+      "tipLabel": "Brake Calibration"
+    },
+    {
+      "h2": "Turn-In Geometry and Apex Placement"
+    },
+    {
+      "p": "This is where I see most drivers lose time at Sonoma. The turn-in point is not always where your eyes want it to be. On-curb exits look appealing, but Sonoma often rewards deeper braking and a later apex—it gives you a better exit and more rolling speed into the next corner."
+    },
+    {
+      "list": [
+        "Turn 1 (Grange): Turn in ~1 car-width earlier than feels natural. Your instinct says late apex for exit speed; the actual fast line is a slightly mid-line apex that lets you trail throttle aggressively out the right side.",
+        "Turn 5 (Sears Point): Late turn-in, early-mid apex. The apex curb is your reference; aim for the first ~third of it. This prevents understeer and loads the inside front tire for grip.",
+        "Turns 7–9: These are the fast transitions that catch people off guard. Turn-in early for each apex, roll smooth throttle application, and let momentum do the work. Trying to trail brake through here is a mistake.",
+        "Turn 11 (hairpin): Sharp, late turn-in, apex at the curb line. The corner is tight; don't try to be clever. Get the car stopped and turned, then roll throttle hard once you're committed to the corner."
+      ]
+    },
+    {
+      "h2": "Setup Adjustments for Sonoma"
+    },
+    {
+      "p": "My R9 direct-drive setup at Sonoma differs slightly from my road-course baseline. Sonoma has enough elevation change and fast transitions that I need slightly more stability but not so much that the car feels nervous on heavy-braking corners."
+    },
+    {
+      "list": [
+        "Anti-roll bars: Front ~1.5–2 clicks stiffer than road-course baseline. The fast sections demand less roll; the heavy braking demands you can modulate brake pressure without the car walking around.",
+        "Brake bias: 56–58% front. Sonoma's braking zones are long and demand high brake pressure; a forward bias prevents locking the rears on hard straights. Dial in 1-2 clicks forward if you're locking fronts in Turn 1 or Turn 5.",
+        "Damping: Front rebound and bump stiffness should be moderate. You need to absorb elevation changes without bottoming on the straights. Set bump to ~6, rebound to ~7 as a baseline.",
+        "Tire pressures: ~26.8–27.2 psi front, ~26.4–26.8 psi rear for GT3s. Sonoma's mix of heavy braking and fast rolling creates heat; you want pressures that keep front load balanced without front locking.",
+        "Downforce: Run your standard road-course wing angle. Sonoma doesn't reward high drag; mid-range downforce (500–700 points for GT3) strikes the balance."
+      ]
+    },
+    {
+      "p": "I typically start with <a href=\"building-setup-from-iracing-baseline.html\">my baseline setup and make adjustments</a> based on how the car feels in practice. If the rear slides on turn-in at the hairpin, I stiffen front ARB by 0.5 clicks. If the fronts lock under braking, I soften brake bias or adjust brake pressure curve on the pedals."
+    },
+    {
+      "h2": "Elevation and Visual Reference Points"
+    },
+    {
+      "p": "Sonoma climbs into Turn 1, descends hard into Turn 5, then climbs again into the high-speed section. This elevation change affects how the car feels and where you can see reference points. On my first few laps, I miss apexes because I'm misjudging brake markers that are visually compressed by the hill."
+    },
+    {
+      "list": [
+        "Turn 1: The hill makes the braking zone look shorter than it is. Brake earlier than you think; the visual compression is real.",
+        "Turn 5: The downhill into this corner loads the front tire hard. You can brake deeper and trail brake longer here than elevation-neutral corners elsewhere. Use the downslope.",
+        "Turns 7–9: The course climbs back up; your visual reference for apex shifts as the elevation rises. Pick a fixed reference (curb line, grass edge, advertising board) and commit to it.",
+        "Turn 11: The hairpin sits at mid-elevation with a descent afterward. Brake hard on the descent; the downslope helps slow the car naturally."
+      ]
+    },
+    {
+      "h2": "Common Mistakes and How to Fix Them"
+    },
+    {
+      "list": [
+        "Too much brake pressure too late into Turn 1: You lock the fronts or understeer wide. Solution: brake ~20 m earlier, trail to apex, let the car settle before throttle.",
+        "Overshooting the carousel entry: You're turning in too early because you're focused on exiting on the curb. The curb will come; focus on entry angle first.",
+        "Trying to brake-and-turn at Turns 7–9: These fast transitions need committed entries. Brake BEFORE the corner, roll smooth throttle through, and don't over-slow. You'll lose 0.5–1 sec if you're timid here.",
+        "Locking fronts at Turn 5 on exit: You're still braking as you apply throttle. Let off brakes fully before rolling throttle; the downslope doesn't need brake input at apex."
+      ]
+    },
+    {
+      "h2": "Tire Management and Race Pace"
+    },
+    {
+      "p": "Sonoma is a ~2-minute lap in GT3 machinery, which means tire temperature management over a race stint matters. The heavy braking at Turns 1 and 5 loads the front tires; the fast transitions stress the rears. If you're running ~30 minutes before a pit stop, tire deg will cost you 3–5 tenths by lap 20."
+    },
+    {
+      "list": [
+        "First 3 laps: Easy pace, get tires warm gradually. The curbing at Sonoma can jar you off line if tires are cold; dial it in slowly.",
+        "Laps 4–15: Push hard while tires are fresh. This is your window for consistent high pace. Lock in lap times here.",
+        "Laps 16+: Tires start to fade noticeably. Reduce trail-braking aggression slightly and rely more on smooth entry and early throttle. You lose 1–2 tenths but preserve grip for the final laps.",
+        "Race pace vs. qualifying: In a race, dial back trail-braking intensity by ~10% and focus on smooth momentum. You'll lose 0.2–0.3 sec per lap but gain consistency and avoid lockups from fatigue."
+      ]
+    },
+    {
+      "tip": "On my R9, I set FFB strength to ~95–105 N·m for Sonoma. The braking zones generate heavy load; the fast transitions need finesse. If FFB is too low, you miss the threshold feedback on brake input. If it's too high, the wheel becomes jittery in the fast sections. Medium-high strength gives you the best of both.",
+      "tipLabel": "FFB Strength for Sonoma"
+    },
+    {
+      "h2": "Practice Routine and Learning the Line"
+    },
+    {
+      "p": "Sonoma took me 3–4 hours of practice to feel confident, and another 2–3 hours to be consistently quick. Here's how I approached it:"
+    },
+    {
+      "olist": [
+        "Lap 1–5: Slow pace, find the braking markers visually. Don't worry about apexes; focus on understanding where the car needs to be stopped.",
+        "Lap 6–15: Increase to ~90% pace, focus on one corner at a time. Start with Turn 1, nail it, move to Turn 5.",
+        "Lap 16–30: Push toward qualifying pace. The fast transitions (7–9) will feel awkward; give them extra laps.",
+        "Lap 31–45: Put together clean laps. You should be on pace now. Record your replay and watch your apex placement.",
+        "Lap 46+: Race pace and tire management. Dial back intensity by ~10%, focus on smooth inputs, and avoid lockups."
+      ]
+    },
+    {
+      "p": "Most of my lap-time gain comes in the first 30 minutes. After that, gains are smaller; you're refining lines and tire management rather than learning the course. The payoff is that a clean, well-timed Sonoma lap feels fantastic—the fast sections flow, the braking is sharp but controlled, and the exits are smooth."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's the ideal brake bias for GT3s at Sonoma?",
+      "a": "I run 56–58% front bias depending on the car. Sonoma's heavy braking at Turns 1 and 5 demands a forward bias to prevent rear-lock on hard straights. Start at 57% and adjust by 1 click if you're locking fronts (soften bias) or rears (stiffen bias). The downhill braking into Turn 5 may require 1–2 clicks more front bias than your road-course baseline."
+    },
+    {
+      "q": "How do I avoid understeer at Turn 5 (Sears Point)?",
+      "a": "Turn 5 understeer usually means you're turning in too early or braking too late. Solution: brake straight until 25–30 m before apex, then trail brake hard as you turn in. The car should still be decelerating at apex; this prevents the front tires from running out of grip. Practice this in the Mazda first if you're unsure—the slower speed makes the technique clearer."
+    },
+    {
+      "q": "Should I trail brake through Turns 7–9?",
+      "a": "No. Turns 7–9 are fast, committed transitions that reward early entry and smooth, early throttle. Brake hard BEFORE the corner, then release brakes fully and let momentum carry you through. If you're still on brakes as you turn in, you'll understeer and lose grip. These corners are about rolling speed, not trail-braking finesse."
+    },
+    {
+      "q": "What tire pressures work best for a 30-minute stint?",
+      "a": "Start at 26.8–27.0 psi front and 26.4–26.6 psi rear. Over 30 minutes, fronts will heat and climb 0.5–1 psi due to heavy braking; dial them in about 0.3–0.5 psi lower than you'd run for a short qualifying lap. Check your telemetry after 10 minutes and adjust based on how tire temps are trending. Aim for peak grip in the middle of your stint, not the beginning."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "moza-cs-v2"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}

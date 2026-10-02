@@ -409,6 +409,7 @@ ${relatedHtml}
       <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
       <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
     </p>
+  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:.8">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
   </footer>
 
   <script src="/js/ga4.js" defer></script>
@@ -580,6 +581,7 @@ if (rendered > 0) {
   const smOk = updateSitemap(renderedPosts);
   console.log(idxOk ? 'Updated blog/index.html.' : 'blog/index.html not updated.');
   console.log(smOk ? 'Updated sitemap.xml.' : 'sitemap.xml not updated.');
+  try { require('./build-aeo.js').build(); } catch (e) { console.warn('build-aeo failed (non-fatal):', e.message); }
 } else {
   console.log('Nothing to render.');
 }

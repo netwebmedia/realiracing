@@ -1,0 +1,162 @@
+{
+  "slug": "consistency-over-pace-lap-time-spread-wins",
+  "tag": "iRacing Tips · Racing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Consistency Over Pace: Why Lap-Time Spread Wins Races",
+  "description": "A tighter lap-time delta wins more races than peak pace. Learn how to build consistency on your MOZA R9 setup and why repeatability beats raw speed in iRacing.",
+  "sections": [
+    {
+      "p": "I've spent enough time watching my telemetry on the MOZA R9 to know that my fastest lap in practice means almost nothing. What wins races is the ability to run the same lap—within a tenth or two—for twenty laps straight. I used to chase tenths obsessively, uploading replays to setup shops and tweaking brake bias until my eyes crossed. Then I realized my problem wasn't peak pace; it wasn't even setup. It was that my lap times swung wildly. A 1:47.2, then a 1:47.9, then a 1:47.4. That variance kills you in a race when fuel load, tire deg, and pressure shifts are already working against consistency."
+    },
+    {
+      "p": "Pace is the ceiling. Consistency is what you actually *drive*. In a ten-lap iRacing race, a driver with a 1:48.0 average delta of 0.3 seconds beats a driver with 1:47.5 pace but a 0.8-second spread almost every time. The first driver finishes predictable. The second spins, locks the rear, locks the front, then comes back. One is a racer. The other is a passenger on a bucking horse. This post is about how I built consistency on my rig and why it matters more than you think."
+    },
+    {
+      "h2": "Why Variance Kills You in a Race"
+    },
+    {
+      "p": "Lap-time spread is the fingerprint of a driver fighting their inputs. When your times jump around—even just 0.3 to 0.5 seconds lap to lap—it means you're not trusting your reference points, your trail-braking depth, your entry speed, or your pedal pressure. In practice, that feels like 'finding the rhythm.' In a 40-car race, it feels like being unpredictable, which breeds mistakes, which breeds incidents."
+    },
+    {
+      "list": [
+        "A tight 0.1–0.2 second spread means your muscle memory is locked in; you're replicating the same inputs every lap regardless of tire temp or brake fade",
+        "Wide variance (0.5+) signals that you're hunting for grip instead of driving to a reference, making you vulnerable to traffic and pressure from behind",
+        "Tighter consistency = predictable line choice, predictable braking point, predictable exit speed—all of which translate to safer racecraft and fewer incidents"
+      ]
+    },
+    {
+      "p": "On my MOZA R9 with the load-cell CRP2 pedals, I can feel when I'm being sloppy with brake pressure. A inconsistent brake application—even 5–10% variation in pedal pressure depth—ripples through your entry, your rotation, and your exit. Multiply that over twenty laps and you're a second slower on average than you could be, but more importantly, you're *unreliable*. Your engineer (or your spotter) can't predict where you'll be on track."
+    },
+    {
+      "h2": "Where Variance Hides: Brake Pressure and Trail Braking"
+    },
+    {
+      "p": "The biggest culprit in lap-time variance, in my experience, is brake pressure inconsistency. My CRP2 pedals have a load cell and a pressure curve, which means I can see exactly how much force I'm applying brake-to-brake. When I first switched from a friction-based pedal, I was shocked: my 'same braking point' was anywhere from 85 to 95% pedal pressure depending on the lap. That's a massive swing in decel, which throws off everything downstream—entry angle, rotation speed, throttle application. All of it cooks."
+    },
+    {
+      "p": "Trail braking amplifies this problem. If your pressure curve is set up correctly (and I wrote a <a href=\"moza-crp2-brake-calibration-pressure-curves.html\">guide on that</a>), your pedal travel maps directly to brake force. But if you're not consistent with how deep you press, you're not consistent with your brake force. On a car like the Ferrari 488 GT3 Evo, which has a sharp brake bias bias window, a 5% variance in pedal pressure can shift your lock-up point by half a meter. Do that over sixteen laps and your data is noise."
+    },
+    {
+      "h3": "The Fix: Calibrate Your Pressure Curve and Drill Your Input"
+    },
+    {
+      "list": [
+        "Set your load-cell pedal range so that 100% of your comfortable brake pressure maps to 100% pedal travel (not 80% or 110%—exact)",
+        "Run five laps at a time with telemetry ON and watch your brake pressure trace, not your lap time; aim for a flat, identical brake pressure line lap to lap",
+        "Use a fixation point before each braking zone: if you brake at the '100m' board, brake at the *exact same pixel* every lap, and match your pressure curve to that point",
+        "Repeat until you're within 2–3% pedal pressure variance lap to lap; this is your baseline for consistency"
+      ]
+    },
+    {
+      "h2": "Throttle Application and Midcorner Consistency"
+    },
+    {
+      "p": "Brake inconsistency is loud and obvious. Throttle variance is quieter but just as deadly. On a load-cell brake, you have direct feedback—more pressure, more decel. But with throttle, especially on a wheel with force feedback, you can hide sloppy inputs. You might be rolling in 20% throttle, then 15%, then 18%, and the lap times stay close enough that you don't notice."
+    },
+    {
+      "p": "The MOZA R9's force feedback is detailed enough that I can feel when I'm being wishy-washy with throttle. A 5 N·m car feels alive; it tells you when the rear is moving. So does your throttle application. When I'm sloppy, the car chatters and unsettles. When I'm precise—steady throttle ramp, full application by apex, held until the exit marker—the car is a scalpel."
+    },
+    {
+      "list": [
+        "Pick a throttle target for each corner: 25%, 50%, 75%, 100%—or wherever the data says it should be",
+        "Practice applying throttle *to that target* over 10 laps with your telemetry trace on-screen; watch the throttle line, not the lap time",
+        "Once you can hit the same throttle profile for ten laps within 2–3%, move to a different corner; don't chase pace yet",
+        "Consistency in mid-corner throttle reduces rear instability, which reduces oversteer catchery, which reduces variance"
+      ]
+    },
+    {
+      "h2": "Building a Consistency Baseline: The Data Approach"
+    },
+    {
+      "p": "You can feel inconsistency—the car fights you, your inputs are jumpy, you're never quite settled. But you can't *quantify* it without telemetry. I use iRacing's built-in telemetry viewer and Crew Chief to overlay my brake, throttle, and steering traces lap-to-lap. It's eye-opening. You think you braked at the same point, but the pedal trace is all over the map."
+    },
+    {
+      "olist": [
+        "Run five hot laps at your current pace; export telemetry for all five",
+        "Open the telemetry viewer and compare your brake pressure trace (lap 1 vs. lap 5); note the variance in pressure at your braking points",
+        "Do the same for throttle application around your slowest corner; measure the variance in % throttle at mid-corner",
+        "Do the same for steering angle at your entry and apex; a 2–3 degree spread is good, 5+ degrees is sloppy",
+        "Pick one input (usually brake) and drill it for ten laps until your variance shrinks to 2% or less",
+        "Only then move to the next input; consistency compounds"
+      ]
+    },
+    {
+      "tip": "Don't chase lap time during this phase. If your 'consistent' lap is 1:48.2 when your peak is 1:47.8, that's fine. You're building the neural pathway. Pace will follow once the groove is automatic.",
+      "tipLabel": "The Consistency Phase"
+    },
+    {
+      "h2": "Race Pace vs. Practice Pace: When Spread Becomes an Asset"
+    },
+    {
+      "p": "Here's where consistency wins races in a way pure speed doesn't: tire management and degradation. In practice, you're running a qualy stint on fresh tires. Your lap times are artificially tight because grip is high. In a race, tires degrade. Fuel load changes. Brake temps climb. A driver with tight consistency *before* fatigue will maintain consistency *during* fatigue better than a driver who relied on peak grip and loose inputs."
+    },
+    {
+      "p": "The margin between my 1:47.8 peak and my 1:48.2 average is usually less than a tenth by lap 15 of a 20-lap race. My opponent who ran 1:47.5 with wild variance? By lap 12, their tires are cooked, their inputs are even looser, and they're a full second off pace. I pass them because I'm consistent. They weren't."
+    },
+    {
+      "list": [
+        "A consistent driver's lap time drops predictably with tire deg; you can plan pit strategy around that curve",
+        "A loose driver's times scatter; they have no idea if they need fuel or tires or just a reset, so they make bad strategy calls",
+        "Consistent braking means you're not locking up when temps climb; loose drivers lock up mid-race and ruin their race",
+        "Consistent throttle application means the rear stays planted even on dead tires; loose drivers spin trying to force pace they've lost"
+      ]
+    },
+    {
+      "h2": "How I Test Consistency: The 'Ten-Lap Test'"
+    },
+    {
+      "p": "Before I enter a league race, I run what I call the 'ten-lap test.' I do ten consecutive laps on fresh tires, no setup changes, no tweaks. I'm looking for two things: (1) lap-time spread over the ten laps, and (2) the *shape* of my data—does it decay smoothly, or does it bounce around?"
+    },
+    {
+      "list": [
+        "Ideal: laps 1–3 building heat, laps 4–8 within 0.15 seconds of each other (the 'groove'), laps 9–10 dropping 0.2–0.3 as tires die",
+        "Bad: laps bouncing 0.3–0.5 seconds across all ten; this means your inputs are loose and you won't be raceable",
+        "Red flag: one lap noticeably faster or slower than the others; this usually signals a mistake (lock-up, off-track, weird traffic) that you need to replicate to avoid in the race"
+      ]
+    },
+    {
+      "p": "If my ten-lap test shows a 0.3-second spread with a clean groove, I'm ready to race. If it's 0.5+, I spend another thirty minutes drilling brake or throttle application before I even think about entering a lobby."
+    },
+    {
+      "h2": "The Hardware Piece: Why Your Rig Matters for Consistency"
+    },
+    {
+      "p": "A loose rig makes consistency harder. My MOZA R9 on a fixed aluminum cockpit, with the CRP2 load-cell pedals mounted firmly, gives me the same force feedback and pedal feel lap after lap. If your wheelbase is wobbling, your pedals are on carpet, or your shifter is loose, your inputs will vary because your *feedback* is inconsistent. You're not getting the same signal from the car, so you can't replicate the same input."
+    },
+    {
+      "p": "This doesn't mean you need a high-end rig. It means your rig needs to be *tight*. A cheap cockpit bolted solidly beats an expensive one held together with hope. Your pedals need to be fixed, your wheel needs to be bolted, and your monitor or headset needs to be stationary. <a href=\"best-sim-racing-cockpit-2026.html\">Read my cockpit guide</a> if your rig is sloppy; it's probably costing you consistency more than setup tweaks ever could."
+    },
+    {
+      "h2": "Consistency Wins Races: The Takeaway"
+    },
+    {
+      "p": "I used to think that the fastest drivers in iRacing were just faster. Now I know they're just more consistent. They run 1:47.8 every lap because they've drilled their inputs until they're automatic. I used to be a 1:47.5 / 1:48.2 swing driver. Now I'm a 1:48.0 ± 0.15 driver, and I finish higher every race. The pace will come. But consistency wins trophies."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What's a 'good' lap-time spread for iRacing racing?",
+      "a": "For a 20-lap race, aim for within 0.2 seconds of your average pace across at least ten consecutive laps. Anything tighter than 0.15 seconds is elite-level. Anything over 0.3 seconds means your inputs are loose and you're leaving time on the table."
+    },
+    {
+      "q": "Should I focus on consistency or peak pace in practice?",
+      "a": "Consistency first. Spend 60 percent of your practice time drilling your inputs to be repeatable (brake pressure, throttle, steering angle), and 40 percent chasing peak pace. Once your groove is locked in, peak pace comes automatically because you're not fighting yourself anymore."
+    },
+    {
+      "q": "How does rig flex affect my consistency?",
+      "a": "A loose rig—pedals on carpet, wheel bracket flexy, seat moving—changes your feedback lap to lap. This makes it harder for your brain to encode consistent inputs because the signal from the car is inconsistent. A tight rig gives you the same force feedback and pedal feel every lap, which trains muscle memory faster."
+    },
+    {
+      "q": "Can I have good consistency with a bad setup?",
+      "a": "Yes, and it's actually valuable. A bad setup will have a ceiling, but you can still be consistent within that ceiling. A tight setup + loose inputs will never work. So build consistency on whatever setup you have; then optimize the setup. The two feed each other."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "cockpit"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}

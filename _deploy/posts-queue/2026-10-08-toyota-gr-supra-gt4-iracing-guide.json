@@ -1,0 +1,168 @@
+{
+  "slug": "toyota-gr-supra-gt4-iracing-guide",
+  "tag": "Car Guide · GT Racing",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "Toyota GR Supra GT4 iRacing Guide: Setup, Braking, Cornering",
+  "description": "Master the Supra GT4's mid-engine balance and aggressive throttle response. Setup tuning, braking technique, and wet-weather adjustments for consistent pace.",
+  "sections": [
+    {
+      "p": "The Toyota GR Supra GT4 is a deceptive car on the iRacing grid. It looks composed, sits in the middle of the performance table, and then you arrive at a corner at 140 mph feeling like you're piloting a keg of gasoline on a hair trigger. I've spent enough laps in it to know where it'll bite and where it'll reward smooth hands—and the gap between those two states is narrower than you'd think. This guide walks through the setup philosophy, braking zones, and throttle management that make the Supra work consistently, whether you're in a 30-minute sprint or a two-hour endurance grind."
+    },
+    {
+      "p": "The Supra's mid-engine weight distribution (~48/52 front-to-rear) plays a huge role in how it feels on my MOZA R9 rig. It's neutral enough to trust early, but the rear wants to teach you about oversteer the moment you're careless with the throttle or trail-brake into the apex. That's not a flaw—it's the car's character, and mastering it separates consistent top-10 finishes from a string of off-track excursions."
+    },
+    {
+      "h2": "Baseline Setup and Weight Transfer Philosophy"
+    },
+    {
+      "p": "I start with iRacing's stock Supra setup and then make targeted adjustments based on track type. The Supra responds well to anti-roll bar tuning because its mid-engine layout means weight transfers happen quickly—you feel the car's balance shift in real time on corner entry."
+    },
+    {
+      "list": [
+        "Front anti-roll bar: Start at 12.0 and adjust down (softer) if the front feels sluggish on turn-in; increase (stiffer) if it understeers mid-corner.",
+        "Rear anti-roll bar: Keep it ~2–3 clicks stiffer than the front to fight oversteer on power exit. The Supra will reward you for precision here.",
+        "Brake balance: 58–60% front bias is my baseline. On road courses with heavy braking zones, I push to 60%; on flowing layouts, I drop it to 57%.",
+        "Differential lock: Front at ~40%, rear at ~60% on-power. The Supra needs that rear lock to plant power cleanly and prevent mid-corner push.",
+        "Ride height: Lower settings (~35 mm front, ~40 mm rear) improve aero efficiency but increase flatness. I trade a touch of comfort for speed, especially on courses with fast transitions like <a href=\"suzuka-iracing-guide.html\">Suzuka</a>."
+      ]
+    },
+    {
+      "tip": "The Supra's brakes are its weak point relative to competitors—they heat quickly and fade under sustained abuse. Plan your downshift points early, and never trail-brake aggressively into a complex corner sequence without cooling room before the next turn.",
+      "tipLabel": "Brake Thermal Management"
+    },
+    {
+      "h2": "Braking Technique: Threshold Pressure and Modulation"
+    },
+    {
+      "p": "On my MOZA CRP2 load-cell pedals, I've calibrated them with ~0.5 N·m of brake pressure needed to hit 100% pedal input. That precision matters with the Supra because its brakes demand progressive modulation. Hard stops are fine, but aggressive trail-braking into a slow corner will either lock the fronts or cook the pads instantly."
+    },
+    {
+      "olist": [
+        "Identify your track's natural brake point—usually a road sign or marker board. The Supra can take late entries, but not at the expense of turning in.",
+        "Build braking pressure over the first 50–60% of the pedal stroke, then hold steady. Avoid sharp pressure spikes mid-braking; the car will upset easily.",
+        "Release brake pressure in stages as you approach the apex. Begin unwinding at 60% throttle entry to keep longitudinal and lateral loads in balance.",
+        "On fast sweepers where you're only dipping the brakes (Eau Rouge, the Porsche Curves at Daytona), use 30–40% pedal and brief touches. Sensitivity is everything."
+      ]
+    },
+    {
+      "p": "The Supra rewards a smooth brake release and early throttle more than most GT4 cars. Its engine responds quickly once you're on power, which means incomplete corner exit causes oversteer—not instant, but gradual and predictable if you're driving smoothly. That predictability is what lets you push the margins."
+    },
+    {
+      "h2": "Cornering Balance and Throttle Control"
+    },
+    {
+      "p": "Entry oversteer is the Supra's signature vice. The moment you carry too much speed with incomplete turn-in, the rear will step. Unlike the <a href=\"aston-martin-vantage-gt4-comprehensive-guide.html\">Aston Martin Vantage GT4</a>, which punishes you immediately, the Supra gives you a frame or two to catch it if you're smooth on the wheel. This is where I benefit most from the MOZA R9's ~9 N·m of force feedback—I feel the weight transfer and back off before I'm in trouble."
+    },
+    {
+      "list": [
+        "Turn-in: Steer in one fluid motion. Avoid aggressive inputs or on-off steering; both unload the inside front and invite oversteer.",
+        "Apex throttle: The Supra is nose-sensitive under acceleration, so add throttle gradually from the apex onwards. You're not trying to power-slide; you're trying to maintain rolling speed.",
+        "Exit phase: This is where the car shines. Once you're fully on power, the mid-engine balance means steady-state cornering is safer than most cars. You can hold 3–4 seconds of full power through a medium-speed corner without fear.",
+        "Over-limit behavior: If you do push too hard, the rear steps first, then spins if you don't catch it. Catch it by immediately easing throttle and steering into the slide—no aggressive countersteering needed."
+      ]
+    },
+    {
+      "p": "Tire temperatures matter hugely with the Supra. A cold front-left will understeer, and a cold rear-right will oversteer unpredictably. I always run a lap to warm everything, then a second lap for pace. On a third lap, the car becomes sharp and confident."
+    },
+    {
+      "h2": "Track-Specific Adjustments"
+    },
+    {
+      "p": "The Supra doesn't need complete setup changes between tracks, but small tweaks unlock consistency:"
+    },
+    {
+      "list": [
+        "Technical, low-speed tracks (Mid-Ohio, Okayama): Increase front anti-roll bar stiffness by 1–2 clicks, soften the rear slightly. You want the front to bite mid-corner.",
+        "High-speed, flowing layouts (Spa, Road America): Soften both bars slightly to allow more wheel travel over crests. The Supra can lose front-end grip if you're too stiff.",
+        "Brake-heavy circuits (Sebring, Silverstone): Raise brake balance by 1–2%, and increase rear brake pressure slightly to prevent tail-happy lock-ups on trail-braking.",
+        "Tight, demanding loops (Brands Hatch, Laguna Seca): Lower ride height by 2–3 mm for added stability, but watch for flatness on curbs."
+      ]
+    },
+    {
+      "h2": "Wet-Weather Setup and Sensitivity"
+    },
+    {
+      "p": "Rain multiplies the Supra's oversteer tendency because water reduces rear grip faster than front grip. I make three key changes in wet conditions:"
+    },
+    {
+      "list": [
+        "Rear anti-roll bar: Soften it by 2–3 clicks to restore mid-corner balance. The Supra will still be loose, but not undrivable.",
+        "Brake balance: Drop it to 55–56% to prevent tail-happy locking. Wet braking is more sensitive to pressure spikes.",
+        "Throttle discipline: This is where driving skill dominates. Use half-throttle or less until you exit the corner fully. Even small power additions will break the rear loose."
+      ]
+    },
+    {
+      "tip": "In the wet, the Supra is genuinely difficult compared to its competitors. You're slower than a Vantage GT4 by 2–3 tenths in rain, purely because of oversteer sensitivity. Accept that, drive smooth, and you'll gain on drivers who fight the car.",
+      "tipLabel": "Wet-Weather Reality"
+    },
+    {
+      "h2": "Tire Strategy and Longevity"
+    },
+    {
+      "p": "The Supra's tires wear predictably, but unevenly. Aggressive driving loads the fronts hard, and lack of throttle discipline loads the rears. In an endurance race, I monitor tire delta over the first 15 minutes to spot wear trends early."
+    },
+    {
+      "list": [
+        "Front tires: These wear fastest if your setup is nose-heavy or if you brake late. A 30-lap stint will show ~12–15% wear by lap 25.",
+        "Rear tires: These wear more evenly but hurt pace earlier than fronts. Watch for rear grip loss around lap 22–25 of a 30-lap race.",
+        "Tire pressure: Start at ~27.5 psi cold (front) and ~28.0 psi (rear). Track pressure at 29–30 psi is ideal; above that, grip suffers."
+      ]
+    },
+    {
+      "p": "On longer races, a pit stop at lap 20–22 for fresh tires buys you pace for the final stretch. The Supra's fuel consumption is moderate (~2.5–2.7 liters per lap at race pace), so fuel strategy rarely forces your pit timing."
+    },
+    {
+      "h2": "Qualifying vs. Race Pace Setup"
+    },
+    {
+      "p": "The Supra's low-fuel qualifying speed is deceptive. It's fast, but fragile. I use a slightly softer setup in qualifying (1–2 clicks softer on bars, 1% less brake balance) to get immediate turn-in and confidence. Then, for race trim, I revert to the stiffer, more planted setup I've outlined above."
+    },
+    {
+      "p": "That qualifying setup is faster by 0.1–0.15 seconds per lap, but it eats tires hard and won't survive 30 laps of racing. Know the difference, and adjust after qualifying ends."
+    },
+    {
+      "h2": "Common Mistakes and How to Avoid Them"
+    },
+    {
+      "list": [
+        "<strong>Over-correcting mid-corner oversteer:</strong> If the rear steps, ease the throttle and steer smoothly into the slide. Aggressive countersteering only makes it worse.",
+        "<strong>Brake balance too low:</strong> Many drivers run 55% balance or lower to feel 'locked in.' The Supra will thank you by locking the rear and killing your pace. Stay at 57% minimum.",
+        "<strong>Ignoring tire temperature:</strong> Cold tires make the car feel broken. Always complete a warm-up lap before assessing balance.",
+        "<strong>Trail-braking too aggressively:</strong> The Supra's brakes fade quickly, so limit trail-braking to 30–40% brake pressure on corner entry. Save full-pressure braking for dedicated braking zones."
+      ]
+    },
+    {
+      "h2": "Comparison to Other GT4 Cars"
+    },
+    {
+      "p": "The Supra GT4 sits between the Aston Martin Vantage (more stable, less responsive) and the BMW M4 GT4 (more raw, more nervous). If you're transitioning from the Vantage, expect sharper oversteer sensitivity and earlier tire falloff. If you're coming from the M4, the Supra is more forgiving on power exit but less rewarding on qualifying laps. Whichever your reference point, respect the Supra's mid-engine character and drive smoothly."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why does the Supra feel so twitchy compared to the Aston Martin Vantage GT4?",
+      "a": "The Supra's mid-engine layout (versus Vantage's front-mid-engine) means the polar moment of inertia is different. Weight is concentrated in the center and rear, so yaw changes happen faster. Combined with slightly softer bushings, the Supra will rotate quicker and oversteer earlier than the Vantage. It's not twitchy by design; it's responsive. Drive smoothly and progressively, and it rewards you."
+    },
+    {
+      "q": "What's the best brake balance for the Supra on street circuits versus road courses?",
+      "a": "On road courses with long straights (Spa, Road America), use 60% front balance. On street circuits with short braking zones (Long Beach, Singapore), drop to 57–58% to prevent rear locking on light trail-brakes. The Supra's brakes fade under sustained abuse, so lower balance also buys you margin as they heat. Start at 58–59% and adjust from there based on lock-up feel."
+    },
+    {
+      "q": "How much faster is the Supra in qualifying versus race trim?",
+      "a": "On low fuel with an aggressive qualifying setup (soft bars, light brakes), the Supra is roughly 0.15–0.25 seconds per lap faster than safe race trim. That speed comes from earlier turn-in and confidence under braking, but it's not sustainable. Race trim prioritizes planted mid-corner balance and tire longevity. Expect to give back 0.1–0.15 seconds over a 30-lap race if you switch to race setup after qualifying."
+    },
+    {
+      "q": "What should I do if the Supra keeps oversteering on power exit?",
+      "a": "First, soften the rear anti-roll bar by 1–2 clicks to increase rear grip. Second, ensure your brake balance isn't too low (stay at 57% minimum); rear locking during trail-braking causes oversteer. Third, add throttle more gradually—the Supra's engine response is quick, so full throttle input immediately will break loose a cold or loaded rear. If oversteer persists, your tire pressures are likely too low; warm tires at 29–30 psi are mandatory for grip."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9",
+    "moza-crp2",
+    "cockpit",
+    "monitor-1440p-120"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}

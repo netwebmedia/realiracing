@@ -56,7 +56,127 @@
         "name": "RealIRacing",
         "url": "https://realiracing.com/",
         "description": "iRacing sim racing content, race highlights, setup guides, rig tours and tips.",
+        "dateModified": "2026-09-29",
         "publisher": { "@id": "https://realiracing.com/#organization" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is behind RealIRacing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RealIRacing is run by Carlos Martinez, who races on iRacing under the user name Carlos Martinez9. The site and the @realtape YouTube channel cover iRacing from a racer's perspective with real motorsport roots; the channel lists 975+ videos and 1,700+ subscribers, and has been on YouTube for 15 years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What sim racing gear does RealIRacing race on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The rig is a MOZA R9 direct drive wheelbase (9 N·m), a MOZA CS V2 steering wheel and MOZA CRP2 load cell pedals, driven by an RTX 5060 Ti and a Ryzen 7 5700 with 32 GB of RAM on a single 1440p 120 Hz monitor. Every part is hardware Carlos owns and races on, and the full breakdown is on the My Rig page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What content does RealIRacing publish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Four kinds of content: race highlights, setup guides, rig tours and iRacing tips. The blog adds written guides on force feedback settings, wheel and pedal buyer's guides, safety rating and racecraft, car and track guides, and OBS streaming configurations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the gear links on RealIRacing affiliate links?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Gear links go to Amazon and carry an affiliate tag, so Carlos may earn a small commission if you buy, at no extra cost to you. That income helps keep the site running. The affiliate disclosure sits in the gear section of this page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I watch and follow RealIRacing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Watch race highlights, setup guides and rig tours on YouTube at @realtape. Follow @realiracing on Instagram, TikTok and X, or find every platform in one place at realiracing.com/go."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json" id="latest-posts-ld">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Latest RealIRacing blog posts",
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "numberOfItems": 10,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://realiracing.com/blog/fuji-speedway-iracing-guide.html",
+        "name": "Fuji Speedway iRacing Guide: Lines, Setup, Wet Weather"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://realiracing.com/blog/indianapolis-motor-speedway-iracing-guide.html",
+        "name": "Indianapolis Motor Speedway iRacing Guide: Line, Setup, Drafting"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://realiracing.com/blog/iracing-stream-overlay-hud-tools.html",
+        "name": "iRacing Stream Overlays and HUD Tools: Build a Pro-Looking Broadcast"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://realiracing.com/blog/spotter-calls-what-to-listen-for.html",
+        "name": "Spotter Calls Decoded: What to Actually Listen For"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://realiracing.com/blog/iracing-qualifying-best-practices-pace.html",
+        "name": "iRacing Qualifying Best Practices: Strategy, Pace, and Grid Position"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://realiracing.com/blog/prevent-eye-strain-sim-racing-distance.html",
+        "name": "Eye Strain and Screen Distance: Preventing Fatigue in Long iRacing Sessions"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://realiracing.com/blog/cadillac-v-series-r-gtp-iracing-guide.html",
+        "name": "Cadillac V-Series.R GTP iRacing Guide: Setup and Technique"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://realiracing.com/blog/direct-drive-damping-friction-settings.html",
+        "name": "Direct Drive Damping and Friction: Finding Your Feel"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://realiracing.com/blog/iracing-incident-points-how-they-work.html",
+        "name": "iRacing Incident Points Explained: What Actually Causes Them"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://realiracing.com/blog/zandvoort-iracing-guide-banking-crests.html",
+        "name": "Zandvoort iRacing Guide: Banking, Blind Crests, and Line Choice"
       }
     ]
   }
@@ -84,6 +204,15 @@
       font-family: var(--font);
       line-height: 1.6;
     }
+
+    /* ── FAQ ─────────────────────────────── */
+    #faq { max-width: 900px; margin: 0 auto; padding: 80px 24px; }
+    #faq h2 { margin-bottom: 8px; }
+    .faq-updated { color: var(--muted); font-size: 0.8rem; margin-bottom: 28px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 14px; }
+    .faq-item h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .faq-item p { color: var(--muted); font-size: 0.95rem; }
+    .faq-item a { color: var(--accent2); }
 
     /* ── NAV ─────────────────────────────── */
     nav {
@@ -718,6 +847,17 @@
       .nav-links::-webkit-scrollbar { display: none; }
       .nav-links li { flex: 0 0 auto; }
       .nav-links a { font-size: 0.82rem; white-space: nowrap; }
+      /* 2026-09-29: the Subscribe pill is the last item of this scrolling row, so
+         at 375px it sat past the right edge (QA F3, 2026-09-05). Pin it to the
+         right edge of the row; the other links scroll underneath it. The opaque
+         fade keeps their text from showing through the pill. */
+      .nav-links li:last-child {
+        position: sticky;
+        right: 0;
+        margin-left: auto;
+        padding-left: 14px;
+        background: linear-gradient(90deg, rgba(10,10,10,0), #0a0a0a 14px);
+      }
       .stats-bar { gap: 30px; }
       section { padding: 60px 20px; }
       .media-grid, .yt-grid { grid-template-columns: 1fr; }
@@ -1523,6 +1663,33 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq">
+    <p class="section-label">FAQ</p>
+    <h2>Frequently asked questions</h2>
+    <p class="faq-updated">Last updated: <time datetime="2026-09-29">September 29, 2026</time></p>
+      <div class="faq-item">
+        <h3>Who is behind RealIRacing?</h3>
+        <p>RealIRacing is run by Carlos Martinez, who races on iRacing under the user name Carlos Martinez9. The site and the @realtape YouTube channel cover iRacing from a racer's perspective with real motorsport roots; the channel lists 975+ videos and 1,700+ subscribers, and has been on YouTube for 15 years.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What sim racing gear does RealIRacing race on?</h3>
+        <p>The rig is a MOZA R9 direct drive wheelbase (9 N·m), a MOZA CS V2 steering wheel and MOZA CRP2 load cell pedals, driven by an RTX 5060 Ti and a Ryzen 7 5700 with 32 GB of RAM on a single 1440p 120 Hz monitor. Every part is hardware Carlos owns and races on, and the full breakdown is on the <a href="/gear.html">My Rig page</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What content does RealIRacing publish?</h3>
+        <p>Four kinds of content: race highlights, setup guides, rig tours and iRacing tips. The <a href="/blog/">blog</a> adds written guides on force feedback settings, wheel and pedal buyer's guides, safety rating and racecraft, car and track guides, and OBS streaming configurations.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are the gear links on RealIRacing affiliate links?</h3>
+        <p>Yes. Gear links go to Amazon and carry an affiliate tag, so Carlos may earn a small commission if you buy, at no extra cost to you. That income helps keep the site running. The affiliate disclosure sits in the gear section of this page.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where can I watch and follow RealIRacing?</h3>
+        <p>Watch race highlights, setup guides and rig tours on YouTube at @realtape. Follow @realiracing on Instagram, TikTok and X, or find every platform in one place at <a href="/go/">realiracing.com/go</a>.</p>
+      </div>
+  </section>
+
   <!-- PLATFORMS -->
   <div class="platforms-section" id="platforms">
     <div class="platforms-inner">
@@ -1641,6 +1808,7 @@
     </p>
   
     <p class="footer-social" style="margin-top:10px;display:flex;justify-content:center;gap:16px" aria-label="Social media"><a href="https://www.instagram.com/realiracing/" rel="me noopener" target="_blank" aria-label="RealiRacing on Instagram" style="color:inherit;display:inline-flex;align-items:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="m12 0c-3.26 0-3.667.015-4.947.072-1.278.06-2.148.261-2.913.558-.789.306-1.459.717-2.126 1.384s-1.079 1.336-1.384 2.126c-.297.765-.499 1.635-.558 2.913-.06 1.28-.072 1.687-.072 4.947s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558 1.28.06 1.687.072 4.947.072s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126-.667-.667-1.335-1.079-2.126-1.384-.765-.297-1.636-.499-2.913-.558-1.28-.06-1.687-.072-4.947-.072zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zm0 10.162c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44s.646-1.439 1.44-1.439c.793-.001 1.44.645 1.44 1.439z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61556874721569" rel="me noopener" target="_blank" aria-label="RealiRacing on Facebook" style="color:inherit;display:inline-flex;align-items:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a><a href="https://www.youtube.com/@realtape" rel="me noopener" target="_blank" aria-label="Realtape on YouTube" style="color:inherit;display:inline-flex;align-items:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.13C19.55 3.55 12 3.55 12 3.55s-7.55 0-9.4.52A3 3 0 0 0 .5 6.2C0 8.07 0 12 0 12s0 3.93.5 5.8a3 3 0 0 0 2.1 2.13c1.85.52 9.4.52 9.4.52s7.55 0 9.4-.52a3 3 0 0 0 2.1-2.13C24 15.93 24 12 24 12s0-3.93-.5-5.8zM9.6 15.57V8.43L15.82 12 9.6 15.57z"/></svg></a><a href="https://x.com/realiracing" rel="me noopener" target="_blank" aria-label="RealiRacing on X" style="color:inherit;display:inline-flex;align-items:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg></a><a href="https://www.tiktok.com/@realiracing" rel="me noopener" target="_blank" aria-label="RealiRacing on TikTok" style="color:inherit;display:inline-flex;align-items:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.6 6.32a5.46 5.46 0 0 1-3.36-1.13 5.46 5.46 0 0 1-2.16-3.7h-3.5v13.6a3.3 3.3 0 1 1-2.31-3.15V8.32a6.78 6.78 0 1 0 5.81 6.71V8.66a8.92 8.92 0 0 0 5.52 1.88V7.05a5.49 5.49 0 0 1 0-.73z"/></svg></a></p>
+  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:.8">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
   </footer>
 
   <script src="/js/home.js" defer></script>

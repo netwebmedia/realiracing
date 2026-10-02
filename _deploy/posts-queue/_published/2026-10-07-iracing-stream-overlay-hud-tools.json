@@ -1,0 +1,145 @@
+{
+  "slug": "iracing-stream-overlay-hud-tools",
+  "tag": "Streaming · OBS",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "iRacing Stream Overlays and HUD Tools: Build a Pro-Looking Broadcast",
+  "description": "Essential overlay and HUD tools for iRacing streamers. Free and paid options to display telemetry, leaderboards, and graphics without cluttering your view.",
+  "sections": [
+    {
+      "p": "When I stream iRacing races on Twitch, the hardest part isn't managing my MOZA R9 through a tight corner—it's deciding what data to show viewers without turning the screen into a cockpit dashboard. A good overlay separates casual streaming from something worth watching. You need live telemetry, position info, and graphics that reinforce the narrative of the race, all without breaking immersion or eating frame rate."
+    },
+    {
+      "p": "I've tested overlay approaches across dozens of broadcasts, from bare-bones setups to ones so packed with widgets they distracted from the racing itself. The best streams use layered overlays: a persistent lower-third with driver name and iRating, telemetry panels that toggle on demand, and graphics that only appear during key moments like pit stops or spins. This guide covers the tools I actually use and recommend, with honest trade-offs for each."
+    },
+    {
+      "h2": "Free Overlay and Data Tools"
+    },
+    {
+      "h3": "Garage 61 Telemetry Companion"
+    },
+    {
+      "p": "Garage 61's telemetry companion is the free workhorse for most iRacing streamers. It reads the iRacing telemetry feed in real time and outputs overlays as browser sources in OBS—your graphics card stays focused on rendering the sim itself. I run it on a second monitor while streaming, and it pulls brake pressure, throttle position, gear, speed, and fuel consumption live."
+    },
+    {
+      "p": "The overlay customization is robust. You can position elements anywhere on screen, choose fonts and colors, and filter which data displays. I keep brake pressure and throttle in opposite corners during road racing, then swap to fuel and tire temps during endurance sessions. The HUD is lightweight; it adds maybe 1–2% CPU load on my streaming PC. Downside: it requires you to export and host your own browser source files, so setup takes 20 minutes your first time."
+    },
+    {
+      "h3": "CrewChief (Free Spotter Voice)"
+    },
+    {
+      "p": "CrewChief isn't purely an overlay tool, but it generates text output that you can capture in OBS as a source. It's a free spotter that calls gaps to cars ahead and behind, tells you when you're off-line, and warns of car damage. Many streamers layer a CrewChief text widget over the race footage so viewers see the same information the driver hears. The spotter voice itself isn't visible on stream—you're capturing its diagnostic text output."
+    },
+    {
+      "p": "The real value for streaming is audience engagement. Viewers enjoy following the spotter's callouts; it builds tension and makes sense of what's happening on track. I use it on longer races where position changes matter most."
+    },
+    {
+      "h3": "iRacing Companion App (Mobile Overlay)"
+    },
+    {
+      "p": "The official iRacing Companion app on mobile gives you live telemetry of your car and other drivers' positions. While it's not a direct OBS overlay, streamers often set up a second camera or screen-capture to show the app during pit stops or between races. It displays tire temps, fuel, damage, and positions in real time. It's free with an iRacing subscription and requires no setup beyond launching the app."
+    },
+    {
+      "h2": "Paid Overlay Platforms"
+    },
+    {
+      "h3": "SimHub and Custom Dashboards"
+    },
+    {
+      "p": "SimHub is a paid app (~$50 USD one-time purchase, though prices fluctuate) that connects to iRacing telemetry and creates highly customizable overlays, dashboard displays for secondary monitors, and even animated motion rig controls. It's overkill for basic streaming, but if you're building a serious broadcast operation or running a motion rig, SimHub pays for itself through visual polish and reliability."
+    },
+    {
+      "p": "I use SimHub's dashboard feature on a tablet mounted to my cockpit—it shows real-time telemetry in a clean, professional format that viewers can see during pit-stop cuts. You can design your own HUD from scratch or use the templated dashboards. Performance is excellent; SimHub is optimized for streaming and pulls minimal system resources. The learning curve is steeper than free tools, but the customization depth is unmatched."
+    },
+    {
+      "h3": "OBS Text and Image Overlays (Manual Build)"
+    },
+    {
+      "p": "You don't need a third-party tool for a basic overlay. OBS supports text sources, image overlays, and scene layering. I build lower-thirds with driver name, iRating, and series info using OBS text layers and static images from Figma. During broadcasts, I manually change the text between races or use a script to update it. It's labor-intensive for live updates, but it's free and you retain full creative control."
+    },
+    {
+      "p": "This approach works best if you're streaming pre-recorded content or running league races where the same drivers compete repeatedly. Real-time telemetry won't update automatically, but you can layer static leaderboards or session info that you swap between scenes."
+    },
+    {
+      "h2": "Building a Broadcast Overlay Stack"
+    },
+    {
+      "p": "A professional-looking iRacing stream combines 3–4 layers: a persistent lower-third, live telemetry panels, leaderboard/position info, and occasional graphics for key moments. Let me walk through my actual setup."
+    },
+    {
+      "list": [
+        "Lower-third (static): Driver name, iRating, car/series info. Built in OBS as a text layer, updated manually or via a script between races.",
+        "Telemetry panel (live): Garage 61 or SimHub pulls brake, throttle, gear, speed. Positioned in a corner, toggled on/off during key moments (quali, pit stops, battles).",
+        "Leaderboard (live or updated): iRacing Companion app screen-captured or a static image swapped during pit windows.",
+        "Graphics (triggered): Spin, incident, or overtake animations triggered manually or via a command. OBS scenes work well for this—bind hotkeys to swap graphics mid-race."
+      ]
+    },
+    {
+      "tip": "Never overlay telemetry across the apex of a turn. Viewers want to see your line-work, not a fuel gauge. Keep panels in corners or use transparency so they don't block track action.",
+      "tipLabel": "Stream Design Tip"
+    },
+    {
+      "h2": "In-Game HUD vs. Broadcast Overlay"
+    },
+    {
+      "p": "iRacing's built-in HUD (the dash, delta timer, and gauges visible in-game) is separate from your broadcast overlay. When you stream, viewers see both: your car's dash plus any OBS-based graphics layered on top. Streaming doesn't need you to turn off the in-game HUD. In fact, most professional streamers leave it on because it shows lap deltas, tire temps, and fuel—all useful context for viewers."
+    },
+    {
+      "p": "Customize the in-game HUD in iRacing's display settings. Position gauges where they don't obstruct your view or the broadcast focal point (the track). I keep my delta timer and fuel counter on the right side of screen during endurance races, and I hide non-essential gauges to keep the frame clean."
+    },
+    {
+      "h2": "Performance and Frame Rate Considerations"
+    },
+    {
+      "p": "Overlays and HUD tools run on your streaming PC, not your racing PC (assuming you're using a dedicated streaming setup), so they shouldn't impact your in-game frame rate. However, they do consume streaming PC CPU and GPU resources. If you're encoding with OBS on the same machine, too many live data sources can cause dropped frames on the broadcast side."
+    },
+    {
+      "p": "Solutions: Use hardware encoding (NVIDIA NVENC) instead of CPU encoding, limit the number of live telemetry panels to 2–3 at a time, and close background apps. Garage 61 is the leanest option; it uses ~2–3% of a mid-range streaming PC's CPU. SimHub and CrewChief pull similar loads."
+    },
+    {
+      "tip": "Test your full overlay stack before going live. Run a practice race, record to a local file, and check for dropped frames or visual glitches. A clean 60 fps broadcast matters more than one extra telemetry widget.",
+      "tipLabel": "QA Before Stream"
+    },
+    {
+      "h2": "Practical Streaming Workflow"
+    },
+    {
+      "p": "Here's my pre-broadcast checklist: Launch Garage 61 or SimHub on the streaming PC 10 minutes before race time. Start OBS and load your overlay scene. Verify that telemetry is updating by watching the live preview. If you're using custom graphics, bind hotkeys for scene switches (I use F1 for spins, F2 for overtakes, F3 for pit-stop graphics). Load iRacing and run a 2-lap practice race to confirm telemetry is flowing into the overlay."
+    },
+    {
+      "p": "During the broadcast, toggle telemetry on during critical moments—pit stops, battles for position, or when fuel is running low. Keep the overlay minimal during clean racing; viewers want to watch your driving, not data. Between races, update your lower-third text and swap graphics as needed."
+    },
+    {
+      "h2": "Choosing Your Tool Stack"
+    },
+    {
+      "p": "Start free with <a href=\"garage61-telemetry-comparison-tools.html\">Garage 61 or the iRacing Companion app</a>. These have zero upfront cost and teach you overlay workflow. If you stream regularly (3+ times per week) or run a league, invest in SimHub. The customization and reliability justify the cost. For casual streamers, free tools are plenty—don't overthink it."
+    },
+    {
+      "p": "If you're just starting your streaming journey, check out <a href=\"how-to-stream-iracing-obs.html\">my OBS setup guide</a> for the foundational broadcasting workflow. Overlays are the polish; solid encoding and bitrate matter first."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do overlays hurt my in-game frame rate?",
+      "a": "No. Overlays run on your streaming PC, not your racing PC. They don't impact your iRacing performance at all. However, they do consume CPU on your streaming machine, so use hardware encoding in OBS (NVENC for NVIDIA GPUs) to avoid broadcast frame drops."
+    },
+    {
+      "q": "Can I use overlays if I'm racing on a single PC setup?",
+      "a": "Yes, but you'll need headroom. If you're rendering iRacing and encoding the stream on one machine, use lightweight tools like Garage 61 instead of SimHub, and limit overlays to 2-3 data sources. Keep iRacing settings at high frame rates (120+ fps) so OBS encoding doesn't steal resources."
+    },
+    {
+      "q": "What telemetry should I display for road racing vs. ovals?",
+      "a": "Road racing: brake pressure, throttle, gear, and tire temps. These show line execution and setup. Ovals: speed, fuel consumption, and tire wear. Position deltas matter less than fuel strategy and tire fall-off. Adjust your overlay between series; don't force road-racing data onto oval broadcasts."
+    },
+    {
+      "q": "Is SimHub worth it for casual streamers?",
+      "a": "Probably not on first purchase. Try free tools for 10-20 streams. If you find yourself wishing for better customization or a second-monitor dashboard, SimHub's cost (~$50 USD) is justified. For weekly casual streams, Garage 61 free tier is sufficient."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}

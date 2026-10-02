@@ -1,0 +1,158 @@
+{
+  "slug": "racelab-overlays-iracing-telemetry-streaming",
+  "tag": "Streaming · OBS",
+  "author": "Carlos Martinez",
+  "readTime": "9 min read",
+  "title": "RaceLab Overlays for iRacing: Real-Time Telemetry on Stream",
+  "description": "Stream live telemetry, delta times, and tire temps with RaceLab overlays. Learn setup, which data matters, and how to avoid visual clutter.",
+  "sections": [
+    {
+      "p": "If you've watched sim racing streams, you've seen those slick overlays showing brake pressure, throttle input, and tire temperature in real time. Most of them come from <strong>RaceLab</strong>—a free tool that hooks directly into iRacing's telemetry output and feeds customizable graphics to OBS. I use RaceLab on my own streams, and it transforms a plain cockpit view into a broadcast-quality display that educates viewers and adds production value without needing expensive hardware or pay software."
+    },
+    {
+      "p": "The catch: RaceLab's power is in its flexibility, which also means there's setup work ahead. You'll need to understand what data matters for your audience, how to position overlays so they don't obscure your racing line, and how to avoid the trap of showing so much telemetry that viewers can't focus on the actual driving."
+    },
+    {
+      "h2": "What RaceLab Does and Why It Works"
+    },
+    {
+      "p": "RaceLab reads iRacing's live telemetry stream—brake input, throttle, steering angle, G-force, tire temps, fuel, tire wear—and renders it as configurable on-screen graphics that sync perfectly with your race footage. Because it's tapping the same data iRacing uses internally, the latency is negligible; what you see on stream matches what you're feeling on the wheel and pedals in real time."
+    },
+    {
+      "p": "Unlike manual setups that require separate hardware or clunky software overlays, RaceLab integrates directly into OBS as a plugin or stands as a browser source. I run it as a browser source in OBS, which keeps my streaming PC's CPU load flat and gives me dead-simple control over positioning and refresh rates."
+    },
+    {
+      "list": [
+        "Brake pressure and throttle input (left and right pedals, independently trackable)",
+        "Steering angle and steering rate (useful for learning smooth inputs)",
+        "Lateral and longitudinal G-force (shows cornering and braking intensity)",
+        "Tire temperatures and tire wear (per corner—front-left, front-right, rear-left, rear-right)",
+        "Fuel remaining and consumption rate",
+        "Delta time to your own baseline or to competitors in replay",
+        "Pit stop timer and pit delta",
+        "RPM, gear, and speed (for manual transmission cars)"
+      ]
+    },
+    {
+      "tip": "Free doesn't mean limited. RaceLab's base package is fully featured for streaming. Paid tiers exist for advanced features like cloud saves and priority support, but you'll get 80% of the value for zero cost.",
+      "tipLabel": "Free Tool, Real Value"
+    },
+    {
+      "h2": "Setting Up RaceLab in OBS"
+    },
+    {
+      "p": "The setup process is straightforward if you know what you're doing, but a few missteps early on can waste an hour. Here's the real workflow:"
+    },
+    {
+      "olist": [
+        "Download RaceLab from the official website (racedepartment.com or official repository). Install it as a standalone application.",
+        "Launch RaceLab and log in with your iRacing account. RaceLab needs permission to read your telemetry, which you grant one time.",
+        "Open a practice session in iRacing. RaceLab will auto-detect the connection once you're in-sim.",
+        "In RaceLab's UI, customize which overlays you want—telemetry gauges, delta timer, tire wear, etc. Drag them to positions you prefer.",
+        "Copy the RaceLab URL from settings (usually something like localhost:8080/overlay).",
+        "In OBS, add a new Browser Source and paste the RaceLab URL. Set width and height to match your stream resolution (1920×1080 for 1080p, or your native output).",
+        "In OBS, set the browser source's refresh rate to 60 Hz if your iRacing stream is 60 FPS. Adjust down to 30 Hz if you're streaming lower frame rates to reduce CPU load.",
+        "Position the browser source over your cockpit view in OBS's Canvas. Lock the layer so you don't accidentally move it.",
+        "Test in a short practice session. Verify the overlay updates in real time and doesn't flicker or drop frames."
+      ]
+    },
+    {
+      "p": "The browser source approach is stable because OBS renders it independently of your game. Even if your frame rate dips in a chaotic 30-car race on my MOZA R9 setup, the overlay keeps refreshing at 60 Hz."
+    },
+    {
+      "h2": "Choosing What to Display Without Overwhelming Viewers"
+    },
+    {
+      "p": "This is where most streamers go wrong. RaceLab lets you display brake pressure, throttle, steering angle, tire temps, wear, fuel, delta, and more all at once. Your instinct is to show everything because you have the data. Resist that instinct."
+    },
+    {
+      "p": "Your audience cares about context. A casual viewer doesn't need to parse brake pressure in kPa; they want to know <em>is the driver braking hard or softly?</em> A sim racing student might want tire temps because they're learning thermal management. A league racer watching your lap onboard wants to see lap delta relative to their own pace."
+    },
+    {
+      "list": [
+        "<strong>For casual entertainment streams:</strong> Throttle and brake pedal gauges (simple bar graphs), speed, and gear. The visual simplicity keeps focus on your line and racecraft.",
+        "<strong>For educational content:</strong> Add steering angle, lateral G, and tire temps. Explain what viewers are seeing in real time ('Watch how the tire temps climb in turn 3 if I carry too much speed').",
+        "<strong>For league or competitive streams:</strong> Brake pressure, throttle, tire wear, fuel, and a delta timer. Competitive viewers want the raw data to dissect.",
+        "<strong>For VR broadcasts:</strong> Keep overlays minimal and large. VR footage is already hard to parse on a flat screen; a dense telemetry gauge makes it worse."
+      ]
+    },
+    {
+      "tip": "Test your overlay setup on a trusted streamer or friend before going live. Ask them: 'Can you see the telemetry clearly? Does it distract from the driving?' Honest feedback saves you from a botched first broadcast.",
+      "tipLabel": "Beta Test Your Layout"
+    },
+    {
+      "h2": "Positioning and Visual Hierarchy"
+    },
+    {
+      "p": "Where you place RaceLab's gauges in your OBS canvas matters as much as what you show. The cockpit view—especially on <a href=\"best-sim-racing-wheels-iracing.html\">my MOZA R9 wheel</a>—naturally draws the eye to the center and upper half of the screen. You want telemetry in the corners and edges, where it informs without blocking the road."
+    },
+    {
+      "list": [
+        "<strong>Bottom-left corner:</strong> Throttle and brake pedals. Viewers follow hand inputs naturally; pedal gauges here feel intuitive.",
+        "<strong>Bottom-right corner:</strong> Tire temps and wear. Data that changes slowly, so it doesn't need center-screen real estate.",
+        "<strong>Top-left:</strong> Speed and gear (or RPM for high-revving cars). Small, high-contrast, quick-read.",
+        "<strong>Top-right:</strong> Delta timer or fuel remaining. Information that can change suddenly and needs to catch the eye quickly.",
+        "<strong>Center-bottom (minimal overlap):</strong> Only if you're showing a critical single metric—lap delta, for example, on a tight race."
+      ]
+    },
+    {
+      "p": "RaceLab's opacity and color settings matter too. If your cockpit is dark (night racing at Le Mans), use bright, high-contrast overlays. If it's daylight, slightly lower opacity so overlays blend without vanishing. I typically run 85–90% opacity and use light backgrounds on dark overlays to ensure they read regardless of track lighting."
+    },
+    {
+      "h2": "Troubleshooting Common Issues"
+    },
+    {
+      "p": "RaceLab is robust, but a few gotchas catch new users:"
+    },
+    {
+      "list": [
+        "<strong>RaceLab won't connect to iRacing:</strong> Verify iRacing is fully loaded (sitting in pit box), and that you've granted RaceLab permission in your iRacing account settings. Restart both apps if the connection fails.",
+        "<strong>Overlay flickers or drops frames:</strong> Your browser source refresh rate is too high. Drop it from 60 Hz to 30 Hz. If you're streaming at 30 FPS, match the source to 30 Hz.",
+        "<strong>Telemetry data looks wrong (tire temps stuck, brake pressure static):</strong> You may be in a replay or test drive, not a live session. Launch a practice session or race to restore live telemetry.",
+        "<strong>OBS CPU usage spikes when RaceLab loads:</strong> Reduce the browser source resolution. If you're streaming 1080p, try 960×540 for the overlay and scale it up in OBS. The text will look the same but uses half the pixels.",
+        "<strong>Overlay positioned off-screen after OBS update:</strong> RaceLab's browser source sometimes resets position. Drag it back into canvas and lock the layer."
+      ]
+    },
+    {
+      "h2": "RaceLab in Replay and Analysis"
+    },
+    {
+      "p": "Beyond live streaming, RaceLab can record telemetry data and replay it with overlays for post-race analysis. If you want to study a qualifying lap or a wheel-to-wheel moment, you can load a replay, enable RaceLab, and scrub through with full telemetry visible. That's invaluable for league debriefs or personal coaching."
+    },
+    {
+      "p": "Some streamers record their RaceLab sessions, then edit them into YouTube videos with highlights synced to telemetry. You can pause, zoom in on specific gauges, and narrate what you were doing. It's a production skill in itself, but the raw material—clean, synchronized telemetry—comes straight from RaceLab."
+    },
+    {
+      "h2": "The Real Value Proposition"
+    },
+    {
+      "p": "RaceLab is free, it integrates seamlessly with OBS, and it gives your stream production value that would cost hundreds of dollars to replicate with custom graphics or hardware. For a sim racer who wants to broadcast or archive their driving with professional-grade telemetry overlay, it's the obvious choice."
+    },
+    {
+      "p": "The investment is your time learning which data to show, how to position it, and when to update your layout based on feedback. Once that's dialed, you've got a repeatable, broadcast-ready setup. On my own streams, I spend maybe 10 minutes per session tweaking RaceLab's display; the payoff is viewers who understand what I'm doing and feel like they're in the car with me."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I need a powerful PC to run RaceLab while streaming iRacing?",
+      "a": "No. RaceLab runs as a lightweight browser application on your streaming PC and uses minimal CPU. Even as a browser source in OBS at 60 Hz refresh, it adds less than 5% CPU overhead on a modern machine. If you're using a dedicated streaming PC separate from your racing PC, RaceLab communicates over your network, which is negligible load."
+    },
+    {
+      "q": "Can I use RaceLab with VR headsets?",
+      "a": "RaceLab itself isn't VR-aware, but you can stream your VR footage to OBS (via third-party capture or mixed reality software) and overlay RaceLab on top. The telemetry appears in your broadcast, even though you're racing in VR. Many VR racers do this to make their streams more watchable on flat screens."
+    },
+    {
+      "q": "What data in RaceLab is most useful for improving my driving?",
+      "a": "Tire temps and brake pressure are the biggest teaching tools. Tire temps show how hard you're working the tires in each corner, which feeds directly into pace management and tire degradation strategy. Brake pressure reveals whether you're trail-braking smoothly or stabbing the pedal, a habit that kills lap time and tire life. Delta time matters for competitive leagues."
+    },
+    {
+      "q": "Does RaceLab work in all iRacing cars and series, or are there limitations?",
+      "a": "RaceLab works in all iRacing content—cars, ovals, road courses, dirt, everything. The telemetry feed is universal. However, some cars report fewer sensors (older vehicle models may not have tire-temp telemetry, for example). Modern GT and prototype cars report full data; Mazda MX-5 or entry-level content might have fewer metrics. In practice, you won't run into missing data unless you're racing very old car models."
+    }
+  ],
+  "gearKeys": [
+    "moza-r9"
+  ],
+  "published": "2026-09-28",
+  "dateLabel": "September 28, 2026"
+}
