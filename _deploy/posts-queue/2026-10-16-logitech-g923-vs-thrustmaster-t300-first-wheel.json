@@ -1,0 +1,95 @@
+{
+  "slug": "logitech-g923-vs-thrustmaster-t300-first-wheel",
+  "tag": "Buyer's Guide · Hardware",
+  "author": "Carlos Martinez",
+  "readTime": "8 min read",
+  "title": "Logitech G923 vs Thrustmaster T300: Which Should Be Your First Wheel",
+  "description": "Comparing the two most common entry wheels for iRacing beginners — belt vs gear drive, pedal sets, and which one actually holds up as you improve.",
+  "sections": [
+    {
+      "p": "Before I moved to a MOZA R9, I spent two seasons on a belt-driven wheel, and almost every message I get from people starting out on iRacing asks the same thing: Logitech G923 or Thrustmaster T300? Both sit in roughly the same ~$350-450 price band, both are gear-driven or belt-driven rather than direct drive, and both will genuinely teach you to drive. The differences that matter are quieter than the marketing — pedal quality, drive mechanism feel, and ecosystem compatibility down the line."
+    },
+    {
+      "p": "I'm not going to tell you one is objectively better, because for a first wheel the honest answer depends on what you already own and what you plan to upgrade into. Here's what actually separates them."
+    },
+    {
+      "h2": "Drive Mechanism: Belt vs Gear"
+    },
+    {
+      "p": "The G923 uses a hybrid belt/dual-motor system; the T300 uses a gear-and-belt combination with a brushless motor. In practice, the T300 tends to feel slightly smoother at low speeds with less of the faint notchiness some G923 units develop after a year or two of use. Neither has the instant, weighty response of a direct-drive wheelbase like a MOZA R9 or Fanatec CSL DD — ~2-2.5 N·m peak torque on both is enough to learn car balance, not enough to feel fine FFB detail like tire slip onset."
+    },
+    {
+      "list": [
+        "G923: hybrid dual-motor system, ~2.1 N·m peak torque, includes TrueForce (a secondary haptic effect layer for supported titles — iRacing support is limited)",
+        "T300: brushless motor with belt reduction, ~3.9 N·m peak torque claimed, generally regarded as the smoother of the two at idle",
+        "Both: 11-inch wheel rim swappable on later upgrades, both compatible with PC"
+      ]
+    },
+    {
+      "h2": "Pedals: The Part That Actually Matters More"
+    },
+    {
+      "p": "This is where I'd weight your decision. The T300's stock three-pedal set (clutch, brake, throttle) uses a simple spring on the brake pedal — functional, but it won't teach you fine brake modulation the way a load-cell pedal does. The G923's pedal set is similar, also spring-based, though Logitech's throttle/clutch pedals have a slightly more linear feel in my experience demoing both."
+    },
+    {
+      "p": "Neither stock pedal set is going to carry you past intermediate iRacing. If brake consistency is your priority from day one, budget separately for an upgrade — something like the <a href=\"best-budget-load-cell-pedals.html\">budget load-cell pedals</a> guide covers what to look for, and a load-cell brake genuinely changes how consistent your threshold braking is."
+    },
+    {
+      "tip": "Don't buy either wheel expecting the stock pedals to last. Budget mentally for a pedal upgrade within the first year if you get serious about iRacing — it's the single biggest feel improvement after the wheel itself.",
+      "tipLabel": "Budget Ahead"
+    },
+    {
+      "h2": "Build Quality and Longevity"
+    },
+    {
+      "p": "I've seen more complaints about G923 belt wear and occasional dead-zone drift after 18+ months of heavy use than about the T300's gear-drive wearing out, though both are widely used and both brands have active support ecosystems. If you plan to race daily, the T300's mechanism has a slight edge in reported longevity; if you're racing a few times a week, either will likely outlast your interest in staying at this tier."
+    },
+    {
+      "h2": "Ecosystem and Upgrade Path"
+    },
+    {
+      "p": "This is the part beginners skip and then regret. Thrustmaster wheel rims are compatible across their T-series lineup, so a T300 base can carry you into a nicer rim later without replacing the whole wheel. Logitech's ecosystem is more closed — the G923 doesn't have the same swappable-rim culture, and if you outgrow it, you're more likely replacing the whole unit rather than just the rim."
+    },
+    {
+      "p": "If your real plan is \"buy entry wheel now, direct drive in 1-2 years,\" the upgrade path matters less, because you'll likely sell the whole unit anyway. Used entry wheels hold value reasonably well precisely because so many people are at this exact decision point."
+    },
+    {
+      "h2": "Which One Should You Actually Buy"
+    },
+    {
+      "p": "If you already own other Logitech gaming gear or want TrueForce for non-iRacing titles, the G923 is a fine, slightly cheaper-at-sale-time option. If you want the smoother low-speed feel and a wheel rim ecosystem you can grow inside without replacing the base, I lean T300 for most new iRacing drivers — that's the one I'd point a friend toward if they asked me cold."
+    },
+    {
+      "p": "Either way: don't agonize over this decision for weeks. Both wheels will teach you more about car control in your first 20 hours than any setting change will. The jump that actually changes your lap times is seat time, not which ~$400 wheel you start on."
+    },
+    {
+      "olist": [
+        "Decide your budget ceiling including pedals — don't spend it all on the wheel alone",
+        "If upgrade path matters to you, lean T300 for rim compatibility",
+        "If you already own Logitech peripherals or want cross-game haptics, G923 is reasonable",
+        "Plan a pedal upgrade within year one regardless of which wheel you pick"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is the Thrustmaster T300 better than the Logitech G923 for iRacing specifically?",
+      "a": "Slightly, in my experience — the low-speed feel is smoother and the rim-swap ecosystem gives you a clearer upgrade path. But the gap is small enough that either wheel will teach you real car control; don't let this choice delay getting on track."
+    },
+    {
+      "q": "Do I need to upgrade the stock pedals right away?",
+      "a": "Not right away, but plan for it within the first year if you get serious. Both stock pedal sets use simple springs rather than a load cell, which limits how precisely you can modulate braking — the single biggest feel upgrade after your first wheel is usually better pedals."
+    },
+    {
+      "q": "Will either wheel prepare me for a direct-drive upgrade later?",
+      "a": "Yes, both teach fundamental car control, weight transfer, and FFB reading. The feel difference when you move to direct drive is real — sharper, more detailed FFB — but the driving skills transfer directly."
+    },
+    {
+      "q": "Can I use these wheels with console as well as PC?",
+      "a": "Both have console-compatible versions depending on the exact SKU you buy, but iRacing itself is PC-only, so if iRacing is your target, confirm you're buying the PC-compatible version of whichever wheel you choose."
+    }
+  ],
+  "gearKeys": ["logitech-g923", "thrustmaster-t300", "cockpit"],
+  "published": "2026-10-16",
+  "dateLabel": "October 16, 2026"
+}

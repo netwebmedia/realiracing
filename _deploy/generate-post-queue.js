@@ -280,6 +280,20 @@ const TOPIC_POOL = [
   'phillip island iracing guide: fast sweepers and the high-speed lines',
   'sonoma raceway iracing guide: elevation and the carousel',
   'charlotte roval iracing guide: the infield chicane and the banking',
+
+  // ─── Expansion 2026-10-02 — bottom-funnel buying guides ────────────────────
+  // Amazon Associates risk window: the account needs qualifying purchases, not
+  // just traffic. These topics are deliberately purchase-intent, SKU-comparison
+  // or "which tier should I buy" framing rather than technique/track content,
+  // so the gearKeys boxes sit in front of someone actually deciding what to buy.
+  'entry vs mid vs flagship direct drive wheelbase: which tier to buy',
+  'sim racing gear checklist: what to buy first on a tight budget',
+  'building a dedicated iRacing PC: CPU and GPU pairing guide',
+  'single 1440p 120Hz monitor buying guide for sim racing',
+  'when a fitness tracker like WHOOP is worth it for endurance racing',
+  'upgrading from stock pedals to load cell: a buying checklist',
+  'wheel rim buying guide: GT, open-wheel and rally shapes compared',
+  'cockpit frame buying guide: what to check before you buy',
 ];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
