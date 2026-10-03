@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endurance Racing Fuel and Tire Strategy Basics | RealIRacing</title>
+  <meta name="description" content="Master fuel consumption, tire degradation, and stint planning for longer iRacing races. Learn when to push and when to conserve." />
+  <link rel="canonical" href="https://realiracing.com/blog/endurance-racing-fuel-tire-strategy.html" />
+  <meta property="og:title" content="Endurance Racing Fuel and Tire Strategy Basics" />
+  <meta property="og:description" content="Master fuel consumption, tire degradation, and stint planning for longer iRacing races. Learn when to push and when to conserve." />
+  <meta property="og:url" content="https://realiracing.com/blog/endurance-racing-fuel-tire-strategy.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://realiracing.com/assets/photos/sim-esports.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="562" />
+  <meta property="og:image:alt" content="Competitors at an esports event" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://realiracing.com/assets/photos/sim-esports.jpg" />
+  <link rel="stylesheet" href="blog.css?v=20260826" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Endurance Racing Fuel and Tire Strategy Basics",
+    "description": "Master fuel consumption, tire degradation, and stint planning for longer iRacing races. Learn when to push and when to conserve.",
+    "author": { "@type": "Person", "name": "Carlos Martinez", "url": "https://realiracing.com" },
+    "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "https://realiracing.com" },
+    "mainEntityOfPage": "https://realiracing.com/blog/endurance-racing-fuel-tire-strategy.html",
+    "image": "https://realiracing.com/assets/photos/sim-esports.jpg",
+    "datePublished": "2026-09-28",
+    "dateModified": "2026-09-28"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if I'm burning too much fuel for a specific stint?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Run a 15-lap practice stint at your intended race pace, then check telemetry for total fuel consumed. Divide fuel used by laps to get liters per lap. Multiply that by your pit-window target (say, 40 laps). If the total exceeds your tank capacity, you either need to back off pace, plan a pit stop sooner, or use a lighter fuel trim. Track this every practice session—fuel burn changes with track temperature and setup changes." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I pit when my tires are still half-decent, or push until they're really worn?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Push until they're genuinely degraded and your pace has fallen 1-2 tenths below your baseline. A pit stop costs 25-35 seconds, so staying out 3-5 extra laps on aging tires usually beats pitting early. The exception: if a yellow flag is flying or about to fly, pit immediately under yellow to lose no position. In the final stint, pushing worn tires is acceptable because the race ends soon; in early stints, preserve options." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best way to plan pit windows for a four-hour endurance race with two drivers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide the four hours into roughly four pit cycles of 50-60 minutes each. Each driver should handle two stints. Calculate fuel capacity and tire life in practice—if your car burns ~2.8 L/lap and your tank is 100 L, you can run ~35 laps per stint on a typical track. Plan pit windows around those numbers. Build in 5-lap flex room for traffic, cautions, or pace adjustments. Brief your co-driver on fuel burn rate and target stint length before the race starts." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does fuel load at the start affect my opening lap and first stint pace?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Full fuel at the start (~100 L depending on car) adds weight that hurts braking and acceleration slightly, but the impact is usually 0.3-0.5 seconds per lap compared to low fuel. You'll feel heavier turn-in response and longer braking distances. This is why the first driver often focuses on track position in the opening laps rather than chasing the fastest lap—conserving fuel and preserving tires matters more than outrunning cars that will pit sooner anyway." }
+    }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">
+      <svg class="nav-logo-wheel" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#e8ff00" stroke-width="2.5"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#2a2d35" stroke-width="7"/>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="#e8ff00" stroke-width="2" stroke-dasharray="14 56" stroke-dashoffset="-10"/>
+        <line x1="20" y1="20" x2="7" y2="24" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="33" y2="16" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="20" y1="20" x2="20" y2="34" stroke="#e8ff00" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="3" fill="#e8ff00"/>
+      </svg>
+      <span>Real</span>IRacing
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#media">Media</a></li>
+      <li><a href="/#content">Content</a></li>
+      <li><a class="active" href="/blog/">Blog</a></li>
+      <li><a href="/gear.html">My Rig</a></li>
+      <li><a href="/#platforms">Platforms</a></li>
+      <li><a class="nav-cta" href="https://www.youtube.com/@realtape" target="_blank">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <p class="section-label">iRacing Tips · Strategy</p>
+    <h1>Endurance Racing Fuel and Tire Strategy Basics</h1>
+    <div class="article-meta">
+      <span class="author">Carlos Martinez</span>
+      <span class="dot">·</span>
+      <span>Updated September 28, 2026</span>
+      <span class="dot">·</span>
+      <span>9 min read</span>
+    </div>
+
+        <figure class="article-photo">
+          <img src="/assets/photos/sim-esports.jpg" width="1000" height="562" alt="Competitors at an esports event" loading="eager" decoding="async">
+          <figcaption>Photo: BBC News اردو · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener nofollow">CC BY 3.0</a> · Source: <a href="https://commons.wikimedia.org/wiki/File:E-sports_How_is_gaming_culture_transforming_in_Pakistan_-_BBCURDU_-_0-2-41.png" target="_blank" rel="noopener nofollow">Wikimedia Commons</a></figcaption>
+        </figure>
+
+    <div class="article-body">
+      <p class="disclosure">Some links on this page may earn RealIRacing a commission at no extra cost to you. Gear I personally race on is called out as such; other picks are researched recommendations.</p>
+
+      <p class="article-lead">Endurance racing in iRacing—whether it's a four-hour GT3 race or a longer prototype stint—is nothing like a 30-minute sprint. You're not just driving fast; you're managing fuel, tire wear, and driver swaps across stints that can last 45 minutes to over an hour per driver. Get the strategy wrong and you'll either run out of fuel with two laps to go or limp across the finish line on bald tires. Get it right, and you'll see cars that were faster in qualifying fade behind you as the race unfolds.</p>
+
+      <p>On my MOZA R9 setup, I've learned that endurance strategy starts before the first lap. It's about understanding your fuel burn rate, how your tires degrade under load, and then building a plan that balances aggression with survival. Let me walk you through the fundamentals.</p>
+
+      <h2>Understanding Fuel Consumption and Tank Strategy</h2>
+
+      <p>Fuel consumption in iRacing endurance racing is directly tied to how hard you're pushing. Aggressive acceleration, high cornering speeds, and high brake application all increase fuel burn. On a typical two-hour GT3 race, I'll do a short practice stint to establish a baseline: push for ten minutes at race pace, then check my fuel consumption in the telemetry.</p>
+
+      <p>The math is simple but critical. If my tank holds ~100 liters (depending on the car), and I burn ~2.8 liters per lap at aggressive pace, I can run roughly 35 laps before refueling. But if I back off slightly—smoother on the throttle, less aggressive on corner entry—that same tank might stretch to 38 or 40 laps. That one extra lap can be the difference between pitting under yellow (advantage) or under green (loss of position).</p>
+
+      <ul>
+        <li>Check fuel consumption early in practice; run 10-15 laps at your intended race pace and divide total fuel used by laps completed</li>
+        <li>Account for qualifying fuel trim (lighter fuel loads mean faster pace; endurance requires full or near-full tanks for stint duration)</li>
+        <li>Plan pit windows around fuel capacity, not just tire wear—run out of fuel and you're in the pits for ~45 seconds minimum</li>
+        <li>Use telemetry markers to spot where you burn the most fuel: hard acceleration zones, repetitive cornering, cold-tire laps after pit stops</li>
+      </ul>
+
+      <div class="tip-box">
+        <span class="box-label">Fuel Load and Driver Rhythm</span>
+        <p>In a two-driver race, the first driver often carries full fuel; the second driver runs a shorter stint with less fuel in the tank. That second stint can feel sharper—less weight means better braking and turn-in response. Use that to your advantage on track position, not just raw pace.</p>
+      </div>
+
+      <h2>Tire Degradation Patterns Across a Stint</h2>
+
+      <p>Tires don't fail linearly in endurance racing. There's a sweet window—typically laps 8 to 25 of a 45-minute stint—where the tires are warm, gripped up, and degrading slowly. Before that, you're losing lap time because the tires aren't fully up to temperature. After that, you start losing pace noticeably every lap. By the end of a long stint, especially in GT3 or GTP, you can lose 3–5 tenths per lap compared to prime tires.</p>
+
+      <p>I track tire degradation by watching my lap times and comparing them to my baseline. If my baseline is 1:52.3 on fresh tires, I expect a small dip in the first 3–5 laps as tires come in, then consistent pace for 15–20 laps. After lap 20, I'll start seeing lap times rise: 1:52.5, 1:52.7, 1:52.9. That's my signal to either push harder while I still have grip, or begin a controlled fuel-conservation phase if I'm targeting a specific pit window.</p>
+
+      <p>The type of compound matters, too. Softer tires degrade faster but give more grip early. Harder compounds last longer but take longer to warm up. In endurance, harder tires are often the safer choice—you lose a few tenths on lap five, but you're still competitive on lap 40. On my MOZA R9, I find that smoother inputs help tire life considerably. Abrupt steering corrections and late trail braking accelerate wear on the fronts.</p>
+
+      <ul>
+        <li>First 5 laps: tires warming up. Don't expect baseline pace; use this phase to settle into the car and build fuel/tire heat gently</li>
+        <li>Laps 6–25 (approx): prime window. Tires are hot, fuel load is still manageable. This is when you set your fastest laps and close gaps</li>
+        <li>Laps 26–40+: degradation phase. Pace will slow by 0.5–1.5 seconds depending on compound and track. Adjust strategy: pit soon or extend and conserve</li>
+        <li>Final 5 laps of stint: fuel tank is low, tires are aged. Focus on clean driving and consistent pace; don't overdrive on degraded rubber</li>
+      </ul>
+
+      <h2>Building Your Stint and Pit Window Plan</h2>
+
+      <p>A solid endurance strategy document—whether you're in a league race or a public session—maps out target stint lengths, pit windows, and driver order. For a four-hour race with two drivers, you might plan four pit stops. For a six-hour race with three drivers, you might do five or six. The key is balancing fuel capacity with tire life so that pit stops align.</p>
+
+      <p>Here's a practical two-driver endurance example I've used on my rig:</p>
+
+      <ol>
+        <li>Driver 1 takes the start with full fuel. Target: 45 minutes, ~40 laps, pushing for the first 15 minutes to gain track position.</li>
+        <li>Lap 32–35: fuel consumption is now critical. Driver 1 enters fuel-conservation mode—smooth inputs, controlled pace, aiming for a pit window at lap 40 (45 minutes elapsed).</li>
+        <li>Pit stop 1: fuel to full, tire change if needed, driver swap to Driver 2.</li>
+        <li>Driver 2 exits with full fuel. This driver has fresher tires and can push immediately. Target: another 45–50 minutes.</li>
+        <li>Repeat this pattern, adjusting pit windows based on actual fuel burn and real-time tire wear.</li>
+      </ol>
+
+      <p>The flexibility comes in. If you're running P2 and the leader pits at lap 28, you don't have to follow immediately—you can extend to lap 32, make up the gap, then pit from a better position. Conversely, if you're ahead and see traffic building, pitting early can clear your air and preserve strategy advantage.</p>
+
+      <div class="tip-box">
+        <span class="box-label">Live Telemetry Communication</span>
+        <p>Use iRacing telemetry and splits in real-time. A radio system or spotter (I use Crew Chief) lets you communicate stint predictions and fuel burn live. 'We're burning 2.9 liters per lap, full tank is 100, so we have 32 laps left' takes five seconds to relay but saves pit-window mistakes.</p>
+      </div>
+
+      <h2>Tire Strategy: When to Pit, When to Stay Out</h2>
+
+      <p>One of the most common endurance mistakes is pitting too early just because tires have lost a few tenths. A pit stop costs 25–35 seconds (fuel, tires, driver swap). If your tires can still deliver pace and fuel allows, staying out for two or three more laps often nets a better result. Conversely, pitting before the tires are truly done can save you from a late-race caution or a competitor's ambush.</p>
+
+      <p>I evaluate tire health by asking: <strong>Can my current tires still beat the next driver's incoming fresh tires in the first lap or two after my pit?</strong> If yes, stay out. If no, pit now. This calculation shifts depending on track position. Leading by two seconds? Stay out and defend. Down by three seconds? Fresh tires and a driver swap might close that gap faster than extending this stint.</p>
+
+      <ul>
+        <li>Monitor tire temperature across all four tires—uneven degradation signals setup issues that a pit stop won't fix (e.g., too much brake bias favoring one axle)</li>
+        <li>In wet conditions, tire degradation is steeper and more sudden. You may be forced to pit earlier than in the dry, or risk aquaplaning on worn rubber</li>
+        <li>Keep a running tally of pit cycles. In a six-hour race, pitting five times is efficient; six pits wastes time. Plan stint lengths to minimize total pit stops</li>
+        <li>Late-race cautions can change everything. If yellows are flying, extend your stint to pit under yellow rather than green—you lose no position to competitors</li>
+      </ul>
+
+      <h2>Practice and Consistency: The Real Foundation</h2>
+
+      <p>All of this strategy falls apart if you don't have baseline data. Before any endurance race, I spend 30–45 minutes in a practice session running solo, building fuel and tire degradation profiles for the specific setup I'm using. I test two scenarios: one where I push hard for 15 laps, then conserve for 15 laps; another where I fuel-save from lap one.</p>
+
+      <p>This isn't just about lap times. It's about understanding how your car, tires, and setup behave across a full stint. Does the car get loose as fuel weight drops? Do rear tires degrade faster than fronts? Does your fuel consumption spike if you're caught in traffic? These details turn a guessed strategy into an informed plan.</p>
+
+      <p>In team endurance races, communication between drivers is everything. The outgoing driver should brief the incoming driver: tire condition (which corner is slippy), traffic position, fuel burn actual vs. planned, and strategy adjustments. On my rig, I use Crew Chief or Discord to relay this real-time, especially in longer races where conditions shift.</p>
+
+      <p>Endurance racing rewards patience, smooth inputs, and planning. You'll see cars that were two or three tenths faster in qualifying fade as the race unfolds because they didn't account for fuel, tire wear, and strategic pit windows. Master the fundamentals of fuel consumption and tire degradation, build a realistic pit plan, and you'll surprise faster drivers with consistency and track position when it matters most.</p>
+
+      <div id="rir-gear"><div class="gear-box">
+        <span class="box-label">The gear in this guide</span>
+        <ul>
+          <li><a href="https://www.amazon.com/s?k=MOZA+R9+wheel+base&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-r9" target="_blank" rel="sponsored noopener">MOZA R9 Direct Drive Wheelbase</a> — 9 N·m direct drive — the base bolted to my rig right now</li>
+          <li><a href="https://www.amazon.com/s?k=MOZA+CRP2+pedals&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-crp2" target="_blank" rel="sponsored noopener">MOZA CRP2 Load Cell Pedals</a> — load-cell brake, managed in the same Pit House software</li>
+        </ul>
+        <p class="aff-note">Some links are affiliate links — I may earn a commission at no cost to you.</p>
+      </div></div>
+
+      <div class="cta-box">
+        <h3>Watch it, don't just read about it</h3>
+        <p>I stream and upload iRacing races on my MOZA R9 rig — real laps, real force feedback, real mistakes. See the gear from this guide working before you spend a cent.</p>
+        <a class="btn-primary" href="https://www.youtube.com/@realtape" target="_blank">▶ Subscribe on YouTube</a>
+      </div>
+
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h3>How do I know if I'm burning too much fuel for a specific stint?</h3>
+        <p>Run a 15-lap practice stint at your intended race pace, then check telemetry for total fuel consumed. Divide fuel used by laps to get liters per lap. Multiply that by your pit-window target (say, 40 laps). If the total exceeds your tank capacity, you either need to back off pace, plan a pit stop sooner, or use a lighter fuel trim. Track this every practice session—fuel burn changes with track temperature and setup changes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I pit when my tires are still half-decent, or push until they're really worn?</h3>
+        <p>Push until they're genuinely degraded and your pace has fallen 1-2 tenths below your baseline. A pit stop costs 25-35 seconds, so staying out 3-5 extra laps on aging tires usually beats pitting early. The exception: if a yellow flag is flying or about to fly, pit immediately under yellow to lose no position. In the final stint, pushing worn tires is acceptable because the race ends soon; in early stints, preserve options.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the best way to plan pit windows for a four-hour endurance race with two drivers?</h3>
+        <p>Divide the four hours into roughly four pit cycles of 50-60 minutes each. Each driver should handle two stints. Calculate fuel capacity and tire life in practice—if your car burns ~2.8 L/lap and your tank is 100 L, you can run ~35 laps per stint on a typical track. Plan pit windows around those numbers. Build in 5-lap flex room for traffic, cautions, or pace adjustments. Brief your co-driver on fuel burn rate and target stint length before the race starts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does fuel load at the start affect my opening lap and first stint pace?</h3>
+        <p>Full fuel at the start (~100 L depending on car) adds weight that hurts braking and acceleration slightly, but the impact is usually 0.3-0.5 seconds per lap compared to low fuel. You'll feel heavier turn-in response and longer braking distances. This is why the first driver often focuses on track position in the opening laps rather than chasing the fastest lap—conserving fuel and preserving tires matters more than outrunning cars that will pit sooner anyway.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Keep reading</h2>
+    <div class="related-grid">
+      <a class="related-card" href="garage61-telemetry-comparison-tools.html"><span>iRacing Tips</span>Garage61 vs Telemetry Comparison Tools: Which Fits Your iRacing Workflow</a>
+      <a class="related-card" href="iracing-qualifying-best-practices-pace.html"><span>iRacing Tips</span>iRacing Qualifying Best Practices: Strategy, Pace, and Grid Position</a>
+      <a class="related-card" href="rookie-to-class-d-fastest-legitimate-route.html"><span>iRacing Tips</span>Rookie to Class D: The Fastest Legitimate Route Through iRacing</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 RealIRacing · iRacing User: <strong>Carlos Martinez9</strong> · Built with 🏎️</p>
+    <p style="margin-top:6px;font-size:0.78rem;">
+      <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
+      <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
+    </p>
+  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:.8">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
+  </footer>
+
+  <script src="/js/ga4.js" defer></script>
+  <script src="/js/affiliates.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof renderGearBox === 'function') {
+        renderGearBox('rir-gear', ["moza-r9","moza-crp2"], 'The gear in this guide');
+      }
+      if (window.RIR_AFF) { RIR_AFF.hydrateLinks(); }
+    });
+  </script>
+
+</body>
+</html>
