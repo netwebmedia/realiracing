@@ -16,14 +16,14 @@
   <meta property="og:image:alt" content="A racing bucket seat and harness" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://realiracing.com/assets/photos/rig-seat.jpg" />
-  <link rel="stylesheet" href="blog.css?v=20260826" />
+  <link rel="stylesheet" href="blog.css?v=20261005" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Eye Strain and Screen Distance: Preventing Fatigue in Long iRacing Sessions",
     "description": "How screen distance, monitor size, and viewing angles affect eye fatigue in sim racing. Real solutions I use on my rig to race injury-free for hours.",
-    "author": { "@type": "Person", "name": "Carlos Martinez", "url": "https://realiracing.com" },
+    "author": { "@type": "Person", "@id": "https://realiracing.com/#carlos", "name": "Carlos Martinez", "url": "https://realiracing.com/", "sameAs": ["https://www.youtube.com/@realtape","https://www.instagram.com/realiracing"] },
     "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "https://realiracing.com" },
     "mainEntityOfPage": "https://realiracing.com/blog/prevent-eye-strain-sim-racing-distance.html",
     "image": "https://realiracing.com/assets/photos/rig-seat.jpg",
@@ -59,6 +59,12 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realiracing.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://realiracing.com/blog/"},{"@type":"ListItem","position":3,"name":"Eye Strain and Screen Distance: Preventing Fatigue in Long iRacing Sessions","item":"https://realiracing.com/blog/prevent-eye-strain-sim-racing-distance.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"The gear in this guide","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"MOZA R9 Direct Drive Wheelbase","description":"9 N·m direct drive — the base bolted to my rig right now","url":"https://realiracing.com/blog/prevent-eye-strain-sim-racing-distance.html#rir-gear"}},{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"1440p 120 Hz+ G-SYNC Compatible Gaming Monitor","description":"my single-screen setup — high refresh matters more than size","url":"https://realiracing.com/blog/prevent-eye-strain-sim-racing-distance.html#rir-gear"}},{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Sim Racing Cockpit / Wheel Stand","description":"a rigid mount matters more than the brand — flex kills FFB detail","url":"https://realiracing.com/blog/prevent-eye-strain-sim-racing-distance.html#rir-gear"}}]}
+  </script>
 </head>
 <body>
 
@@ -85,7 +91,7 @@
     </ul>
   </nav>
 
-  <div class="article-wrap">
+  <main class="article-wrap">
     <p class="section-label">Hardware Setup · Ergonomics</p>
     <h1>Eye Strain and Screen Distance: Preventing Fatigue in Long iRacing Sessions</h1>
     <div class="article-meta">
@@ -97,7 +103,7 @@
     </div>
 
         <figure class="article-photo">
-          <img src="/assets/photos/rig-seat.jpg" width="1000" height="750" alt="A racing bucket seat and harness" loading="eager" decoding="async">
+          <img src="/assets/photos/rig-seat.jpg" width="1000" height="750" alt="A racing bucket seat and harness" srcset="/assets/photos/rig-seat-sm.jpg 560w, /assets/photos/rig-seat.jpg 1000w" sizes="(max-width: 760px) 100vw, 712px" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Photo: <a href="https://www.flickr.com/photos/25632349@N04" target="_blank" rel="noopener nofollow">The Car Spy</a> · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener nofollow">CC BY 2.0</a> · Source: <a href="https://commons.wikimedia.org/wiki/File:Bucket_seat_with_Schroth_six-point_harness_in_a_2010_Porsche_997_GT3_RS_3.8.jpg" target="_blank" rel="noopener nofollow">Wikimedia Commons</a></figcaption>
         </figure>
 
@@ -170,11 +176,16 @@
 
       <div id="rir-gear"><div class="gear-box">
         <span class="box-label">The gear in this guide</span>
-        <ul>
-          <li><a href="https://www.amazon.com/s?k=MOZA+R9+wheel+base&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-r9" target="_blank" rel="sponsored noopener">MOZA R9 Direct Drive Wheelbase</a> — 9 N·m direct drive — the base bolted to my rig right now</li>
-          <li><a href="https://www.amazon.com/s?k=1440p+144hz+g-sync+compatible+gaming+monitor&amp;tag=realiracing-20" data-aff="monitor-1440p-120" target="_blank" rel="sponsored noopener">1440p 120 Hz+ G-SYNC Compatible Gaming Monitor</a> — my single-screen setup — high refresh matters more than size</li>
-          <li><a href="https://www.amazon.com/s?k=sim+racing+cockpit+stand&amp;tag=realiracing-20" data-aff="cockpit" target="_blank" rel="sponsored noopener">Sim Racing Cockpit / Wheel Stand</a> — a rigid mount matters more than the brand — flex kills FFB detail</li>
-        </ul>
+        <div class="table-scroll">
+          <table class="gear-table">
+            <thead><tr><th scope="col">Pick</th><th scope="col">Why it made the list</th><th scope="col">Tested?</th></tr></thead>
+            <tbody>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=MOZA+R9+wheel+base&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-r9" target="_blank" rel="sponsored noopener">MOZA R9 Direct Drive Wheelbase</a></th><td>9 N·m direct drive — the base bolted to my rig right now</td><td><span class="rig-badge">Raced on</span></td></tr>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=1440p+144hz+g-sync+compatible+gaming+monitor&amp;tag=realiracing-20" data-aff="monitor-1440p-120" target="_blank" rel="sponsored noopener">1440p 120 Hz+ G-SYNC Compatible Gaming Monitor</a></th><td>my single-screen setup — high refresh matters more than size</td><td><span class="rig-badge">Raced on</span></td></tr>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=sim+racing+cockpit+stand&amp;tag=realiracing-20" data-aff="cockpit" target="_blank" rel="sponsored noopener">Sim Racing Cockpit / Wheel Stand</a></th><td>a rigid mount matters more than the brand — flex kills FFB detail</td><td><span class="rig-badge rig-badge--rec">Researched pick</span></td></tr>
+            </tbody>
+          </table>
+        </div>
         <p class="aff-note">Some links are affiliate links — I may earn a commission at no cost to you.</p>
       </div></div>
 
@@ -203,7 +214,7 @@
         <p>If you catch yourself leaning forward after 30 minutes, or if your eyes feel fatigued after an hour even when you're not racing intensely, you're likely too close. Also, if small details (like apex markers) feel unclear without being blurry, your viewing angle is too narrow. Push back 3–4 inches and reassess after a full practice session.</p>
       </div>
     </div>
-  </div>
+  </main>
 
   <div class="related">
     <h2>Keep reading</h2>
@@ -220,7 +231,7 @@
       <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
       <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
     </p>
-  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:.8">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
+  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:1">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
   <p class="dg-credit" style="margin-top:8px;font-size:0.78rem;text-align:center">A <a href="https://dongaston.com/" rel="noopener" style="color:inherit;text-decoration:underline">Don Gast&oacute;n</a> company</p>
   </footer>
 
