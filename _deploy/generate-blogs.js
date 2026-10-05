@@ -368,7 +368,7 @@ ${faqJsonLd}
     <p class="section-label">${esc(tag)}</p>
     <h1>${esc(title)}</h1>
     <div class="article-meta">
-      <span class="author">${esc(author)}</span>
+      <span class="author"><a href="https://dongaston.com/" rel="noopener" style="color:inherit">${esc(author)}</a></span>
       <span class="dot">·</span>
       <span>Updated ${esc(dateLabel)}</span>
       <span class="dot">·</span>
@@ -409,6 +409,7 @@ ${relatedHtml}
       <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
       <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
     </p>
+    <p class="dg-credit" style="margin-top:8px;font-size:0.78rem;text-align:center">A <a href="https://dongaston.com/" rel="noopener" style="color:inherit;text-decoration:underline">Don Gast&oacute;n</a> company</p>
   <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:.8">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
   </footer>
 
