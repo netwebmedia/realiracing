@@ -2,7 +2,9 @@ name: Generate Blog Queue (Weekly)
 
 # Runs every Monday at 10:00 UTC (6 AM Santiago).
 # Generates ~20 posts (2/day cadence matches the publish workflow below).
-# Requires the ANTHROPIC_API_KEY repo secret — see the "Check API key" step;
+# Claude calls use the CLAUDE_CODE_OAUTH_TOKEN secret (Max subscription, minted
+# with `claude setup-token`) when set, else the ANTHROPIC_API_KEY repo secret.
+# Requires one of the two — see the "Require Claude credentials" step;
 # if it's missing this workflow skips gracefully instead of hard-failing the
 # scheduled run.
 
@@ -48,17 +50,29 @@ jobs:
       # this same repo already gets this right for the FTP secrets — ::error::
       # and exit 1 — and the monorepo's golferos generator says it outright:
       # "Without it the job fails loudly rather than shipping nothing quietly."
-      - name: Require API key
+      - name: Require Claude credentials
         run: |
-          if [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ]; then
-            echo "::error::ANTHROPIC_API_KEY is not set, so this run cannot generate anything. Add it under Settings > Secrets and variables > Actions. This now fails instead of passing silently — nine scheduled runs reported success while doing nothing."
+          if [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ] && [ -z "${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}" ]; then
+            echo "::error::Neither CLAUDE_CODE_OAUTH_TOKEN nor ANTHROPIC_API_KEY is set, so this run cannot generate anything. Add one at https://github.com/netwebmedia/realiracing/settings/secrets/actions/new. This fails instead of passing silently — nine scheduled runs once reported success while doing nothing."
             exit 1
           fi
-          echo "✓ key present"
+          echo "✓ credentials present"
+
+      # Claude calls run on the Claude Max subscription when CLAUDE_CODE_OAUTH_TOKEN
+      # is set (see _deploy/lib/claude-call.js), with ANTHROPIC_API_KEY as the
+      # fallback. The SDK installs outside the repo so package.json stays untouched.
+      - name: Install Claude Agent SDK
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then echo "No CLAUDE_CODE_OAUTH_TOKEN -- calls use ANTHROPIC_API_KEY"; exit 0; fi
+          npm install --prefix "$RUNNER_TEMP/agent-sdk" --no-audit --no-fund --loglevel=error @anthropic-ai/claude-agent-sdk@^0.3
 
       - name: Generate posts
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_AGENT_SDK_DIR: ${{ runner.temp }}/agent-sdk
         run: |
           COUNT="${{ github.event.inputs.count || '20' }}"
           node _deploy/generate-post-queue.js --count "$COUNT"
