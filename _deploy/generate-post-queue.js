@@ -7,17 +7,17 @@
 //   node _deploy/generate-post-queue.js --count 40         # generate 40 posts
 //   node _deploy/generate-post-queue.js --start-date 2026-08-01 --count 20
 //
-// Requires: ANTHROPIC_API_KEY env var
+// Requires: CLAUDE_CODE_OAUTH_TOKEN (Claude subscription) or ANTHROPIC_API_KEY
 
 const fs   = require('fs');
 const path = require('path');
+const { callClaude, claudeConfigured } = require('./lib/claude-call.js');
 const { parseBatchReply } = require('./lib/salvage.js');
 
 process.chdir(path.join(__dirname, '..'));
 
 const QUEUE_DIR     = path.join('_deploy', 'posts-queue');
 const PUBLISHED_DIR = path.join(QUEUE_DIR, '_published');
-const API_URL       = 'https://api.anthropic.com/v1/messages';
 const MODEL         = 'claude-haiku-4-5-20251001';
 // ONE post per API call (was 2).
 //
@@ -348,7 +348,7 @@ const REQUEST_TIMEOUT_MS = 180000; // hard cap per API call; without this a stal
 
 async function generateBatch(topics, publishDate, usedSlugs, gearOptions) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) throw new Error('ANTHROPIC_API_KEY not set');
+  if (!claudeConfigured()) throw new Error('Neither CLAUDE_CODE_OAUTH_TOKEN nor ANTHROPIC_API_KEY is set');
 
   const dateStr  = isoDate(publishDate);
   const labelStr = dateLabel(publishDate);
@@ -394,38 +394,14 @@ Rules:
 
   const userPrompt = `Generate ${topics.length} blog posts on these topics:\n${topics.map((t, i) => `${i + 1}. ${t}`).join('\n')}`;
 
-  const ac = new AbortController();
-  const timer = setTimeout(() => ac.abort(), REQUEST_TIMEOUT_MS);
-  let res;
-  try {
-    res = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: MODEL,
-        max_tokens: MAX_TOKENS,
-        messages: [{ role: 'user', content: userPrompt }],
-        system: systemPrompt,
-      }),
-      signal: ac.signal,
-    });
-  } catch (e) {
-    if (e.name === 'AbortError') throw new Error(`API request timed out after ${REQUEST_TIMEOUT_MS / 1000}s`);
-    throw e;
-  } finally {
-    clearTimeout(timer);
-  }
-
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`API error ${res.status}: ${err}`);
-  }
-
-  const data = await res.json();
+  const data = await callClaude({
+    apiKey,
+    model: MODEL,
+    maxTokens: MAX_TOKENS,
+    timeoutMs: REQUEST_TIMEOUT_MS,
+    system: systemPrompt,
+    user: userPrompt,
+  });
   const text = data.content[0].text.trim();
   const clean = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/, '');
 
@@ -449,8 +425,8 @@ Rules:
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error('Error: ANTHROPIC_API_KEY is not set. Add it as a repo secret (Settings -> Secrets and variables -> Actions) and as an env var locally. Get a key at https://console.anthropic.com');
+  if (!claudeConfigured()) {
+    console.error('Error: Neither CLAUDE_CODE_OAUTH_TOKEN nor ANTHROPIC_API_KEY is set. Add CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`) or ANTHROPIC_API_KEY as a repo secret at https://github.com/netwebmedia/realiracing/settings/secrets/actions/new');
     process.exit(1);
   }
 
