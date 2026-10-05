@@ -74,9 +74,15 @@ function creditHtml(photo) {
   return `Photo: ${who} · ${link(photo.license_url, photo.license)} · Source: ${link(photo.source, photo.source_name || 'Wikimedia Commons')}`;
 }
 
+/* The hero is the LCP element: fetchpriority=high, and srcset so a phone takes
+ * the 560px file instead of the 1000px one (the article column is 712px wide at
+ * most). AVIF/WebP are served by content negotiation in .htaccess. */
 function figureHtml(photo, indent = '        ') {
+  const srcset = photo.sm_width && photo.sm_width < photo.width
+    ? ` srcset="${esc(smFile(photo.file))} ${photo.sm_width}w, ${esc(photo.file)} ${photo.width}w" sizes="(max-width: 760px) 100vw, 712px"`
+    : '';
   return `${indent}<figure class="article-photo">
-${indent}  <img src="${esc(photo.file)}" width="${photo.width}" height="${photo.height}" alt="${esc(photo.alt_en)}" loading="eager" decoding="async">
+${indent}  <img src="${esc(photo.file)}" width="${photo.width}" height="${photo.height}" alt="${esc(photo.alt_en)}"${srcset} loading="eager" fetchpriority="high" decoding="async">
 ${indent}  <figcaption>${creditHtml(photo)}</figcaption>
 ${indent}</figure>`;
 }

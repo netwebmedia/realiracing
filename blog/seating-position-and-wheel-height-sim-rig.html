@@ -14,14 +14,14 @@
 <meta property="og:image:height" content="563">
 <meta property="og:image:alt" content="Cover art: a rising series of bars">
   <meta property="og:type" content="article" />
-  <link rel="stylesheet" href="blog.css?v=20260824" />
+  <link rel="stylesheet" href="blog.css?v=20261005" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Your Seating Position Is Probably Costing You More Lap Time Than Your Wheelbase",
     "description": "Wheel height, pedal angle and seat rake changed my consistency in iRacing more than any hardware upgrade. Here is how I set my rig, and the mistakes I made first.",
-    "author": { "@type": "Person", "name": "Carlos Martinez", "url": "https://realiracing.com" },
+    "author": { "@type": "Person", "@id": "https://realiracing.com/#carlos", "name": "Carlos Martinez", "url": "https://realiracing.com/", "sameAs": ["https://www.youtube.com/@realtape","https://www.instagram.com/realiracing"] },
     "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "https://realiracing.com" },
     "mainEntityOfPage": "https://realiracing.com/blog/seating-position-and-wheel-height-sim-rig.html",
   "image": "https://realiracing.com/assets/photos/pedals-cover.jpg",
@@ -57,6 +57,12 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realiracing.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://realiracing.com/blog/"},{"@type":"ListItem","position":3,"name":"Your Seating Position Is Probably Costing You More Lap Time Than Your Wheelbase","item":"https://realiracing.com/blog/seating-position-and-wheel-height-sim-rig.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"The gear in this guide","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Sim Racing Cockpit / Wheel Stand","description":"a rigid mount matters more than the brand — flex kills FFB detail","url":"https://realiracing.com/blog/seating-position-and-wheel-height-sim-rig.html#rir-gear"}},{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"MOZA R9 Direct Drive Wheelbase","description":"9 N·m direct drive — the base bolted to my rig right now","url":"https://realiracing.com/blog/seating-position-and-wheel-height-sim-rig.html#rir-gear"}},{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"MOZA CRP2 Load Cell Pedals","description":"load-cell brake, managed in the same Pit House software","url":"https://realiracing.com/blog/seating-position-and-wheel-height-sim-rig.html#rir-gear"}},{"@type":"ListItem","position":4,"item":{"@type":"Product","name":"MOZA SR-P Load Cell Pedals","description":"budget load cell on the same Pit House ecosystem as my R9","url":"https://realiracing.com/blog/seating-position-and-wheel-height-sim-rig.html#rir-gear"}}]}
+  </script>
 </head>
 <body>
 
@@ -83,7 +89,7 @@
     </ul>
   </nav>
 
-  <div class="article-wrap">
+  <main class="article-wrap">
     <p class="section-label">Setup Guides · Ergonomics</p>
     <h1>Your Seating Position Is Probably Costing You More Lap Time Than Your Wheelbase</h1>
     <div class="article-meta">
@@ -95,7 +101,7 @@
     </div>
 
         <figure class="article-photo">
-          <img src="/assets/photos/pedals-cover.jpg" width="1000" height="563" alt="Cover art: a rising series of bars" loading="eager" decoding="async">
+          <img src="/assets/photos/pedals-cover.jpg" width="1000" height="563" alt="Cover art: a rising series of bars" srcset="/assets/photos/pedals-cover-sm.jpg 560w, /assets/photos/pedals-cover.jpg 1000w" sizes="(max-width: 760px) 100vw, 712px" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Illustration: RealiRacing</figcaption>
         </figure>
 
@@ -172,12 +178,17 @@
 
       <div id="rir-gear"><div class="gear-box">
         <span class="box-label">The gear in this guide</span>
-        <ul>
-          <li><a href="https://www.amazon.com/s?k=sim+racing+cockpit+stand&amp;tag=realiracing-20" data-aff="cockpit" target="_blank" rel="sponsored noopener">Sim Racing Cockpit / Wheel Stand</a> — a rigid mount matters more than the brand — flex kills FFB detail</li>
-          <li><a href="https://www.amazon.com/s?k=MOZA+R9+wheel+base&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-r9" target="_blank" rel="sponsored noopener">MOZA R9 Direct Drive Wheelbase</a> — 9 N·m direct drive — the base bolted to my rig right now</li>
-          <li><a href="https://www.amazon.com/s?k=MOZA+CRP2+pedals&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-crp2" target="_blank" rel="sponsored noopener">MOZA CRP2 Load Cell Pedals</a> — load-cell brake, managed in the same Pit House software</li>
-          <li><a href="https://www.amazon.com/s?k=MOZA+SR-P+pedals&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-sr-p" target="_blank" rel="sponsored noopener">MOZA SR-P Load Cell Pedals</a> — budget load cell on the same Pit House ecosystem as my R9</li>
-        </ul>
+        <div class="table-scroll">
+          <table class="gear-table">
+            <thead><tr><th scope="col">Pick</th><th scope="col">Why it made the list</th><th scope="col">Tested?</th></tr></thead>
+            <tbody>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=sim+racing+cockpit+stand&amp;tag=realiracing-20" data-aff="cockpit" target="_blank" rel="sponsored noopener">Sim Racing Cockpit / Wheel Stand</a></th><td>a rigid mount matters more than the brand — flex kills FFB detail</td><td><span class="rig-badge rig-badge--rec">Researched pick</span></td></tr>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=MOZA+R9+wheel+base&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-r9" target="_blank" rel="sponsored noopener">MOZA R9 Direct Drive Wheelbase</a></th><td>9 N·m direct drive — the base bolted to my rig right now</td><td><span class="rig-badge">Raced on</span></td></tr>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=MOZA+CRP2+pedals&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-crp2" target="_blank" rel="sponsored noopener">MOZA CRP2 Load Cell Pedals</a></th><td>load-cell brake, managed in the same Pit House software</td><td><span class="rig-badge">Raced on</span></td></tr>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=MOZA+SR-P+pedals&amp;rh=p_89%3AMOZA&amp;tag=realiracing-20" data-aff="moza-sr-p" target="_blank" rel="sponsored noopener">MOZA SR-P Load Cell Pedals</a></th><td>budget load cell on the same Pit House ecosystem as my R9</td><td><span class="rig-badge rig-badge--rec">Researched pick</span></td></tr>
+            </tbody>
+          </table>
+        </div>
         <p class="aff-note">Some links are affiliate links — I may earn a commission at no cost to you.</p>
       </div></div>
 
@@ -206,7 +217,7 @@
         <p>You can improve position on a desk setup and it is worth doing, but a desk limits how high you can mount the wheel and how much you can recline, and a clamped wheelbase will flex under a strong direct drive unit. That flex changes your reference position under load and blunts detail in the force feedback. A rigid cockpit is what makes a fixed, repeatable driving position possible in the first place.</p>
       </div>
     </div>
-  </div>
+  </main>
 
   <div class="related">
     <h2>Keep reading</h2>
@@ -223,7 +234,7 @@
       <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
       <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
     </p>
-  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:.8">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
+  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:1">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
   <p class="dg-credit" style="margin-top:8px;font-size:0.78rem;text-align:center">A <a href="https://dongaston.com/" rel="noopener" style="color:inherit;text-decoration:underline">Don Gast&oacute;n</a> company</p>
   </footer>
 

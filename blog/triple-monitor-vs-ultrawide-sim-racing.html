@@ -14,14 +14,14 @@
 <meta property="og:image:height" content="563">
 <meta property="og:image:alt" content="Cover art: overlapping isometric blocks">
   <meta property="og:type" content="article" />
-  <link rel="stylesheet" href="blog.css?v=20260824" />
+  <link rel="stylesheet" href="blog.css?v=20261005" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Triple Monitors vs Ultrawide for Sim Racing — Which Setup Actually Wins in 2026",
     "description": "Triple 1440p monitors vs a single ultrawide for iRacing: peripheral vision, bezel compromise, GPU cost and desk space compared honestly.",
-    "author": { "@type": "Person", "name": "Carlos Martinez", "url": "https://realiracing.com" },
+    "author": { "@type": "Person", "@id": "https://realiracing.com/#carlos", "name": "Carlos Martinez", "url": "https://realiracing.com/", "sameAs": ["https://www.youtube.com/@realtape","https://www.instagram.com/realiracing"] },
     "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "https://realiracing.com" },
     "mainEntityOfPage": "https://realiracing.com/blog/triple-monitor-vs-ultrawide-sim-racing.html",
   "image": "https://realiracing.com/assets/photos/rig-cover.jpg",
@@ -59,6 +59,12 @@
   </script>
   <!-- Google Analytics 4 -->
   <script src="/js/ga4.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realiracing.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://realiracing.com/blog/"},{"@type":"ListItem","position":3,"name":"Triple Monitors vs Ultrawide for Sim Racing — Which Setup Actually Wins in 2026","item":"https://realiracing.com/blog/triple-monitor-vs-ultrawide-sim-racing.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"The gear in this guide","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"1440p 120 Hz+ G-SYNC Compatible Gaming Monitor","description":"my single-screen setup — high refresh matters more than size","url":"https://realiracing.com/blog/triple-monitor-vs-ultrawide-sim-racing.html#rir-gear"}},{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"NVIDIA GeForce RTX 5060 Ti (8 GB)","description":"renders iRacing and NVENC-encodes the stream on the same chip","url":"https://realiracing.com/blog/triple-monitor-vs-ultrawide-sim-racing.html#rir-gear"}}]}
+  </script>
 </head>
 <body>
 
@@ -85,7 +91,7 @@
     </ul>
   </nav>
 
-  <div class="article-wrap">
+  <main class="article-wrap">
     <p class="section-label">Hardware · Displays</p>
     <h1>Triple Monitors vs Ultrawide for Sim Racing — Which Setup Actually Wins in 2026</h1>
     <div class="article-meta">
@@ -97,7 +103,7 @@
     </div>
 
         <figure class="article-photo">
-          <img src="/assets/photos/rig-cover.jpg" width="1000" height="563" alt="Cover art: overlapping isometric blocks" loading="eager" decoding="async">
+          <img src="/assets/photos/rig-cover.jpg" width="1000" height="563" alt="Cover art: overlapping isometric blocks" srcset="/assets/photos/rig-cover-sm.jpg 560w, /assets/photos/rig-cover.jpg 1000w" sizes="(max-width: 760px) 100vw, 712px" loading="eager" fetchpriority="high" decoding="async">
           <figcaption>Illustration: RealiRacing</figcaption>
         </figure>
 
@@ -129,10 +135,15 @@
 
       <div id="rir-gear"><div class="gear-box">
         <span class="box-label">The gear in this guide</span>
-        <ul>
-          <li><a href="https://www.amazon.com/s?k=1440p+144hz+g-sync+compatible+gaming+monitor&amp;tag=realiracing-20" data-aff="monitor-1440p-120" target="_blank" rel="sponsored noopener">1440p 120 Hz+ G-SYNC Compatible Gaming Monitor</a> — my single-screen setup — high refresh matters more than size</li>
-          <li><a href="https://www.amazon.com/s?k=RTX+5060+Ti+8GB+graphics+card&amp;tag=realiracing-20" data-aff="gpu-rtx-5060-ti" target="_blank" rel="sponsored noopener">NVIDIA GeForce RTX 5060 Ti (8 GB)</a> — renders iRacing and NVENC-encodes the stream on the same chip</li>
-        </ul>
+        <div class="table-scroll">
+          <table class="gear-table">
+            <thead><tr><th scope="col">Pick</th><th scope="col">Why it made the list</th><th scope="col">Tested?</th></tr></thead>
+            <tbody>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=1440p+144hz+g-sync+compatible+gaming+monitor&amp;tag=realiracing-20" data-aff="monitor-1440p-120" target="_blank" rel="sponsored noopener">1440p 120 Hz+ G-SYNC Compatible Gaming Monitor</a></th><td>my single-screen setup — high refresh matters more than size</td><td><span class="rig-badge">Raced on</span></td></tr>
+            <tr><th scope="row"><a href="https://www.amazon.com/s?k=RTX+5060+Ti+8GB+graphics+card&amp;tag=realiracing-20" data-aff="gpu-rtx-5060-ti" target="_blank" rel="sponsored noopener">NVIDIA GeForce RTX 5060 Ti (8 GB)</a></th><td>renders iRacing and NVENC-encodes the stream on the same chip</td><td><span class="rig-badge">Raced on</span></td></tr>
+            </tbody>
+          </table>
+        </div>
         <p class="aff-note">Some links are affiliate links — I may earn a commission at no cost to you.</p>
       </div></div>
 
@@ -161,7 +172,7 @@
         <p>Confirm your GPU can hold a stable frame rate across the full triple resolution, measure your actual desk width against a triple monitor stand's footprint, and decide honestly whether the bezels between panels will bother you — all three matter more than the specs on the box.</p>
       </div>
     </div>
-  </div>
+  </main>
 
   <div class="related">
     <h2>Keep reading</h2>
@@ -178,7 +189,7 @@
       <a href="/">Home</a> · <a href="/blog/">Blog</a> ·
       <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
     </p>
-  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:.8">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
+  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:1">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
   <p class="dg-credit" style="margin-top:8px;font-size:0.78rem;text-align:center">A <a href="https://dongaston.com/" rel="noopener" style="color:inherit;text-decoration:underline">Don Gast&oacute;n</a> company</p>
   </footer>
 

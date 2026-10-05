@@ -62,29 +62,67 @@ function affUrlFor(cfg, key) {
   return url;
 }
 
-/* Produces the same box renderGearBox() builds in the DOM. Unknown keys are
- * dropped rather than throwing — a bad key must never break the pipeline.
- * Returns the empty container unchanged when nothing valid remains, so the
- * runtime path can still try. data-aff is emitted so hydrateLinks() can
- * re-point a link if the tag ever changes without a rebuild. */
+/* Products Carlos actually races and streams on (the "actual rig" group in
+ * js/affiliates.js, minus WHOOP: the band on his wrist is a 4.0, the product
+ * linked is the 5.0 you can buy now). These get the "Raced on" badge in the
+ * comparison table; every other pick is a researched recommendation, exactly as
+ * the disclosure paragraph on each post already says. No ratings, no scores and
+ * no prices are shown anywhere in the box. */
+const RIG_KEYS = new Set([
+  'moza-r9', 'moza-cs-v2', 'moza-crp2', 'gpu-rtx-5060-ti', 'cpu-ryzen-7-5700', 'monitor-1440p-120',
+]);
+
+/* Produces the gear box renderGearBox() would build in the DOM, as a comparison
+ * table: pick, why it made the list, and whether it is on Carlos's own rig.
+ * Unknown keys are dropped rather than throwing — a bad key must never break
+ * the pipeline. Returns the empty container unchanged when nothing valid
+ * remains, so the runtime path can still try. data-aff is emitted so
+ * hydrateLinks() can re-point a link if the tag ever changes without a rebuild;
+ * every link keeps rel="sponsored noopener" and the Associates tag. */
 function renderGearBoxHtml(cfg, keys, title) {
-  const items = (keys || [])
+  const rows = (keys || [])
     .filter((k) => cfg.products[k])
     .map((k) => {
       const p = cfg.products[k];
       const a = `<a href="${esc(affUrlFor(cfg, k))}" data-aff="${esc(k)}" target="_blank" rel="sponsored noopener">${esc(p.name)}</a>`;
-      return `          <li>${a}${p.note ? ' — ' + esc(p.note) : ''}</li>`;
+      const status = RIG_KEYS.has(k)
+        ? '<span class="rig-badge">Raced on</span>'
+        : '<span class="rig-badge rig-badge--rec">Researched pick</span>';
+      return `            <tr><th scope="row">${a}</th><td>${esc(p.note)}</td><td>${status}</td></tr>`;
     });
 
-  if (!items.length) return '<div id="rir-gear"></div>';
+  if (!rows.length) return '<div id="rir-gear"></div>';
 
   return `<div id="rir-gear"><div class="gear-box">
         <span class="box-label">${esc(title || 'Gear used & recommended')}</span>
-        <ul>
-${items.join('\n')}
-        </ul>
+        <div class="table-scroll">
+          <table class="gear-table">
+            <thead><tr><th scope="col">Pick</th><th scope="col">Why it made the list</th><th scope="col">Tested?</th></tr></thead>
+            <tbody>
+${rows.join('\n')}
+            </tbody>
+          </table>
+        </div>
         <p class="aff-note">${esc(cfg.disclosure)}</p>
       </div></div>`;
 }
 
-module.exports = { loadAffiliateConfig, affUrlFor, renderGearBoxHtml, esc };
+/* schema.org ItemList of Product entries for a post's gear keys. Deliberately
+ * has no offers, price, rating or review: none of those exist as real data, and
+ * affiliate URLs are not the product's canonical page. */
+function gearItemListLd(cfg, keys, pageUrl, title) {
+  const items = (keys || []).filter((k) => cfg.products[k]).map((k, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Product',
+      name: cfg.products[k].name,
+      description: cfg.products[k].note,
+      url: `${pageUrl}#rir-gear`,
+    },
+  }));
+  if (!items.length) return null;
+  return { '@context': 'https://schema.org', '@type': 'ItemList', name: title || 'The gear in this guide', itemListElement: items };
+}
+
+module.exports = { loadAffiliateConfig, affUrlFor, renderGearBoxHtml, gearItemListLd, RIG_KEYS, esc };

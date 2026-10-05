@@ -64,6 +64,21 @@ function brandTitle(title) {
 
 function hash(s) { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) & 0x7fffffff; return h; }
 function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+// Real, public profiles only (same set the homepage Person/Organization carry).
+const AUTHOR_SAMEAS = ['https://www.youtube.com/@realtape', 'https://www.instagram.com/realiracing'];
+
+function breadcrumbLd(title, url) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog/` },
+      { '@type': 'ListItem', position: 3, name: title, item: url },
+    ],
+  };
+}
+
 function stripTags(s) { return String(s == null ? '' : s).replace(/<[^>]+>/g, ''); }
 // Titles/tags scraped back out of already-rendered HTML (scanExistingPosts)
 // come out HTML-escaped (e.g. "&amp;"). Un-escape them here so downstream
@@ -94,7 +109,7 @@ function loadAllowedGearKeys() {
 // links exist in the served HTML: crawlable, and working even if JS fails. The
 // runtime renderGearBox() call each post still carries then finds a populated
 // container and no-ops.
-const { loadAffiliateConfig, renderGearBoxHtml } = require('./lib/affiliates-ssr.js');
+const { loadAffiliateConfig, renderGearBoxHtml, gearItemListLd } = require('./lib/affiliates-ssr.js');
 
 const FALLBACK_GEAR_KEYS = ['moza-r9', 'cockpit'];
 
@@ -276,7 +291,9 @@ function renderPostHtml(post, related, allowedGearKeys) {
   // Rendered into the HTML at build time so the affiliate links are crawlable
   // and survive a JS failure; the runtime renderGearBox() call below then
   // finds a populated container and leaves it alone.
-  const gearBoxHtml = renderGearBoxHtml(loadAffiliateConfig(), gearKeys, 'The gear in this guide');
+  const affCfg = loadAffiliateConfig();
+  const gearBoxHtml = renderGearBoxHtml(affCfg, gearKeys, 'The gear in this guide');
+  const gearLd = gearItemListLd(affCfg, gearKeys, url, 'The gear in this guide');
 
   const faqs = Array.isArray(post.faqs) && post.faqs.length ? post.faqs : buildFallbackFaqs(post);
   const bodyHtml = renderSections(post.sections);
@@ -314,14 +331,14 @@ function renderPostHtml(post, related, allowedGearKeys) {
   <meta property="og:image:alt" content="${esc(photo.alt_en)}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="${photoUrl}" />
-  <link rel="stylesheet" href="blog.css?v=20260826" />
+  <link rel="stylesheet" href="blog.css?v=20261005" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": ${JSON.stringify(title)},
     "description": ${JSON.stringify(description)},
-    "author": { "@type": "Person", "name": ${JSON.stringify(author)}, "url": "${SITE_URL}" },
+    "author": { "@type": "Person", "@id": "${SITE_URL}/#carlos", "name": ${JSON.stringify(author)}, "url": "${SITE_URL}/", "sameAs": ${JSON.stringify(AUTHOR_SAMEAS)} },
     "publisher": { "@type": "Organization", "name": "RealIRacing", "url": "${SITE_URL}" },
     "mainEntityOfPage": "${url}",
     "image": ${JSON.stringify(photoUrl)},
@@ -330,6 +347,12 @@ function renderPostHtml(post, related, allowedGearKeys) {
   }
   </script>
   <script type="application/ld+json">
+  ${JSON.stringify(breadcrumbLd(title, url))}
+  </script>
+${gearLd ? `  <script type="application/ld+json">
+  ${JSON.stringify(gearLd)}
+  </script>
+` : ''}  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -364,7 +387,7 @@ ${faqJsonLd}
     </ul>
   </nav>
 
-  <div class="article-wrap">
+  <main class="article-wrap">
     <p class="section-label">${esc(tag)}</p>
     <h1>${esc(title)}</h1>
     <div class="article-meta">
@@ -394,7 +417,7 @@ ${bodyHtml}
 
 ${faqItemsHtml}
     </div>
-  </div>
+  </main>
 
   <div class="related">
     <h2>Keep reading</h2>
@@ -410,7 +433,7 @@ ${relatedHtml}
       <a href="https://realiracing.com/go/" target="_blank">realiracing.com/go</a>
     </p>
     <p class="dg-credit" style="margin-top:8px;font-size:0.78rem;text-align:center">A <a href="https://dongaston.com/" rel="noopener" style="color:inherit;text-decoration:underline">Don Gast&oacute;n</a> company</p>
-  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:.8">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
+  <div class="nwm-credit" style="flex:1 1 100%;width:100%;box-sizing:border-box;margin-top:14px;padding-top:10px;border-top:1px solid rgba(128,128,128,.25);font-size:12px;line-height:1.6;text-align:center;opacity:1">Made by <a href="https://netwebmedia.com/?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;text-decoration:underline">NetWebMedia</a> · est. 2006 · <a class="nwm-credit-cta" href="https://netwebmedia.com/free-audit.html?utm_source=realiracing&amp;utm_medium=footer&amp;utm_campaign=made-by" rel="noopener" style="color:inherit;font-weight:600;text-decoration:underline;white-space:nowrap">Want a site like this? Get a free audit →</a></div>
   </footer>
 
   <script src="/js/ga4.js" defer></script>
@@ -447,7 +470,7 @@ function buildCardHtml(post) {
         <div class="blog-card-cat">${esc(post.tag || '')}</div>
       </div>
       <div class="blog-card-body">
-        <h3>${esc(post.title)}</h3>
+        <h2>${esc(post.title)}</h2>
         <p>${esc(post.description)}</p>
         <div class="blog-card-meta"><strong>${esc(post.author || 'Carlos Martinez')}</strong> · ${esc(shortDateLabel(post.dateLabel))} · ${esc(readTimeShort(post.readTime))}</div>
       </div>
