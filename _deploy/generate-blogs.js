@@ -396,6 +396,8 @@ ${faqJsonLd}
       <span>Updated ${esc(dateLabel)}</span>
       <span class="dot">·</span>
       <span>${esc(readTime)}</span>
+      <span class="dot">·</span>
+      <a class="meta-gear" href="#rir-gear">Gear picks ↓</a>
     </div>
 
 ${photos.figureHtml(photo)}
