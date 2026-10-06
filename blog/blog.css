@@ -141,6 +141,12 @@ nav {
 }
 .article-meta .author { color: var(--accent2); font-weight: 600; }
 .article-meta .dot { opacity: .5; }
+.article-meta .meta-gear {
+  background: var(--accent); color: var(--black); font-weight: 800;
+  padding: 4px 12px; border-radius: 999px; text-decoration: none;
+  white-space: nowrap;
+}
+.article-meta .meta-gear:hover { opacity: .85; }
 
 .article-body h2 {
   font-size: 1.55rem; font-weight: 800; letter-spacing: -0.5px;
